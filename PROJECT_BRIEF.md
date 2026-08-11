@@ -6,6 +6,8 @@
 
 `gsm-frameworks` is the published, versioned repository of **sourced governance/compliance/architecture/regulatory framework schemas** for the IT Intelligence Platform (ITIP). It was extracted from the private `itip` repository's `def/frameworks/` directory (269 files at extraction) so that the sourced vocabulary can be distributed, versioned, and consumed independently of ITIP's private design-time IP.
 
+It sits under the **GSM solution umbrella** (`gsm/`) alongside `gsm-specifications`, the normative model it is expressed against.
+
 ## 2. Concept / Product Description
 
 Content here is **schema, not application logic**: JSON Schema archetypes and Directive/Norm ascription instances sourced from external standards (TOGAF, ISO/IEC 25000 series, GDPR, NIS2, SCAP, RFC 9110, aDRI-IRN, and reserved protocol quads for gRPC/GraphQL/Kafka/AMQP/WebSocket/JDBC). Each framework is organized by its **own taxonomy** (P9 — model-native organization, not GSM subject-type classification), and composes with other models exclusively through the GSM governance layer (Directives qualifying Subjects using archetypes from different models) — never through schema-level cross-references.

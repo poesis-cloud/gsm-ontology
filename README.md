@@ -4,6 +4,11 @@ Framework definitions built on the **Generative System Model (GSM)**, registered
 ascriptions in the SIE Definition Manager (DM), and assembled into organization-specific
 framework stacks by consuming domain applications such as the IT Intelligence Platform (ITIP).
 
+This repository is one half of the GSM solution: the normative model it is expressed against
+lives in the sibling [`gsm-specifications`](https://github.com/poesis-cloud/gsm-specifications)
+repository, and both are aggregated under the
+[`gsm`](https://github.com/poesis-cloud/gsm) umbrella.
+
 > This repository is in a design-time phase. It contains framework model statements and
 > supporting sources, not runnable application code.
 
@@ -585,7 +590,8 @@ governance grammar, not reproductions of source standards' normative text. See
 
 ## References
 
-- `poesis-cloud/gsm` — Generative System Model
+- `poesis-cloud/gsm` — GSM solution umbrella (this repo's parent)
+- `poesis-cloud/gsm-specifications` — Generative System Model specification
 - `poesis-cloud/sie-definition-manager` — Definition Manager
 - `poesis-cloud/sie-definition-manager/def/adr/authorship-not-a-gsm-concern.md`
 - `poesis-cloud/sie-definition-manager/def/adr/uniform-polymorphic-ascription-api.md`
