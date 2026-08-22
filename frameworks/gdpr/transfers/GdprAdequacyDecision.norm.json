@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 45(1)",
-    "paragraphs": [
-      "45(1)"
-    ],
-    "text": "A transfer of personal data to a third country or an international organisation may take place where the Commission has decided that the third country, a territory or one or more specified sectors within that third country, or the international organisation in question ensures an adequate level of protection. Such a transfer shall not require any specific authorisation."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/transfers/TransferRestriction/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/transfers/GdprTransferMechanism/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER', 'PROCESSOR'] && GdprTransferMechanism.internationalTransfer == true && GdprTransferMechanism.transferMechanism == 'ADEQUACY_DECISION'",
   "assertion": "transferSafeguardInPlace == true",

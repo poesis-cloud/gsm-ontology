@@ -1,22 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 13(1)-(2)",
-    "paragraphs": [
-      "13(1)(a)",
-      "13(1)(c)",
-      "13(1)(e)",
-      "13(2)(a)",
-      "13(2)(b)"
-    ],
-    "text": "The controller shall provide the data subject with: (a) the identity and contact details of the controller; (c) the purposes and legal basis; (e) the recipients or categories of recipients; and further: (2)(a) the period for which personal data will be stored; (2)(b) the existence of the right to request access, rectification, erasure, restriction, portability, and to object."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/InformationDirectCollection/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprTransparencyObligation/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprTransparencyObligation.informationProvided == true",
   "assertion": "controllerIdentityDisclosed == true && purposesDisclosed == true && recipientsDisclosed == true && retentionPeriodDisclosed == true && rightsInformed == true",

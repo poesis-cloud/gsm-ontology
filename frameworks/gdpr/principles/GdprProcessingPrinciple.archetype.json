@@ -2,10 +2,6 @@
   "$schema": "gsmarc://gsm/Archetype/v1",
   "$id": "gsmarc://gsm-frameworks/gdpr/principles/GdprProcessingPrinciple/v1",
   "title": "GdprProcessingPrinciple",
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
   "description": "GDPR-sourced archetype \u2014 data processing principle under Regulation (EU) 2016/679. Article 5 defines seven foundational principles that all personal data processing must satisfy. The controller is responsible for and must be able to demonstrate compliance with all principles (accountability). Rootless \u2014 regulatory compliance dimension. Source: GDPR Article 5(1)(a)-(f) and Article 5(2).",
   "type": "object",
   "required": [
@@ -41,6 +37,5 @@
       "$gsm:queryable": true,
       "description": "Date of last compliance assessment for this principle."
     }
-  },
-  "additionalProperties": false
+  }
 }

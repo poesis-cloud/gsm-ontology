@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/governance/ArchitectureDecision/v1",
-  "title": "ArchitectureDecision",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/governance/TogafArchitectureDecision/v1",
+  "title": "TogafArchitectureDecision",
   "description": "TOGAF-sourced justification archetype \u2014 Architecture Decision Record (ADR). Defines the property vocabulary for recording architecture decisions, their context, rationale, and lifecycle status. Rootless archetype \u2014 used to type decision records in governance justification. TOGAF mapping: Architecture Decision / Rationale (Architecture Governance, Decision Log). Formalizes the TOGAF concept of recording rationale as structured, queryable decision records. Source framework: TOGAF (Architecture Governance, Decision Log).",
   "type": "object",
   "required": [
@@ -41,6 +37,5 @@
       },
       "description": "Known consequences of adopting this decision (both positive and negative). TOGAF mapping: impact assessment."
     }
-  },
-  "additionalProperties": false
+  }
 }

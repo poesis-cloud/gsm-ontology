@@ -1,24 +1,7 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 14",
-    "paragraphs": [
-      "14(1)",
-      "14(2)",
-      "14(3)",
-      "14(4)"
-    ],
-    "text": "Where personal data have not been obtained from the data subject, the controller shall provide the data subject with the following information: (a) the identity and the contact details of the controller [...] (c) the purposes of the processing for which the personal data are intended as well as the legal basis for the processing; (d) the categories of personal data concerned; (e) the recipients or categories of recipients of the personal data, if any; (f) where applicable, that the controller intends to transfer personal data [...]. The controller shall provide the information referred to in paragraphs 1 and 2: (a) within a reasonable period after obtaining the personal data, but at the latest within one month."
-  },
   "structure": "$gdpr:data-controller",
   "modal": "MUST",
   "verb": "ENSURE",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprTransparencyObligation/v1",
-  "purpose": "$gdpr:personal-data-processing",
-  "deploymentNotes": "At deployment: 'structure' resolves to the data controller (accountable). 'purpose' resolves to the adopter's personal data processing scope. Mandates provision of specified information when personal data were not obtained from the data subject, within a reasonable period (max 1 month). Includes additional requirement to disclose data source (Art 14(2)(f)). Operationalized by Norms checking information provision (with temporal window) and content completeness."
+  "purpose": "$gdpr:personal-data-processing"
 }

@@ -1,19 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 15(1)",
-    "paragraphs": [
-      "15(1)",
-      "15(3)"
-    ],
-    "text": "The data subject shall have the right to obtain from the controller confirmation as to whether or not personal data concerning him or her are being processed, and, where that is the case, access to the personal data and the following information: (a) the purposes of the processing; (b) the categories of personal data concerned; (c) the recipients or categories of recipient to whom the personal data have been or will be disclosed; (d) where possible, the envisaged period for which the personal data will be stored; (e) the existence of the right to request from the controller rectification or erasure of personal data or restriction of processing; (f) the right to lodge a complaint with a supervisory authority; (g) where the personal data are not collected from the data subject, any available information as to their source; (h) the existence of automated decision-making, including profiling."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/RightOfAccess/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprDataSubjectRight/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprDataSubjectRight.rightType == 'ACCESS' && GdprDataSubjectRight.identityVerified == true",
   "assertion": "responseProvided == true && dataCopyProvided == true",

@@ -2,82 +2,260 @@
   "name": "gdpr",
   "version": "1.0.0",
   "description": "GDPR-sourced vocabulary and governance statements \u2014 principles, lawful basis, data subject rights, controller/processor duties, transfers, breach notification, and impact assessment.",
-  "baseVersion": "1.0.0",
+  "layer": "reference",
   "elements": [
     {
-      "path": "breach-notification/AuthorityNotification72h.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "breach-notification/GdprAuthorityNotification72h.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 33(1)",
+        "paragraphs": [
+          "33(1)"
+        ],
+        "text": "In the case of a personal data breach, the controller shall without undue delay and, where feasible, not later than 72 hours after having become aware of it, notify the personal data breach to the supervisory authority competent in accordance with Article 55, unless the personal data breach is unlikely to result in a risk to the rights and freedoms of natural persons. Where the notification to the supervisory authority is not made within 72 hours, it shall be accompanied by reasons for the delay."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/breach-notification/GdprBreachNotificationAuthority/v1"
     },
     {
-      "path": "breach-notification/BreachDocumented.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "breach-notification/GdprBreachDocumented.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 33(5)",
+        "paragraphs": [
+          "33(5)"
+        ],
+        "text": "The controller shall document any personal data breaches, comprising the facts relating to the personal data breach, its effects and the remedial action taken. That documentation shall enable the supervisory authority to verify compliance with this Article."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/breach-notification/GdprBreachNotificationAuthority/v1"
     },
     {
-      "path": "breach-notification/BreachNotificationAuthority.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "breach-notification/GdprBreachNotificationAuthority.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 33",
+        "paragraphs": [
+          "33(1)",
+          "33(3)"
+        ],
+        "text": "In the case of a personal data breach, the controller shall without undue delay and, where feasible, not later than 72 hours after having become aware of it, notify the personal data breach to the supervisory authority competent in accordance with Article 55, unless the personal data breach is unlikely to result in a risk to the rights and freedoms of natural persons. Where the notification to the supervisory authority is not made within 72 hours, it shall be accompanied by reasons for the delay. [...] The notification referred to in paragraph 1 shall at least: (a) describe the nature of the personal data breach; (b) communicate the name and contact details of the data protection officer; (c) describe the likely consequences of the personal data breach; (d) describe the measures taken or proposed to be taken by the controller to address the personal data breach."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller (accountable). 'purpose' resolves to the adopter's personal data processing scope \u2014 breach notification governs the processing system's incident response capabilities. Mandates breach notification to the supervisory authority within 72 hours unless risk is unlikely. Operationalized by temporal Norms (72h deadline) and content completeness Norms."
     },
     {
-      "path": "breach-notification/BreachNotificationSubject.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "breach-notification/GdprBreachNotificationSubject.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 34",
+        "paragraphs": [
+          "34(1)",
+          "34(2)",
+          "34(3)"
+        ],
+        "text": "When the personal data breach is likely to result in a high risk to the rights and freedoms of natural persons, the controller shall communicate the personal data breach to the data subject without undue delay. The communication to the data subject referred to in paragraph 1 shall describe in clear and plain language the nature of the personal data breach and contain at least the information and measures referred to in points (b), (c) and (d) of Article 33(3). The communication to the data subject referred to in paragraph 1 shall not be required if any of the following conditions are met: (a) the controller has implemented appropriate technical and organisational protection measures, and those measures were applied to the personal data affected by the personal data breach, in particular those that render the personal data unintelligible to any person who is not authorised to access it, such as encryption; (b) the controller has taken subsequent measures which ensure that the high risk to the rights and freedoms of data subjects referred to in paragraph 1 is no longer likely to materialise; (c) it would involve disproportionate effort."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller (accountable). 'purpose' resolves to the adopter's personal data processing scope \u2014 breach communication governs the processing system's incident response capabilities. Mandates breach communication to data subjects when risk is HIGH. Art 34(3) provides three exemptions (encryption, subsequent measures, disproportionate effort). Operationalized by Norms checking data subject notification when risk is HIGH."
     },
     {
       "path": "breach-notification/GdprDataBreach.archetype.json"
     },
     {
-      "path": "breach-notification/NotificationContentsComplete.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "breach-notification/GdprNotificationContentsComplete.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 33(3)",
+        "paragraphs": [
+          "33(3)"
+        ],
+        "text": "The notification referred to in paragraph 1 shall at least: (a) describe the nature of the personal data breach including where possible, the categories and approximate number of data subjects concerned and the categories and approximate number of personal data records concerned; (b) communicate the name and contact details of the data protection officer or other contact point where more information can be obtained; (c) describe the likely consequences of the personal data breach; (d) describe the measures taken or proposed to be taken by the controller to address the personal data breach, including, where appropriate, measures to mitigate its possible adverse effects."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/breach-notification/GdprBreachNotificationAuthority/v1"
     },
     {
-      "path": "breach-notification/SubjectNotificationHighRisk.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "breach-notification/GdprSubjectNotificationHighRisk.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 34(1)",
+        "paragraphs": [
+          "34(1)",
+          "34(2)"
+        ],
+        "text": "When the personal data breach is likely to result in a high risk to the rights and freedoms of natural persons, the controller shall communicate the personal data breach to the data subject without undue delay. The communication to the data subject referred to in paragraph 1 shall describe in clear and plain language the nature of the personal data breach and contain at least the information and measures referred to in points (b), (c) and (d) of Article 33(3)."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/breach-notification/GdprBreachNotificationSubject/v1"
     },
     {
-      "path": "controller-processor/ArrangementDocumented.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "controller-processor/GdprArrangementDocumented.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 26(1)-(2)",
+        "paragraphs": [
+          "26(1)",
+          "26(2)"
+        ],
+        "text": "Where two or more controllers jointly determine the purposes and means of processing, they shall be joint controllers. They shall in a transparent manner determine their respective responsibilities for compliance with the obligations under this Regulation, in particular as regards the exercising of the rights of the data subject and their respective duties to provide the information referred to in Articles 13 and 14, by means of an arrangement between them. The arrangement may designate a contact point for data subjects. The essence of the arrangement shall be made available to the data subject."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprJointControllers/v1"
     },
     {
-      "path": "controller-processor/ContractContentsComplete.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "controller-processor/GdprContractContentsComplete.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 28(3)",
+        "paragraphs": [
+          "28(3)(a)",
+          "28(3)(b)",
+          "28(3)(c)",
+          "28(3)(d)",
+          "28(3)(e)",
+          "28(3)(f)",
+          "28(3)(g)",
+          "28(3)(h)"
+        ],
+        "text": "Processing by a processor shall be governed by a contract or other legal act that sets out the subject-matter and duration of the processing, the nature and purpose, the type of personal data, categories of data subjects, and the obligations and rights of the controller. That contract shall stipulate, in particular, that the processor: (a) processes only on documented instructions; (b) ensures confidentiality; (c) takes Art 32 security measures; (d) respects sub-processing conditions; (e) assists with data subject requests; (f) assists with Art 32-36 compliance; (g) deletes or returns data after service ends; (h) makes available all information for compliance demonstration and allows audits."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprProcessorObligations/v1"
     },
     {
-      "path": "controller-processor/DataProtectionByDesign.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "controller-processor/GdprDataProtectionByDesign.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 25",
+        "paragraphs": [
+          "25(1)",
+          "25(2)"
+        ],
+        "text": "Taking into account the state of the art, the cost of implementation and the nature, scope, context and purposes of processing as well as the risks of varying likelihood and severity for rights and freedoms of natural persons posed by the processing, the controller shall, both at the time of the determination of the means for processing and at the time of the processing itself, implement appropriate technical and organisational measures, such as pseudonymisation, which are designed to implement data-protection principles, such as data minimisation, in an effective manner. [...] The controller shall implement appropriate technical and organisational measures for ensuring that, by default, only personal data which are necessary for each specific purpose of the processing are processed."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller (accountable). 'purpose' resolves to the adopter's personal data processing scope. Mandates data protection by design (Art 25(1)) and by default (Art 25(2)). Operationalized by Norms checking implementation of technical/organisational measures and default minimisation."
     },
     {
-      "path": "controller-processor/DefaultMinimalProcessing.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "controller-processor/GdprDefaultMinimalProcessing.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 25(2)",
+        "paragraphs": [
+          "25(2)"
+        ],
+        "text": "The controller shall implement appropriate technical and organisational measures for ensuring that, by default, only personal data which are necessary for each specific purpose of the processing are processed. That obligation applies to the amount of personal data collected, the extent of their processing, the period of their storage and their accessibility. In particular, such measures shall ensure that by default personal data are not made accessible without the individual's intervention to an indefinite number of natural persons."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprDataProtectionByDesign/v1"
     },
     {
-      "path": "controller-processor/DesignMeasuresImplemented.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "controller-processor/GdprDesignMeasuresImplemented.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 25(1)",
+        "paragraphs": [
+          "25(1)"
+        ],
+        "text": "Taking into account the state of the art, the cost of implementation and the nature, scope, context and purposes of processing as well as the risks of varying likelihood and severity for rights and freedoms of natural persons posed by the processing, the controller shall, both at the time of the determination of the means for processing and at the time of the processing itself, implement appropriate technical and organisational measures, such as pseudonymisation, which are designed to implement data-protection principles, such as data minimisation, in an effective manner and to integrate the necessary safeguards into the processing in order to meet the requirements of this Regulation and protect the rights of data subjects."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprDataProtectionByDesign/v1"
     },
     {
-      "path": "controller-processor/DpoContactPublished.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "controller-processor/GdprDpoContactPublished.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 37(7)",
+        "paragraphs": [
+          "37(7)"
+        ],
+        "text": "The controller or the processor shall publish the contact details of the data protection officer and communicate them to the supervisory authority."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprDpoDesignation/v1"
     },
     {
-      "path": "controller-processor/DpoDesignated.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "controller-processor/GdprDpoDesignated.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 37(1)",
+        "paragraphs": [
+          "37(1)"
+        ],
+        "text": "The controller and the processor shall designate a data protection officer in any case where: (a) the processing is carried out by a public authority or body, except for courts acting in their judicial capacity; (b) the core activities of the controller or the processor consist of processing operations which, by virtue of their nature, their scope and/or their purposes, require regular and systematic monitoring of data subjects on a large scale; or (c) the core activities of the controller or the processor consist of processing on a large scale of special categories of data pursuant to Article 9 or personal data relating to criminal convictions and offences referred to in Article 10."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprDpoDesignation/v1"
     },
     {
-      "path": "controller-processor/DpoDesignation.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "controller-processor/GdprDpoDesignation.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 37",
+        "paragraphs": [
+          "37(1)",
+          "37(5)",
+          "37(7)"
+        ],
+        "text": "The controller and the processor shall designate a data protection officer in any case where: (a) the processing is carried out by a public authority or body, except for courts acting in their judicial capacity; (b) the core activities of the controller or the processor consist of processing operations which, by virtue of their nature, their scope and/or their purposes, require regular and systematic monitoring of data subjects on a large scale; or (c) the core activities of the controller or the processor consist of processing on a large scale of special categories of data pursuant to Article 9 or personal data relating to criminal convictions and offences referred to in Article 10. [...] The data protection officer shall be designated on the basis of professional qualities and, in particular, expert knowledge of data protection law and practices and the ability to fulfil the tasks referred to in Article 39."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller or processor (accountable). 'purpose' resolves to the adopter's personal data processing scope. Mandates DPO designation when conditions in Art 37(1)(a)-(c) are met. Operationalized by Norms checking DPO designation, qualification, independence, and contact publication."
     },
     {
-      "path": "controller-processor/DpoIndependence.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "controller-processor/GdprDpoIndependence.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 38(3)",
+        "paragraphs": [
+          "38(3)",
+          "38(6)"
+        ],
+        "text": "The controller and processor shall ensure that the data protection officer does not receive any instructions regarding the exercise of those tasks. He or she shall not be dismissed or penalised by the controller or the processor for performing his tasks. The data protection officer shall directly report to the highest management level of the controller or the processor. The data protection officer may fulfil other tasks and duties. The controller or processor shall ensure that any such tasks and duties do not result in a conflict of interests."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprDpoDesignation/v1"
     },
     {
-      "path": "controller-processor/DpoQualified.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "controller-processor/GdprDpoQualified.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 37(5)",
+        "paragraphs": [
+          "37(5)"
+        ],
+        "text": "The data protection officer shall be designated on the basis of professional qualities and, in particular, expert knowledge of data protection law and practices and the ability to fulfil the tasks referred to in Article 39."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprDpoDesignation/v1"
     },
     {
-      "path": "controller-processor/DpoResourcesProvided.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "controller-processor/GdprDpoResourcesProvided.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 38(2)",
+        "paragraphs": [
+          "38(2)"
+        ],
+        "text": "The controller and processor shall support the data protection officer in performing the tasks referred to in Article 39 by providing resources necessary to carry out those tasks and access to personal data and processing operations, and to maintain his or her expert knowledge."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprDpoDesignation/v1"
     },
     {
-      "path": "controller-processor/EffectivenessRegularlyTested.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "controller-processor/GdprEffectivenessRegularlyTested.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 32(1)(d)",
+        "paragraphs": [
+          "32(1)(d)"
+        ],
+        "text": "A process for regularly testing, assessing and evaluating the effectiveness of technical and organisational measures for ensuring the security of the processing."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprSecurityOfProcessing/v1"
     },
     {
       "path": "controller-processor/GdprControllerProcessorRole.archetype.json"
@@ -98,60 +276,210 @@
       "path": "controller-processor/GdprSecurityMeasure.archetype.json"
     },
     {
-      "path": "controller-processor/JointControllers.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "controller-processor/GdprJointControllers.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 26",
+        "paragraphs": [
+          "26(1)",
+          "26(2)",
+          "26(3)"
+        ],
+        "text": "Where two or more controllers jointly determine the purposes and means of processing, they shall be joint controllers. They shall in a transparent manner determine their respective responsibilities for compliance with the obligations under this Regulation, in particular as regards the exercising of the rights of the data subject and their respective duties to provide the information referred to in Articles 13 and 14, by means of an arrangement between them. [...] The essence of the arrangement shall be made available to the data subject."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller(s) (accountable). 'purpose' resolves to the adopter's personal data processing scope. Mandates that joint controllers document their respective responsibilities in a transparent arrangement, with the essence made available to data subjects. Data subject may exercise rights against each joint controller regardless of arrangement terms (Art 26(3)). Operationalized by Norm checking arrangement documentation."
     },
     {
-      "path": "controller-processor/PersonnelAuthorized.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "controller-processor/GdprPersonnelAuthorized.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 32(4)",
+        "paragraphs": [
+          "32(4)"
+        ],
+        "text": "The controller and processor shall take steps to ensure that any natural person acting under the authority of the controller or the processor who has access to personal data does not process them except on instructions from the controller, unless required to do so by Union or Member State law."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprSecurityOfProcessing/v1"
     },
     {
-      "path": "controller-processor/ProcessorInstructionsBound.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "controller-processor/GdprProcessorInstructionsBound.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 28(3)(a)",
+        "paragraphs": [
+          "28(3)(a)"
+        ],
+        "text": "Processing by a processor shall be governed by a contract or other legal act under Union or Member State law, that is binding on the processor with regard to the controller and that sets out [...] (a) processes the personal data only on documented instructions from the controller, including with regard to transfers of personal data to a third country or an international organisation, unless required to do so by Union or Member State law to which the processor is subject."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprProcessorObligations/v1"
     },
     {
-      "path": "controller-processor/ProcessorObligations.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "controller-processor/GdprProcessorObligations.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 28",
+        "paragraphs": [
+          "28(1)",
+          "28(2)",
+          "28(3)",
+          "28(9)"
+        ],
+        "text": "Where processing is to be carried out on behalf of a controller, the controller shall use only processors providing sufficient guarantees to implement appropriate technical and organisational measures in such a manner that processing will meet the requirements of this Regulation and ensure the protection of the rights of the data subject. The processor shall not engage another processor without prior specific or general written authorisation of the controller. [...] Processing by a processor shall be governed by a contract or other legal act under Union or Member State law, that is binding on the processor with regard to the controller and that sets out the subject-matter and duration of the processing, the nature and purpose of the processing, the type of personal data and categories of data subjects and the obligations and rights of the controller."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller (accountable). 'purpose' resolves to the adopter's personal data processing scope. Mandates that processing by a processor is governed by a binding contract containing all elements of Art 28(3)(a)-(h), that sub-processors are authorized, and that the contract is in writing. Operationalized by Norms checking instructions binding, sub-processor authorization, and contract completeness."
     },
     {
-      "path": "controller-processor/RecordContentsComplete.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "controller-processor/GdprRecordContentsComplete.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 30(1)",
+        "paragraphs": [
+          "30(1)(a)",
+          "30(1)(b)",
+          "30(1)(c)",
+          "30(1)(d)",
+          "30(1)(e)",
+          "30(1)(f)",
+          "30(1)(g)"
+        ],
+        "text": "The record shall contain: (a) the name and contact details of the controller; (b) the purposes of the processing; (c) a description of the categories of data subjects and categories of personal data; (d) the categories of recipients; (e) transfers to third countries; (f) envisaged time limits for erasure; (g) a general description of technical and organisational security measures."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprRecordsOfProcessing/v1"
     },
     {
-      "path": "controller-processor/RecordsMaintained.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "controller-processor/GdprRecordsMaintained.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 30(1)",
+        "paragraphs": [
+          "30(1)"
+        ],
+        "text": "Each controller and, where applicable, the controller's representative, shall maintain a record of processing activities under its responsibility. That record shall contain all of the following information: (a) the name and contact details of the controller and, where applicable, the joint controller, the controller's representative and the data protection officer; (b) the purposes of the processing; (c) a description of the categories of data subjects and of the categories of personal data; (d) the categories of recipients to whom the personal data have been or will be disclosed; (e) where applicable, transfers of personal data to a third country or an international organisation; (f) where possible, the envisaged time limits for erasure of the different categories of data; (g) where possible, a general description of the technical and organisational security measures referred to in Article 32(1)."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprRecordsOfProcessing/v1"
     },
     {
-      "path": "controller-processor/RecordsOfProcessing.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "controller-processor/GdprRecordsOfProcessing.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 30",
+        "paragraphs": [
+          "30(1)",
+          "30(2)",
+          "30(3)"
+        ],
+        "text": "Each controller and, where applicable, the controller's representative, shall maintain a record of processing activities under its responsibility. That record shall contain all of the following information: (a) the name and contact details of the controller and, where applicable, the joint controller, the controller's representative and the data protection officer; (b) the purposes of the processing; (c) a description of the categories of data subjects and of the categories of personal data; (d) the categories of recipients; (e) transfers of personal data to a third country including documentation of suitable safeguards; (f) where possible, the envisaged time limits for erasure; (g) where possible, a general description of the technical and organisational security measures. [...] The records shall be maintained in writing, including in electronic form."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller (or processor for Art 30(2) records) (accountable). 'purpose' resolves to the adopter's personal data processing scope. Mandates maintenance of processing activity records. Exemption under Art 30(5) for enterprises with fewer than 250 employees (unless processing is not occasional, involves special categories, or is likely to result in risk). Operationalized by Norms checking record maintenance and completeness."
     },
     {
-      "path": "controller-processor/SecurityMeasuresImplemented.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "controller-processor/GdprSecurityMeasuresImplemented.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 32(1)",
+        "paragraphs": [
+          "32(1)(a)",
+          "32(1)(b)",
+          "32(1)(c)"
+        ],
+        "text": "Taking into account the state of the art, the costs of implementation and the nature, scope, context and purposes of processing as well as the risk of varying likelihood and severity for the rights and freedoms of natural persons, the controller and the processor shall implement appropriate technical and organisational measures to ensure a level of security appropriate to the risk, including inter alia as appropriate: (a) the pseudonymisation and encryption of personal data; (b) the ability to ensure the ongoing confidentiality, integrity, availability and resilience of processing systems and services; (c) the ability to restore the availability and access to personal data in a timely manner in the event of a physical or technical incident."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprSecurityOfProcessing/v1"
     },
     {
-      "path": "controller-processor/SecurityOfProcessing.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "controller-processor/GdprSecurityOfProcessing.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 32",
+        "paragraphs": [
+          "32(1)",
+          "32(2)",
+          "32(4)"
+        ],
+        "text": "Taking into account the state of the art, the costs of implementation and the nature, scope, context and purposes of processing as well as the risk of varying likelihood and severity for the rights and freedoms of natural persons, the controller and the processor shall implement appropriate technical and organisational measures to ensure a level of security appropriate to the risk, including inter alia as appropriate: (a) the pseudonymisation and encryption of personal data; (b) the ability to ensure the ongoing confidentiality, integrity, availability and resilience of processing systems and services; (c) the ability to restore the availability and access to personal data in a timely manner in the event of a physical or technical incident; (d) a process for regularly testing, assessing and evaluating the effectiveness of technical and organisational measures for ensuring the security of the processing."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller and processor (accountable). 'purpose' resolves to the adopter's personal data processing scope. Mandates implementation of appropriate technical and organisational security measures proportionate to risk. Applies to both controllers and processors (Art 32 addresses both). Operationalized by Norms checking security measures implementation, regular testing, and personnel authorization."
     },
     {
-      "path": "controller-processor/SubProcessorAuthorized.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "controller-processor/GdprSubProcessorAuthorized.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 28(2)",
+        "paragraphs": [
+          "28(2)"
+        ],
+        "text": "The processor shall not engage another processor without prior specific or general written authorisation of the controller. In the case of general written authorisation, the processor shall inform the controller of any intended changes concerning the addition or replacement of other processors, thereby giving the controller the opportunity to object to such changes."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprProcessorObligations/v1"
     },
     {
-      "path": "data-subject-rights/AccessProvided.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "data-subject-rights/GdprAccessProvided.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 15(1)",
+        "paragraphs": [
+          "15(1)",
+          "15(3)"
+        ],
+        "text": "The data subject shall have the right to obtain from the controller confirmation as to whether or not personal data concerning him or her are being processed, and, where that is the case, access to the personal data and the following information: (a) the purposes of the processing; (b) the categories of personal data concerned; (c) the recipients or categories of recipient to whom the personal data have been or will be disclosed; (d) where possible, the envisaged period for which the personal data will be stored; (e) the existence of the right to request from the controller rectification or erasure of personal data or restriction of processing; (f) the right to lodge a complaint with a supervisory authority; (g) where the personal data are not collected from the data subject, any available information as to their source; (h) the existence of automated decision-making, including profiling."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprRightOfAccess/v1"
     },
     {
-      "path": "data-subject-rights/AutomatedDecisionMaking.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "data-subject-rights/GdprAutomatedDecisionMaking.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 22",
+        "paragraphs": [
+          "22(1)",
+          "22(3)"
+        ],
+        "text": "The data subject shall have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning him or her or similarly significantly affects him or her. [...] In the cases referred to in paragraph 2, the data controller shall implement suitable measures to safeguard the data subject's rights and freedoms and legitimate interests, at least the right to obtain human intervention on the part of the controller, to express his or her point of view and to contest the decision."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller. 'purpose' resolves to data subjects. Ensures protection against solely automated decision-making with legal/significant effects. Where automated decisions are permitted (Art 22(2) exceptions: contract, law, explicit consent), human intervention must be available."
     },
     {
-      "path": "data-subject-rights/DirectCollectionContentsComplete.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "data-subject-rights/GdprDirectCollectionContentsComplete.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 13(1)-(2)",
+        "paragraphs": [
+          "13(1)(a)",
+          "13(1)(c)",
+          "13(1)(e)",
+          "13(2)(a)",
+          "13(2)(b)"
+        ],
+        "text": "The controller shall provide the data subject with: (a) the identity and contact details of the controller; (c) the purposes and legal basis; (e) the recipients or categories of recipients; and further: (2)(a) the period for which personal data will be stored; (2)(b) the existence of the right to request access, rectification, erasure, restriction, portability, and to object."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprInformationDirectCollection/v1"
     },
     {
-      "path": "data-subject-rights/ErasureCompleted.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "data-subject-rights/GdprErasureCompleted.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 17(1)",
+        "paragraphs": [
+          "17(1)",
+          "17(3)"
+        ],
+        "text": "The data subject shall have the right to obtain from the controller the erasure of personal data concerning him or her without undue delay and the controller shall have the obligation to erase personal data without undue delay where one of the following grounds applies: (a) the personal data are no longer necessary in relation to the purposes for which they were collected or otherwise processed; (b) the data subject withdraws consent; (c) the data subject objects pursuant to Article 21(1); (d) the personal data have been unlawfully processed; (e) the personal data have to be erased for compliance with a legal obligation; (f) the personal data have been collected in relation to the offer of information society services referred to in Article 8(1). Paragraphs 1 and 2 shall not apply to the extent that processing is necessary for exercising the right of freedom of expression, compliance with a legal obligation, reasons of public interest in the area of public health, archiving purposes, or the establishment, exercise or defence of legal claims."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprRightToErasure/v1"
     },
     {
       "path": "data-subject-rights/GdprDataSubjectRight.archetype.json"
@@ -160,135 +488,453 @@
       "path": "data-subject-rights/GdprTransparencyObligation.archetype.json"
     },
     {
-      "path": "data-subject-rights/HumanIntervention.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "data-subject-rights/GdprHumanIntervention.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 22(1)",
+        "paragraphs": [
+          "22(1)",
+          "22(3)"
+        ],
+        "text": "The data subject shall have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning him or her or similarly significantly affects him or her. Paragraph 1 shall not apply if the decision: (a) is necessary for entering into, or performance of, a contract between the data subject and a data controller; (b) is authorised by Union or Member State law; or (c) is based on the data subject's explicit consent. In the cases referred to in paragraph 2(a) and (c), the data controller shall implement suitable measures to safeguard the data subject's rights and freedoms and legitimate interests, at least the right to obtain human intervention on the part of the controller, to express his or her point of view and to contest the decision."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprAutomatedDecisionMaking/v1"
     },
     {
-      "path": "data-subject-rights/IndirectCollectionContentsComplete.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "data-subject-rights/GdprIndirectCollectionContentsComplete.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 14(1)-(2)",
+        "paragraphs": [
+          "14(1)(a)",
+          "14(1)(c)",
+          "14(1)(d)",
+          "14(1)(e)",
+          "14(2)(a)",
+          "14(2)(b)",
+          "14(2)(f)"
+        ],
+        "text": "Where personal data have not been obtained from the data subject, the controller shall provide: (a) controller identity; (c) purposes and legal basis; (d) categories of personal data; (e) recipients; (2)(a) storage period; (2)(b) rights information; (2)(f) from which source the personal data originate, and if applicable, whether it came from publicly accessible sources."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprInformationIndirectCollection/v1"
     },
     {
-      "path": "data-subject-rights/InformationDirectCollection.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "data-subject-rights/GdprInformationDirectCollection.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 13",
+        "paragraphs": [
+          "13(1)",
+          "13(2)",
+          "13(3)"
+        ],
+        "text": "Where personal data relating to a data subject are collected from the data subject, the controller shall, at the time when personal data are obtained, provide the data subject with all of the following information: (a) the identity and the contact details of the controller and, where applicable, of the controller's representative; (b) the contact details of the data protection officer, where applicable; (c) the purposes of the processing for which the personal data are intended as well as the legal basis for the processing; [...] (e) the recipients or categories of recipients of the personal data, if any; (f) where applicable, the fact that the controller intends to transfer personal data to a third country."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller (accountable). 'purpose' resolves to the adopter's personal data processing scope. Mandates provision of specified information at the time personal data are collected directly from the data subject. Operationalized by Norms checking information provision and content completeness."
     },
     {
-      "path": "data-subject-rights/InformationIndirectCollection.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "data-subject-rights/GdprInformationIndirectCollection.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 14",
+        "paragraphs": [
+          "14(1)",
+          "14(2)",
+          "14(3)",
+          "14(4)"
+        ],
+        "text": "Where personal data have not been obtained from the data subject, the controller shall provide the data subject with the following information: (a) the identity and the contact details of the controller [...] (c) the purposes of the processing for which the personal data are intended as well as the legal basis for the processing; (d) the categories of personal data concerned; (e) the recipients or categories of recipients of the personal data, if any; (f) where applicable, that the controller intends to transfer personal data [...]. The controller shall provide the information referred to in paragraphs 1 and 2: (a) within a reasonable period after obtaining the personal data, but at the latest within one month."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller (accountable). 'purpose' resolves to the adopter's personal data processing scope. Mandates provision of specified information when personal data were not obtained from the data subject, within a reasonable period (max 1 month). Includes additional requirement to disclose data source (Art 14(2)(f)). Operationalized by Norms checking information provision (with temporal window) and content completeness."
     },
     {
-      "path": "data-subject-rights/InformationProvidedAtCollection.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "data-subject-rights/GdprInformationProvidedAtCollection.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 13(1)-(2)",
+        "paragraphs": [
+          "13(1)",
+          "13(2)"
+        ],
+        "text": "Where personal data relating to a data subject are collected from the data subject, the controller shall, at the time when personal data are obtained, provide the data subject with all of the following information: (a) the identity and the contact details of the controller and, where applicable, of the controller's representative; (b) the contact details of the data protection officer, where applicable; (c) the purposes of the processing for which the personal data are intended as well as the legal basis for the processing."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprInformationDirectCollection/v1"
     },
     {
-      "path": "data-subject-rights/InformationProvidedWithinPeriod.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "data-subject-rights/GdprInformationProvidedWithinPeriod.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 14(3)",
+        "paragraphs": [
+          "14(3)(a)"
+        ],
+        "text": "The controller shall provide the information referred to in paragraphs 1 and 2: (a) within a reasonable period after obtaining the personal data, but at the latest within one month, having regard to the specific circumstances in which the personal data are processed."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprInformationIndirectCollection/v1"
     },
     {
-      "path": "data-subject-rights/NotificationObligation.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "data-subject-rights/GdprNotificationObligation.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 19",
+        "paragraphs": [
+          "19"
+        ],
+        "text": "The controller shall communicate any rectification or erasure of personal data or restriction of processing carried out in accordance with Article 16, Article 17(1) and Article 18 to each recipient to whom the personal data have been disclosed, unless this proves impossible or involves disproportionate effort. The controller shall inform the data subject about those recipients if the data subject requests it."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller (accountable). 'purpose' resolves to the adopter's personal data processing scope. Mandates notification of each recipient when rectification (Art 16), erasure (Art 17(1)), or restriction (Art 18) has been carried out, unless impossible or disproportionate effort. Also requires informing the data subject about recipients on request. Operationalized by Norm checking recipient notification."
     },
     {
-      "path": "data-subject-rights/ObjectionHandled.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "data-subject-rights/GdprObjectionHandled.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 21(1)",
+        "paragraphs": [
+          "21(1)"
+        ],
+        "text": "The data subject shall have the right to object, on grounds relating to his or her particular situation, at any time to processing of personal data concerning him or her which is based on point (e) or (f) of Article 6(1), including profiling based on those provisions. The controller shall no longer process the personal data unless the controller demonstrates compelling legitimate grounds for the processing which override the interests, rights and freedoms of the data subject or for the establishment, exercise or defence of legal claims."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprRightToObject/v1"
     },
     {
-      "path": "data-subject-rights/PortabilityDirectTransfer.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "data-subject-rights/GdprPortabilityDirectTransfer.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 20(2)",
+        "paragraphs": [
+          "20(2)"
+        ],
+        "text": "In exercising his or her right to data portability pursuant to paragraph 1, the data subject shall have the right to have the personal data transmitted directly from one controller to another, where technically feasible."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprRightToPortability/v1"
     },
     {
-      "path": "data-subject-rights/PortabilityStructuredFormat.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "data-subject-rights/GdprPortabilityStructuredFormat.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 20(1)",
+        "paragraphs": [
+          "20(1)"
+        ],
+        "text": "The data subject shall have the right to receive the personal data concerning him or her, which he or she has provided to a controller, in a structured, commonly used and machine-readable format and have the right to transmit those data to another controller without hindrance from the controller to which the personal data have been provided."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprRightToPortability/v1"
     },
     {
-      "path": "data-subject-rights/RecipientsNotified.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "data-subject-rights/GdprRecipientsNotified.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 19",
+        "paragraphs": [
+          "19"
+        ],
+        "text": "The controller shall communicate any rectification or erasure of personal data or restriction of processing carried out in accordance with Article 16, Article 17(1) and Article 18 to each recipient to whom the personal data have been disclosed, unless this proves impossible or involves disproportionate effort. The controller shall inform the data subject about those recipients if the data subject requests it."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprNotificationObligation/v1"
     },
     {
-      "path": "data-subject-rights/RectificationCompleted.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "data-subject-rights/GdprRectificationCompleted.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 16",
+        "paragraphs": [
+          "16"
+        ],
+        "text": "The data subject shall have the right to obtain from the controller without undue delay the rectification of inaccurate personal data concerning him or her. Taking into account the purposes of the processing, the data subject shall have the right to have incomplete personal data completed, including by means of providing a supplementary statement."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprRightToRectification/v1"
     },
     {
-      "path": "data-subject-rights/RequestFree.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "data-subject-rights/GdprRequestFree.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 12(5)",
+        "paragraphs": [
+          "12(5)"
+        ],
+        "text": "Information provided under Articles 13 and 14 and any communication and any actions taken under Articles 15 to 22 and 34 shall be provided free of charge. Where requests from a data subject are manifestly unfounded or excessive, in particular because of their repetitive character, the controller may either: (a) charge a reasonable fee taking into account the administrative costs of providing the information or communication or taking the action requested; or (b) refuse to act on the request."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprTransparentCommunication/v1"
     },
     {
-      "path": "data-subject-rights/ResponseTimeliness.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "data-subject-rights/GdprResponseTimeliness.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 12(3)",
+        "paragraphs": [
+          "12(3)"
+        ],
+        "text": "The controller shall provide information on action taken on a request under Articles 15 to 22 to the data subject without undue delay and in any event within one month of receipt of the request. That period may be extended by two further months where necessary, taking into account the complexity and number of the requests."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprTransparentCommunication/v1"
     },
     {
-      "path": "data-subject-rights/RestrictionApplied.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "data-subject-rights/GdprRestrictionApplied.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 18(1)",
+        "paragraphs": [
+          "18(1)"
+        ],
+        "text": "The data subject shall have the right to obtain from the controller restriction of processing where one of the following applies: (a) the accuracy of the personal data is contested by the data subject; (b) the processing is unlawful and the data subject opposes the erasure and requests restriction instead; (c) the controller no longer needs the data but the data subject requires them for legal claims; (d) the data subject has objected pursuant to Article 21(1) pending verification."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprRightToRestriction/v1"
     },
     {
-      "path": "data-subject-rights/RightOfAccess.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "data-subject-rights/GdprRightOfAccess.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 15",
+        "paragraphs": [
+          "15(1)",
+          "15(3)"
+        ],
+        "text": "The data subject shall have the right to obtain from the controller confirmation as to whether or not personal data concerning him or her are being processed, and, where that is the case, access to the personal data and the following information: (a) the purposes of the processing; (b) the categories of personal data concerned; (c) the recipients or categories of recipient; (d) the envisaged storage period; (e) the existence of the right to request rectification, erasure, restriction, or object; (f) the right to lodge a complaint; (g) available information on the data source; (h) the existence of automated decision-making including profiling. [...] The controller shall provide a copy of the personal data undergoing processing."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller. 'purpose' resolves to data subjects. Enables the right of access. Norms verify that access requests are fulfilled within the Art 12(3) deadline."
     },
     {
-      "path": "data-subject-rights/RightToErasure.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "data-subject-rights/GdprRightToErasure.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 17",
+        "paragraphs": [
+          "17(1)",
+          "17(2)",
+          "17(3)"
+        ],
+        "text": "The data subject shall have the right to obtain from the controller the erasure of personal data concerning him or her without undue delay and the controller shall have the obligation to erase personal data without undue delay where one of the following grounds applies: (a) the personal data are no longer necessary in relation to the purposes for which they were collected or otherwise processed; (b) the data subject withdraws consent and there is no other legal ground for the processing; (c) the data subject objects pursuant to Article 21(1) and there are no overriding legitimate grounds; (d) the personal data have been unlawfully processed; (e) erasure is required for compliance with a legal obligation; (f) the personal data have been collected in relation to the offer of information society services to a child. [...] Paragraph 1 shall not apply to the extent that processing is necessary for exercising the right of freedom of expression, compliance with a legal obligation, public health, archiving/research, or legal claims."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller. 'purpose' resolves to data subjects. Enables the right to erasure ('right to be forgotten'). Art 17(3) provides five exemptions. Norms verify erasure completion unless an exemption applies."
     },
     {
-      "path": "data-subject-rights/RightToObject.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "data-subject-rights/GdprRightToObject.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 21",
+        "paragraphs": [
+          "21(1)",
+          "21(2)",
+          "21(3)"
+        ],
+        "text": "The data subject shall have the right to object, on grounds relating to his or her particular situation, at any time to processing of personal data concerning him or her which is based on point (e) or (f) of Article 6(1), including profiling based on those provisions. The controller shall no longer process the personal data unless the controller demonstrates compelling legitimate grounds for the processing which override the interests, rights and freedoms of the data subject, or for the establishment, exercise or defence of legal claims. Where personal data are processed for direct marketing purposes, the data subject shall have the right to object at any time to processing of personal data concerning him or her for such marketing, which includes profiling to the extent that it is related to such direct marketing. Where the data subject objects to processing for direct marketing purposes, the personal data shall no longer be processed for such purposes."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller. 'purpose' resolves to data subjects. Enables the right to object. For direct marketing objections (Art 21(2)-(3)), there is an absolute right \u2014 no override possible. For other objections (Art 21(1)), controller may demonstrate compelling legitimate grounds."
     },
     {
-      "path": "data-subject-rights/RightToPortability.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "data-subject-rights/GdprRightToPortability.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 20",
+        "paragraphs": [
+          "20(1)",
+          "20(2)"
+        ],
+        "text": "The data subject shall have the right to receive the personal data concerning him or her, which he or she has provided to a controller, in a structured, commonly used and machine-readable format and have the right to transmit those data to another controller without hindrance from the controller to which the personal data have been provided, where: (a) the processing is based on consent or contract; and (b) the processing is carried out by automated means. In exercising his or her right to data portability, the data subject shall have the right to have the personal data transmitted directly from one controller to another, where technically feasible."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller. 'purpose' resolves to data subjects. Enables the right to data portability. Applies only when processing is based on consent or contract and carried out by automated means. Norms verify structured/machine-readable format and direct transfer capability."
     },
     {
-      "path": "data-subject-rights/RightToRectification.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "data-subject-rights/GdprRightToRectification.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 16",
+        "paragraphs": [
+          "16"
+        ],
+        "text": "The data subject shall have the right to obtain from the controller without undue delay the rectification of inaccurate personal data concerning him or her. Taking into account the purposes of the processing, the data subject shall have the right to have incomplete personal data completed, including by means of providing a supplementary statement."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller. 'purpose' resolves to data subjects. Enables the right to rectification. Norms verify that rectification requests are fulfilled without undue delay."
     },
     {
-      "path": "data-subject-rights/RightToRestriction.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "data-subject-rights/GdprRightToRestriction.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 18",
+        "paragraphs": [
+          "18(1)",
+          "18(2)",
+          "18(3)"
+        ],
+        "text": "The data subject shall have the right to obtain from the controller restriction of processing where one of the following applies: (a) the accuracy of the personal data is contested by the data subject, for a period enabling the controller to verify the accuracy; (b) the processing is unlawful and the data subject opposes erasure and requests restriction of use instead; (c) the controller no longer needs the personal data but they are required by the data subject for the establishment, exercise or defence of legal claims; (d) the data subject has objected to processing pursuant to Article 21(1) pending the verification whether the legitimate grounds of the controller override those of the data subject."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller. 'purpose' resolves to data subjects. Mandates enabling the right to restriction of processing under four specified grounds. When processing is restricted, data may only be stored; any other processing requires data subject's consent or is for legal claims, protection of rights, or important public interest. Operationalized by Norm checking restriction is applied."
     },
     {
-      "path": "data-subject-rights/TransparentCommunication.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "data-subject-rights/GdprTransparentCommunication.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 12",
+        "paragraphs": [
+          "12(1)",
+          "12(2)",
+          "12(3)"
+        ],
+        "text": "The controller shall take appropriate measures to provide any information referred to in Articles 13 and 14 and any communication under Articles 15 to 22 and 34 relating to processing to the data subject in a concise, transparent, intelligible and easily accessible form, using clear and plain language, in particular for any information addressed specifically to a child. The information shall be provided in writing, or by other means, including, where appropriate, by electronic means. [...] The controller shall facilitate the exercise of data subject rights under Articles 15 to 22."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller (accountable). 'purpose' resolves to the adopter's personal data processing scope. This Directive mandates transparent communication about all processing. Operationalized by Norms checking information provision completeness and format requirements."
     },
     {
-      "path": "impact-assessment/Dpia.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "impact-assessment/GdprDpia.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 35",
+        "paragraphs": [
+          "35(1)",
+          "35(3)",
+          "35(7)"
+        ],
+        "text": "Where a type of processing in particular using new technologies, and taking into account the nature, scope, context and purposes of the processing, is likely to result in a high risk to the rights and freedoms of natural persons, the controller shall, prior to the processing, carry out an assessment of the impact of the envisaged processing operations on the protection of personal data. A data protection impact assessment referred to in paragraph 1 shall in particular be required in the case of: (a) a systematic and extensive evaluation of personal aspects relating to natural persons which is based on automated processing, including profiling, and on which decisions are based that produce legal effects concerning the natural person or similarly significantly affect the natural person; (b) processing on a large scale of special categories of data referred to in Article 9(1), or of personal data relating to criminal convictions and offences referred to in Article 10; or (c) a systematic monitoring of a publicly accessible area on a large scale."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller (accountable). 'purpose' resolves to the adopter's personal data processing scope \u2014 DPIA governs the processing system's risk assessment capabilities. Mandates DPIA prior to high-risk processing. Art 35(3) lists three mandatory scenarios. Art 35(7) specifies minimum DPIA contents. Art 36 requires prior consultation with supervisory authority when residual risk remains HIGH. Operationalized by Norms checking DPIA conducted, contents complete, and prior consultation."
     },
     {
-      "path": "impact-assessment/DpiaConducted.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "impact-assessment/GdprDpiaConducted.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 35(1)",
+        "paragraphs": [
+          "35(1)",
+          "35(3)"
+        ],
+        "text": "Where a type of processing in particular using new technologies, and taking into account the nature, scope, context and purposes of the processing, is likely to result in a high risk to the rights and freedoms of natural persons, the controller shall, prior to the processing, carry out an assessment of the impact of the envisaged processing operations on the protection of personal data. A data protection impact assessment shall in particular be required in the case of: (a) a systematic and extensive evaluation of personal aspects based on automated processing, including profiling; (b) processing on a large scale of special categories of data; or (c) a systematic monitoring of a publicly accessible area on a large scale."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/impact-assessment/GdprDpia/v1"
     },
     {
-      "path": "impact-assessment/DpiaContentsComplete.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "impact-assessment/GdprDpiaContentsComplete.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 35(7)",
+        "paragraphs": [
+          "35(7)"
+        ],
+        "text": "The assessment shall contain at least: (a) a systematic description of the envisaged processing operations and the purposes of the processing, including, where applicable, the legitimate interest pursued by the controller; (b) an assessment of the necessity and proportionality of the processing operations in relation to the purposes; (c) an assessment of the risks to the rights and freedoms of data subjects referred to in paragraph 1; and (d) the measures envisaged to address the risks, including safeguards, security measures and mechanisms to ensure the protection of personal data and to demonstrate compliance with this Regulation."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/impact-assessment/GdprDpia/v1"
     },
     {
       "path": "impact-assessment/GdprImpactAssessment.archetype.json"
     },
     {
-      "path": "impact-assessment/PriorConsultation.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "impact-assessment/GdprPriorConsultation.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 36(1)",
+        "paragraphs": [
+          "36(1)"
+        ],
+        "text": "The controller shall consult the supervisory authority prior to processing where a data protection impact assessment under Article 35 indicates that the processing would result in a high risk in the absence of measures taken by the controller to mitigate the risk."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/impact-assessment/GdprDpia/v1"
     },
     {
-      "path": "lawful-basis/ChildConsent.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "lawful-basis/GdprChildConsent.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 8",
+        "paragraphs": [
+          "8(1)",
+          "8(2)"
+        ],
+        "text": "Where point (a) of Article 6(1) applies, in relation to the offer of information society services directly to a child, the processing of the personal data of a child shall be lawful where the child is at least 16 years old. Where the child is below the age of 16 years, such processing shall be lawful only if and to the extent that consent is given or authorised by the holder of parental responsibility over the child. [...] The controller shall make reasonable efforts to verify in such cases that consent is given or authorised by the holder of parental responsibility over the child, taking into consideration available technology."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller (accountable). 'purpose' resolves to the adopter's personal data processing scope. Mandates parental consent verification when offering information society services directly to a child under 16 (or lower age set by Member State, not below 13). Operationalized by Norm checking parental consent and age verification."
     },
     {
-      "path": "lawful-basis/ConsentDemonstrable.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "lawful-basis/GdprConsentDemonstrable.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 7(1)",
+        "paragraphs": [
+          "7(1)"
+        ],
+        "text": "Where processing is based on consent, the controller shall be able to demonstrate that the data subject has consented to processing of his or her personal data."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/lawful-basis/GdprConsentRequirements/v1"
     },
     {
-      "path": "lawful-basis/ConsentDistinguishable.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "lawful-basis/GdprConsentDistinguishable.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 7(2)",
+        "paragraphs": [
+          "7(2)"
+        ],
+        "text": "If the data subject's consent is given in the context of a written declaration which also concerns other matters, the request for consent shall be presented in a manner which is clearly distinguishable from the other matters, in an intelligible and easily accessible form, using clear and plain language."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/lawful-basis/GdprConsentRequirements/v1"
     },
     {
-      "path": "lawful-basis/ConsentFreelyGiven.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "lawful-basis/GdprConsentFreelyGiven.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 7(4)",
+        "paragraphs": [
+          "7(4)"
+        ],
+        "text": "When assessing whether consent is freely given, utmost account shall be taken of whether, inter alia, the performance of a contract, including the provision of a service, is conditional on consent to the processing of personal data that is not necessary for the performance of that contract."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/lawful-basis/GdprConsentRequirements/v1"
     },
     {
-      "path": "lawful-basis/ConsentRequirements.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "lawful-basis/GdprConsentRequirements.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 7",
+        "paragraphs": [
+          "7(1)",
+          "7(2)",
+          "7(3)",
+          "7(4)"
+        ],
+        "text": "Where processing is based on consent, the controller shall be able to demonstrate that the data subject has consented to processing of his or her personal data. If the data subject's consent is given in the context of a written declaration which also concerns other matters, the request for consent shall be presented in a manner which is clearly distinguishable from the other matters, in an intelligible and easily accessible form, using clear and plain language. The data subject shall have the right to withdraw his or her consent at any time. [...] When assessing whether consent is freely given, utmost account shall be taken of whether the performance of a contract, including the provision of a service, is conditional on consent to the processing of personal data that is not necessary for the performance of that contract."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller (accountable). 'purpose' resolves to the adopter's personal data processing scope. Applies only when consent is the lawful basis for processing. Operationalized by Norms checking each consent condition: demonstrability, distinguishability, withdrawal mechanism, and freely given status."
     },
     {
-      "path": "lawful-basis/ConsentWithdrawable.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "lawful-basis/GdprConsentWithdrawable.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 7(3)",
+        "paragraphs": [
+          "7(3)"
+        ],
+        "text": "The data subject shall have the right to withdraw his or her consent at any time. The withdrawal of consent shall not affect the lawfulness of processing based on consent before its withdrawal. Prior to giving consent, the data subject shall be informed thereof. It shall be as easy to withdraw as to give consent."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/lawful-basis/GdprConsentRequirements/v1"
     },
     {
       "path": "lawful-basis/GdprConsent.archetype.json"
@@ -300,86 +946,270 @@
       "path": "lawful-basis/GdprSpecialCategoryData.archetype.json"
     },
     {
-      "path": "lawful-basis/LawfulBasisDocumented.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "lawful-basis/GdprLawfulBasisDocumented.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 6(1)",
+        "paragraphs": [
+          "6(1)"
+        ],
+        "text": "Processing shall be lawful only if and to the extent that at least one of the following applies: (a) the data subject has given consent to the processing of his or her personal data for one or more specific purposes; (b) processing is necessary for the performance of a contract to which the data subject is party or in order to take steps at the request of the data subject prior to entering into a contract; (c) processing is necessary for compliance with a legal obligation to which the controller is subject; (d) processing is necessary in order to protect the vital interests of the data subject or of another natural person; (e) processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller; (f) processing is necessary for the purposes of the legitimate interests pursued by the controller or by a third party."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/lawful-basis/GdprLawfulProcessing/v1"
     },
     {
-      "path": "lawful-basis/LawfulProcessing.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "lawful-basis/GdprLawfulProcessing.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 6",
+        "paragraphs": [
+          "6(1)"
+        ],
+        "text": "Processing shall be lawful only if and to the extent that at least one of the following applies: (a) the data subject has given consent to the processing of his or her personal data for one or more specific purposes; (b) processing is necessary for the performance of a contract to which the data subject is party; (c) processing is necessary for compliance with a legal obligation to which the controller is subject; (d) processing is necessary in order to protect the vital interests of the data subject or of another natural person; (e) processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority; (f) processing is necessary for the purposes of the legitimate interests pursued by the controller or by a third party."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller (accountable). 'purpose' resolves to the adopter's personal data processing scope. Every processing activity MUST have a documented lawful basis. Operationalized by Norms checking that a lawful basis is identified and documented for each processing operation."
     },
     {
-      "path": "lawful-basis/ParentalConsentVerified.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "lawful-basis/GdprParentalConsentVerified.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 8(1)-(2)",
+        "paragraphs": [
+          "8(1)",
+          "8(2)"
+        ],
+        "text": "Where point (a) of Article 6(1) applies, in relation to the offer of information society services directly to a child, the processing of the personal data of a child shall be lawful where the child is at least 16 years old. Where the child is below the age of 16 years, such processing shall be lawful only if and to the extent that consent is given or authorised by the holder of parental responsibility over the child. The controller shall make reasonable efforts to verify in such cases that consent is given or authorised by the holder of parental responsibility over the child, taking into consideration available technology."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/lawful-basis/GdprChildConsent/v1"
     },
     {
-      "path": "lawful-basis/SpecialCategoryProhibition.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "lawful-basis/GdprSpecialCategoryProhibition.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 9(1)",
+        "paragraphs": [
+          "9(1)",
+          "9(2)"
+        ],
+        "text": "Processing of personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade union membership, and the processing of genetic data, biometric data for the purpose of uniquely identifying a natural person, data concerning health or data concerning a natural person's sex life or sexual orientation shall be prohibited. Paragraph 1 shall not apply if one of the following applies: (a) the data subject has given explicit consent; (b) processing is necessary for the purposes of carrying out the obligations and exercising specific rights of the controller or of the data subject in the field of employment and social security and social protection law; ... (j) processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/lawful-basis/GdprSpecialCategoryRestriction/v1"
     },
     {
-      "path": "lawful-basis/SpecialCategoryRestriction.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "lawful-basis/GdprSpecialCategoryRestriction.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 9",
+        "paragraphs": [
+          "9(1)",
+          "9(2)"
+        ],
+        "text": "Processing of personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade union membership, and the processing of genetic data, biometric data for the purpose of uniquely identifying a natural person, data concerning health or data concerning a natural person's sex life or sexual orientation shall be prohibited. Paragraph 1 shall not apply if one of the following applies: (a) the data subject has given explicit consent to the processing of those personal data for one or more specified purposes; [...] (b) processing is necessary for the purposes of carrying out the obligations and exercising specific rights of the controller or of the data subject in the field of employment and social security and social protection law; [...]"
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller (accountable). 'purpose' resolves to the adopter's personal data processing scope. Default prohibition on processing special category data unless a condition from Art 9(2) is met. The modal MUST_NOT reflects the prohibition; Norms verify that a valid processing condition applies when special category data is present."
     },
     {
-      "path": "principles/Accountability.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "principles/GdprAccountability.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 5(2)",
+        "paragraphs": [
+          "5(2)"
+        ],
+        "text": "The controller shall be responsible for, and be able to demonstrate compliance with, paragraph 1 ('accountability')."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/principles/GdprProcessingPrinciples/v1"
     },
     {
-      "path": "principles/Accuracy.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "principles/GdprAccuracy.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 5(1)(d)",
+        "paragraphs": [
+          "5(1)(d)"
+        ],
+        "text": "Personal data shall be accurate and, where necessary, kept up to date; every reasonable step must be taken to ensure that personal data that are inaccurate, having regard to the purposes for which they are processed, are erased or rectified without delay ('accuracy')."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/principles/GdprProcessingPrinciples/v1"
     },
     {
-      "path": "principles/DataMinimisation.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "principles/GdprDataMinimisation.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 5(1)(c)",
+        "paragraphs": [
+          "5(1)(c)"
+        ],
+        "text": "Personal data shall be adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed ('data minimisation')."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/principles/GdprProcessingPrinciples/v1"
     },
     {
       "path": "principles/GdprProcessingPrinciple.archetype.json"
     },
     {
-      "path": "principles/IntegrityConfidentiality.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "principles/GdprIntegrityConfidentiality.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 5(1)(f)",
+        "paragraphs": [
+          "5(1)(f)"
+        ],
+        "text": "Personal data shall be processed in a manner that ensures appropriate security of the personal data, including protection against unauthorised or unlawful processing and against accidental loss, destruction or damage, using appropriate technical or organisational measures ('integrity and confidentiality')."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/principles/GdprProcessingPrinciples/v1"
     },
     {
-      "path": "principles/LawfulnessFairnessTransparency.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "principles/GdprLawfulnessFairnessTransparency.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 5(1)(a)",
+        "paragraphs": [
+          "5(1)(a)"
+        ],
+        "text": "Personal data shall be processed lawfully, fairly and in a transparent manner in relation to the data subject ('lawfulness, fairness and transparency')."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/principles/GdprProcessingPrinciples/v1"
     },
     {
-      "path": "principles/ProcessingPrinciples.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "principles/GdprProcessingPrinciples.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 5",
+        "paragraphs": [
+          "5(1)(a)",
+          "5(1)(b)",
+          "5(1)(c)",
+          "5(1)(d)",
+          "5(1)(e)",
+          "5(1)(f)",
+          "5(2)"
+        ],
+        "text": "Personal data shall be: (a) processed lawfully, fairly and in a transparent manner in relation to the data subject ('lawfulness, fairness and transparency'); (b) collected for specified, explicit and legitimate purposes and not further processed in a manner that is incompatible with those purposes ('purpose limitation'); (c) adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed ('data minimisation'); (d) accurate and, where necessary, kept up to date ('accuracy'); (e) kept in a form which permits identification of data subjects for no longer than is necessary ('storage limitation'); (f) processed in a manner that ensures appropriate security ('integrity and confidentiality'). The controller shall be responsible for, and be able to demonstrate compliance with, paragraph 1 ('accountability')."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the entity acting as data controller (accountable). 'purpose' resolves to the adopter's personal data processing scope \u2014 the governed system/activities. This Directive mandates compliance with all seven processing principles. Operationalized by 7 Norms (one per principle). The accountability principle (Art 5(2)) requires the controller to demonstrate compliance \u2014 this means compliance evidence must exist, not merely compliance itself."
     },
     {
-      "path": "principles/PurposeLimitation.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "principles/GdprPurposeLimitation.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 5(1)(b)",
+        "paragraphs": [
+          "5(1)(b)"
+        ],
+        "text": "Personal data shall be collected for specified, explicit and legitimate purposes and not further processed in a manner that is incompatible with those purposes; further processing for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes shall, in accordance with Article 89(1), not be considered to be incompatible with the initial purposes ('purpose limitation')."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/principles/GdprProcessingPrinciples/v1"
     },
     {
-      "path": "principles/StorageLimitation.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "principles/GdprStorageLimitation.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 5(1)(e)",
+        "paragraphs": [
+          "5(1)(e)"
+        ],
+        "text": "Personal data shall be kept in a form which permits identification of data subjects for no longer than is necessary for the purposes for which the personal data are processed; personal data may be stored for longer periods insofar as the personal data will be processed solely for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) subject to implementation of the appropriate technical and organisational measures required by this Regulation in order to safeguard the rights and freedoms of the data subject ('storage limitation')."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/principles/GdprProcessingPrinciples/v1"
     },
     {
-      "path": "transfers/AdequacyDecision.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "transfers/GdprAdequacyDecision.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 45(1)",
+        "paragraphs": [
+          "45(1)"
+        ],
+        "text": "A transfer of personal data to a third country or an international organisation may take place where the Commission has decided that the third country, a territory or one or more specified sectors within that third country, or the international organisation in question ensures an adequate level of protection. Such a transfer shall not require any specific authorisation."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/transfers/GdprTransferRestriction/v1"
     },
     {
-      "path": "transfers/AppropriateSafeguards.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "transfers/GdprAppropriateSafeguards.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 46(1)",
+        "paragraphs": [
+          "46(1)",
+          "46(2)"
+        ],
+        "text": "In the absence of a decision pursuant to Article 45(3), a controller or processor may transfer personal data to a third country or an international organisation only if the controller or processor has provided appropriate safeguards, and on condition that enforceable data subject rights and effective legal remedies for data subjects are available. The appropriate safeguards referred to in paragraph 1 may be provided for, without requiring any specific authorisation from a supervisory authority, by: (a) a legally binding and enforceable instrument between public authorities or bodies; (b) binding corporate rules; (c) standard data protection clauses adopted by the Commission; (d) standard data protection clauses adopted by a supervisory authority and approved by the Commission; (e) an approved code of conduct; (f) an approved certification mechanism."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/transfers/GdprTransferRestriction/v1"
     },
     {
-      "path": "transfers/DerogationConditionMet.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "transfers/GdprDerogationConditionMet.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 49(1)",
+        "paragraphs": [
+          "49(1)"
+        ],
+        "text": "In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a transfer or a set of transfers of personal data to a third country or an international organisation shall take place only on one of the following conditions: (a) the data subject has explicitly consented to the proposed transfer; (b) the transfer is necessary for the performance of a contract between the data subject and the controller; (c) the transfer is necessary for important reasons of public interest; (d) the transfer is necessary for the establishment, exercise or defence of legal claims; (e) the transfer is necessary in order to protect the vital interests of the data subject; (f) the transfer is made from a register which according to Union or Member State law is intended to provide information to the public."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/transfers/GdprTransferRestriction/v1"
     },
     {
       "path": "transfers/GdprTransferMechanism.archetype.json"
     },
     {
-      "path": "transfers/TransferImpactAssessed.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "transfers/GdprTransferImpactAssessed.norm.json",
+      "source": {
+        "authority": "European Data Protection Board",
+        "regulation": "EDPB Recommendations 01/2020 on measures that supplement transfer tools to ensure compliance with the EU level of protection of personal data",
+        "article": "Step 3",
+        "paragraphs": [
+          "Step 3"
+        ],
+        "text": "You need to assess if there is anything in the law or practice of the third country that may impinge on the effectiveness of the appropriate safeguards of the transfer tools you are relying on, in the context of your specific transfer. This assessment must take into account the circumstances of the transfer and the supplementary measures you could put in place."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/transfers/GdprTransferRestriction/v1"
     },
     {
-      "path": "transfers/TransferRestriction.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "transfers/GdprTransferRestriction.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 44",
+        "paragraphs": [
+          "44",
+          "45(1)",
+          "46(1)",
+          "49(1)"
+        ],
+        "text": "Any transfer of personal data which are undergoing processing or are intended for processing after transfer to a third country or to an international organisation shall take place only if, subject to the other provisions of this Regulation, the conditions laid down in this Chapter are complied with by the controller and processor, including for onward transfers of personal data from the third country or an international organisation to another third country or to another international organisation. All provisions in this Chapter shall be applied in order to ensure that the level of protection of natural persons guaranteed by this Regulation is not undermined."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the data controller or processor performing international transfers (accountable). 'purpose' resolves to the adopter's personal data processing scope \u2014 transfer restrictions govern the processing system's cross-border data flow capabilities. Mandates that international transfers occur only under an approved transfer mechanism (adequacy decision, appropriate safeguards, BCRs, SCCs, or derogation). Operationalized by Norms checking transfer safeguard in place, adequacy validity, appropriate safeguards, and derogation conditions."
     },
     {
-      "path": "transfers/TransferSafeguardInPlace.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "transfers/GdprTransferSafeguardInPlace.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Regulation (EU) 2016/679 (GDPR)",
+        "article": "Article 44",
+        "paragraphs": [
+          "44"
+        ],
+        "text": "Any transfer of personal data which are undergoing processing or are intended for processing after transfer to a third country or to an international organisation shall take place only if, subject to the other provisions of this Regulation, the conditions laid down in this Chapter are complied with by the controller and processor, including for onward transfers of personal data from the third country or an international organisation to another third country or to another international organisation."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/gdpr/transfers/GdprTransferRestriction/v1"
     }
   ]
 }

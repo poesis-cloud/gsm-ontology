@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "nis2",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Directive (EU) 2022/2555 (NIS2)",
-    "article": "Article 21(3)",
-    "paragraphs": [
-      "21(3)"
-    ],
-    "text": "Member States shall ensure that, when considering which measures referred to in point (d) of paragraph 2 are appropriate, entities take into account the vulnerabilities specific to each direct supplier and service provider and the overall quality of products and cybersecurity practices of their suppliers and service providers, including their secure development procedures."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/nis2/supply-chain/SupplyChainSecurity/v1",
   "qualifier": "gsmarc://gsm-frameworks/nis2/supply-chain/Nis2SupplyChainSecurity/v1",
   "applicability": "Nis2EntityClassification.entityTier in ['ESSENTIAL', 'IMPORTANT'] && Nis2SupplyChainSecurity.supplierAssessmentCompleted == true",
   "assertion": "secureDevProcedureVerified == true",

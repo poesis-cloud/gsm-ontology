@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25012/system-dependent-quality/DataPortability/v1",
-  "title": "DataPortability",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25012/system-dependent-quality/Iso25000DataPortability/v1",
+  "title": "Iso25000DataPortability",
   "description": "ISO 25012-sourced data quality archetype \u2014 Portability system-dependent data quality characteristic. The degree to which data has attributes that enable it to be installed, replaced, or moved from one system to another preserving the existing quality in a specific context of use. Rootless archetype \u2014 used as qualifier in Directives/Norms governing data entities. Source: ISO/IEC 25012 (System-Dependent Data Quality \u2014 Portability).",
   "type": "object",
   "required": [
@@ -40,6 +36,5 @@
       ],
       "description": "Expected complexity of migrating data between systems."
     }
-  },
-  "additionalProperties": false
+  }
 }

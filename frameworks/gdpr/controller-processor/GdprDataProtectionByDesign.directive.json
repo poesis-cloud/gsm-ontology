@@ -1,22 +1,7 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 25",
-    "paragraphs": [
-      "25(1)",
-      "25(2)"
-    ],
-    "text": "Taking into account the state of the art, the cost of implementation and the nature, scope, context and purposes of processing as well as the risks of varying likelihood and severity for rights and freedoms of natural persons posed by the processing, the controller shall, both at the time of the determination of the means for processing and at the time of the processing itself, implement appropriate technical and organisational measures, such as pseudonymisation, which are designed to implement data-protection principles, such as data minimisation, in an effective manner. [...] The controller shall implement appropriate technical and organisational measures for ensuring that, by default, only personal data which are necessary for each specific purpose of the processing are processed."
-  },
   "structure": "$gdpr:data-controller",
   "modal": "MUST",
   "verb": "ENSURE",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprDataProtectionByDesign/v1",
-  "purpose": "$gdpr:personal-data-processing",
-  "deploymentNotes": "At deployment: 'structure' resolves to the data controller (accountable). 'purpose' resolves to the adopter's personal data processing scope. Mandates data protection by design (Art 25(1)) and by default (Art 25(2)). Operationalized by Norms checking implementation of technical/organisational measures and default minimisation."
+  "purpose": "$gdpr:personal-data-processing"
 }

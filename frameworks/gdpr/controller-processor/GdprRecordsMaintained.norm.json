@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 30(1)",
-    "paragraphs": [
-      "30(1)"
-    ],
-    "text": "Each controller and, where applicable, the controller's representative, shall maintain a record of processing activities under its responsibility. That record shall contain all of the following information: (a) the name and contact details of the controller and, where applicable, the joint controller, the controller's representative and the data protection officer; (b) the purposes of the processing; (c) a description of the categories of data subjects and of the categories of personal data; (d) the categories of recipients to whom the personal data have been or will be disclosed; (e) where applicable, transfers of personal data to a third country or an international organisation; (f) where possible, the envisaged time limits for erasure of the different categories of data; (g) where possible, a general description of the technical and organisational security measures referred to in Article 32(1)."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/RecordsOfProcessing/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprProcessingActivity/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER']",
   "assertion": "recordsMaintained == true",

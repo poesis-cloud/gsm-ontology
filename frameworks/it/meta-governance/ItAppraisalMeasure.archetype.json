@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/AppraisalMeasure/v1",
-  "title": "AppraisalMeasure",
-  "framework": {
-    "name": "itip",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/it/meta-governance/ItAppraisalMeasure/v1",
+  "title": "ItAppraisalMeasure",
   "description": "ITIP data archetype \u2014 quantitative governance measure for dashboard indicators. Rootless (no GSM base extension). Types the effect payload emitted by appraisal Mechanisms for every rule evaluation, regardless of whether a threshold was breached. Each measure provides the raw indicator value, its unit, optional component breakdown, and optional entity-level details. Stored by the BFF for trend computation and dashboard rendering. Source: ITIP (domain archetype for governance appraisal).",
   "type": "object",
   "required": [
@@ -69,6 +65,5 @@
       },
       "default": []
     }
-  },
-  "additionalProperties": false
+  }
 }

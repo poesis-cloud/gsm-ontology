@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25012/inherent-quality/DataCompleteness/v1",
-  "title": "DataCompleteness",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25012/inherent-quality/Iso25000DataCompleteness/v1",
+  "title": "Iso25000DataCompleteness",
   "description": "ISO 25012-sourced data quality archetype \u2014 Completeness inherent data quality characteristic. The degree to which subject data associated with an entity has values for all expected attributes and related entity instances in a specific context of use. Rootless archetype \u2014 used as qualifier in Directives/Norms governing data entities. Source: ISO/IEC 25012 (Inherent Data Quality \u2014 Completeness).",
   "type": "object",
   "required": [
@@ -39,6 +35,5 @@
       ],
       "description": "Policy for handling missing/null values in data records."
     }
-  },
-  "additionalProperties": false
+  }
 }

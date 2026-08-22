@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 33(5)",
-    "paragraphs": [
-      "33(5)"
-    ],
-    "text": "The controller shall document any personal data breaches, comprising the facts relating to the personal data breach, its effects and the remedial action taken. That documentation shall enable the supervisory authority to verify compliance with this Article."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/breach-notification/BreachNotificationAuthority/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/breach-notification/GdprDataBreach/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprDataBreach.personalDataBreach == true",
   "assertion": "breachDocumented == true",

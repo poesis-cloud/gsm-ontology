@@ -2,10 +2,6 @@
   "$schema": "gsmarc://gsm/Archetype/v1",
   "$id": "gsmarc://gsm-frameworks/nis2/entity-classification/Nis2SectorScope/v1",
   "title": "Nis2SectorScope",
-  "framework": {
-    "name": "nis2",
-    "version": "1.0.0"
-  },
   "description": "NIS2-sourced archetype \u2014 sector and subsector classification under Directive (EU) 2022/2555. Determines which NIS2 sector an entity belongs to and its criticality level. Rootless \u2014 regulatory scoping dimension. Source: NIS2 Annexes I (high-criticality) and II (other critical sectors).",
   "type": "object",
   "required": [
@@ -51,6 +47,5 @@
       "$gsm:queryable": true,
       "description": "Which NIS2 annex classifies this sector. ANNEX_I: sectors of high criticality. ANNEX_II: other critical sectors. Determines baseline obligation level."
     }
-  },
-  "additionalProperties": false
+  }
 }

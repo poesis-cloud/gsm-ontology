@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/business-architecture/BusinessEvent/v1",
-  "title": "BusinessEvent",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/business-architecture/TogafBusinessEvent/v1",
+  "title": "TogafBusinessEvent",
   "description": "TOGAF-sourced archetype \u2014 event classification for data flowing through Interactions. A business event signals that something of governance relevance has occurred. Used as the data Archetype for Effectors and Receptors (archetype field). Rootless \u2014 not a Structure, Mechanism, or Interaction; it types the payload exchanged between them. Source framework: TOGAF (Content Metamodel \u2192 Business Event).",
   "type": "object",
   "required": [
@@ -34,6 +30,5 @@
       "$gsm:queryable": true,
       "description": "How the event is triggered. TOGAF mapping: Event trigger mechanism."
     }
-  },
-  "additionalProperties": false
+  }
 }

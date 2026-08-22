@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 5(1)(c)",
-    "paragraphs": [
-      "5(1)(c)"
-    ],
-    "text": "Personal data shall be adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed ('data minimisation')."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/principles/ProcessingPrinciples/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/principles/GdprProcessingPrinciple/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprProcessingPrinciple.principle == 'DATA_MINIMISATION'",
   "assertion": "principleCompliant == true",

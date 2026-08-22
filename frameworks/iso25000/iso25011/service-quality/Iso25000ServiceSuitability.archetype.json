@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25011/service-quality/ServiceSuitability/v1",
-  "title": "ServiceSuitability",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25011/service-quality/Iso25000ServiceSuitability/v1",
+  "title": "Iso25000ServiceSuitability",
   "description": "ISO 25011 quality archetype \u2014 Suitability viability dimension. Degree to which an IT service provides functions that meet stated and implied needs when the service is used under specified conditions. Sub-characteristics: Completeness, Correctness, Appropriateness, Consistency. Rootless archetype \u2014 used as qualifier in Directives/Norms and as data type for Effectors/Receptors carrying service suitability state. Source: ISO/IEC TS 25011:2017 \u00a77.1.",
   "type": "object",
   "required": [
@@ -50,6 +46,5 @@
       ],
       "description": "Degree to which the IT service behavior and information is consistent across service delivery channels."
     }
-  },
-  "additionalProperties": false
+  }
 }

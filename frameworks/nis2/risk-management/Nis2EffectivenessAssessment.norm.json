@@ -1,15 +1,4 @@
 {
-  "framework": {
-    "name": "nis2",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Directive (EU) 2022/2555 (NIS2)",
-    "article": "Article 21(2)(f)",
-    "text": "[Measures shall include at least:] (f) policies and procedures to assess the effectiveness of cybersecurity risk-management measures."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/nis2/risk-management/RiskManagement/v1",
   "qualifier": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2RiskManagementMeasure/v1",
   "applicability": "Nis2EntityClassification.entityTier in ['ESSENTIAL', 'IMPORTANT'] && Nis2RiskManagementMeasure.measureCategory == 'EFFECTIVENESS_ASSESSMENT'",
   "assertion": "implementationLevel != 'NOT_IMPLEMENTED'",

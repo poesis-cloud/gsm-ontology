@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/business-architecture/Role/v1",
-  "title": "Role",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/business-architecture/TogafRole/v1",
+  "title": "TogafRole",
   "description": "TOGAF-sourced archetype \u2014 a responsibility or set of responsibilities assigned to an Actor. Roles define what an Actor does within a specific context; Actors play one or more Roles. Rootless \u2014 a Role is not itself an active system but a classification of responsibility. TOGAF mapping: Role (Content Metamodel, Business Architecture domain). Source framework: TOGAF (Business Architecture, Content Framework).",
   "type": "object",
   "required": [
@@ -39,6 +35,5 @@
       "minLength": 1,
       "description": "Human-readable description of the role's responsibilities."
     }
-  },
-  "additionalProperties": false
+  }
 }

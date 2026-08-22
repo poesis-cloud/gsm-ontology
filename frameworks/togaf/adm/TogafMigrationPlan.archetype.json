@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/adm/MigrationPlan/v1",
-  "title": "MigrationPlan",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/adm/TogafMigrationPlan/v1",
+  "title": "TogafMigrationPlan",
   "description": "TOGAF-sourced archetype \u2014 a definition of the migration strategy and execution plan for transitioning from baseline to target architecture. A governance definition of change execution. Rootless, domain-scoped. TOGAF mapping: Migration Plan (ADM Phase F, Migration Planning). Source framework: TOGAF (ADM, Phase F).",
   "type": "object",
   "required": [
@@ -39,6 +35,5 @@
       "$gsm:queryable": true,
       "description": "Whether the migration plan includes rollback capability. TOGAF mapping: Migration Planning reversibility assessment."
     }
-  },
-  "additionalProperties": false
+  }
 }

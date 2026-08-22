@@ -1,12 +1,8 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/data-architecture/LogicalDataComponent/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkStructure/v1",
-  "title": "LogicalDataComponent",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/data-architecture/TogafLogicalDataComponent/v1",
+  "$ref": "gsmarc://gsm/Structure/v1",
+  "title": "TogafLogicalDataComponent",
   "description": "TOGAF-sourced structural archetype \u2014 logical data entity or grouping independent of physical storage technology. Complementary definition layer to PhysicalDataComponent: both define the same identity (data storage) at different abstraction levels (logical = strategic/design, physical = infrastructure/implementation). Extends Structure with TOGAF Data Architecture vocabulary. TOGAF mapping: Logical Data Component (Content Metamodel, Data Architecture domain). Source framework: TOGAF (Data Architecture, Content Framework).",
   "type": "object",
   "required": [

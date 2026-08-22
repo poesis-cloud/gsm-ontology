@@ -1,27 +1,7 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 5",
-    "paragraphs": [
-      "5(1)(a)",
-      "5(1)(b)",
-      "5(1)(c)",
-      "5(1)(d)",
-      "5(1)(e)",
-      "5(1)(f)",
-      "5(2)"
-    ],
-    "text": "Personal data shall be: (a) processed lawfully, fairly and in a transparent manner in relation to the data subject ('lawfulness, fairness and transparency'); (b) collected for specified, explicit and legitimate purposes and not further processed in a manner that is incompatible with those purposes ('purpose limitation'); (c) adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed ('data minimisation'); (d) accurate and, where necessary, kept up to date ('accuracy'); (e) kept in a form which permits identification of data subjects for no longer than is necessary ('storage limitation'); (f) processed in a manner that ensures appropriate security ('integrity and confidentiality'). The controller shall be responsible for, and be able to demonstrate compliance with, paragraph 1 ('accountability')."
-  },
   "structure": "$gdpr:data-controller",
   "modal": "MUST",
   "verb": "ENSURE",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/principles/GdprProcessingPrinciple/v1",
-  "purpose": "$gdpr:personal-data-processing",
-  "deploymentNotes": "At deployment: 'structure' resolves to the entity acting as data controller (accountable). 'purpose' resolves to the adopter's personal data processing scope \u2014 the governed system/activities. This Directive mandates compliance with all seven processing principles. Operationalized by 7 Norms (one per principle). The accountability principle (Art 5(2)) requires the controller to demonstrate compliance \u2014 this means compliance evidence must exist, not merely compliance itself."
+  "purpose": "$gdpr:personal-data-processing"
 }

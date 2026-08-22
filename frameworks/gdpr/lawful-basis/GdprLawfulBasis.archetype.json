@@ -2,10 +2,6 @@
   "$schema": "gsmarc://gsm/Archetype/v1",
   "$id": "gsmarc://gsm-frameworks/gdpr/lawful-basis/GdprLawfulBasis/v1",
   "title": "GdprLawfulBasis",
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
   "description": "GDPR-sourced archetype \u2014 lawful basis for processing personal data under Regulation (EU) 2016/679. Article 6 defines six mutually exclusive lawful bases. At least one must apply to every processing operation. Rootless \u2014 regulatory compliance dimension. Source: GDPR Article 6(1)(a)-(f).",
   "type": "object",
   "required": [
@@ -44,6 +40,5 @@
       "$gsm:queryable": true,
       "description": "Result of the balancing test between controller/third-party legitimate interests and data subject fundamental rights and freedoms. INTERESTS_PREVAIL: processing justified. RIGHTS_PREVAIL: processing not justified. INCONCLUSIVE: further assessment needed. Source: GDPR Art 6(1)(f)."
     }
-  },
-  "additionalProperties": false
+  }
 }

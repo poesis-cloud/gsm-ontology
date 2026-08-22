@@ -1,19 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 22(1)",
-    "paragraphs": [
-      "22(1)",
-      "22(3)"
-    ],
-    "text": "The data subject shall have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning him or her or similarly significantly affects him or her. Paragraph 1 shall not apply if the decision: (a) is necessary for entering into, or performance of, a contract between the data subject and a data controller; (b) is authorised by Union or Member State law; or (c) is based on the data subject's explicit consent. In the cases referred to in paragraph 2(a) and (c), the data controller shall implement suitable measures to safeguard the data subject's rights and freedoms and legitimate interests, at least the right to obtain human intervention on the part of the controller, to express his or her point of view and to contest the decision."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/AutomatedDecisionMaking/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprDataSubjectRight/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprDataSubjectRight.rightType == 'AUTOMATED_DECISION_PROTECTION'",
   "assertion": "responseProvided == true && humanInterventionProvided == true",

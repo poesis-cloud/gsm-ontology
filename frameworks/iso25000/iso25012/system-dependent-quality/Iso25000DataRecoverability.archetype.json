@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25012/system-dependent-quality/DataRecoverability/v1",
-  "title": "DataRecoverability",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25012/system-dependent-quality/Iso25000DataRecoverability/v1",
+  "title": "Iso25000DataRecoverability",
   "description": "ISO 25012-sourced data quality archetype \u2014 Recoverability system-dependent data quality characteristic. The degree to which data has attributes that enable it to maintain and preserve a specified level of operations and quality, even in the event of failure, in a specific context of use. Rootless archetype \u2014 used as qualifier in Directives/Norms governing data entities. Source: ISO/IEC 25012 (System-Dependent Data Quality \u2014 Recoverability).",
   "type": "object",
   "required": [
@@ -34,6 +30,5 @@
       "$gsm:queryable": true,
       "description": "Data backup strategy. NONE = no backup. PERIODIC_SNAPSHOT = scheduled full backups. INCREMENTAL = differential changes captured. CONTINUOUS_REPLICATION = real-time data replication."
     }
-  },
-  "additionalProperties": false
+  }
 }

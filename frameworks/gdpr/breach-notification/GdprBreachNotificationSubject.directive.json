@@ -1,23 +1,7 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 34",
-    "paragraphs": [
-      "34(1)",
-      "34(2)",
-      "34(3)"
-    ],
-    "text": "When the personal data breach is likely to result in a high risk to the rights and freedoms of natural persons, the controller shall communicate the personal data breach to the data subject without undue delay. The communication to the data subject referred to in paragraph 1 shall describe in clear and plain language the nature of the personal data breach and contain at least the information and measures referred to in points (b), (c) and (d) of Article 33(3). The communication to the data subject referred to in paragraph 1 shall not be required if any of the following conditions are met: (a) the controller has implemented appropriate technical and organisational protection measures, and those measures were applied to the personal data affected by the personal data breach, in particular those that render the personal data unintelligible to any person who is not authorised to access it, such as encryption; (b) the controller has taken subsequent measures which ensure that the high risk to the rights and freedoms of data subjects referred to in paragraph 1 is no longer likely to materialise; (c) it would involve disproportionate effort."
-  },
   "structure": "$gdpr:data-controller",
   "modal": "MUST",
   "verb": "ENSURE",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/breach-notification/GdprDataBreach/v1",
-  "purpose": "$gdpr:personal-data-processing",
-  "deploymentNotes": "At deployment: 'structure' resolves to the data controller (accountable). 'purpose' resolves to the adopter's personal data processing scope \u2014 breach communication governs the processing system's incident response capabilities. Mandates breach communication to data subjects when risk is HIGH. Art 34(3) provides three exemptions (encryption, subsequent measures, disproportionate effort). Operationalized by Norms checking data subject notification when risk is HIGH."
+  "purpose": "$gdpr:personal-data-processing"
 }

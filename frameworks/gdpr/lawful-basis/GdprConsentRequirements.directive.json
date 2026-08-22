@@ -1,24 +1,7 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 7",
-    "paragraphs": [
-      "7(1)",
-      "7(2)",
-      "7(3)",
-      "7(4)"
-    ],
-    "text": "Where processing is based on consent, the controller shall be able to demonstrate that the data subject has consented to processing of his or her personal data. If the data subject's consent is given in the context of a written declaration which also concerns other matters, the request for consent shall be presented in a manner which is clearly distinguishable from the other matters, in an intelligible and easily accessible form, using clear and plain language. The data subject shall have the right to withdraw his or her consent at any time. [...] When assessing whether consent is freely given, utmost account shall be taken of whether the performance of a contract, including the provision of a service, is conditional on consent to the processing of personal data that is not necessary for the performance of that contract."
-  },
   "structure": "$gdpr:data-controller",
   "modal": "MUST",
   "verb": "ENSURE",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/lawful-basis/GdprConsent/v1",
-  "purpose": "$gdpr:personal-data-processing",
-  "deploymentNotes": "At deployment: 'structure' resolves to the data controller (accountable). 'purpose' resolves to the adopter's personal data processing scope. Applies only when consent is the lawful basis for processing. Operationalized by Norms checking each consent condition: demonstrability, distinguishability, withdrawal mechanism, and freely given status."
+  "purpose": "$gdpr:personal-data-processing"
 }

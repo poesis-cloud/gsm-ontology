@@ -1,12 +1,8 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/technology-architecture/TechnologyFunction/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkMechanism/v1",
-  "title": "TechnologyFunction",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/technology-architecture/TogafTechnologyFunction/v1",
+  "$ref": "gsmarc://gsm/Mechanism/v1",
+  "title": "TogafTechnologyFunction",
   "description": "TOGAF-sourced mechanism archetype \u2014 a behavioral unit providing technology processing, storage, or communication capability within a Technology Component. Analogous to ApplicationFunction (behavioral unit within Application Components). Extends Mechanism with TOGAF Technology Architecture vocabulary. TOGAF mapping: implicit in Content Metamodel (Technology Components deliver Technology Services through behavioral units). Source framework: TOGAF (Technology Architecture, Content Framework).",
   "type": "object",
   "required": [

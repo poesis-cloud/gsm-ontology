@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/governance/Assumption/v1",
-  "title": "Assumption",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/governance/TogafAssumption/v1",
+  "title": "TogafAssumption",
   "description": "TOGAF-sourced archetype \u2014 a statement taken to be true for planning purposes pending validation. Placed in unclassified/ for future GSM placement deliberation. TOGAF mapping: Assumption (ADM Requirements Management, Risk Management). Source framework: TOGAF (ADM, Requirements Management).",
   "type": "object",
   "required": [
@@ -38,6 +34,5 @@
       "minLength": 1,
       "description": "Method to validate or invalidate this assumption. TOGAF mapping: Assumption validation approach."
     }
-  },
-  "additionalProperties": false
+  }
 }

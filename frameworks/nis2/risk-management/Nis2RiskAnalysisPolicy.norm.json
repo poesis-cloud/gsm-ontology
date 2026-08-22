@@ -1,15 +1,4 @@
 {
-  "framework": {
-    "name": "nis2",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Directive (EU) 2022/2555 (NIS2)",
-    "article": "Article 21(2)(a)",
-    "text": "[Measures shall include at least:] (a) policies on risk analysis and information system security."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/nis2/risk-management/RiskManagement/v1",
   "qualifier": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2RiskManagementMeasure/v1",
   "applicability": "Nis2EntityClassification.entityTier in ['ESSENTIAL', 'IMPORTANT'] && Nis2RiskManagementMeasure.measureCategory == 'RISK_ANALYSIS_AND_IS_SECURITY_POLICY'",
   "assertion": "implementationLevel != 'NOT_IMPLEMENTED'",

@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25012/inherent-quality/DataCurrentness/v1",
-  "title": "DataCurrentness",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25012/inherent-quality/Iso25000DataCurrentness/v1",
+  "title": "Iso25000DataCurrentness",
   "description": "ISO 25012-sourced data quality archetype \u2014 Currentness inherent data quality characteristic. The degree to which data has attributes that are of the right age in a specific context of use. Rootless archetype \u2014 used as qualifier in Directives/Norms governing data entities. Source: ISO/IEC 25012 (Inherent Data Quality \u2014 Currentness).",
   "type": "object",
   "required": [
@@ -35,6 +31,5 @@
       "pattern": "^P",
       "description": "Expected frequency of data updates from source. ISO 8601 duration."
     }
-  },
-  "additionalProperties": false
+  }
 }

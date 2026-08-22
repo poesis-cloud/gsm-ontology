@@ -1,23 +1,7 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 26",
-    "paragraphs": [
-      "26(1)",
-      "26(2)",
-      "26(3)"
-    ],
-    "text": "Where two or more controllers jointly determine the purposes and means of processing, they shall be joint controllers. They shall in a transparent manner determine their respective responsibilities for compliance with the obligations under this Regulation, in particular as regards the exercising of the rights of the data subject and their respective duties to provide the information referred to in Articles 13 and 14, by means of an arrangement between them. [...] The essence of the arrangement shall be made available to the data subject."
-  },
   "structure": "$gdpr:data-controller",
   "modal": "MUST",
   "verb": "ENSURE",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprControllerProcessorRole/v1",
-  "purpose": "$gdpr:personal-data-processing",
-  "deploymentNotes": "At deployment: 'structure' resolves to the data controller(s) (accountable). 'purpose' resolves to the adopter's personal data processing scope. Mandates that joint controllers document their respective responsibilities in a transparent arrangement, with the essence made available to data subjects. Data subject may exercise rights against each joint controller regardless of arrangement terms (Art 26(3)). Operationalized by Norm checking arrangement documentation."
+  "purpose": "$gdpr:personal-data-processing"
 }

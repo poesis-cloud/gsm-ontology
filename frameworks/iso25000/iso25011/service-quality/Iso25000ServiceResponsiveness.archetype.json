@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25011/service-quality/ServiceResponsiveness/v1",
-  "title": "ServiceResponsiveness",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25011/service-quality/Iso25000ServiceResponsiveness/v1",
+  "title": "Iso25000ServiceResponsiveness",
   "description": "ISO 25011 quality archetype \u2014 Responsiveness viability dimension. Degree to which the IT service provider reacts to user requests in a timely fashion. Sub-characteristics: Timeliness, Reactiveness. Rootless archetype \u2014 unique to service quality, no product-quality equivalent. Source: ISO/IEC TS 25011:2017 \u00a77.6.",
   "type": "object",
   "required": [
@@ -33,6 +29,5 @@
       "$gsm:queryable": true,
       "description": "Degree to which the IT service provider anticipates and acts on user needs. PASSIVE = responds only to explicit requests. STANDARD = responds with awareness of context. PROACTIVE = anticipates needs and initiates action."
     }
-  },
-  "additionalProperties": false
+  }
 }

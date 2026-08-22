@@ -29,7 +29,7 @@
 # ────────────────────────────────────────────────────────────────
 
 def emit_measure(value, unit, components):
-    sys.effect("AppraisalMeasure", {
+    sys.effect("ItAppraisalMeasure", {
         "ruleType": rule,
         "subjectType": stype,
         "subjectDefinitionId": sid,
@@ -39,7 +39,7 @@ def emit_measure(value, unit, components):
     })
 
 def emit_finding(finding_type, severity, message):
-    sys.effect("AppraisalFinding", {
+    sys.effect("ItAppraisalFinding", {
         "ruleType": rule,
         "findingType": finding_type,
         "subjectType": stype,
@@ -48,7 +48,7 @@ def emit_finding(finding_type, severity, message):
         "message": message,
     })
 
-evt = sys.receive("AppraisalTrigger")
+evt = sys.receive("ItAppraisalTrigger")
 rule    = evt["ruleType"]
 stype   = evt["subjectType"]
 sid     = evt["subjectDefinitionId"]

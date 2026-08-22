@@ -1,22 +1,7 @@
 {
-  "framework": {
-    "name": "nis2",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Directive (EU) 2022/2555 (NIS2)",
-    "article": "Article 21",
-    "paragraphs": [
-      "21(1)",
-      "21(2)"
-    ],
-    "text": "Member States shall ensure that essential and important entities take appropriate and proportionate technical, operational and organisational measures to manage the risks posed to the security of network and information systems which those entities use for their operations or for the provision of their services, and to prevent or minimise the impact of incidents on recipients of their services and on other services. [...] The measures referred to in paragraph 1 shall be based on an all-hazards approach that aims to protect network and information systems [...] and shall include at least the following: (a) policies on risk analysis and information system security; (b) incident handling; (c) business continuity and crisis management; (d) supply chain security; (e) security in network and information systems acquisition, development and maintenance; (f) policies and procedures to assess the effectiveness of cybersecurity risk-management measures; (g) basic cyber hygiene practices and cybersecurity training; (h) policies and procedures regarding the use of cryptography and, where appropriate, encryption; (i) human resources security, access control policies and asset management; (j) the use of multi-factor authentication or continuous authentication solutions."
-  },
   "structure": "$nis2:regulatory-authority",
   "modal": "MUST",
   "verb": "ENSURE",
   "qualifier": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2RiskManagementMeasure/v1",
-  "purpose": "$nis2:classified-entity",
-  "deploymentNotes": "At deployment: 'structure' resolves to the governing Structure. 'purpose' resolves to every Structure classified ESSENTIAL or IMPORTANT. This Directive mandates implementation of all 10 measure categories from Art 21(2)(a)-(j). Operationalized by 10 Norms (one per measure category) checking implementationLevel != NOT_IMPLEMENTED. The proportionality principle (Art 21(1)) means measure intensity scales with entity size, exposure, and risk severity."
+  "purpose": "$nis2:classified-entity"
 }

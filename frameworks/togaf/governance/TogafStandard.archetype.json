@@ -1,12 +1,8 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/governance/Standard/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkDirective/v1",
-  "title": "Standard",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/governance/TogafStandard/v1",
+  "$ref": "gsmarc://gsm/Directive/v1",
+  "title": "TogafStandard",
   "description": "TOGAF-sourced directive archetype \u2014 a normative reference from an external or internal standards body that constrains architecture decisions. Enriches Directive with compliance and provenance vocabulary. Requires GSM unsealing of Directive to be functional. Extends Directive with TOGAF Standards Information Base vocabulary. TOGAF mapping: Standard (Standards Information Base, Architecture Repository). Source framework: TOGAF (Architecture Repository, Standards Information Base).",
   "type": "object",
   "required": [

@@ -1,0 +1,272 @@
+{
+  "$comment": "Machine-readable inter-framework articulation map, owned by the `it` domain framework (the integrator). Reference frameworks are isolated and never encode these relations in their schemas; composition happens here and through GSM governance (Directives/Norms qualifying subjects across frameworks). The prose analysis in frameworks/README.md is derived commentary; this file is the authoritative articulation declaration. Relations: qualifies-with (Directive qualifier from other framework), measures-with (Norm assertions reference other framework's property vocabulary), governed-by (subjects governed by other framework's quality/regulatory dimensions), identified-by (identification substrate), parallel-obligation (independent regulatory chains on the same event), distinct-overlap (related dimensions, deliberately separate scopes), composes-facet (schema-level allOf composition of a rootless facet \u2014 the only schema-level cross-framework mechanism, reserved to the domain layer).",
+  "articulations": [
+    {
+      "source": "it",
+      "target": "prov",
+      "relation": "composes-facet",
+      "summary": "Anticipated coupling: ITIP runtime registration archetypes compose the prov ProvAttribution facet (wasAttributedTo) so tenant-authored statements carry platform-derived authorship for ownership-based access checks.",
+      "conceptMappings": [
+        {
+          "sourceConcept": "(runtime registration archetypes)",
+          "targetConcept": "ProvAttribution",
+          "relation": "composes-facet"
+        }
+      ]
+    },
+    {
+      "source": "prov",
+      "target": "oidc",
+      "relation": "identified-by",
+      "summary": "Domain-layer articulation: PROV leaves wasAttributedTo.agent open; the composing it-layer archetype tightens it to the oidc OidcSubject shape (sub, iss), so the attributed agent is OIDC-identified. Neither reference framework encodes this \u2014 the coupling exists only here.",
+      "conceptMappings": [
+        {
+          "sourceConcept": "ProvAttribution.wasAttributedTo.agent",
+          "targetConcept": "OidcSubject",
+          "relation": "identified-by"
+        }
+      ]
+    },
+    {
+      "source": "it",
+      "target": "scap",
+      "relation": "composes-facet",
+      "summary": "SoftwareTechnology composes ScapPlatformIdentifier as a rootless facet: CPE URI plus decomposed attributes identify what technology platform an IT subject is.",
+      "conceptMappings": [
+        {
+          "sourceConcept": "ItSoftwareTechnology",
+          "targetConcept": "ScapPlatformIdentifier",
+          "relation": "composes-facet"
+        }
+      ]
+    },
+    {
+      "source": "togaf",
+      "target": "iso25000",
+      "relation": "qualifies-with",
+      "summary": "TOGAF governance mechanisms provide governance intent; ISO 2501x archetypes provide the measurement vocabulary.",
+      "conceptMappings": [
+        {
+          "sourceConcept": "TogafArchitecturePrinciple",
+          "targetConcept": "Iso25000ProductReliability",
+          "relation": "qualifies-with",
+          "note": "Any ISO 25010 product-quality characteristic may serve as qualifier."
+        },
+        {
+          "sourceConcept": "TogafArchitectureRequirement",
+          "targetConcept": "Iso25000ProductSecurity",
+          "relation": "qualifies-with",
+          "note": "Specific quality characteristic plus measurable threshold."
+        },
+        {
+          "sourceConcept": "TogafMeasure",
+          "targetConcept": "Iso25000ProductPerformanceEfficiency",
+          "relation": "measures-with"
+        },
+        {
+          "sourceConcept": "TogafLogicalDataComponent",
+          "targetConcept": "Iso25000DataAccuracy",
+          "relation": "governed-by",
+          "note": "ISO 25012 inherent data-quality characteristics govern TOGAF data architecture subjects."
+        },
+        {
+          "sourceConcept": "TogafPhysicalDataComponent",
+          "targetConcept": "Iso25000DataAvailability",
+          "relation": "governed-by",
+          "note": "ISO 25012 system-dependent characteristics."
+        },
+        {
+          "sourceConcept": "TogafPlatformService",
+          "targetConcept": "Iso25000ServiceReliability",
+          "relation": "governed-by",
+          "note": "ISO 25011 service-quality characteristics govern TOGAF service subjects."
+        }
+      ]
+    },
+    {
+      "source": "iso25000",
+      "target": "iso25000",
+      "relation": "distinct-overlap",
+      "summary": "ISO 25010 (product), ISO 25011 (service), and ISO 25012 (data) are complementary internal models: product quality governs system behavior, service quality governs delivery experience, data quality governs intrinsic/systemic data properties.",
+      "conceptMappings": [
+        {
+          "sourceConcept": "Iso25000ProductAvailability",
+          "targetConcept": "Iso25000DataAvailability",
+          "relation": "distinct-overlap",
+          "note": "Product uptime vs data accessibility."
+        },
+        {
+          "sourceConcept": "Iso25000ProductReliability",
+          "targetConcept": "Iso25000ServiceReliability",
+          "relation": "distinct-overlap",
+          "note": "Artifact intrinsic quality vs delivery experience (SLA)."
+        },
+        {
+          "sourceConcept": "Iso25000ProductSecurity",
+          "targetConcept": "Iso25000DataConfidentiality",
+          "relation": "distinct-overlap"
+        }
+      ]
+    },
+    {
+      "source": "nis2",
+      "target": "iso25000",
+      "relation": "measures-with",
+      "summary": "NIS2 creates the legal obligation; ISO 2501x provides the measurement vocabulary its Norms assert against.",
+      "conceptMappings": [
+        {
+          "sourceConcept": "Nis2RiskManagementMeasure",
+          "targetConcept": "Iso25000ProductSecurity",
+          "relation": "measures-with",
+          "note": "Art 21(2)(h) cryptography and 21(2)(j) MFA verified through ProductSecurity properties."
+        },
+        {
+          "sourceConcept": "Nis2IncidentReporting",
+          "targetConcept": "Iso25000ProductAvailability",
+          "relation": "distinct-overlap",
+          "note": "Legal deadlines (24h/72h/1mo) are not SLA targets."
+        },
+        {
+          "sourceConcept": "Nis2RiskManagementMeasure",
+          "targetConcept": "Iso25000DataRecoverability",
+          "relation": "measures-with",
+          "note": "Art 21(2)(c) business continuity mandates recoverability (RPO/RTO)."
+        }
+      ]
+    },
+    {
+      "source": "nis2",
+      "target": "togaf",
+      "relation": "qualifies-with",
+      "summary": "NIS2 Directives are the legal root; TOGAF principles, standards, and requirements derive architecture decisions from the regulatory mandates.",
+      "conceptMappings": [
+        {
+          "sourceConcept": "Nis2RiskManagementMeasure",
+          "targetConcept": "TogafArchitectureRequirement",
+          "relation": "qualifies-with"
+        },
+        {
+          "sourceConcept": "Nis2EntityClassification",
+          "targetConcept": "TogafBusinessCapability",
+          "relation": "governed-by",
+          "note": "Entity tier is a scoping input to capability mapping."
+        }
+      ]
+    },
+    {
+      "source": "nis2",
+      "target": "scap",
+      "relation": "identified-by",
+      "summary": "SCAP is the identification substrate for NIS2 compliance evidence: CPE scopes platforms, CCE identifies the configuration settings that Norm assertions check.",
+      "conceptMappings": [
+        {
+          "sourceConcept": "Nis2RiskManagementMeasure",
+          "targetConcept": "ScapPlatformIdentifier",
+          "relation": "identified-by"
+        },
+        {
+          "sourceConcept": "Nis2RiskManagementMeasure",
+          "targetConcept": "ScapConfigurationSetting",
+          "relation": "identified-by"
+        }
+      ]
+    },
+    {
+      "source": "gdpr",
+      "target": "nis2",
+      "relation": "parallel-obligation",
+      "summary": "Complementary EU regulations with orthogonal scoping (GDPR: controller/processor role; NIS2: entity tier). Both chains activate independently on the same event.",
+      "conceptMappings": [
+        {
+          "sourceConcept": "GdprBreachNotificationAuthority",
+          "targetConcept": "Nis2IncidentReporting",
+          "relation": "parallel-obligation",
+          "note": "GDPR 72h to DPA; NIS2 24h/72h/1mo to CSIRT \u2014 both satisfied independently."
+        }
+      ]
+    },
+    {
+      "source": "gdpr",
+      "target": "iso25000",
+      "relation": "measures-with",
+      "summary": "GDPR principles create the legal obligation; ISO 2501x provides measurement properties, notably ISO 25012 for the data-quality principles.",
+      "conceptMappings": [
+        {
+          "sourceConcept": "GdprAccuracy",
+          "targetConcept": "Iso25000DataAccuracy",
+          "relation": "measures-with",
+          "note": "Art 5(1)(d)."
+        },
+        {
+          "sourceConcept": "GdprDataMinimisation",
+          "targetConcept": "DataRelevancy",
+          "relation": "measures-with",
+          "note": "Art 5(1)(c)."
+        },
+        {
+          "sourceConcept": "GdprStorageLimitation",
+          "targetConcept": "Iso25000DataCurrentness",
+          "relation": "measures-with",
+          "note": "Art 5(1)(e)."
+        },
+        {
+          "sourceConcept": "GdprIntegrityConfidentiality",
+          "targetConcept": "Iso25000ProductSecurity",
+          "relation": "measures-with",
+          "note": "Art 5(1)(f) verified through encryption/auth/TLS properties."
+        }
+      ]
+    },
+    {
+      "source": "gdpr",
+      "target": "togaf",
+      "relation": "qualifies-with",
+      "summary": "GDPR Directives are the legal root for data-protection governance; TOGAF translates them into architecture principles, requirements, and standards.",
+      "conceptMappings": [
+        {
+          "sourceConcept": "GdprDataProtectionByDesign",
+          "targetConcept": "TogafArchitecturePrinciple",
+          "relation": "qualifies-with",
+          "note": "Art 25."
+        },
+        {
+          "sourceConcept": "GdprTransferMechanism",
+          "targetConcept": "TogafStandard",
+          "relation": "governed-by",
+          "note": "Cross-border data-flow technology standards."
+        }
+      ]
+    },
+    {
+      "source": "togaf",
+      "target": "scap",
+      "relation": "identified-by",
+      "summary": "SCAP CPE provides the standardized identification scheme for TOGAF technology-architecture subjects.",
+      "conceptMappings": [
+        {
+          "sourceConcept": "TogafTechnologyComponent",
+          "targetConcept": "ScapPlatformIdentifier",
+          "relation": "identified-by"
+        },
+        {
+          "sourceConcept": "TogafPlatformService",
+          "targetConcept": "ScapPlatformIdentifier",
+          "relation": "identified-by"
+        }
+      ]
+    },
+    {
+      "source": "iso25000",
+      "target": "scap",
+      "relation": "identified-by",
+      "summary": "SCAP identifies the technology targets and configuration settings that ISO 25010 ProductSecurity measures are evaluated against.",
+      "conceptMappings": [
+        {
+          "sourceConcept": "Iso25000ProductSecurity",
+          "targetConcept": "ScapConfigurationSetting",
+          "relation": "identified-by"
+        }
+      ]
+    }
+  ]
+}

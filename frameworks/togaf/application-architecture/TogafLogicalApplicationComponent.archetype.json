@@ -1,12 +1,8 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/application-architecture/LogicalApplicationComponent/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkStructure/v1",
-  "title": "LogicalApplicationComponent",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/application-architecture/TogafLogicalApplicationComponent/v1",
+  "$ref": "gsmarc://gsm/Structure/v1",
+  "title": "TogafLogicalApplicationComponent",
   "description": "TOGAF-sourced structural archetype \u2014 logical encapsulation of application functionality, independent of implementation technology. Extends Structure with TOGAF Application Architecture vocabulary. TOGAF mapping: Logical Application Component (Content Metamodel, Application Architecture domain). Source framework: TOGAF (Application Architecture, Content Framework).",
   "type": "object",
   "required": [

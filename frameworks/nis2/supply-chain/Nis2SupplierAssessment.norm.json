@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "nis2",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Directive (EU) 2022/2555 (NIS2)",
-    "article": "Article 21(2)(d)",
-    "paragraphs": [
-      "21(2)(d)"
-    ],
-    "text": "[Measures shall include at least:] (d) supply chain security, including security-related aspects concerning the relationships between each entity and its direct suppliers or service providers."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/nis2/supply-chain/SupplyChainSecurity/v1",
   "qualifier": "gsmarc://gsm-frameworks/nis2/supply-chain/Nis2SupplyChainSecurity/v1",
   "applicability": "Nis2EntityClassification.entityTier in ['ESSENTIAL', 'IMPORTANT']",
   "assertion": "supplierAssessmentCompleted == true",

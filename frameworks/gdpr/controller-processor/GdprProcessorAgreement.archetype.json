@@ -2,10 +2,6 @@
   "$schema": "gsmarc://gsm/Archetype/v1",
   "$id": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprProcessorAgreement/v1",
   "title": "GdprProcessorAgreement",
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
   "description": "GDPR-sourced archetype \u2014 data processing agreement requirements under Regulation (EU) 2016/679. Article 28 mandates that processing by a processor shall be governed by a contract or legal act setting out subject-matter, duration, nature, purpose, type of personal data, categories of data subjects, and obligations/rights of the controller. Rootless \u2014 regulatory compliance dimension. Source: GDPR Article 28.",
   "type": "object",
   "required": [
@@ -61,6 +57,5 @@
       "type": "boolean",
       "description": "Whether the contract or legal act is in writing, including in electronic form. Source: GDPR Art 28(9)."
     }
-  },
-  "additionalProperties": false
+  }
 }

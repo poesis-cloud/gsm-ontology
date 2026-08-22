@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 37(5)",
-    "paragraphs": [
-      "37(5)"
-    ],
-    "text": "The data protection officer shall be designated on the basis of professional qualities and, in particular, expert knowledge of data protection law and practices and the ability to fulfil the tasks referred to in Article 39."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/DpoDesignation/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprDataProtectionOfficer/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER', 'PROCESSOR'] && GdprDataProtectionOfficer.dpoDesignated == true",
   "assertion": "dpoQualified == true",

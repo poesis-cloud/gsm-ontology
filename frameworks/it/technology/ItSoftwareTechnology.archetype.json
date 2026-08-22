@@ -1,17 +1,13 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/SoftwareTechnology/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkStructure/v1",
+  "$id": "gsmarc://gsm-frameworks/it/technology/ItSoftwareTechnology/v1",
+  "$ref": "gsmarc://gsm/Structure/v1",
   "allOf": [
     {
       "$ref": "gsmarc://gsm-frameworks/scap/cpe/ScapPlatformIdentifier/v1"
     }
   ],
-  "title": "SoftwareTechnology",
-  "framework": {
-    "name": "itip",
-    "version": "1.0.0"
-  },
+  "title": "ItSoftwareTechnology",
   "description": "ITIP domain archetype \u2014 software technology classification. Typing: extends gsm:Structure (single-base $ref). Facets: composes ScapPlatformIdentifier (CPE 2.3 identification dimension) via allOf, inheriting its properties (cpeUri, part, vendor, product, version, etc.). Adds: (1) 'type' \u2014 governance-relevant functional role; (2) 'settings' \u2014 the configuration knobs this technology defines, each carrying its CCE identifier (NIST CCE enumeration) for cross-framework traceability. CPE part mapping: type OPERATING_SYSTEM / HYPERVISOR \u2192 CPE part 'o'; all other types \u2192 CPE part 'a'. Norm assertions use CEL comprehensions over settings: settings.exists(s, s.name == \"ssl\" && s.value == \"on\"). Source: ITIP (domain taxonomy for IT technology governance).",
   "type": "object",
   "required": [

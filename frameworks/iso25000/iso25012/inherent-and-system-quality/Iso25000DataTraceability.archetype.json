@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25012/inherent-and-system-quality/DataTraceability/v1",
-  "title": "DataTraceability",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25012/inherent-and-system-quality/Iso25000DataTraceability/v1",
+  "title": "Iso25000DataTraceability",
   "description": "ISO 25012-sourced data quality archetype \u2014 Traceability inherent-and-system data quality characteristic. The degree to which data has attributes that provide an audit trail of access to the data and of any changes made to the data in a specific context of use. Rootless archetype \u2014 used as qualifier in Directives/Norms governing data entities. Source: ISO/IEC 25012 (Inherent and System-Dependent Data Quality \u2014 Traceability).",
   "type": "object",
   "required": [
@@ -37,6 +33,5 @@
       "pattern": "^P",
       "description": "How long traceability records must be retained. ISO 8601 duration."
     }
-  },
-  "additionalProperties": false
+  }
 }

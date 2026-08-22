@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25010/quality-in-use/ProductEfficiency/v1",
-  "title": "ProductEfficiency",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25010/quality-in-use/Iso25000ProductEfficiency/v1",
+  "title": "Iso25000ProductEfficiency",
   "description": "ISO 25010-sourced quality archetype \u2014 Efficiency quality-in-use characteristic. Measures resources expended in relation to the accuracy and completeness with which users achieve goals. Rootless archetype \u2014 used as qualifier in Directives/Norms. Source: ISO/IEC 25010 (Quality in Use \u2014 Efficiency).",
   "type": "object",
   "required": [
@@ -42,6 +38,5 @@
       ],
       "description": "Overall economic productivity \u2014 ratio of effective output to total resource cost."
     }
-  },
-  "additionalProperties": false
+  }
 }

@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25010/product-quality/ProductAvailability/v1",
-  "title": "ProductAvailability",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25010/product-quality/Iso25000ProductAvailability/v1",
+  "title": "Iso25000ProductAvailability",
   "description": "TOGAF-sourced quality archetype \u2014 Availability viability dimension. Defines the property vocabulary for availability governance: uptime targets, recovery objectives, redundancy. Rootless archetype (no structural allOf) \u2014 used as qualifier in Directives/Norms and as data type for Effectors/Receptors carrying availability state. Norm predicates reference properties by Availability.{property} in CEL expressions. Source framework: TOGAF (Architecture Principles, Non-Functional Requirements) + ISO/IEC 25010 (Availability sub-characteristic).",
   "type": "object",
   "required": [
@@ -45,6 +41,5 @@
       "$gsm:queryable": true,
       "description": "Infrastructure redundancy topology. NONE = single instance. ACTIVE_PASSIVE = standby failover. ACTIVE_ACTIVE = load-balanced replicas. MULTI_REGION = geo-distributed."
     }
-  },
-  "additionalProperties": false
+  }
 }

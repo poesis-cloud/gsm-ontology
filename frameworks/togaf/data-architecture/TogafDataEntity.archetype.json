@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/data-architecture/DataEntity/v1",
-  "title": "DataEntity",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/data-architecture/TogafDataEntity/v1",
+  "title": "TogafDataEntity",
   "description": "TOGAF-sourced archetype \u2014 Data Entity classification vocabulary. Defines governance-relevant properties for data entities: category, format, lifecycle stage, system of record. Rootless, domain-scoped \u2014 applies only to data entities, not transversal to all governed things. A Data Entity is not a Structure (Structures are constituted of Mechanisms). Each concrete data entity is defined by its own Archetype schema; this schema provides the classification vocabulary for governance over those definitions. Source framework: TOGAF (Data Architecture, Content Metamodel).",
   "type": "object",
   "required": [
@@ -50,6 +46,5 @@
       "$gsm:queryable": true,
       "description": "System of record for this data entity (e.g., 'crm', 'erp', 'data-lake'). Enables data lineage governance and ownership mapping."
     }
-  },
-  "additionalProperties": false
+  }
 }

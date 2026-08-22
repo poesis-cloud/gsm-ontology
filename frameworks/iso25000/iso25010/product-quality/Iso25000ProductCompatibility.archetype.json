@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25010/product-quality/ProductCompatibility/v1",
-  "title": "ProductCompatibility",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25010/product-quality/Iso25000ProductCompatibility/v1",
+  "title": "Iso25000ProductCompatibility",
   "description": "ISO 25010-sourced quality archetype \u2014 Compatibility product quality characteristic. Defines the property vocabulary for compatibility governance: co-existence with other products in shared environments and interoperability through information exchange. Rootless archetype \u2014 used as qualifier in Directives/Norms. Source: ISO/IEC 25010 (Product Quality \u2014 Compatibility: Co-existence, Interoperability).",
   "type": "object",
   "required": [
@@ -51,6 +47,5 @@
       ],
       "description": "Expected contention level when co-existing on shared resources (CPU, memory, network, storage)."
     }
-  },
-  "additionalProperties": false
+  }
 }

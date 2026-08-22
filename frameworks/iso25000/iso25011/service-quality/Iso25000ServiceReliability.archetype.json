@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25011/service-quality/ServiceReliability/v1",
-  "title": "ServiceReliability",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25011/service-quality/Iso25000ServiceReliability/v1",
+  "title": "Iso25000ServiceReliability",
   "description": "ISO 25011 quality archetype \u2014 IT Service Reliability viability dimension. Degree to which the IT service performs specified functions under specified conditions for a specified period of time. Sub-characteristics: Continuity, IT Service Recoverability, Availability. Rootless archetype \u2014 used as qualifier in Directives/Norms governing service reliability and SLA targets. Source: ISO/IEC TS 25011:2017 \u00a77.4.",
   "type": "object",
   "required": [
@@ -45,6 +41,5 @@
       ],
       "description": "Recovery time objective classification for the IT service. NONE = no defined RTO. HOURS = recovery in hours. MINUTES = recovery in minutes. NEAR_ZERO = near-instantaneous recovery."
     }
-  },
-  "additionalProperties": false
+  }
 }

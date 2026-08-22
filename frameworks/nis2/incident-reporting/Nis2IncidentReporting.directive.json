@@ -1,22 +1,7 @@
 {
-  "framework": {
-    "name": "nis2",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Directive (EU) 2022/2555 (NIS2)",
-    "article": "Article 23",
-    "paragraphs": [
-      "23(1)",
-      "23(4)"
-    ],
-    "text": "Member States shall ensure that essential and important entities notify, without undue delay, the CSIRT [...] or, where applicable, the competent authority [...] of any significant incident. [...] (a) without undue delay and in any event within 24 hours of becoming aware of the significant incident, an early warning, which, where applicable, shall indicate whether the significant incident is suspected of being caused by unlawful or malicious acts or could have a cross-border impact; (b) without undue delay and in any event within 72 hours of becoming aware of the significant incident, an incident notification, which, where applicable, shall update the information referred to in point (a) and indicate an initial assessment of the significant incident; [...] (d) a final report not later than one month after the submission of the incident notification."
-  },
   "structure": "$nis2:regulatory-authority",
   "modal": "MUST",
   "verb": "ENSURE",
   "qualifier": "gsmarc://gsm-frameworks/nis2/incident-reporting/Nis2IncidentReporting/v1",
-  "purpose": "$nis2:classified-entity",
-  "deploymentNotes": "At deployment: 'structure' resolves to the governing Structure. 'purpose' resolves to every Structure classified ESSENTIAL or IMPORTANT. This Directive mandates the multi-stage incident notification pipeline. Operationalized by 3 temporal Norms: 24h early warning, 72h incident notification, 1-month final report. Applies only to 'significant incidents' as defined in Art 23(3)."
+  "purpose": "$nis2:classified-entity"
 }

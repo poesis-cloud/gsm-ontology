@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 5(1)(f)",
-    "paragraphs": [
-      "5(1)(f)"
-    ],
-    "text": "Personal data shall be processed in a manner that ensures appropriate security of the personal data, including protection against unauthorised or unlawful processing and against accidental loss, destruction or damage, using appropriate technical or organisational measures ('integrity and confidentiality')."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/principles/ProcessingPrinciples/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/principles/GdprProcessingPrinciple/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprProcessingPrinciple.principle == 'INTEGRITY_CONFIDENTIALITY'",
   "assertion": "principleCompliant == true",

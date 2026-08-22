@@ -2,10 +2,6 @@
   "$schema": "gsmarc://gsm/Archetype/v1",
   "$id": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2RiskManagementMeasure/v1",
   "title": "Nis2RiskManagementMeasure",
-  "framework": {
-    "name": "nis2",
-    "version": "1.0.0"
-  },
   "description": "NIS2-sourced archetype \u2014 cybersecurity risk-management measure under Directive (EU) 2022/2555. Article 21(2) defines 10 mandatory measure categories that essential and important entities must implement. Each measure is independently assessable. Rootless \u2014 regulatory compliance dimension. Source: NIS2 Article 21(2)(a)-(j).",
   "type": "object",
   "required": [
@@ -51,6 +47,5 @@
       "$gsm:queryable": true,
       "description": "Date of last effectiveness assessment of this measure. Source: NIS2 Art 21(2)(g)."
     }
-  },
-  "additionalProperties": false
+  }
 }

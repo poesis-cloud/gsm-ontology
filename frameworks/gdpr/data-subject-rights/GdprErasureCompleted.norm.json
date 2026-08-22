@@ -1,19 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 17(1)",
-    "paragraphs": [
-      "17(1)",
-      "17(3)"
-    ],
-    "text": "The data subject shall have the right to obtain from the controller the erasure of personal data concerning him or her without undue delay and the controller shall have the obligation to erase personal data without undue delay where one of the following grounds applies: (a) the personal data are no longer necessary in relation to the purposes for which they were collected or otherwise processed; (b) the data subject withdraws consent; (c) the data subject objects pursuant to Article 21(1); (d) the personal data have been unlawfully processed; (e) the personal data have to be erased for compliance with a legal obligation; (f) the personal data have been collected in relation to the offer of information society services referred to in Article 8(1). Paragraphs 1 and 2 shall not apply to the extent that processing is necessary for exercising the right of freedom of expression, compliance with a legal obligation, reasons of public interest in the area of public health, archiving purposes, or the establishment, exercise or defence of legal claims."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/RightToErasure/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprDataSubjectRight/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprDataSubjectRight.rightType == 'ERASURE' && GdprDataSubjectRight.identityVerified == true",
   "assertion": "responseProvided == true && dataErased == true",

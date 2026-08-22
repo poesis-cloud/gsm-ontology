@@ -1,19 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 26(1)-(2)",
-    "paragraphs": [
-      "26(1)",
-      "26(2)"
-    ],
-    "text": "Where two or more controllers jointly determine the purposes and means of processing, they shall be joint controllers. They shall in a transparent manner determine their respective responsibilities for compliance with the obligations under this Regulation, in particular as regards the exercising of the rights of the data subject and their respective duties to provide the information referred to in Articles 13 and 14, by means of an arrangement between them. The arrangement may designate a contact point for data subjects. The essence of the arrangement shall be made available to the data subject."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/JointControllers/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprControllerProcessorRole/v1",
   "applicability": "GdprControllerProcessorRole.role == 'JOINT_CONTROLLER'",
   "assertion": "jointControllerArrangement == true",

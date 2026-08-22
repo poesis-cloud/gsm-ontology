@@ -2,7 +2,7 @@
   "name": "nis2",
   "version": "1.0.0",
   "description": "NIS2-sourced vocabulary and governance statements \u2014 entity classification, risk management, incident reporting, and supply-chain security.",
-  "baseVersion": "1.0.0",
+  "layer": "reference",
   "elements": [
     {
       "path": "entity-classification/Nis2EntityClassification.archetype.json"
@@ -11,75 +11,191 @@
       "path": "entity-classification/Nis2SectorScope.archetype.json"
     },
     {
-      "path": "incident-reporting/EarlyWarning24h.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "incident-reporting/Nis2EarlyWarning24h.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 23(4)(a)",
+        "text": "Without undue delay and in any event within 24 hours of becoming aware of the significant incident, an early warning, which, where applicable, shall indicate whether the significant incident is suspected of being caused by unlawful or malicious acts or could have a cross-border impact."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/nis2/incident-reporting/Nis2IncidentReporting/v1"
     },
     {
-      "path": "incident-reporting/FinalReport1m.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "incident-reporting/Nis2FinalReport1m.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 23(4)(d)",
+        "text": "A final report not later than one month after the submission of the incident notification under point (b), including the following: (i) a detailed description of the incident, including its severity and impact; (ii) the type of threat or root cause that is likely to have triggered the incident; (iii) applied and ongoing mitigation measures; (iv) where applicable, the cross-border impact of the incident."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/nis2/incident-reporting/Nis2IncidentReporting/v1"
     },
     {
-      "path": "incident-reporting/IncidentReporting.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "incident-reporting/Nis2IncidentReporting.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 23",
+        "paragraphs": [
+          "23(1)",
+          "23(4)"
+        ],
+        "text": "Member States shall ensure that essential and important entities notify, without undue delay, the CSIRT [...] or, where applicable, the competent authority [...] of any significant incident. [...] (a) without undue delay and in any event within 24 hours of becoming aware of the significant incident, an early warning, which, where applicable, shall indicate whether the significant incident is suspected of being caused by unlawful or malicious acts or could have a cross-border impact; (b) without undue delay and in any event within 72 hours of becoming aware of the significant incident, an incident notification, which, where applicable, shall update the information referred to in point (a) and indicate an initial assessment of the significant incident; [...] (d) a final report not later than one month after the submission of the incident notification."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the governing Structure. 'purpose' resolves to every Structure classified ESSENTIAL or IMPORTANT. This Directive mandates the multi-stage incident notification pipeline. Operationalized by 3 temporal Norms: 24h early warning, 72h incident notification, 1-month final report. Applies only to 'significant incidents' as defined in Art 23(3)."
     },
     {
-      "path": "incident-reporting/IntermediateReport.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "incident-reporting/Nis2IntermediateReport.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 23(4)(c)",
+        "paragraphs": [
+          "23(4)(c)"
+        ],
+        "text": "Upon the request of the CSIRT or, where applicable, the competent authority, an intermediate report on relevant status updates."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/nis2/incident-reporting/Nis2IncidentReporting/v1"
     },
     {
       "path": "incident-reporting/Nis2IncidentReporting.archetype.json"
     },
     {
-      "path": "incident-reporting/Notification72h.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "incident-reporting/Nis2Notification72h.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 23(4)(b)",
+        "text": "Without undue delay and in any event within 72 hours of becoming aware of the significant incident, an incident notification, which, where applicable, shall update the information referred to in point (a) and indicate an initial assessment of the significant incident, including its severity and impact, as well as, where available, the indicators of compromise."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/nis2/incident-reporting/Nis2IncidentReporting/v1"
     },
     {
-      "path": "risk-management/BusinessContinuity.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "risk-management/Nis2BusinessContinuity.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 21(2)(c)",
+        "text": "[Measures shall include at least:] (c) business continuity, such as backup management and disaster recovery, and crisis management."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2RiskManagement/v1"
     },
     {
-      "path": "risk-management/Cryptography.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "risk-management/Nis2Cryptography.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 21(2)(h)",
+        "text": "[Measures shall include at least:] (h) policies and procedures regarding the use of cryptography and, where appropriate, encryption."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2RiskManagement/v1"
     },
     {
-      "path": "risk-management/CyberHygiene.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "risk-management/Nis2CyberHygiene.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 21(2)(g)",
+        "text": "[Measures shall include at least:] (g) basic cyber hygiene practices and cybersecurity training."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2RiskManagement/v1"
     },
     {
-      "path": "risk-management/EffectivenessAssessment.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "risk-management/Nis2EffectivenessAssessment.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 21(2)(f)",
+        "text": "[Measures shall include at least:] (f) policies and procedures to assess the effectiveness of cybersecurity risk-management measures."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2RiskManagement/v1"
     },
     {
-      "path": "risk-management/EmployeeTraining.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "risk-management/Nis2EmployeeTraining.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 20(2)",
+        "paragraphs": [
+          "20(2)"
+        ],
+        "text": "Member States shall ensure that the members of the management bodies of essential and important entities are required to follow training, and shall encourage essential and important entities to offer similar training to their employees on a regular basis, in order to gain sufficient knowledge and skills to enable them to identify risks and assess cybersecurity risk-management practices and their impact on the services provided by the entity."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2GovernanceAccountability/v1"
     },
     {
-      "path": "risk-management/GovernanceAccountability.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "risk-management/Nis2GovernanceAccountability.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 20",
+        "paragraphs": [
+          "20(1)",
+          "20(2)"
+        ],
+        "text": "Management bodies of essential and important entities shall approve the cybersecurity risk-management measures taken by those entities in order to comply with Article 21 and shall oversee its implementation and can be held liable for infringements by those entities of that Article. [...] Member States shall ensure that the members of the management bodies of essential and important entities are required to follow training, and shall encourage essential and important entities to offer similar training to their employees on a regular basis."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the governing Structure that adopts NIS2 compliance governance. 'purpose' resolves to every Structure classified as ESSENTIAL or IMPORTANT per Nis2EntityClassification. This Directive mandates management body approval of cybersecurity measures (Art 20(1)), mandatory training (Art 20(2)), and liability acknowledgment."
     },
     {
-      "path": "risk-management/HumanResources.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "risk-management/Nis2HumanResources.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 21(2)(i)",
+        "text": "[Measures shall include at least:] (i) human resources security, access control policies and asset management."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2RiskManagement/v1"
     },
     {
-      "path": "risk-management/IncidentHandling.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "risk-management/Nis2IncidentHandling.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 21(2)(b)",
+        "text": "[Measures shall include at least:] (b) incident handling."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2RiskManagement/v1"
     },
     {
-      "path": "risk-management/ManagementApproval.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "risk-management/Nis2ManagementApproval.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 20(1)",
+        "text": "Management bodies of essential and important entities shall approve the cybersecurity risk-management measures taken by those entities in order to comply with Article 21 and shall oversee its implementation."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2GovernanceAccountability/v1"
     },
     {
-      "path": "risk-management/ManagementTraining.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "risk-management/Nis2ManagementTraining.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 20(2)",
+        "text": "Member States shall ensure that the members of the management bodies of essential and important entities are required to follow training, and shall encourage essential and important entities to offer similar training to their employees on a regular basis, in order to gain sufficient knowledge and skills to enable them to identify risks and assess cybersecurity risk-management practices and their impact on the services provided by the entity."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2GovernanceAccountability/v1"
     },
     {
-      "path": "risk-management/MultiFactorAuth.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "risk-management/Nis2MultiFactorAuth.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 21(2)(j)",
+        "text": "[Measures shall include at least:] (j) the use of multi-factor authentication or continuous authentication solutions, secured voice, video and text communications and secured emergency communication systems within the entity, where appropriate."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2RiskManagement/v1"
     },
     {
-      "path": "risk-management/NetworkSecurity.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "risk-management/Nis2NetworkSecurity.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 21(2)(e)",
+        "text": "[Measures shall include at least:] (e) security in network and information systems acquisition, development and maintenance, including vulnerability handling and disclosure."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2RiskManagement/v1"
     },
     {
       "path": "risk-management/Nis2GovernanceAccountability.archetype.json"
@@ -88,39 +204,107 @@
       "path": "risk-management/Nis2RiskManagementMeasure.archetype.json"
     },
     {
-      "path": "risk-management/RiskAnalysisPolicy.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "risk-management/Nis2RiskAnalysisPolicy.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 21(2)(a)",
+        "text": "[Measures shall include at least:] (a) policies on risk analysis and information system security."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2RiskManagement/v1"
     },
     {
-      "path": "risk-management/RiskManagement.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "risk-management/Nis2RiskManagement.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 21",
+        "paragraphs": [
+          "21(1)",
+          "21(2)"
+        ],
+        "text": "Member States shall ensure that essential and important entities take appropriate and proportionate technical, operational and organisational measures to manage the risks posed to the security of network and information systems which those entities use for their operations or for the provision of their services, and to prevent or minimise the impact of incidents on recipients of their services and on other services. [...] The measures referred to in paragraph 1 shall be based on an all-hazards approach that aims to protect network and information systems [...] and shall include at least the following: (a) policies on risk analysis and information system security; (b) incident handling; (c) business continuity and crisis management; (d) supply chain security; (e) security in network and information systems acquisition, development and maintenance; (f) policies and procedures to assess the effectiveness of cybersecurity risk-management measures; (g) basic cyber hygiene practices and cybersecurity training; (h) policies and procedures regarding the use of cryptography and, where appropriate, encryption; (i) human resources security, access control policies and asset management; (j) the use of multi-factor authentication or continuous authentication solutions."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the governing Structure. 'purpose' resolves to every Structure classified ESSENTIAL or IMPORTANT. This Directive mandates implementation of all 10 measure categories from Art 21(2)(a)-(j). Operationalized by 10 Norms (one per measure category) checking implementationLevel != NOT_IMPLEMENTED. The proportionality principle (Art 21(1)) means measure intensity scales with entity size, exposure, and risk severity."
     },
     {
-      "path": "risk-management/SupplyChainSecurity.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "risk-management/Nis2SupplyChainSecurity.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 21(2)(d)",
+        "text": "[Measures shall include at least:] (d) supply chain security, including security-related aspects concerning the relationships between each entity and its direct suppliers or service providers."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2RiskManagement/v1"
     },
     {
       "path": "supply-chain/Nis2SupplyChainSecurity.archetype.json"
     },
     {
-      "path": "supply-chain/SecureDevVerification.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "supply-chain/Nis2SecureDevVerification.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 21(3)",
+        "paragraphs": [
+          "21(3)"
+        ],
+        "text": "Member States shall ensure that, when considering which measures referred to in point (d) of paragraph 2 are appropriate, entities take into account the vulnerabilities specific to each direct supplier and service provider and the overall quality of products and cybersecurity practices of their suppliers and service providers, including their secure development procedures."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/nis2/supply-chain/Nis2SupplyChainSecurity/v1"
     },
     {
-      "path": "supply-chain/SupplierAssessment.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "supply-chain/Nis2SupplierAssessment.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 21(2)(d)",
+        "paragraphs": [
+          "21(2)(d)"
+        ],
+        "text": "[Measures shall include at least:] (d) supply chain security, including security-related aspects concerning the relationships between each entity and its direct suppliers or service providers."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/nis2/supply-chain/Nis2SupplyChainSecurity/v1"
     },
     {
-      "path": "supply-chain/SupplierSecurityPosture.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "supply-chain/Nis2SupplierSecurityPosture.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 21(2)(d)",
+        "paragraphs": [
+          "21(2)(d)"
+        ],
+        "text": "[Measures shall include at least:] (d) supply chain security, including [...] the overall quality of products and cybersecurity practices of their suppliers and service providers."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/nis2/supply-chain/Nis2SupplyChainSecurity/v1"
     },
     {
-      "path": "supply-chain/SupplyChainSecurity.directive.json",
-      "archetype": "SourcedDirective"
+      "path": "supply-chain/Nis2SupplyChainSecurity.directive.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 21(2)(d)",
+        "paragraphs": [
+          "21(2)(d)",
+          "21(3)"
+        ],
+        "text": "[Measures shall include at least:] (d) supply chain security, including security-related aspects concerning the relationships between each entity and its direct suppliers or service providers. [...] Member States shall ensure that, when considering which measures referred to in point (d) of paragraph 2 are appropriate, entities take into account the vulnerabilities specific to each direct supplier and service provider and the overall quality of products and cybersecurity practices of their suppliers and service providers, including their secure development procedures."
+      },
+      "deploymentNotes": "At deployment: 'structure' resolves to the governing Structure. 'purpose' resolves to every Structure classified ESSENTIAL or IMPORTANT. This Directive elevates supply chain security from Art 21(2)(d) to a standalone Directive because it governs cross-entity relationships (entity \u2192 supplier). Art 21(3) adds specific supply chain due diligence requirements. Operationalized by Norms checking supplier assessment completion and security posture."
     },
     {
-      "path": "supply-chain/VulnerabilityDisclosure.norm.json",
-      "archetype": "SourcedNorm"
+      "path": "supply-chain/Nis2VulnerabilityDisclosure.norm.json",
+      "source": {
+        "authority": "European Parliament and Council of the European Union",
+        "regulation": "Directive (EU) 2022/2555 (NIS2)",
+        "article": "Article 21(2)(d)",
+        "paragraphs": [
+          "21(2)(d)"
+        ],
+        "text": "[Measures shall include at least:] (d) supply chain security, including [...] vulnerability handling and disclosure."
+      },
+      "operationalizes": "gsmarc://gsm-frameworks/nis2/supply-chain/Nis2SupplyChainSecurity/v1"
     }
   ]
 }

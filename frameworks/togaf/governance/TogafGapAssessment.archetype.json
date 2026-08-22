@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/governance/GapAssessment/v1",
-  "title": "GapAssessment",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/governance/TogafGapAssessment/v1",
+  "title": "TogafGapAssessment",
   "description": "TOGAF-sourced justification archetype \u2014 Architecture Gap Assessment. Defines the property vocabulary for recording gaps between baseline (current) and target architecture states. Rootless archetype \u2014 used to type gap records in governance justification. TOGAF mapping: Gap Analysis (ADM Phases B/C/D \u2014 the technique of comparing baseline and target architectures to identify gaps using a disposition matrix). Source framework: TOGAF (Gap Analysis technique, ADM Phases B-D).",
   "type": "object",
   "required": [
@@ -54,6 +50,5 @@
       "type": "string",
       "description": "Description of the desired target state for the component or capability."
     }
-  },
-  "additionalProperties": false
+  }
 }

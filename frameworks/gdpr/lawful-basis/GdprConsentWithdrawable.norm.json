@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 7(3)",
-    "paragraphs": [
-      "7(3)"
-    ],
-    "text": "The data subject shall have the right to withdraw his or her consent at any time. The withdrawal of consent shall not affect the lawfulness of processing based on consent before its withdrawal. Prior to giving consent, the data subject shall be informed thereof. It shall be as easy to withdraw as to give consent."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/lawful-basis/ConsentRequirements/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/lawful-basis/GdprConsent/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprLawfulBasis.lawfulBasis == 'CONSENT'",
   "assertion": "withdrawalMechanismAvailable == true",

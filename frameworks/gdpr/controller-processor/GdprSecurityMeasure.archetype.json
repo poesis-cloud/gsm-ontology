@@ -2,10 +2,6 @@
   "$schema": "gsmarc://gsm/Archetype/v1",
   "$id": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprSecurityMeasure/v1",
   "title": "GdprSecurityMeasure",
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
   "description": "GDPR-sourced archetype \u2014 security of processing measures under Regulation (EU) 2016/679. Article 32 requires controllers and processors to implement appropriate technical and organisational measures to ensure a level of security appropriate to the risk, including pseudonymisation, encryption, CIA, resilience, and regular testing. Rootless \u2014 regulatory compliance dimension. Source: GDPR Article 32.",
   "type": "object",
   "required": [
@@ -62,6 +58,5 @@
       "type": "boolean",
       "description": "Whether steps have been taken to ensure that any natural person acting under the authority of the controller or processor who has access to personal data does not process them except on instructions from the controller. Source: GDPR Art 32(4)."
     }
-  },
-  "additionalProperties": false
+  }
 }

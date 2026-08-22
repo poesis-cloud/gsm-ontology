@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 28(2)",
-    "paragraphs": [
-      "28(2)"
-    ],
-    "text": "The processor shall not engage another processor without prior specific or general written authorisation of the controller. In the case of general written authorisation, the processor shall inform the controller of any intended changes concerning the addition or replacement of other processors, thereby giving the controller the opportunity to object to such changes."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/ProcessorObligations/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprProcessorAgreement/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER', 'PROCESSOR']",
   "assertion": "subProcessorAuthorized == true",

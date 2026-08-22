@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/adm/TransitionArchitecture/v1",
-  "title": "TransitionArchitecture",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/adm/TogafTransitionArchitecture/v1",
+  "title": "TogafTransitionArchitecture",
   "description": "TOGAF-sourced archetype \u2014 a formally defined intermediate architecture state between the Baseline Architecture and the Target Architecture. Represents a planned waypoint in the architecture evolution roadmap. Placed in unclassified/ for GSM placement deliberation: may be a directive (target state specification), a governance record, or a state-plane snapshot definition. TOGAF mapping: Transition Architecture (ADM Phase E/F, Migration Planning). Source framework: TOGAF (ADM, Migration Planning).",
   "type": "object",
   "required": [
@@ -33,6 +29,5 @@
       "pattern": "^P",
       "description": "Planned duration for this transition as ISO 8601 duration (e.g., 'P6M' for six months). TOGAF mapping: Migration Planning timeline."
     }
-  },
-  "additionalProperties": false
+  }
 }

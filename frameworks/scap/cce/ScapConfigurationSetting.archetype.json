@@ -2,10 +2,6 @@
   "$schema": "gsmarc://gsm/Archetype/v1",
   "$id": "gsmarc://gsm-frameworks/scap/cce/ScapConfigurationSetting/v1",
   "title": "ScapConfigurationSetting",
-  "framework": {
-    "name": "scap",
-    "version": "1.0.0"
-  },
   "description": "SCAP-sourced archetype \u2014 configuration setting identification per Common Configuration Enumeration (CCE). Each CCE entry uniquely identifies a configuration guidance statement, enabling correlation of security configuration guidance across multiple sources (CIS Benchmarks, DISA STIGs, NIST 800-53). Rootless \u2014 cross-cutting identification dimension applicable to any configurable subject. Source: NIST CCE List, NIST SP 800-126 r3 (SCAP 1.3).",
   "type": "object",
   "required": [
@@ -48,6 +44,5 @@
       },
       "description": "Control framework references that cite this configuration setting (e.g., 'CIS Controls v8 Safeguard 5.2', 'NIST SP 800-53 CM-6'). This property documents the cross-framework traceability that CCE natively provides. Source: CCE List references field."
     }
-  },
-  "additionalProperties": false
+  }
 }

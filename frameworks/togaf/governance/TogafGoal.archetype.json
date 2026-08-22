@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/governance/Goal/v1",
-  "title": "Goal",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/governance/TogafGoal/v1",
+  "title": "TogafGoal",
   "description": "TOGAF-sourced archetype \u2014 a high-level qualitative statement of intent or direction for the organization. Goals are derived from Drivers and refined into measurable Objectives. Rootless \u2014 a Goal is a strategic classification, not an active system. TOGAF mapping: Goal (Motivation Extension, Architecture Vision). Source framework: TOGAF (Motivation Extension, Architecture Vision).",
   "type": "object",
   "required": [
@@ -38,6 +34,5 @@
       "minLength": 1,
       "description": "Human-readable statement of the goal."
     }
-  },
-  "additionalProperties": false
+  }
 }

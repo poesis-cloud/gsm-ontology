@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 38(2)",
-    "paragraphs": [
-      "38(2)"
-    ],
-    "text": "The controller and processor shall support the data protection officer in performing the tasks referred to in Article 39 by providing resources necessary to carry out those tasks and access to personal data and processing operations, and to maintain his or her expert knowledge."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/DpoDesignation/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprDataProtectionOfficer/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER', 'PROCESSOR'] && GdprDataProtectionOfficer.dpoDesignated == true",
   "assertion": "dpoResourcesProvided == true",

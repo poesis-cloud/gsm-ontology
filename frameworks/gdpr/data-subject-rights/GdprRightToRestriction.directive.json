@@ -1,23 +1,7 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 18",
-    "paragraphs": [
-      "18(1)",
-      "18(2)",
-      "18(3)"
-    ],
-    "text": "The data subject shall have the right to obtain from the controller restriction of processing where one of the following applies: (a) the accuracy of the personal data is contested by the data subject, for a period enabling the controller to verify the accuracy; (b) the processing is unlawful and the data subject opposes erasure and requests restriction of use instead; (c) the controller no longer needs the personal data but they are required by the data subject for the establishment, exercise or defence of legal claims; (d) the data subject has objected to processing pursuant to Article 21(1) pending the verification whether the legitimate grounds of the controller override those of the data subject."
-  },
   "structure": "$gdpr:data-controller",
   "modal": "MUST",
   "verb": "ENABLE",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprDataSubjectRight/v1",
-  "purpose": "$gdpr:data-subject",
-  "deploymentNotes": "At deployment: 'structure' resolves to the data controller. 'purpose' resolves to data subjects. Mandates enabling the right to restriction of processing under four specified grounds. When processing is restricted, data may only be stored; any other processing requires data subject's consent or is for legal claims, protection of rights, or important public interest. Operationalized by Norm checking restriction is applied."
+  "purpose": "$gdpr:data-subject"
 }

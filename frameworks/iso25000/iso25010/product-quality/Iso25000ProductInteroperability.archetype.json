@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25010/product-quality/ProductInteroperability/v1",
-  "title": "ProductInteroperability",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25010/product-quality/Iso25000ProductInteroperability/v1",
+  "title": "Iso25000ProductInteroperability",
   "description": "TOGAF-sourced quality archetype \u2014 Interoperability viability dimension. Defines the property vocabulary for integration governance: API style, data format standards, versioning, schema compliance. Rootless archetype \u2014 used as qualifier in Directives/Norms and as data type for Effectors/Receptors carrying integration state. Source framework: TOGAF (Application Architecture, Integration Architecture) + ISO/IEC 25010 (Interoperability \u2014 Co-existence, Compatibility).",
   "type": "object",
   "required": [
@@ -48,6 +44,5 @@
       "type": "boolean",
       "description": "Whether schemas are published to and validated against a schema registry."
     }
-  },
-  "additionalProperties": false
+  }
 }

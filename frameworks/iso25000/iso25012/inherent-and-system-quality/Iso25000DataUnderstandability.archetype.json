@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25012/inherent-and-system-quality/DataUnderstandability/v1",
-  "title": "DataUnderstandability",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25012/inherent-and-system-quality/Iso25000DataUnderstandability/v1",
+  "title": "Iso25000DataUnderstandability",
   "description": "ISO 25012-sourced data quality archetype \u2014 Understandability inherent-and-system data quality characteristic. The degree to which data has attributes that enable it to be read and interpreted by users, and is expressed in appropriate languages, symbols, and units in a specific context of use. Rootless archetype \u2014 used as qualifier in Directives/Norms governing data entities. Source: ISO/IEC 25012 (Inherent and System-Dependent Data Quality \u2014 Understandability).",
   "type": "object",
   "required": [
@@ -31,6 +27,5 @@
       "type": "boolean",
       "description": "Whether data uses standard notations, units, and symbols recognized by the target audience."
     }
-  },
-  "additionalProperties": false
+  }
 }

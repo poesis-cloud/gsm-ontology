@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 49(1)",
-    "paragraphs": [
-      "49(1)"
-    ],
-    "text": "In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a transfer or a set of transfers of personal data to a third country or an international organisation shall take place only on one of the following conditions: (a) the data subject has explicitly consented to the proposed transfer; (b) the transfer is necessary for the performance of a contract between the data subject and the controller; (c) the transfer is necessary for important reasons of public interest; (d) the transfer is necessary for the establishment, exercise or defence of legal claims; (e) the transfer is necessary in order to protect the vital interests of the data subject; (f) the transfer is made from a register which according to Union or Member State law is intended to provide information to the public."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/transfers/TransferRestriction/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/transfers/GdprTransferMechanism/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER', 'PROCESSOR'] && GdprTransferMechanism.internationalTransfer == true && GdprTransferMechanism.transferMechanism == 'DEROGATION'",
   "assertion": "transferSafeguardInPlace == true",

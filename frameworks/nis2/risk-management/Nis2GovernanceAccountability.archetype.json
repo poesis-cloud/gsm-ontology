@@ -2,10 +2,6 @@
   "$schema": "gsmarc://gsm/Archetype/v1",
   "$id": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2GovernanceAccountability/v1",
   "title": "Nis2GovernanceAccountability",
-  "framework": {
-    "name": "nis2",
-    "version": "1.0.0"
-  },
   "description": "NIS2-sourced archetype \u2014 management body governance accountability under Directive (EU) 2022/2555. Defines the vocabulary for management body obligations: approval of risk-management measures, mandatory training, and personal liability acknowledgement. Rootless \u2014 regulatory governance dimension. Source: NIS2 Article 20.",
   "type": "object",
   "required": [
@@ -31,6 +27,5 @@
       "$gsm:queryable": true,
       "description": "Whether management body members have acknowledged personal liability for infringements of Article 21. Member States ensure management bodies can be held liable per national law. Source: NIS2 Art 20(1) (final sentence)."
     }
-  },
-  "additionalProperties": false
+  }
 }

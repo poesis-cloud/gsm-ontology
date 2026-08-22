@@ -2,10 +2,6 @@
   "$schema": "gsmarc://gsm/Archetype/v1",
   "$id": "gsmarc://gsm-frameworks/scap/cpe/ScapPlatformIdentifier/v1",
   "title": "ScapPlatformIdentifier",
-  "framework": {
-    "name": "scap",
-    "version": "1.0.0"
-  },
   "description": "SCAP-sourced archetype \u2014 structured technology platform identification per Common Platform Enumeration (CPE) 2.3. Decomposes the CPE Well-Formed Name (WFN) into typed properties enabling Norm predicates against specific technology attributes (vendor, product, version). Cross-cutting identification dimension applicable to any technology-typed subject. Extended by SoftwareTechnology (ITIP domain taxonomy). CCE link: ScapConfigurationSetting.platform references cpeUri as the join key for configuration compliance. Source: NIST IR 7695 (CPE 2.3 Naming), NIST SP 800-126 r3 (SCAP 1.3).",
   "type": "object",
   "required": [

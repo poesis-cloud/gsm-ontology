@@ -1,12 +1,8 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/technology-architecture/CommunicationPath/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkInteraction/v1",
-  "title": "CommunicationPath",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/technology-architecture/TogafCommunicationPath/v1",
+  "$ref": "gsmarc://gsm/Interaction/v1",
+  "title": "TogafCommunicationPath",
   "description": "TOGAF-sourced interaction archetype \u2014 physical or logical communication channel between Nodes or Technology Components. The Effector\u2192Receptor coupling through which infrastructure-level data flows. Extends Interaction with TOGAF Technology Architecture vocabulary. TOGAF mapping: Communication Path (Content Metamodel, Technology Architecture domain). Source framework: TOGAF (Technology Architecture, Content Framework).",
   "type": "object",
   "required": [

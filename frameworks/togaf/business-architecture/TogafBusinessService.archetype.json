@@ -1,12 +1,8 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/business-architecture/BusinessService/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkStructure/v1",
-  "title": "BusinessService",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/business-architecture/TogafBusinessService/v1",
+  "$ref": "gsmarc://gsm/Structure/v1",
+  "title": "TogafBusinessService",
   "description": "TOGAF-sourced structural archetype \u2014 Business Architecture building block. Extends Structure with TOGAF Business Architecture vocabulary: service granularity, business domain, business criticality. Used as archetype_id on Structure Ascriptions representing business services. TOGAF mapping: Business Service (Content Metamodel, Business Architecture domain). Source framework: TOGAF (Business Architecture, Content Framework).",
   "type": "object",
   "required": [

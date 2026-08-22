@@ -1,12 +1,8 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkEffector/v1",
+  "$ref": "gsmarc://gsm/Effector/v1",
   "$id": "gsmarc://gsm-frameworks/http/HttpResponseEffector/v1",
   "title": "HttpResponseEffector",
-  "framework": {
-    "name": "http",
-    "version": "1.0.0"
-  },
   "description": "Effector archetype for HTTP response emission. HTTP responses have no verb system; response semantics are carried by the status code on the data layer (HttpResponse.statusClass/statusCode). Source: RFC 9110 \u00a715 \u2014 Status Codes.",
   "type": "object",
   "properties": {

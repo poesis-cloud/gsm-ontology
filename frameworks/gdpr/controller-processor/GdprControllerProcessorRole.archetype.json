@@ -2,10 +2,6 @@
   "$schema": "gsmarc://gsm/Archetype/v1",
   "$id": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprControllerProcessorRole/v1",
   "title": "GdprControllerProcessorRole",
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
   "description": "GDPR-sourced archetype \u2014 controller and processor role classification under Regulation (EU) 2016/679. Determines the entity's role in personal data processing and associated obligations. Controllers determine purposes and means; processors act on controller instructions. Rootless \u2014 regulatory scoping dimension. Source: GDPR Article 4(7)-(8), Articles 26-28.",
   "type": "object",
   "required": [
@@ -41,6 +37,5 @@
       "type": "boolean",
       "description": "Whether a transparent arrangement between joint controllers determines respective responsibilities. Required when role is JOINT_CONTROLLER. Source: GDPR Art 26(1)."
     }
-  },
-  "additionalProperties": false
+  }
 }

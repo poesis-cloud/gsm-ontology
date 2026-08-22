@@ -1,25 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 28(3)",
-    "paragraphs": [
-      "28(3)(a)",
-      "28(3)(b)",
-      "28(3)(c)",
-      "28(3)(d)",
-      "28(3)(e)",
-      "28(3)(f)",
-      "28(3)(g)",
-      "28(3)(h)"
-    ],
-    "text": "Processing by a processor shall be governed by a contract or other legal act that sets out the subject-matter and duration of the processing, the nature and purpose, the type of personal data, categories of data subjects, and the obligations and rights of the controller. That contract shall stipulate, in particular, that the processor: (a) processes only on documented instructions; (b) ensures confidentiality; (c) takes Art 32 security measures; (d) respects sub-processing conditions; (e) assists with data subject requests; (f) assists with Art 32-36 compliance; (g) deletes or returns data after service ends; (h) makes available all information for compliance demonstration and allows audits."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/ProcessorObligations/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprProcessorAgreement/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprProcessorAgreement.contractInPlace == true",
   "assertion": "contractContentsComplete == true && contractInWriting == true",

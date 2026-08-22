@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25012/inherent-and-system-quality/DataPrecision/v1",
-  "title": "DataPrecision",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25012/inherent-and-system-quality/Iso25000DataPrecision/v1",
+  "title": "Iso25000DataPrecision",
   "description": "ISO 25012-sourced data quality archetype \u2014 Precision inherent-and-system data quality characteristic. The degree to which data has attributes that are exact or that provide discrimination in a specific context of use. Rootless archetype \u2014 used as qualifier in Directives/Norms governing data entities. Source: ISO/IEC 25012 (Inherent and System-Dependent Data Quality \u2014 Precision).",
   "type": "object",
   "required": [
@@ -33,6 +29,5 @@
       "minimum": 1,
       "description": "Required number of significant digits for numeric data."
     }
-  },
-  "additionalProperties": false
+  }
 }

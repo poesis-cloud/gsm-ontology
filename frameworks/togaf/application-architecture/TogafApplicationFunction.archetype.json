@@ -1,12 +1,8 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/application-architecture/ApplicationFunction/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkMechanism/v1",
-  "title": "ApplicationFunction",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/application-architecture/TogafApplicationFunction/v1",
+  "$ref": "gsmarc://gsm/Mechanism/v1",
+  "title": "TogafApplicationFunction",
   "description": "TOGAF-sourced mechanism archetype \u2014 Application Architecture behavioral unit. An application function is the automated behavior that an Application Component (Structure) performs. Extends Mechanism with TOGAF Application Architecture vocabulary. Source framework: TOGAF (Content Metamodel \u2192 Application Function).",
   "type": "object",
   "required": [

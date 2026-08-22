@@ -2,10 +2,6 @@
   "$schema": "gsmarc://gsm/Archetype/v1",
   "$id": "gsmarc://gsm-frameworks/gdpr/transfers/GdprTransferMechanism/v1",
   "title": "GdprTransferMechanism",
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
   "description": "GDPR-sourced archetype \u2014 international data transfer mechanisms under Regulation (EU) 2016/679. Chapter V (Articles 44-49) restricts transfers of personal data to third countries or international organisations unless appropriate safeguards are in place. Rootless \u2014 regulatory compliance dimension. Source: GDPR Articles 44-49.",
   "type": "object",
   "required": [
@@ -45,6 +41,5 @@
       "type": "boolean",
       "description": "Whether a transfer impact assessment has been performed to evaluate the legal framework of the third country and whether supplementary measures are needed. Source: EDPB Recommendations 01/2020."
     }
-  },
-  "additionalProperties": false
+  }
 }

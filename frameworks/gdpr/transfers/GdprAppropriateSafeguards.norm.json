@@ -1,19 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 46(1)",
-    "paragraphs": [
-      "46(1)",
-      "46(2)"
-    ],
-    "text": "In the absence of a decision pursuant to Article 45(3), a controller or processor may transfer personal data to a third country or an international organisation only if the controller or processor has provided appropriate safeguards, and on condition that enforceable data subject rights and effective legal remedies for data subjects are available. The appropriate safeguards referred to in paragraph 1 may be provided for, without requiring any specific authorisation from a supervisory authority, by: (a) a legally binding and enforceable instrument between public authorities or bodies; (b) binding corporate rules; (c) standard data protection clauses adopted by the Commission; (d) standard data protection clauses adopted by a supervisory authority and approved by the Commission; (e) an approved code of conduct; (f) an approved certification mechanism."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/transfers/TransferRestriction/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/transfers/GdprTransferMechanism/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER', 'PROCESSOR'] && GdprTransferMechanism.internationalTransfer == true && GdprTransferMechanism.transferMechanism in ['STANDARD_CONTRACTUAL_CLAUSES', 'BINDING_CORPORATE_RULES', 'APPROVED_CODE_OF_CONDUCT', 'APPROVED_CERTIFICATION']",
   "assertion": "transferSafeguardInPlace == true && supplementaryMeasuresApplied == true",

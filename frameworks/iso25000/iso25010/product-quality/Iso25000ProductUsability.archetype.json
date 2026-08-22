@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25010/product-quality/ProductUsability/v1",
-  "title": "ProductUsability",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25010/product-quality/Iso25000ProductUsability/v1",
+  "title": "Iso25000ProductUsability",
   "description": "TOGAF-sourced quality archetype \u2014 Usability viability dimension. Measures the degree to which the system can be used by specified users to achieve specified goals with effectiveness, efficiency, and satisfaction. Rootless archetype \u2014 transversal to all governed entities. ISO 25010 mapping: Usability (Learnability, Operability, Accessibility, User Error Protection). Source framework: TOGAF (Architecture Principles) + ISO/IEC 25010.",
   "type": "object",
   "required": [
@@ -38,6 +34,5 @@
       "$gsm:queryable": true,
       "description": "Whether the system protects users against making errors. Norm example: Usability.errorProtection == true."
     }
-  },
-  "additionalProperties": false
+  }
 }

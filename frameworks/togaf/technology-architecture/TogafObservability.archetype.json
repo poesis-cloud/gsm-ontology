@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/technology-architecture/Observability/v1",
-  "title": "Observability",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/technology-architecture/TogafObservability/v1",
+  "title": "TogafObservability",
   "description": "TOGAF-sourced quality archetype \u2014 Observability viability dimension. Defines the property vocabulary for observability governance: logging, metrics, distributed tracing, and alerting requirements. Rootless archetype \u2014 used as qualifier in Directives/Norms and as data type for Effectors/Receptors carrying observability posture state. Source framework: TOGAF (Technology Architecture \u2014 monitoring and management requirements) extended with the modern observability pillar model (logs, metrics, traces). Coherence note: fills a gap identified in the TOGAF coherence audit \u2014 TOGAF Technology Architecture monitoring is a core concern not covered by ISO 25010 quality characteristics alone.",
   "type": "object",
   "required": [
@@ -47,6 +43,5 @@
       "$gsm:queryable": true,
       "description": "Minimum observability data retention period in days."
     }
-  },
-  "additionalProperties": false
+  }
 }

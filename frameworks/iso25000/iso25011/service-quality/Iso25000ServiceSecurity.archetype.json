@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25011/service-quality/ServiceSecurity/v1",
-  "title": "ServiceSecurity",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25011/service-quality/Iso25000ServiceSecurity/v1",
+  "title": "Iso25000ServiceSecurity",
   "description": "ISO 25011 quality archetype \u2014 Security viability dimension. Degree to which the IT service protects information and data so that persons or other services have the degree of data access appropriate to their types and levels of authorization. Sub-characteristics: Confidentiality, Integrity, Traceability. Rootless archetype \u2014 used as qualifier in Directives/Norms governing service security posture. Source: ISO/IEC TS 25011:2017 \u00a77.3.",
   "type": "object",
   "required": [
@@ -38,6 +34,5 @@
       "$gsm:queryable": true,
       "description": "Whether the IT service provides an audit trail of service interactions and data access. Norm example: ServiceSecurity.traceabilityEnabled == true."
     }
-  },
-  "additionalProperties": false
+  }
 }

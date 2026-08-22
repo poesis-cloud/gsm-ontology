@@ -2,10 +2,6 @@
   "$schema": "gsmarc://gsm/Archetype/v1",
   "$id": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprDataSubjectRight/v1",
   "title": "GdprDataSubjectRight",
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
   "description": "GDPR-sourced archetype \u2014 data subject rights under Regulation (EU) 2016/679. Articles 15-22 define individual rights that data subjects can exercise against controllers. Each right has specific conditions, exemptions, and response obligations. Rootless \u2014 regulatory compliance dimension. Source: GDPR Articles 15-22.",
   "type": "object",
   "required": [
@@ -85,6 +81,5 @@
       "type": "boolean",
       "description": "Whether human intervention has been provided on the part of the controller, including the right to express a point of view and contest the decision. Applicable when rightType is AUTOMATED_DECISION_PROTECTION. Source: GDPR Art 22(3)."
     }
-  },
-  "additionalProperties": false
+  }
 }

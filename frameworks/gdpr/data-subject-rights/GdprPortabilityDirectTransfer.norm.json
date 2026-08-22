@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 20(2)",
-    "paragraphs": [
-      "20(2)"
-    ],
-    "text": "In exercising his or her right to data portability pursuant to paragraph 1, the data subject shall have the right to have the personal data transmitted directly from one controller to another, where technically feasible."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/RightToPortability/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprDataSubjectRight/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprDataSubjectRight.rightType == 'PORTABILITY' && GdprDataSubjectRight.identityVerified == true",
   "assertion": "responseProvided == true && directTransferCompleted == true",

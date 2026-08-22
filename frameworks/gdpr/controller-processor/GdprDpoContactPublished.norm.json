@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 37(7)",
-    "paragraphs": [
-      "37(7)"
-    ],
-    "text": "The controller or the processor shall publish the contact details of the data protection officer and communicate them to the supervisory authority."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/DpoDesignation/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprDataProtectionOfficer/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER', 'PROCESSOR'] && GdprDataProtectionOfficer.dpoDesignated == true",
   "assertion": "dpoContactPublished == true",

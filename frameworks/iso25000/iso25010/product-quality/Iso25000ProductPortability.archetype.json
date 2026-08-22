@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25010/product-quality/ProductPortability/v1",
-  "title": "ProductPortability",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25010/product-quality/Iso25000ProductPortability/v1",
+  "title": "Iso25000ProductPortability",
   "description": "TOGAF-sourced quality archetype \u2014 Portability viability dimension. Defines the property vocabulary for portability governance: containerization, cloud-provider agnosticism, configuration externalization, and vendor lock-in assessment. Rootless archetype \u2014 used as qualifier in Directives/Norms and as data type for Effectors/Receptors carrying portability posture state. Source framework: TOGAF (Technology Architecture \u2014 migration planning, platform independence) + ISO/IEC 25010 (Portability \u2014 Adaptability, Installability, Replaceability). Coherence note: fills a gap identified in the TOGAF coherence audit \u2014 ISO 25010 Portability is a core quality characteristic relevant to cloud migration governance.",
   "type": "object",
   "required": [
@@ -49,6 +45,5 @@
       "$gsm:queryable": true,
       "description": "Assessed vendor lock-in level. NONE = fully portable. LOW = minor adaptation needed. MEDIUM = significant migration effort. HIGH = deeply coupled to vendor platform."
     }
-  },
-  "additionalProperties": false
+  }
 }

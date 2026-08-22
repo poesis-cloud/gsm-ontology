@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 7(1)",
-    "paragraphs": [
-      "7(1)"
-    ],
-    "text": "Where processing is based on consent, the controller shall be able to demonstrate that the data subject has consented to processing of his or her personal data."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/lawful-basis/ConsentRequirements/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/lawful-basis/GdprConsent/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprLawfulBasis.lawfulBasis == 'CONSENT'",
   "assertion": "consentDemonstrable == true",

@@ -1,21 +1,7 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 16",
-    "paragraphs": [
-      "16"
-    ],
-    "text": "The data subject shall have the right to obtain from the controller without undue delay the rectification of inaccurate personal data concerning him or her. Taking into account the purposes of the processing, the data subject shall have the right to have incomplete personal data completed, including by means of providing a supplementary statement."
-  },
   "structure": "$gdpr:data-controller",
   "modal": "MUST",
   "verb": "ENABLE",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprDataSubjectRight/v1",
-  "purpose": "$gdpr:data-subject",
-  "deploymentNotes": "At deployment: 'structure' resolves to the data controller. 'purpose' resolves to data subjects. Enables the right to rectification. Norms verify that rectification requests are fulfilled without undue delay."
+  "purpose": "$gdpr:data-subject"
 }

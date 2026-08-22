@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 25(1)",
-    "paragraphs": [
-      "25(1)"
-    ],
-    "text": "Taking into account the state of the art, the cost of implementation and the nature, scope, context and purposes of processing as well as the risks of varying likelihood and severity for rights and freedoms of natural persons posed by the processing, the controller shall, both at the time of the determination of the means for processing and at the time of the processing itself, implement appropriate technical and organisational measures, such as pseudonymisation, which are designed to implement data-protection principles, such as data minimisation, in an effective manner and to integrate the necessary safeguards into the processing in order to meet the requirements of this Regulation and protect the rights of data subjects."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/DataProtectionByDesign/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprDataProtectionByDesign/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER']",
   "assertion": "technicalMeasuresImplemented == true && organisationalMeasuresImplemented == true",

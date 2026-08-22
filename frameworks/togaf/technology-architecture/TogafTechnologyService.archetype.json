@@ -1,12 +1,8 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/technology-architecture/TechnologyService/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkStructure/v1",
-  "title": "TechnologyService",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/technology-architecture/TogafTechnologyService/v1",
+  "$ref": "gsmarc://gsm/Structure/v1",
+  "title": "TogafTechnologyService",
   "description": "TOGAF-sourced structural archetype \u2014 Technology Architecture building block. Extends Structure with TOGAF Technology Architecture vocabulary: service category, provider, management model. Used as archetype_id on Structure Ascriptions representing infrastructure and platform services. TOGAF mapping: Technology Service / Platform Service (Content Metamodel, Technology Architecture domain). Source framework: TOGAF (Technology Architecture, Content Framework).",
   "type": "object",
   "required": [

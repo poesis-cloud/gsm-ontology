@@ -1,12 +1,8 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/governance/ArchitectureRequirementCompliance/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkNorm/v1",
-  "title": "ArchitectureRequirementCompliance",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/governance/TogafArchitectureRequirementCompliance/v1",
+  "$ref": "gsmarc://gsm/Norm/v1",
+  "title": "TogafArchitectureRequirementCompliance",
   "description": "TOGAF-sourced norm archetype \u2014 the measurable compliance facet of a TOGAF Requirement. While the Requirement directive (directives/Requirement) captures governance intent (WHAT must be achieved), this schema captures the measurable assertion (HOW to verify compliance). Requires GSM unsealing of Norm to be functional. Extends Norm with TOGAF compliance measurement vocabulary. TOGAF mapping: Requirement compliance assessment (ADM Requirements Management). Source framework: TOGAF (ADM, Requirements Management).",
   "type": "object",
   "required": [

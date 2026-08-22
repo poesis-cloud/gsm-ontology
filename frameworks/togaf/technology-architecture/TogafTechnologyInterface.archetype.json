@@ -1,12 +1,8 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/technology-architecture/TechnologyInterface/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkReceptor/v1",
-  "title": "TechnologyInterface",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/technology-architecture/TogafTechnologyInterface/v1",
+  "$ref": "gsmarc://gsm/Receptor/v1",
+  "title": "TogafTechnologyInterface",
   "description": "TOGAF-sourced receptor archetype \u2014 the access point where technology services are made available to the environment. A port through which technology infrastructure receives commands, data, or signals. Requires GSM unsealing of Receptor to be functional as a Receptor extension. Extends Receptor with TOGAF Technology Architecture vocabulary. TOGAF mapping: Technology Interface (Content Metamodel, Technology Architecture domain). Source framework: TOGAF (Technology Architecture, Content Framework).",
   "type": "object",
   "required": [

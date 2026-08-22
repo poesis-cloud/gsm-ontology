@@ -2,7 +2,7 @@
   "name": "scap",
   "version": "1.0.0",
   "description": "SCAP-sourced identification vocabulary \u2014 CPE platform identifiers and CCE configuration settings.",
-  "baseVersion": "1.0.0",
+  "layer": "reference",
   "elements": [
     {
       "path": "cce/ScapConfigurationSetting.archetype.json"

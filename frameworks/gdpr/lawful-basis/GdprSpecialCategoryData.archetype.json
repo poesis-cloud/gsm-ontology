@@ -2,10 +2,6 @@
   "$schema": "gsmarc://gsm/Archetype/v1",
   "$id": "gsmarc://gsm-frameworks/gdpr/lawful-basis/GdprSpecialCategoryData/v1",
   "title": "GdprSpecialCategoryData",
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
   "description": "GDPR-sourced archetype \u2014 special categories of personal data under Regulation (EU) 2016/679. Article 9 prohibits processing of sensitive data unless one of ten specific conditions from Article 9(2) is met. Rootless \u2014 regulatory compliance dimension. Source: GDPR Article 9(1)-(2).",
   "type": "object",
   "required": [
@@ -53,6 +49,5 @@
       "type": "boolean",
       "description": "Whether additional safeguards required by the applicable processing condition are in place. Several Art 9(2) conditions require specific safeguards (e.g., Art 9(2)(b) requires authorisation by EU/Member State law with appropriate safeguards)."
     }
-  },
-  "additionalProperties": false
+  }
 }

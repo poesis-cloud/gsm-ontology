@@ -1,22 +1,7 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 20",
-    "paragraphs": [
-      "20(1)",
-      "20(2)"
-    ],
-    "text": "The data subject shall have the right to receive the personal data concerning him or her, which he or she has provided to a controller, in a structured, commonly used and machine-readable format and have the right to transmit those data to another controller without hindrance from the controller to which the personal data have been provided, where: (a) the processing is based on consent or contract; and (b) the processing is carried out by automated means. In exercising his or her right to data portability, the data subject shall have the right to have the personal data transmitted directly from one controller to another, where technically feasible."
-  },
   "structure": "$gdpr:data-controller",
   "modal": "MUST",
   "verb": "ENABLE",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprDataSubjectRight/v1",
-  "purpose": "$gdpr:data-subject",
-  "deploymentNotes": "At deployment: 'structure' resolves to the data controller. 'purpose' resolves to data subjects. Enables the right to data portability. Applies only when processing is based on consent or contract and carried out by automated means. Norms verify structured/machine-readable format and direct transfer capability."
+  "purpose": "$gdpr:data-subject"
 }

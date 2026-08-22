@@ -1,22 +1,7 @@
 {
-  "framework": {
-    "name": "nis2",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Directive (EU) 2022/2555 (NIS2)",
-    "article": "Article 21(2)(d)",
-    "paragraphs": [
-      "21(2)(d)",
-      "21(3)"
-    ],
-    "text": "[Measures shall include at least:] (d) supply chain security, including security-related aspects concerning the relationships between each entity and its direct suppliers or service providers. [...] Member States shall ensure that, when considering which measures referred to in point (d) of paragraph 2 are appropriate, entities take into account the vulnerabilities specific to each direct supplier and service provider and the overall quality of products and cybersecurity practices of their suppliers and service providers, including their secure development procedures."
-  },
   "structure": "$nis2:regulatory-authority",
   "modal": "MUST",
   "verb": "ENSURE",
   "qualifier": "gsmarc://gsm-frameworks/nis2/supply-chain/Nis2SupplyChainSecurity/v1",
-  "purpose": "$nis2:classified-entity",
-  "deploymentNotes": "At deployment: 'structure' resolves to the governing Structure. 'purpose' resolves to every Structure classified ESSENTIAL or IMPORTANT. This Directive elevates supply chain security from Art 21(2)(d) to a standalone Directive because it governs cross-entity relationships (entity \u2192 supplier). Art 21(3) adds specific supply chain due diligence requirements. Operationalized by Norms checking supplier assessment completion and security posture."
+  "purpose": "$nis2:classified-entity"
 }

@@ -1,12 +1,8 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/technology-architecture/PhysicalTechnologyComponent/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkStructure/v1",
-  "title": "PhysicalTechnologyComponent",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/technology-architecture/TogafPhysicalTechnologyComponent/v1",
+  "$ref": "gsmarc://gsm/Structure/v1",
+  "title": "TogafPhysicalTechnologyComponent",
   "description": "TOGAF-sourced structural archetype \u2014 physical implementation and deployment of technology functionality. Parallels the Logical/Physical split in Application Architecture and Data Architecture. An active system with Mechanisms (processing, routing, storage functions), Effectors (signals, data output), Receptors (signals, data input). Extends Structure with TOGAF Technology Architecture vocabulary. TOGAF mapping: Physical Technology Component (Content Metamodel, Technology Architecture domain). Source framework: TOGAF (Technology Architecture, Content Framework).",
   "type": "object",
   "required": [

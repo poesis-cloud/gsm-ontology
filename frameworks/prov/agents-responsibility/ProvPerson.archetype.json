@@ -1,0 +1,17 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-frameworks/prov/agents-responsibility/ProvPerson/v1",
+  "title": "ProvPerson",
+  "description": "Rootless shape facet \u2014 PROV Person agent type: \"Person agents are people.\" One of the three agent types PROV defines for interoperability. PROV defines no attributes specific to Person. Source: W3C PROV-DM (REC-prov-dm-20130430) \u00a75.3.1 Agent, prov:Person; PROV-O prov:Person.",
+  "type": "object",
+  "required": [
+    "id"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identifier for the person agent \u2014 mandatory per PROV-DM \u00a75.7.1; a qualified name, mappable to an IRI (\u00a75.7.5)."
+    }
+  }
+}

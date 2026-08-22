@@ -1,15 +1,4 @@
 {
-  "framework": {
-    "name": "nis2",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Directive (EU) 2022/2555 (NIS2)",
-    "article": "Article 20(1)",
-    "text": "Management bodies of essential and important entities shall approve the cybersecurity risk-management measures taken by those entities in order to comply with Article 21 and shall oversee its implementation."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/nis2/risk-management/GovernanceAccountability/v1",
   "qualifier": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2GovernanceAccountability/v1",
   "applicability": "Nis2EntityClassification.entityTier in ['ESSENTIAL', 'IMPORTANT']",
   "assertion": "managementApproval == true",

@@ -1,0 +1,34 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-frameworks/it/ontology/business-architecture/ItBusinessCapability/v1",
+  "$ref": "gsmarc://gsm-frameworks/togaf/business-architecture/TogafBusinessCapability/v1",
+  "title": "ItBusinessCapability",
+  "description": "IT ontology composite \u2014 materialization of the ontology.json axes for TogafBusinessCapability. Typing: extends TogafBusinessCapability (rootless \u2014 qualifier/data roles only). Facets are mounted as optional named properties keyed by lowerCamelCase of the facet's globally-unique title (the catalogue's facet mount rule \u2014 collision-free instance-level namespacing; JSON Schema does not namespace instance properties). Mounted axes \u2014 attributed-to: ProvAttribution; measured-by-quality-in-use: Iso25000ProductContextCoverage, Iso25000ProductEffectiveness, Iso25000ProductEfficiency, Iso25000ProductFreedomFromRisk, Iso25000ProductSatisfaction. Source: frameworks/it/ontology.json (static materialization; generator planned).",
+  "type": "object",
+  "properties": {
+    "iso25000ProductContextCoverage": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25010/quality-in-use/Iso25000ProductContextCoverage/v1",
+      "description": "Optional Iso25000ProductContextCoverage facet mount (ontology axis: measured-by-quality-in-use). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000ProductEffectiveness": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25010/quality-in-use/Iso25000ProductEffectiveness/v1",
+      "description": "Optional Iso25000ProductEffectiveness facet mount (ontology axis: measured-by-quality-in-use). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000ProductEfficiency": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25010/quality-in-use/Iso25000ProductEfficiency/v1",
+      "description": "Optional Iso25000ProductEfficiency facet mount (ontology axis: measured-by-quality-in-use). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000ProductFreedomFromRisk": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25010/quality-in-use/Iso25000ProductFreedomFromRisk/v1",
+      "description": "Optional Iso25000ProductFreedomFromRisk facet mount (ontology axis: measured-by-quality-in-use). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000ProductSatisfaction": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25010/quality-in-use/Iso25000ProductSatisfaction/v1",
+      "description": "Optional Iso25000ProductSatisfaction facet mount (ontology axis: measured-by-quality-in-use). Facet-internal required members apply only when this mount is present."
+    },
+    "provAttribution": {
+      "$ref": "gsmarc://gsm-frameworks/prov/agents-responsibility/ProvAttribution/v1",
+      "description": "Optional ProvAttribution facet mount (ontology axis: attributed-to). Facet-internal required members apply only when this mount is present."
+    }
+  }
+}

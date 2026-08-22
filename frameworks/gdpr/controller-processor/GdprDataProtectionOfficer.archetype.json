@@ -2,10 +2,6 @@
   "$schema": "gsmarc://gsm/Archetype/v1",
   "$id": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprDataProtectionOfficer/v1",
   "title": "GdprDataProtectionOfficer",
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
   "description": "GDPR-sourced archetype \u2014 data protection officer designation and properties under Regulation (EU) 2016/679. Articles 37-39 define when a DPO must be designated, required qualifications, independence guarantees, and tasks. Rootless \u2014 regulatory compliance dimension. Source: GDPR Articles 37, 38, 39.",
   "type": "object",
   "required": [
@@ -44,6 +40,5 @@
       "type": "boolean",
       "description": "Whether the controller/processor provides the DPO with resources necessary to carry out tasks and maintain expert knowledge. Source: GDPR Art 38(2)."
     }
-  },
-  "additionalProperties": false
+  }
 }

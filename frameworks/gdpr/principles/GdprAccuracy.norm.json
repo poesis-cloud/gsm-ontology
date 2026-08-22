@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 5(1)(d)",
-    "paragraphs": [
-      "5(1)(d)"
-    ],
-    "text": "Personal data shall be accurate and, where necessary, kept up to date; every reasonable step must be taken to ensure that personal data that are inaccurate, having regard to the purposes for which they are processed, are erased or rectified without delay ('accuracy')."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/principles/ProcessingPrinciples/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/principles/GdprProcessingPrinciple/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprProcessingPrinciple.principle == 'ACCURACY'",
   "assertion": "principleCompliant == true",

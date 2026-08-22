@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "nis2",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Directive (EU) 2022/2555 (NIS2)",
-    "article": "Article 20(2)",
-    "paragraphs": [
-      "20(2)"
-    ],
-    "text": "Member States shall ensure that the members of the management bodies of essential and important entities are required to follow training, and shall encourage essential and important entities to offer similar training to their employees on a regular basis, in order to gain sufficient knowledge and skills to enable them to identify risks and assess cybersecurity risk-management practices and their impact on the services provided by the entity."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/nis2/risk-management/GovernanceAccountability/v1",
   "qualifier": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2GovernanceAccountability/v1",
   "applicability": "Nis2EntityClassification.entityTier in ['ESSENTIAL', 'IMPORTANT']",
   "assertion": "employeeTrainingOffered == true",

@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/governance/Driver/v1",
-  "title": "Driver",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/governance/TogafDriver/v1",
+  "title": "TogafDriver",
   "description": "TOGAF-sourced archetype \u2014 an external or internal condition that motivates the organization to define Goals and shape architecture direction. Drivers are the root cause of change and the origin of the motivation chain (Driver \u2192 Goal \u2192 Objective \u2192 Requirement). Rootless \u2014 a Driver is a classification of motivation, not an active system. TOGAF mapping: Driver (Motivation Extension, Architecture Vision). Source framework: TOGAF (Motivation Extension, Architecture Vision).",
   "type": "object",
   "required": [
@@ -49,6 +45,5 @@
       "minLength": 1,
       "description": "Human-readable description of the driver."
     }
-  },
-  "additionalProperties": false
+  }
 }

@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 7(4)",
-    "paragraphs": [
-      "7(4)"
-    ],
-    "text": "When assessing whether consent is freely given, utmost account shall be taken of whether, inter alia, the performance of a contract, including the provision of a service, is conditional on consent to the processing of personal data that is not necessary for the performance of that contract."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/lawful-basis/ConsentRequirements/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/lawful-basis/GdprConsent/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprLawfulBasis.lawfulBasis == 'CONSENT'",
   "assertion": "freelyGiven == true",

@@ -2,10 +2,6 @@
   "$schema": "gsmarc://gsm/Archetype/v1",
   "$id": "gsmarc://gsm-frameworks/nis2/incident-reporting/Nis2IncidentReporting/v1",
   "title": "Nis2IncidentReporting",
-  "framework": {
-    "name": "nis2",
-    "version": "1.0.0"
-  },
   "description": "NIS2-sourced archetype \u2014 incident reporting obligations under Directive (EU) 2022/2555. Defines the vocabulary for the multi-stage incident notification pipeline: early warning, formal notification, intermediate report, and final report. Rootless \u2014 regulatory compliance dimension. Source: NIS2 Article 23.",
   "type": "object",
   "required": [
@@ -46,6 +42,5 @@
       "type": "boolean",
       "description": "Whether the incident has or may have cross-border impact. Source: NIS2 Art 23(4)(a)."
     }
-  },
-  "additionalProperties": false
+  }
 }

@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25010/product-quality/ProductFunctionalSuitability/v1",
-  "title": "ProductFunctionalSuitability",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25010/product-quality/Iso25000ProductFunctionalSuitability/v1",
+  "title": "Iso25000ProductFunctionalSuitability",
   "description": "TOGAF-sourced quality archetype \u2014 Functional Suitability viability dimension. Measures whether the system provides functions that meet stated and implied needs. Rootless archetype \u2014 transversal to all governed entities. ISO 25010 mapping: Functional Suitability (Completeness, Correctness, Appropriateness). Source framework: TOGAF (Architecture Principles) + ISO/IEC 25010.",
   "type": "object",
   "required": [
@@ -33,6 +29,5 @@
       "$gsm:queryable": true,
       "description": "Degree to which functions facilitate accomplishment of specified tasks and objectives (0-100%). Norm example: FunctionalSuitability.appropriateness >= 90."
     }
-  },
-  "additionalProperties": false
+  }
 }

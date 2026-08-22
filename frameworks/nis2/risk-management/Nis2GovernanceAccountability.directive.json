@@ -1,22 +1,7 @@
 {
-  "framework": {
-    "name": "nis2",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Directive (EU) 2022/2555 (NIS2)",
-    "article": "Article 20",
-    "paragraphs": [
-      "20(1)",
-      "20(2)"
-    ],
-    "text": "Management bodies of essential and important entities shall approve the cybersecurity risk-management measures taken by those entities in order to comply with Article 21 and shall oversee its implementation and can be held liable for infringements by those entities of that Article. [...] Member States shall ensure that the members of the management bodies of essential and important entities are required to follow training, and shall encourage essential and important entities to offer similar training to their employees on a regular basis."
-  },
   "structure": "$nis2:regulatory-authority",
   "modal": "MUST",
   "verb": "ENSURE",
   "qualifier": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2GovernanceAccountability/v1",
-  "purpose": "$nis2:classified-entity",
-  "deploymentNotes": "At deployment: 'structure' resolves to the governing Structure that adopts NIS2 compliance governance. 'purpose' resolves to every Structure classified as ESSENTIAL or IMPORTANT per Nis2EntityClassification. This Directive mandates management body approval of cybersecurity measures (Art 20(1)), mandatory training (Art 20(2)), and liability acknowledgment."
+  "purpose": "$nis2:classified-entity"
 }

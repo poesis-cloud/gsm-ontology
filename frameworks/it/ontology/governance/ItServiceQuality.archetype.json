@@ -1,0 +1,14 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-frameworks/it/ontology/governance/ItServiceQuality/v1",
+  "$ref": "gsmarc://gsm-frameworks/togaf/governance/TogafServiceQuality/v1",
+  "title": "ItServiceQuality",
+  "description": "IT ontology composite \u2014 materialization of the ontology.json axes for TogafServiceQuality. Typing: extends TogafServiceQuality (rootless \u2014 qualifier/data roles only). Facets are mounted as optional named properties keyed by lowerCamelCase of the facet's globally-unique title (the catalogue's facet mount rule \u2014 collision-free instance-level namespacing; JSON Schema does not namespace instance properties). Mounted axes \u2014 attributed-to: ProvAttribution. Source: frameworks/it/ontology.json (static materialization; generator planned).",
+  "type": "object",
+  "properties": {
+    "provAttribution": {
+      "$ref": "gsmarc://gsm-frameworks/prov/agents-responsibility/ProvAttribution/v1",
+      "description": "Optional ProvAttribution facet mount (ontology axis: attributed-to). Facet-internal required members apply only when this mount is present."
+    }
+  }
+}

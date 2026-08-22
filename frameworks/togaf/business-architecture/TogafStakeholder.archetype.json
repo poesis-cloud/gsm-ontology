@@ -1,12 +1,8 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/business-architecture/Stakeholder/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkStructure/v1",
-  "title": "Stakeholder",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/business-architecture/TogafStakeholder/v1",
+  "$ref": "gsmarc://gsm/Structure/v1",
+  "title": "TogafStakeholder",
   "description": "TOGAF-sourced structural archetype \u2014 a person, team, or organization with interests in or concerns relative to architecture outcomes. An active system: the stakeholder performs governance functions (Mechanisms), produces decisions/approvals (Effectors), receives architecture deliverables (Receptors). Note: Actor and Stakeholder may represent the same real-world entity from different perspectives \u2014 Actor focuses on what they DO, Stakeholder on what they CARE ABOUT. Extends Structure with TOGAF Stakeholder Management vocabulary. TOGAF mapping: Stakeholder (Stakeholder Management, Architecture Governance, Content Metamodel). Source framework: TOGAF (Stakeholder Management, Architecture Governance).",
   "type": "object",
   "required": [

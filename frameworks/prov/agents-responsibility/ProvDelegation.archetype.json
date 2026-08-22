@@ -1,0 +1,46 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-frameworks/prov/agents-responsibility/ProvDelegation/v1",
+  "title": "ProvDelegation",
+  "description": "Rootless facet \u2014 PROV Delegation: \"the assignment of authority and responsibility to an agent (by itself or by another agent) to carry out a specific activity as a delegate or representative, while the agent it acts on behalf of retains some responsibility for the outcome of the delegated work.\" Source: W3C PROV-DM (REC-prov-dm-20130430) \u00a75.3.4 Delegation, actedOnBehalfOf(id; ag2, ag1, a, attrs); PROV-O prov:actedOnBehalfOf.",
+  "type": "object",
+  "required": [
+    "actedOnBehalfOf"
+  ],
+  "properties": {
+    "actedOnBehalfOf": {
+      "type": "object",
+      "required": [
+        "delegate",
+        "responsible"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional identifier for this delegation relation (PROV-DM \u00a75.7.1: two delegations are equal if they have the same identifier)."
+        },
+        "delegate": {
+          "type": "object",
+          "minProperties": 1,
+          "description": "The agent associated with an activity, acting on behalf of the responsible agent (PROV-DM \u00a75.3.4, ag2, mandatory). Must be identifiable (\u00a75.7.1)."
+        },
+        "responsible": {
+          "type": "object",
+          "minProperties": 1,
+          "description": "The agent on behalf of which the delegate agent acted (PROV-DM \u00a75.3.4, ag1, mandatory). Must be identifiable (\u00a75.7.1)."
+        },
+        "activity": {
+          "type": "object",
+          "minProperties": 1,
+          "description": "The activity for which the delegation link holds (PROV-DM \u00a75.3.4, a, optional)."
+        },
+        "attributes": {
+          "type": "object",
+          "description": "Optional set of attribute-value pairs with additional information about this delegation link (PROV-DM attrs; reserved PROV attributes per \u00a75.7.2 \u2014 prov:label, prov:type \u2014 plus application-specific attributes, PROV-DM's extensibility point, \u00a76)."
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

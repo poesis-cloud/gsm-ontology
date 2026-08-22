@@ -44,7 +44,7 @@ CONTRADICTING_MODALS = {
 
 # ── Helper: emit AppraisalMeasure ───────────────────────────────
 def emit_measure(rule, stype, sid, value, unit, components, details = []):
-    sys.effect("AppraisalMeasure", {
+    sys.effect("ItAppraisalMeasure", {
         "ruleType": rule,
         "subjectType": stype,
         "subjectDefinitionId": sid,
@@ -56,7 +56,7 @@ def emit_measure(rule, stype, sid, value, unit, components, details = []):
 
 # ── Helper: emit AppraisalFinding ───────────────────────────────
 def emit_finding(rule, stype, sid, finding_type, severity, message):
-    sys.effect("AppraisalFinding", {
+    sys.effect("ItAppraisalFinding", {
         "ruleType": rule,
         "findingType": finding_type,
         "subjectType": stype,
@@ -66,7 +66,7 @@ def emit_finding(rule, stype, sid, finding_type, severity, message):
     })
 
 # ── Receive trigger ─────────────────────────────────────────────
-evt = sys.receive("AppraisalTrigger")
+evt = sys.receive("ItAppraisalTrigger")
 
 rule    = evt["ruleType"]
 stype   = evt["subjectType"]

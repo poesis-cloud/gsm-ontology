@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25010/product-quality/ProductScalability/v1",
-  "title": "ProductScalability",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25010/product-quality/Iso25000ProductScalability/v1",
+  "title": "Iso25000ProductScalability",
   "description": "TOGAF-sourced quality archetype \u2014 Scalability viability dimension. Defines the property vocabulary for scalability governance: capacity limits, auto-scaling configuration, scaling thresholds. Rootless archetype \u2014 used as qualifier in Directives/Norms and as data type for Effectors/Receptors carrying scalability state. Source framework: TOGAF (Technology Architecture capacity planning) + ISO/IEC 25010 (Performance Efficiency \u2014 Capacity).",
   "type": "object",
   "required": [
@@ -45,6 +41,5 @@
       "maximum": 100,
       "description": "Resource utilization percentage that triggers scale-down (e.g., 30)."
     }
-  },
-  "additionalProperties": false
+  }
 }

@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 18(1)",
-    "paragraphs": [
-      "18(1)"
-    ],
-    "text": "The data subject shall have the right to obtain from the controller restriction of processing where one of the following applies: (a) the accuracy of the personal data is contested by the data subject; (b) the processing is unlawful and the data subject opposes the erasure and requests restriction instead; (c) the controller no longer needs the data but the data subject requires them for legal claims; (d) the data subject has objected pursuant to Article 21(1) pending verification."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/RightToRestriction/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprDataSubjectRight/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprDataSubjectRight.rightType == 'RESTRICTION' && GdprDataSubjectRight.identityVerified == true",
   "assertion": "responseProvided == true && processingRestricted == true",

@@ -1,12 +1,8 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/data-architecture/PhysicalDataComponent/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkStructure/v1",
-  "title": "PhysicalDataComponent",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/data-architecture/TogafPhysicalDataComponent/v1",
+  "$ref": "gsmarc://gsm/Structure/v1",
+  "title": "TogafPhysicalDataComponent",
   "description": "TOGAF-sourced structural archetype \u2014 physical data storage and access infrastructure (database, file system, data lake). An active system: it has Mechanisms (CRUD operations, query processing, replication), Effectors (query results, change events), Receptors (writes, commands). Extends Structure with TOGAF Data Architecture vocabulary. TOGAF mapping: Physical Data Component (Content Metamodel, Data Architecture domain). Source framework: TOGAF (Data Architecture, Content Framework).",
   "type": "object",
   "required": [

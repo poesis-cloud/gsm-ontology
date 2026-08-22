@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25010/product-quality/ProductReliability/v1",
-  "title": "ProductReliability",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25010/product-quality/Iso25000ProductReliability/v1",
+  "title": "Iso25000ProductReliability",
   "description": "TOGAF-sourced quality archetype \u2014 Reliability viability dimension. Defines the property vocabulary for reliability governance: fault tolerance, circuit breaking, retry policies, bulkhead isolation. Rootless archetype \u2014 used as qualifier in Directives/Norms and as data type for Effectors/Receptors carrying reliability state. Source framework: TOGAF (Technology Architecture resilience patterns) + ISO/IEC 25010 (Reliability sub-characteristic \u2014 Maturity, Fault Tolerance, Recoverability).",
   "type": "object",
   "required": [
@@ -45,6 +41,5 @@
       "type": "boolean",
       "description": "Whether bulkhead isolation pattern is required to prevent cascade failures."
     }
-  },
-  "additionalProperties": false
+  }
 }

@@ -1,19 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 9(1)",
-    "paragraphs": [
-      "9(1)",
-      "9(2)"
-    ],
-    "text": "Processing of personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade union membership, and the processing of genetic data, biometric data for the purpose of uniquely identifying a natural person, data concerning health or data concerning a natural person's sex life or sexual orientation shall be prohibited. Paragraph 1 shall not apply if one of the following applies: (a) the data subject has given explicit consent; (b) processing is necessary for the purposes of carrying out the obligations and exercising specific rights of the controller or of the data subject in the field of employment and social security and social protection law; ... (j) processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/lawful-basis/SpecialCategoryRestriction/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/lawful-basis/GdprSpecialCategoryData/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER']",
   "assertion": "processingConditionMet == true",

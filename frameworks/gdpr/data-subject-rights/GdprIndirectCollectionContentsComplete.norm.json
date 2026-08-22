@@ -1,24 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 14(1)-(2)",
-    "paragraphs": [
-      "14(1)(a)",
-      "14(1)(c)",
-      "14(1)(d)",
-      "14(1)(e)",
-      "14(2)(a)",
-      "14(2)(b)",
-      "14(2)(f)"
-    ],
-    "text": "Where personal data have not been obtained from the data subject, the controller shall provide: (a) controller identity; (c) purposes and legal basis; (d) categories of personal data; (e) recipients; (2)(a) storage period; (2)(b) rights information; (2)(f) from which source the personal data originate, and if applicable, whether it came from publicly accessible sources."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/InformationIndirectCollection/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprTransparencyObligation/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprTransparencyObligation.informationProvided == true",
   "assertion": "controllerIdentityDisclosed == true && purposesDisclosed == true && recipientsDisclosed == true && retentionPeriodDisclosed == true && rightsInformed == true && dataSourceDisclosed == true",

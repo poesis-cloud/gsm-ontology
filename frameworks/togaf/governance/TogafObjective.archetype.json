@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/governance/Objective/v1",
-  "title": "Objective",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/governance/TogafObjective/v1",
+  "title": "TogafObjective",
   "description": "TOGAF-sourced archetype \u2014 a quantitative, time-bounded milestone derived from a Goal. Objectives make Goals measurable and trackable, bridging strategic intent (Goal) to operational requirements (ArchitectureRequirement). Rootless \u2014 an Objective is a measurement target, not an active system. TOGAF mapping: Objective (Motivation Extension, Architecture Vision). Source framework: TOGAF (Motivation Extension, Architecture Vision).",
   "type": "object",
   "required": [
@@ -44,6 +40,5 @@
       "minLength": 1,
       "description": "Human-readable description of the objective and its success criteria."
     }
-  },
-  "additionalProperties": false
+  }
 }

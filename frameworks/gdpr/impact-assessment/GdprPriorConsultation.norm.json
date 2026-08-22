@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 36(1)",
-    "paragraphs": [
-      "36(1)"
-    ],
-    "text": "The controller shall consult the supervisory authority prior to processing where a data protection impact assessment under Article 35 indicates that the processing would result in a high risk in the absence of measures taken by the controller to mitigate the risk."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/impact-assessment/Dpia/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/impact-assessment/GdprImpactAssessment/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprImpactAssessment.dpiaConducted == true && GdprImpactAssessment.residualHighRisk == true",
   "assertion": "priorConsultationCompleted == true",

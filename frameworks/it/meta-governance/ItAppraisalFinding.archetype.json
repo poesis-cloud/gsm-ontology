@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/AppraisalFinding/v1",
-  "title": "AppraisalFinding",
-  "framework": {
-    "name": "itip",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/it/meta-governance/ItAppraisalFinding/v1",
+  "title": "ItAppraisalFinding",
   "description": "ITIP data archetype \u2014 appraisal finding output. Rootless (no GSM base extension). Types the effect payload emitted by appraisal Mechanisms when a governance issue is detected. Each finding identifies the rule that was violated, the nature of the issue, the affected subject, and a human-readable diagnostic message. Source: ITIP (domain archetype for governance appraisal).",
   "type": "object",
   "required": [
@@ -68,6 +64,5 @@
       "minLength": 1,
       "description": "Human-readable diagnostic message explaining the finding and its governance impact."
     }
-  },
-  "additionalProperties": false
+  }
 }

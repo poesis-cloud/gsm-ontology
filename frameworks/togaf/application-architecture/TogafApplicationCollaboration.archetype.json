@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/application-architecture/ApplicationCollaboration/v1",
-  "title": "ApplicationCollaboration",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/application-architecture/TogafApplicationCollaboration/v1",
+  "title": "TogafApplicationCollaboration",
   "description": "TOGAF-sourced representation archetype \u2014 an end-to-end representation of multiple Application Components working together to deliver functionality. A cross-structural representation: the collaborating components are independent Structures; the collaboration defines their coordinated behavior pattern. Rootless, domain-scoped. TOGAF mapping: Application Collaboration (Content Metamodel, Application Architecture domain). Source framework: TOGAF (Application Architecture, Content Framework).",
   "type": "object",
   "required": [
@@ -28,6 +24,5 @@
       "$gsm:queryable": true,
       "description": "Number of participating Application Components. TOGAF mapping: Application Collaboration scope."
     }
-  },
-  "additionalProperties": false
+  }
 }

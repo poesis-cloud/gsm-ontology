@@ -12,7 +12,7 @@
 #   relatedAscriptions  — List of Norm ascriptions where Norm.structure matches the
 #                          governed Structure (resolved from Directive.purpose)
 
-evt = sys.receive("AppraisalTrigger")
+evt = sys.receive("ItAppraisalTrigger")
 directive = evt["subject"]
 norms = evt["relatedAscriptions"]
 
@@ -20,7 +20,7 @@ if len(norms) == 0:
     modal = directive["modal"]
     verb = directive["verb"]
     purpose = directive["purpose"]
-    sys.effect("AppraisalFinding", {
+    sys.effect("ItAppraisalFinding", {
         "ruleType": evt["ruleType"],
         "findingType": "GAP",
         "subjectType": evt["subjectType"],

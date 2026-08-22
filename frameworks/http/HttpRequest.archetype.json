@@ -2,10 +2,6 @@
   "$schema": "gsmarc://gsm/Archetype/v1",
   "$id": "gsmarc://gsm-frameworks/http/HttpRequest/v1",
   "title": "HttpRequest",
-  "framework": {
-    "name": "http",
-    "version": "1.0.0"
-  },
   "description": "Types the data payload flowing through HTTP Effectors/Receptors when the payload is an HTTP request message. Extending archetypes add domain-specific body shapes and additional headers via $ref/allOf composition. Source: RFC 9110 (HTTP Semantics, 2022), \u00a73.4 \u2014 Messages; RFC 9112 (HTTP/1.1, 2022), \u00a73 \u2014 Request Line.",
   "type": "object",
   "required": [

@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25010/product-quality/ProductMaintainability/v1",
-  "title": "ProductMaintainability",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25010/product-quality/Iso25000ProductMaintainability/v1",
+  "title": "Iso25000ProductMaintainability",
   "description": "TOGAF-sourced quality archetype \u2014 Maintainability viability dimension. Defines the property vocabulary for maintainability governance: deployment strategy, rollback capability, architectural modularity. Rootless archetype \u2014 used as qualifier in Directives/Norms and as data type for Effectors/Receptors carrying maintainability state. Source framework: TOGAF (Architecture Governance, Change Management) + ISO/IEC 25010 (Maintainability sub-characteristic \u2014 Modularity, Reusability, Modifiability).",
   "type": "object",
   "required": [
@@ -37,6 +33,5 @@
       "$gsm:queryable": true,
       "description": "Architectural modularity classification. MONOLITHIC = single deployable unit. MODULAR = internal module boundaries. MICROSERVICE = independently deployable services."
     }
-  },
-  "additionalProperties": false
+  }
 }

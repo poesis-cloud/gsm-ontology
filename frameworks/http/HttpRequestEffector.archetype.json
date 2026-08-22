@@ -1,12 +1,8 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkEffector/v1",
+  "$ref": "gsmarc://gsm/Effector/v1",
   "$id": "gsmarc://gsm-frameworks/http/HttpRequestEffector/v1",
   "title": "HttpRequestEffector",
-  "framework": {
-    "name": "http",
-    "version": "1.0.0"
-  },
   "description": "Effector archetype for HTTP request emission. Typed by method (operation verb) and uriTemplate (request target). Source: RFC 9110 (HTTP Semantics, 2022).",
   "type": "object",
   "required": [

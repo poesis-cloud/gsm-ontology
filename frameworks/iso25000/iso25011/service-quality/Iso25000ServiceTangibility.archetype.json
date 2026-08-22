@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25011/service-quality/ServiceTangibility/v1",
-  "title": "ServiceTangibility",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25011/service-quality/Iso25000ServiceTangibility/v1",
+  "title": "Iso25000ServiceTangibility",
   "description": "ISO 25011 quality archetype \u2014 Tangibility viability dimension. Degree to which the tangible aspects of an IT service (reports, portals, dashboards, communication materials) meet user expectations. Sub-characteristics: Visibility, Professionalism, IT Service Interface Appearance. Rootless archetype \u2014 unique to service quality, no product-quality equivalent. Source: ISO/IEC TS 25011:2017 \u00a77.5.",
   "type": "object",
   "required": [
@@ -41,6 +37,5 @@
       ],
       "description": "Degree to which the IT service interface appearance is adequate and meets user expectations for visual quality."
     }
-  },
-  "additionalProperties": false
+  }
 }

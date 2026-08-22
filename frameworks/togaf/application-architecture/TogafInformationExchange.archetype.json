@@ -1,12 +1,8 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/application-architecture/InformationExchange/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkInteraction/v1",
-  "title": "InformationExchange",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/application-architecture/TogafInformationExchange/v1",
+  "$ref": "gsmarc://gsm/Interaction/v1",
+  "title": "TogafInformationExchange",
   "description": "TOGAF-sourced interaction archetype \u2014 data flow between components. An information exchange represents the coupling between an Effector (producer) and a Receptor (consumer) through which data is communicated. Extends Interaction with TOGAF Application/Data Architecture vocabulary. Source framework: TOGAF (Content Metamodel \u2192 Information System Service / Data Flow).",
   "type": "object",
   "required": [

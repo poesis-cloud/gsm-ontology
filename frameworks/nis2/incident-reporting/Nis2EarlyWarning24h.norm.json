@@ -1,15 +1,4 @@
 {
-  "framework": {
-    "name": "nis2",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Directive (EU) 2022/2555 (NIS2)",
-    "article": "Article 23(4)(a)",
-    "text": "Without undue delay and in any event within 24 hours of becoming aware of the significant incident, an early warning, which, where applicable, shall indicate whether the significant incident is suspected of being caused by unlawful or malicious acts or could have a cross-border impact."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/nis2/incident-reporting/IncidentReporting/v1",
   "qualifier": "gsmarc://gsm-frameworks/nis2/incident-reporting/Nis2IncidentReporting/v1",
   "applicability": "Nis2EntityClassification.entityTier in ['ESSENTIAL', 'IMPORTANT'] && Nis2IncidentReporting.significantIncident == true && Nis2IncidentReporting.reportingStage == 'EARLY_WARNING'",
   "assertion": "deadlineHours <= 24",

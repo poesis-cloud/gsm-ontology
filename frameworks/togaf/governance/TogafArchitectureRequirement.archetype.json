@@ -1,12 +1,8 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/governance/ArchitectureRequirement/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkDirective/v1",
-  "title": "ArchitectureRequirement",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/governance/TogafArchitectureRequirement/v1",
+  "$ref": "gsmarc://gsm/Directive/v1",
+  "title": "TogafArchitectureRequirement",
   "description": "TOGAF-sourced directive archetype \u2014 a statement of need that must be satisfied by the architecture. In TOGAF, Requirements span Directives (intent: what must be achieved) and Norms (measurable: how to verify). This schema captures the directive facet \u2014 the governance intent. See also RequirementCompliance in norms/ for the measurable facet. Requires GSM unsealing of Directive to be functional. Extends Directive with TOGAF Architecture Requirements vocabulary. TOGAF mapping: Requirement (ADM Requirements Management). Source framework: TOGAF (ADM, Requirements Management).",
   "type": "object",
   "required": [

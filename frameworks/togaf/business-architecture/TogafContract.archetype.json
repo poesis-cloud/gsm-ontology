@@ -1,12 +1,8 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/business-architecture/Contract/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkInteraction/v1",
-  "title": "Contract",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/business-architecture/TogafContract/v1",
+  "$ref": "gsmarc://gsm/Interaction/v1",
+  "title": "TogafContract",
   "description": "TOGAF-sourced interaction archetype \u2014 governance agreement governing the coupling between service provider (Effector) and service consumer (Receptor). Types the Interaction that carries the contractual relationship. Quality targets (Availability, Performance, Security) are expressed as separate Directive/Norm qualifiers governing this Contract-typed Interaction \u2014 the Contract carries agreement metadata, not quality properties directly. Extends Interaction with TOGAF governance vocabulary. TOGAF mapping: Contract / SLA (Content Metamodel, Business Architecture domain). Source framework: TOGAF (Business Architecture, Content Framework).",
   "type": "object",
   "required": [

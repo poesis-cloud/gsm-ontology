@@ -1,23 +1,7 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 17",
-    "paragraphs": [
-      "17(1)",
-      "17(2)",
-      "17(3)"
-    ],
-    "text": "The data subject shall have the right to obtain from the controller the erasure of personal data concerning him or her without undue delay and the controller shall have the obligation to erase personal data without undue delay where one of the following grounds applies: (a) the personal data are no longer necessary in relation to the purposes for which they were collected or otherwise processed; (b) the data subject withdraws consent and there is no other legal ground for the processing; (c) the data subject objects pursuant to Article 21(1) and there are no overriding legitimate grounds; (d) the personal data have been unlawfully processed; (e) erasure is required for compliance with a legal obligation; (f) the personal data have been collected in relation to the offer of information society services to a child. [...] Paragraph 1 shall not apply to the extent that processing is necessary for exercising the right of freedom of expression, compliance with a legal obligation, public health, archiving/research, or legal claims."
-  },
   "structure": "$gdpr:data-controller",
   "modal": "MUST",
   "verb": "ENABLE",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprDataSubjectRight/v1",
-  "purpose": "$gdpr:data-subject",
-  "deploymentNotes": "At deployment: 'structure' resolves to the data controller. 'purpose' resolves to data subjects. Enables the right to erasure ('right to be forgotten'). Art 17(3) provides five exemptions. Norms verify erasure completion unless an exemption applies."
+  "purpose": "$gdpr:data-subject"
 }

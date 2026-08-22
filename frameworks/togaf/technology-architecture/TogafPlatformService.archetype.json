@@ -1,12 +1,8 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/technology-architecture/PlatformService/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkStructure/v1",
-  "title": "PlatformService",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/technology-architecture/TogafPlatformService/v1",
+  "$ref": "gsmarc://gsm/Structure/v1",
+  "title": "TogafPlatformService",
   "description": "TOGAF-sourced structural archetype \u2014 foundational technology capability on which application components are deployed and operated. Extends Structure with TOGAF Technology Architecture vocabulary. TOGAF mapping: Platform Service (Content Metamodel, Technology Architecture domain). Source framework: TOGAF (Technology Architecture, Content Framework).",
   "type": "object",
   "required": [

@@ -1,22 +1,7 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 9",
-    "paragraphs": [
-      "9(1)",
-      "9(2)"
-    ],
-    "text": "Processing of personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade union membership, and the processing of genetic data, biometric data for the purpose of uniquely identifying a natural person, data concerning health or data concerning a natural person's sex life or sexual orientation shall be prohibited. Paragraph 1 shall not apply if one of the following applies: (a) the data subject has given explicit consent to the processing of those personal data for one or more specified purposes; [...] (b) processing is necessary for the purposes of carrying out the obligations and exercising specific rights of the controller or of the data subject in the field of employment and social security and social protection law; [...]"
-  },
   "structure": "$gdpr:data-controller",
   "modal": "MUST_NOT",
   "verb": "ENSURE",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/lawful-basis/GdprSpecialCategoryData/v1",
-  "purpose": "$gdpr:personal-data-processing",
-  "deploymentNotes": "At deployment: 'structure' resolves to the data controller (accountable). 'purpose' resolves to the adopter's personal data processing scope. Default prohibition on processing special category data unless a condition from Art 9(2) is met. The modal MUST_NOT reflects the prohibition; Norms verify that a valid processing condition applies when special category data is present."
+  "purpose": "$gdpr:personal-data-processing"
 }

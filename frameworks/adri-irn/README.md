@@ -47,7 +47,7 @@ aDRI-IRN organizes resilience governance around four capability domains and cros
 
 ### Sourced Governance Instances (provisional)
 
-IRN adherence requirements will be sourced as Directive/Norm instances using `SourcedDirective` and `SourcedNorm` archetypes (per the NIS2/GDPR regulatory pattern):
+IRN adherence requirements will be sourced as Directive/Norm instances in pure GSM grammar, with legal provenance carried on the framework descriptor's `elements[]` entries (per the NIS2/GDPR regulatory pattern):
 
 | IRN Requirement | GSM Instance Type | Folder (planned) |
 |----------------|-------------------|-----------------|

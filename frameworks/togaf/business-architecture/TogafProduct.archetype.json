@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/business-architecture/Product/v1",
-  "title": "Product",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/business-architecture/TogafProduct/v1",
+  "title": "TogafProduct",
   "description": "TOGAF-sourced representation archetype \u2014 a multi-representational concept aggregating features (Mechanisms) from multiple Structures, market interfaces, and portfolio context. Like BusinessProcess and ValueStream, a Product is a cross-structural representation \u2014 it defines a governed aggregate viewed from portfolio/catalog perspective. Rootless, domain-scoped. TOGAF mapping: Product (Content Metamodel, Business Architecture domain). Source framework: TOGAF (Business Architecture, Content Framework).",
   "type": "object",
   "required": [
@@ -36,6 +32,5 @@
       "$gsm:queryable": true,
       "description": "Product lifecycle stage. TOGAF mapping: Product lifecycle management."
     }
-  },
-  "additionalProperties": false
+  }
 }

@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25010/product-quality/ProductSecurity/v1",
-  "title": "ProductSecurity",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25010/product-quality/Iso25000ProductSecurity/v1",
+  "title": "Iso25000ProductSecurity",
   "description": "TOGAF-sourced quality archetype \u2014 Security viability dimension. Defines the property vocabulary for security governance: transport security, authentication, encryption, data classification. Rootless archetype \u2014 used as qualifier in Directives/Norms and as data type for Effectors/Receptors carrying security posture state. Source framework: TOGAF (Security Architecture) + ISO/IEC 25010 (Security sub-characteristic). Note: regulation-specific security requirements (GDPR, NIS2) are sourced from dedicated framework qualities \u2014 this archetype covers TOGAF's architecture-level security vocabulary.",
   "type": "object",
   "required": [
@@ -56,6 +52,5 @@
       "$gsm:queryable": true,
       "description": "Data sensitivity classification level (ascending: PUBLIC < INTERNAL < CONFIDENTIAL < RESTRICTED). Drives encryption, access control, and audit requirements."
     }
-  },
-  "additionalProperties": false
+  }
 }

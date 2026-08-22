@@ -2,10 +2,6 @@
   "$schema": "gsmarc://gsm/Archetype/v1",
   "$id": "gsmarc://gsm-frameworks/gdpr/lawful-basis/GdprConsent/v1",
   "title": "GdprConsent",
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
   "description": "GDPR-sourced archetype \u2014 conditions for valid consent under Regulation (EU) 2016/679. When processing relies on consent as lawful basis, consent must be freely given, specific, informed, unambiguous, demonstrable, and withdrawable. Rootless \u2014 regulatory compliance dimension. Source: GDPR Article 7, Article 8 (child's consent), Recitals 32, 42, 43.",
   "type": "object",
   "required": [
@@ -52,6 +48,5 @@
       "type": "boolean",
       "description": "Whether parental or guardian consent was obtained when the data subject is a child. Required when childConsentApplicable is true. Source: GDPR Art 8(1)."
     }
-  },
-  "additionalProperties": false
+  }
 }

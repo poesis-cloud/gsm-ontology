@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/business-architecture/ValueStream/v1",
-  "title": "ValueStream",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/business-architecture/TogafValueStream/v1",
+  "title": "TogafValueStream",
   "description": "TOGAF-sourced representation archetype \u2014 an end-to-end representation of value delivery from trigger to stakeholder outcome, spanning multiple GSM Structures. A cross-structural representation of how value flows through organizational capabilities. Rootless, domain-scoped. TOGAF mapping: Value Stream (Business Architecture, Value Stream Mapping). Source framework: TOGAF (Business Architecture, Value Stream Mapping).",
   "type": "object",
   "required": [
@@ -28,6 +24,5 @@
       "$gsm:queryable": true,
       "description": "Number of value-adding stages in the stream. TOGAF mapping: Value Stream stage count."
     }
-  },
-  "additionalProperties": false
+  }
 }

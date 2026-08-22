@@ -1,12 +1,8 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/application-architecture/PhysicalApplicationComponent/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkStructure/v1",
-  "title": "PhysicalApplicationComponent",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/application-architecture/TogafPhysicalApplicationComponent/v1",
+  "$ref": "gsmarc://gsm/Structure/v1",
+  "title": "TogafPhysicalApplicationComponent",
   "description": "TOGAF-sourced structural archetype \u2014 physical implementation and deployment of application functionality. Extends Structure with TOGAF Application Architecture vocabulary. TOGAF mapping: Physical Application Component (Content Metamodel, Application Architecture domain). Source framework: TOGAF (Application Architecture, Content Framework).",
   "type": "object",
   "required": [

@@ -1,12 +1,8 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkInteraction/v1",
+  "$ref": "gsmarc://gsm/Interaction/v1",
   "$id": "gsmarc://gsm-frameworks/http/HttpRequestInteraction/v1",
   "title": "HttpRequestInteraction",
-  "framework": {
-    "name": "http",
-    "version": "1.0.0"
-  },
   "description": "Types a one-way causal link (Effector \u2192 Receptor) carrying an HTTP request message from client to server. Source: RFC 9110 \u00a76 \u2014 Message Abstraction, \u00a73.4 \u2014 Messages.",
   "type": "object"
 }

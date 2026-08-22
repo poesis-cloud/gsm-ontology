@@ -1,12 +1,8 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/governance/ArchitectureContract/v1",
-  "$ref": "gsmarc://gsm-frameworks/FrameworkDirective/v1",
-  "title": "ArchitectureContract",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/governance/TogafArchitectureContract/v1",
+  "$ref": "gsmarc://gsm/Directive/v1",
+  "title": "TogafArchitectureContract",
   "description": "TOGAF-sourced directive archetype \u2014 formal joint agreement governing architecture development, quality of service, and cross-organizational commitments. Architecture Contracts are binding governance instruments that formalize agreements between architecture stakeholders regarding deliverables, quality, and fitness-for-purpose. Requires GSM unsealing of Directive to be functional. Extends Directive with TOGAF Architecture Governance vocabulary. TOGAF mapping: Architecture Contract (Architecture Governance \u2014 Architecture Compliance, Interoperability). Source framework: TOGAF (Architecture Governance, Contract Management).",
   "type": "object",
   "required": [

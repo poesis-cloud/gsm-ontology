@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/adm/AdmPhaseRecord/v1",
-  "title": "AdmPhaseRecord",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/adm/TogafAdmPhaseRecord/v1",
+  "title": "TogafAdmPhaseRecord",
   "description": "TOGAF-sourced justification archetype \u2014 ADM Phase Record. Defines the property vocabulary for contextualizing architecture work within TOGAF's Architecture Development Method (ADM) cycle. Rootless archetype \u2014 used to type phase execution records in governance justification. TOGAF mapping: ADM Phase (Architecture Development Method \u2014 the iterative cycle of phases that produce architecture deliverables). Source framework: TOGAF (Architecture Development Method).",
   "type": "object",
   "required": [
@@ -46,6 +42,5 @@
       "minLength": 1,
       "description": "Identifier for the ADM iteration/cycle this phase record belongs to. Links related phase records within the same ADM execution."
     }
-  },
-  "additionalProperties": false
+  }
 }

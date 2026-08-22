@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/iso25000/iso25012/system-dependent-quality/DataAvailability/v1",
-  "title": "DataAvailability",
-  "framework": {
-    "name": "iso25000",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/iso25000/iso25012/system-dependent-quality/Iso25000DataAvailability/v1",
+  "title": "Iso25000DataAvailability",
   "description": "ISO 25012-sourced data quality archetype \u2014 Availability system-dependent data quality characteristic. The degree to which data has attributes that enable it to be retrieved by authorized users and/or applications in a specific context of use. Rootless archetype \u2014 used as qualifier in Directives/Norms governing data entities. Source: ISO/IEC 25012 (System-Dependent Data Quality \u2014 Availability).",
   "type": "object",
   "required": [
@@ -33,6 +29,5 @@
       "type": "boolean",
       "description": "Whether data must be available in offline or disconnected scenarios."
     }
-  },
-  "additionalProperties": false
+  }
 }

@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Data Protection Board",
-    "regulation": "EDPB Recommendations 01/2020 on measures that supplement transfer tools to ensure compliance with the EU level of protection of personal data",
-    "article": "Step 3",
-    "paragraphs": [
-      "Step 3"
-    ],
-    "text": "You need to assess if there is anything in the law or practice of the third country that may impinge on the effectiveness of the appropriate safeguards of the transfer tools you are relying on, in the context of your specific transfer. This assessment must take into account the circumstances of the transfer and the supplementary measures you could put in place."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/transfers/TransferRestriction/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/transfers/GdprTransferMechanism/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER', 'PROCESSOR'] && GdprTransferMechanism.internationalTransfer == true && GdprTransferMechanism.transferMechanism in ['STANDARD_CONTRACTUAL_CLAUSES', 'BINDING_CORPORATE_RULES', 'AD_HOC_CONTRACTUAL_CLAUSES', 'ADMINISTRATIVE_ARRANGEMENTS']",
   "assertion": "transferImpactAssessmentPerformed == true",

@@ -1,18 +1,4 @@
 {
-  "framework": {
-    "name": "gdpr",
-    "version": "1.0.0"
-  },
-  "source": {
-    "authority": "European Parliament and Council of the European Union",
-    "regulation": "Regulation (EU) 2016/679 (GDPR)",
-    "article": "Article 32(4)",
-    "paragraphs": [
-      "32(4)"
-    ],
-    "text": "The controller and processor shall take steps to ensure that any natural person acting under the authority of the controller or the processor who has access to personal data does not process them except on instructions from the controller, unless required to do so by Union or Member State law."
-  },
-  "operationalizes": "gsmarc://gsm-frameworks/gdpr/controller-processor/SecurityOfProcessing/v1",
   "qualifier": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprSecurityMeasure/v1",
   "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER', 'PROCESSOR']",
   "assertion": "personnelAuthorisationEnforced == true",

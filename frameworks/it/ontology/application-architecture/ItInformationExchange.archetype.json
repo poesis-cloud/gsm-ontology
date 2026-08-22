@@ -1,0 +1,106 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-frameworks/it/ontology/application-architecture/ItInformationExchange/v1",
+  "$ref": "gsmarc://gsm-frameworks/togaf/application-architecture/TogafInformationExchange/v1",
+  "title": "ItInformationExchange",
+  "description": "IT ontology composite \u2014 materialization of the ontology.json axes for TogafInformationExchange. Typing: extends TogafInformationExchange (chain converges to its GSM base). Facets are mounted as optional named properties keyed by lowerCamelCase of the facet's globally-unique title (the catalogue's facet mount rule \u2014 collision-free instance-level namespacing; JSON Schema does not namespace instance properties). Mounted axes \u2014 attributed-to: ProvAttribution; measured-by-data-quality: Iso25000DataAccessibility, Iso25000DataAccuracy, Iso25000DataAvailability, Iso25000DataCompleteness, Iso25000DataCompliance, Iso25000DataConfidentiality, Iso25000DataConsistency, Iso25000DataCredibility, Iso25000DataCurrentness, Iso25000DataEfficiency, Iso25000DataPortability, Iso25000DataPrecision, Iso25000DataRecoverability, Iso25000DataTraceability, Iso25000DataUnderstandability; measured-by-service-quality: Iso25000ServiceAdaptability, Iso25000ServiceMaintainability, Iso25000ServiceReliability, Iso25000ServiceResponsiveness, Iso25000ServiceSecurity, Iso25000ServiceSuitability, Iso25000ServiceTangibility, Iso25000ServiceUsability. Source: frameworks/it/ontology.json (static materialization; generator planned).",
+  "type": "object",
+  "properties": {
+    "iso25000DataAccessibility": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25012/inherent-and-system-quality/Iso25000DataAccessibility/v1",
+      "description": "Optional Iso25000DataAccessibility facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000DataAccuracy": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25012/inherent-quality/Iso25000DataAccuracy/v1",
+      "description": "Optional Iso25000DataAccuracy facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000DataAvailability": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25012/system-dependent-quality/Iso25000DataAvailability/v1",
+      "description": "Optional Iso25000DataAvailability facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000DataCompleteness": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25012/inherent-quality/Iso25000DataCompleteness/v1",
+      "description": "Optional Iso25000DataCompleteness facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000DataCompliance": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25012/inherent-and-system-quality/Iso25000DataCompliance/v1",
+      "description": "Optional Iso25000DataCompliance facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000DataConfidentiality": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25012/inherent-and-system-quality/Iso25000DataConfidentiality/v1",
+      "description": "Optional Iso25000DataConfidentiality facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000DataConsistency": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25012/inherent-quality/Iso25000DataConsistency/v1",
+      "description": "Optional Iso25000DataConsistency facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000DataCredibility": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25012/inherent-quality/Iso25000DataCredibility/v1",
+      "description": "Optional Iso25000DataCredibility facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000DataCurrentness": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25012/inherent-quality/Iso25000DataCurrentness/v1",
+      "description": "Optional Iso25000DataCurrentness facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000DataEfficiency": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25012/inherent-and-system-quality/Iso25000DataEfficiency/v1",
+      "description": "Optional Iso25000DataEfficiency facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000DataPortability": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25012/system-dependent-quality/Iso25000DataPortability/v1",
+      "description": "Optional Iso25000DataPortability facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000DataPrecision": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25012/inherent-and-system-quality/Iso25000DataPrecision/v1",
+      "description": "Optional Iso25000DataPrecision facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000DataRecoverability": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25012/system-dependent-quality/Iso25000DataRecoverability/v1",
+      "description": "Optional Iso25000DataRecoverability facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000DataTraceability": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25012/inherent-and-system-quality/Iso25000DataTraceability/v1",
+      "description": "Optional Iso25000DataTraceability facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000DataUnderstandability": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25012/inherent-and-system-quality/Iso25000DataUnderstandability/v1",
+      "description": "Optional Iso25000DataUnderstandability facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000ServiceAdaptability": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25011/service-quality/Iso25000ServiceAdaptability/v1",
+      "description": "Optional Iso25000ServiceAdaptability facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000ServiceMaintainability": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25011/service-quality/Iso25000ServiceMaintainability/v1",
+      "description": "Optional Iso25000ServiceMaintainability facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000ServiceReliability": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25011/service-quality/Iso25000ServiceReliability/v1",
+      "description": "Optional Iso25000ServiceReliability facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000ServiceResponsiveness": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25011/service-quality/Iso25000ServiceResponsiveness/v1",
+      "description": "Optional Iso25000ServiceResponsiveness facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000ServiceSecurity": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25011/service-quality/Iso25000ServiceSecurity/v1",
+      "description": "Optional Iso25000ServiceSecurity facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000ServiceSuitability": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25011/service-quality/Iso25000ServiceSuitability/v1",
+      "description": "Optional Iso25000ServiceSuitability facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000ServiceTangibility": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25011/service-quality/Iso25000ServiceTangibility/v1",
+      "description": "Optional Iso25000ServiceTangibility facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "iso25000ServiceUsability": {
+      "$ref": "gsmarc://gsm-frameworks/iso25000/iso25011/service-quality/Iso25000ServiceUsability/v1",
+      "description": "Optional Iso25000ServiceUsability facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "provAttribution": {
+      "$ref": "gsmarc://gsm-frameworks/prov/agents-responsibility/ProvAttribution/v1",
+      "description": "Optional ProvAttribution facet mount (ontology axis: attributed-to). Facet-internal required members apply only when this mount is present."
+    }
+  }
+}

@@ -1,14 +1,20 @@
-# Model Composition
+# Reference Framework Composition
 
-This document defines the **inter-model articulation** for all sourced models in ITIP. Each model is sourced independently (P2 — no cross-model synthesis in schemas), but they compose into a coherent governance whole through GSM primitives.
+This document is the **analytical companion** to the inter-framework articulation of the catalogue's reference frameworks. Each reference framework is sourced in isolation (P2 — no cross-framework synthesis in schemas; it references only GSM); composition into a coherent governance whole is the exclusive role of the **domain layer**.
+
+> **Authoritative articulation**: the machine-readable articulation map lives in
+> [`it/articulations.json`](it/articulations.json), owned by the `it` domain framework
+> (the integrator). The prose analysis below is derived commentary for humans; tooling
+> and AI traverse the JSON map.
 
 ## Composition Principle
 
-Models are composed **through GSM**, not **within schemas**:
+Reference frameworks are composed **through GSM**, not **within schemas**:
 
-- Each model produces pure schemas in its own folder (`frameworks/{model}/`), inheriting the framework base Archetypes in `frameworks/base/` rather than the GSM bases directly
-- Cross-model references happen at the **governance layer**: Directives qualify Subjects using archetypes from different models
+- Each reference framework produces pure schemas in its own folder (`frameworks/{model}/`), inheriting the GSM bases directly through top-level `$ref`
+- Cross-framework references happen at the **governance layer**: Directives qualify Subjects using archetypes from different frameworks
 - The GSM Ascription mechanism binds multiple Definition layers onto the same Subject
+- Schema-level `allOf` composition of another framework's rootless facet is reserved to the **domain layer** (e.g. `it/technology/SoftwareTechnology` composing `scap/ScapPlatformIdentifier`)
 
 **Example**: A TOGAF `LogicalApplicationComponent` (Structure) can be simultaneously governed by:
 
@@ -26,7 +32,7 @@ When mapping framework concepts to GSM, apply the dynamic/static distinction:
 - A codebase is an Archetype (static structure), not a Structure. A software instance is a Structure (dynamic).
 - Framework "realizes" relationships (e.g., ArchiMate Artifact→ApplicationComponent) express the static-to-dynamic sourcing: Archetype content defines Structure behavior.
 
-## Sourced Models
+## Sourced Reference Frameworks
 
 | Model | Source Standard | Scope | Schema Count |
 | ------- | ---------------- | ------- | ------------- |
@@ -46,7 +52,15 @@ When mapping framework concepts to GSM, apply the dynamic/static distinction:
 | **EIP** | Enterprise Integration Patterns (Hohpe & Woolf, 2003) | Data format — message type classification (event/document) | 1 |
 | **CloudEvents** | CloudEvents 1.0.2 (CNCF, 2022) | Data format — cloud-native event envelope | 1 |
 | **DDD** | Domain-Driven Design (Evans, 2003; Vernon, 2013) | Data format — domain/integration event classification | 1 |
-| **ITIP** | CRUD (James Martin, 1983); SCAP CPE 2.3 (NIST) | ITIP domain vocabulary — CRUD effector semantics, technology identification, governance sourcing | 7 |
+| **OIDC** | OpenID Connect Core 1.0 (OpenID Foundation) | Identity vocabulary — OidcSubject rootless facet (`sub`, `iss`): the shape of an OIDC-identified subject | 1 |
+| **PROV** | W3C PROV-DM / PROV-O (W3C Recommendation, 2013) | Provenance vocabulary — ProvAttribution rootless facet (`wasAttributedTo`): the standards-faithful authorship relation, agent identification left to the composing layer | 1 |
+| **OAuth 2.0** | RFC 6749 (IETF) | Reserved (README only) — authorization roles (ResourceOwner, Client, AuthorizationServer, ResourceServer), tokens, grants; ResourceOwner is an access-granting role, not authorship | 0 |
+
+## Domain Frameworks
+
+| Framework | Layer role | Composes | Contribution |
+| ---------- | ----------- | --------- | ------------- |
+| **IT** (`it/`) | Domain integrator for the IT domain, consumed by ITIP | togaf, iso25000, gdpr, nis2, scap, http, oidc, prov | Meta-governance appraisal vocabulary and mechanisms (`meta-governance/`), shared IT technology identification (`technology/ItSoftwareTechnology` composing SCAP CPE), the IT ontology v1 (`ontology.json` — all togaf/scap/iso25000/prov concepts as four dimensions over one subject taxonomy), and the machine-readable articulation map (`articulations.json`) |
 
 ## Model-Native Organization (P9)
 
@@ -65,7 +79,7 @@ Frameworks are organized by the **model's own taxonomy**, not by GSM subject typ
 
 - **Quality models** (ISO 2501x): Define **measurement vocabularies** — transversal viability dimensions applicable to any governed entity. Produce vocabulary schemas only.
 - **Architecture models** (TOGAF): Define **structural/behavioral/governance vocabularies** — entity types, functions, couplings, governance mechanisms. Produce vocabulary schemas only.
-- **Regulatory models** (NIS2, GDPR, future DORA): Operate at **two layers simultaneously** — vocabulary schemas (regulation-specific concepts) AND sourced governance instances (concrete Directives/Norms from legal articles). Use ITIP's `SourcedDirective`/`SourcedNorm` archetypes.
+- **Regulatory models** (NIS2, GDPR, future DORA): Operate at **two layers simultaneously** — vocabulary schemas (regulation-specific concepts) AND sourced governance instances (concrete Directives/Norms from legal articles). Instances carry pure GSM grammar; their legal provenance (`source`: authority, regulation, article, verbatim text) is catalogue metadata on the framework descriptor's `elements[]` entries.
 
 ## Planned Frameworks
 
@@ -333,7 +347,7 @@ ISO 25030 defines *how to elicit, define, use, and govern quality requirements*.
 }
 ```
 
-The `qualifier` points to `ServiceReliability.archetype.json` (ISO 25011), which defines the property vocabulary (`availabilityTarget`, `continuityLevel`, `recoverabilityTarget`). The Directive declares **governance intent**; the archetype schema declares **what properties exist**; the Norm (below) makes it **measurable**.
+The `qualifier` points to `Iso25000ServiceReliability.archetype.json` (ISO 25011), which defines the property vocabulary (`availabilityTarget`, `continuityLevel`, `recoverabilityTarget`). The Directive declares **governance intent**; the archetype schema declares **what properties exist**; the Norm (below) makes it **measurable**.
 
 ### Norm syntax ↔ ISO 25040 (Quality Evaluation) + 2502n (Measures)
 

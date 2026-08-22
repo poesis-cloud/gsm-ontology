@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/governance/CourseOfAction/v1",
-  "title": "CourseOfAction",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/governance/TogafCourseOfAction/v1",
+  "title": "TogafCourseOfAction",
   "description": "TOGAF-sourced archetype \u2014 a strategic or tactical approach to achieve an objective. Placed in unclassified/ for future GSM placement deliberation. TOGAF mapping: Course of Action (Business Architecture, Strategy). Source framework: TOGAF (Business Architecture, Strategy).",
   "type": "object",
   "required": [
@@ -39,6 +35,5 @@
       },
       "description": "Identified risks associated with pursuing this course of action. TOGAF mapping: Course of Action risk identification."
     }
-  },
-  "additionalProperties": false
+  }
 }

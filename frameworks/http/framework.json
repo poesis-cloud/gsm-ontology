@@ -2,7 +2,7 @@
   "name": "http",
   "version": "1.0.0",
   "description": "HTTP protocol vocabulary \u2014 request/response payload Archetypes and the Effector, Receptor, and Interaction Archetypes that carry them.",
-  "baseVersion": "1.0.0",
+  "layer": "reference",
   "elements": [
     {
       "path": "HttpRequest.archetype.json"

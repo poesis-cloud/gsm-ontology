@@ -1,11 +1,7 @@
 {
   "$schema": "gsmarc://gsm/Archetype/v1",
-  "$id": "gsmarc://gsm-frameworks/togaf/adm/Deliverable/v1",
-  "title": "Deliverable",
-  "framework": {
-    "name": "togaf",
-    "version": "1.0.0"
-  },
+  "$id": "gsmarc://gsm-frameworks/togaf/adm/TogafDeliverable/v1",
+  "title": "TogafDeliverable",
   "description": "TOGAF-sourced archetype \u2014 a contractual output of a Work Package, representing a formally agreed-upon result of ADM work. Deliverables are composed of Artifacts (catalogs, matrices, diagrams). Placed in unclassified/ for GSM placement deliberation: may be a directive (prescriptive outcome), an interaction artifact (contractual exchange), or a structure (a system deliverable). TOGAF mapping: Deliverable (ADM Content Metamodel, Architecture Governance). Source framework: TOGAF (ADM, Content Framework).",
   "type": "object",
   "required": [
@@ -54,6 +50,5 @@
       "$gsm:queryable": true,
       "description": "Formal approval status of the deliverable. TOGAF mapping: Architecture Governance approval lifecycle."
     }
-  },
-  "additionalProperties": false
+  }
 }
