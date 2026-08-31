@@ -1,6 +1,0 @@
-{
-  "qualifier": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprDataProtectionByDesign/v1",
-  "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER']",
-  "assertion": "defaultDataMinimisation == true && processingLimitedByDefault == true",
-  "toleranceMode": "INSTANTANEOUS"
-}

@@ -1,0 +1,7 @@
+{
+  "structure": "$gdpr:data-controller",
+  "modal": "MUST",
+  "verb": "ENSURE",
+  "qualifier": "gsmarc://gsm-ontology/gdpr/controller-processor/ProcessorAgreement/v1",
+  "purpose": "$gdpr:personal-data-processing"
+}

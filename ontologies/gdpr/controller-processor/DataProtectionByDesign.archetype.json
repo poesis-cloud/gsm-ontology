@@ -1,0 +1,39 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/gdpr/controller-processor/DataProtectionByDesign/v1",
+  "title": "DataProtectionByDesign",
+  "description": "GDPR-sourced archetype \u2014 data protection by design and by default under Regulation (EU) 2016/679. Article 25 requires controllers to implement appropriate technical and organisational measures at the time of determination of means and at the time of processing itself. Rootless \u2014 regulatory compliance dimension. Source: GDPR Article 25(1)-(2).",
+  "type": "object",
+  "required": [
+    "technicalMeasuresImplemented"
+  ],
+  "properties": {
+    "technicalMeasuresImplemented": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether appropriate technical measures (e.g., pseudonymisation, encryption, access controls) have been implemented to ensure data protection principles are embedded in processing. Source: GDPR Art 25(1)."
+    },
+    "organisationalMeasuresImplemented": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether appropriate organisational measures (e.g., policies, training, governance procedures) have been implemented. Source: GDPR Art 25(1)."
+    },
+    "pseudonymisationApplied": {
+      "type": "boolean",
+      "description": "Whether pseudonymisation has been applied as a technical measure. Pseudonymisation is explicitly mentioned in Art 25(1) as an example of an appropriate measure."
+    },
+    "defaultDataMinimisation": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether, by default, only personal data which are necessary for each specific purpose of processing are processed. Applies to amount collected, extent of processing, storage period, and accessibility. Source: GDPR Art 25(2)."
+    },
+    "processingLimitedByDefault": {
+      "type": "boolean",
+      "description": "Whether personal data are not made accessible by default to an indefinite number of natural persons without the individual's intervention. Source: GDPR Art 25(2)."
+    },
+    "stateOfArtConsidered": {
+      "type": "boolean",
+      "description": "Whether the state of the art, cost of implementation, nature/scope/context/purposes of processing, and risks of varying likelihood and severity have been taken into account. Source: GDPR Art 25(1)."
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "http",
+  "version": "1.0.0",
+  "description": "HTTP protocol vocabulary \u2014 request/response payload Archetypes and the Effector, Receptor, and Interaction Archetypes that carry them.",
+  "layer": "reference",
+  "elements": [
+    {
+      "path": "Request.archetype.json"
+    },
+    {
+      "path": "RequestEffector.archetype.json"
+    },
+    {
+      "path": "RequestInteraction.archetype.json"
+    },
+    {
+      "path": "RequestReceptor.archetype.json"
+    },
+    {
+      "path": "Response.archetype.json"
+    },
+    {
+      "path": "ResponseEffector.archetype.json"
+    },
+    {
+      "path": "ResponseInteraction.archetype.json"
+    },
+    {
+      "path": "ResponseReceptor.archetype.json"
+    }
+  ]
+}

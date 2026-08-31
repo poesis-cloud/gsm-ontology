@@ -1,0 +1,38 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/governance/Goal/v1",
+  "title": "Goal",
+  "description": "TOGAF-sourced archetype \u2014 a high-level qualitative statement of intent or direction for the organization. Goals are derived from Drivers and refined into measurable Objectives. Rootless \u2014 a Goal is a strategic classification, not an active system. TOGAF mapping: Goal (Motivation Extension, Architecture Vision). Source framework: TOGAF (Motivation Extension, Architecture Vision).",
+  "type": "object",
+  "required": [
+    "scope"
+  ],
+  "properties": {
+    "scope": {
+      "type": "string",
+      "enum": [
+        "ENTERPRISE",
+        "BUSINESS_UNIT",
+        "DOMAIN",
+        "PROJECT"
+      ],
+      "$gsm:queryable": true,
+      "description": "Goal scope within the organization. ENTERPRISE = organization-wide. BUSINESS_UNIT = specific unit. DOMAIN = architecture domain. PROJECT = project-specific. TOGAF mapping: Goal scope in Architecture Vision."
+    },
+    "timeHorizon": {
+      "type": "string",
+      "enum": [
+        "SHORT_TERM",
+        "MEDIUM_TERM",
+        "LONG_TERM"
+      ],
+      "$gsm:queryable": true,
+      "description": "Strategic time horizon for the goal. TOGAF mapping: Architecture Vision time horizon."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable statement of the goal."
+    }
+  }
+}

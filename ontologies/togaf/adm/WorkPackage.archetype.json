@@ -1,0 +1,37 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/adm/WorkPackage/v1",
+  "title": "WorkPackage",
+  "description": "TOGAF-sourced archetype \u2014 a definition of a delivery artifact specifying a set of deliverables and activities to be developed within an ADM phase or transition. A definition from an Effector (producing team/process) to a Receptor (consuming team/process for execution). Rootless, domain-scoped. TOGAF mapping: Work Package (ADM Phase E/F, Implementation and Migration Planning). Source framework: TOGAF (ADM, Implementation and Migration Planning).",
+  "type": "object",
+  "required": [
+    "scope"
+  ],
+  "properties": {
+    "scope": {
+      "type": "string",
+      "enum": [
+        "FULL_ADM_CYCLE",
+        "SINGLE_PHASE",
+        "CROSS_PHASE"
+      ],
+      "$gsm:queryable": true,
+      "description": "Work Package ADM scope. FULL_ADM_CYCLE = entire architecture development. SINGLE_PHASE = scoped to one ADM phase. CROSS_PHASE = spans multiple ADM phases. TOGAF mapping: Work Package scope."
+    },
+    "deliverableType": {
+      "type": "string",
+      "enum": [
+        "BUILDING_BLOCK",
+        "ARTIFACT",
+        "GOVERNANCE_DECISION"
+      ],
+      "$gsm:queryable": true,
+      "description": "Primary deliverable type produced. TOGAF mapping: Work Package deliverable classification."
+    },
+    "estimatedEffort": {
+      "type": "string",
+      "pattern": "^P",
+      "description": "Estimated effort as ISO 8601 duration (e.g., 'P30D' for 30 days). TOGAF mapping: Work Package effort estimation."
+    }
+  }
+}

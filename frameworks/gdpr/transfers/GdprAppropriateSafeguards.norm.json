@@ -1,6 +1,0 @@
-{
-  "qualifier": "gsmarc://gsm-frameworks/gdpr/transfers/GdprTransferMechanism/v1",
-  "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER', 'PROCESSOR'] && GdprTransferMechanism.internationalTransfer == true && GdprTransferMechanism.transferMechanism in ['STANDARD_CONTRACTUAL_CLAUSES', 'BINDING_CORPORATE_RULES', 'APPROVED_CODE_OF_CONDUCT', 'APPROVED_CERTIFICATION']",
-  "assertion": "transferSafeguardInPlace == true && supplementaryMeasuresApplied == true",
-  "toleranceMode": "INSTANTANEOUS"
-}

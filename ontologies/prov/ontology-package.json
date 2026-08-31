@@ -1,0 +1,41 @@
+{
+  "name": "prov",
+  "version": "1.0.0",
+  "description": "W3C PROV provenance vocabulary \u2014 rootless facets and shapes from PROV-DM/PROV-O. Sourced: Component 2 (Derivations: Derivation, Revision, Quotation, Primary Source) and Component 3 (Agents, Responsibility: Agent, Person, Organization, SoftwareAgent, Attribution, Association, Delegation). Components 1, 4, 5, 6 are mapped in the README and reserved.",
+  "layer": "reference",
+  "elements": [
+    {
+      "path": "agents-responsibility/Agent.archetype.json"
+    },
+    {
+      "path": "agents-responsibility/Association.archetype.json"
+    },
+    {
+      "path": "agents-responsibility/Attribution.archetype.json"
+    },
+    {
+      "path": "agents-responsibility/Delegation.archetype.json"
+    },
+    {
+      "path": "agents-responsibility/Organization.archetype.json"
+    },
+    {
+      "path": "agents-responsibility/Person.archetype.json"
+    },
+    {
+      "path": "agents-responsibility/SoftwareAgent.archetype.json"
+    },
+    {
+      "path": "derivations/Derivation.archetype.json"
+    },
+    {
+      "path": "derivations/PrimarySource.archetype.json"
+    },
+    {
+      "path": "derivations/Quotation.archetype.json"
+    },
+    {
+      "path": "derivations/Revision.archetype.json"
+    }
+  ]
+}

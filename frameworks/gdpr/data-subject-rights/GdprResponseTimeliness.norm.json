@@ -1,7 +1,0 @@
-{
-  "qualifier": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprDataSubjectRight/v1",
-  "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprDataSubjectRight.requestReceived == true",
-  "assertion": "responseTimeDays <= 30",
-  "toleranceMode": "INSTANTANEOUS",
-  "temporalWindow": "P1M"
-}

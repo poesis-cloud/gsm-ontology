@@ -1,0 +1,50 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/it/technology-architecture/PlatformService/v1",
+  "$ref": "gsmarc://gsm-ontology/togaf/technology-architecture/PlatformService/v1",
+  "title": "PlatformService",
+  "description": "IT domain composite for PlatformService, materializing its applicable cross-framework facets. Typing: extends PlatformService (chain converges to its GSM base). Facets are mounted as optional named properties keyed by lowerCamelCase of the facet's title (the catalogue's facet mount rule \u2014 instance-level namespacing; JSON Schema does not namespace instance properties. Mount-key distinctness within one composite is the author's responsibility now that titles are no longer framework-prefixed). Mounted facets \u2014 attributed-to: Attribution; identified-by: PlatformIdentifier; measured-by-service-quality: ServiceAdaptability, ServiceMaintainability, ServiceReliability, ServiceResponsiveness, ServiceSecurity, ServiceSuitability, ServiceTangibility, ServiceUsability. Source: hand-authored, TOGAF technology-architecture stratum.",
+  "type": "object",
+  "properties": {
+    "serviceAdaptability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25011/service-quality/ServiceAdaptability/v1",
+      "description": "Optional ServiceAdaptability facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "serviceMaintainability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25011/service-quality/ServiceMaintainability/v1",
+      "description": "Optional ServiceMaintainability facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "serviceReliability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25011/service-quality/ServiceReliability/v1",
+      "description": "Optional ServiceReliability facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "serviceResponsiveness": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25011/service-quality/ServiceResponsiveness/v1",
+      "description": "Optional ServiceResponsiveness facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "serviceSecurity": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25011/service-quality/ServiceSecurity/v1",
+      "description": "Optional ServiceSecurity facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "serviceSuitability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25011/service-quality/ServiceSuitability/v1",
+      "description": "Optional ServiceSuitability facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "serviceTangibility": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25011/service-quality/ServiceTangibility/v1",
+      "description": "Optional ServiceTangibility facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "serviceUsability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25011/service-quality/ServiceUsability/v1",
+      "description": "Optional ServiceUsability facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "attribution": {
+      "$ref": "gsmarc://gsm-ontology/prov/agents-responsibility/Attribution/v1",
+      "description": "Optional Attribution facet mount (ontology axis: attributed-to). Facet-internal required members apply only when this mount is present."
+    },
+    "platformIdentifier": {
+      "$ref": "gsmarc://gsm-ontology/scap/cpe/PlatformIdentifier/v1",
+      "description": "Optional PlatformIdentifier facet mount (ontology axis: identified-by). Facet-internal required members apply only when this mount is present."
+    }
+  }
+}

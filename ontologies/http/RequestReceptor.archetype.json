@@ -1,0 +1,21 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$ref": "gsmarc://gsm/Receptor/v1",
+  "$id": "gsmarc://gsm-ontology/http/RequestReceptor/v1",
+  "title": "RequestReceptor",
+  "description": "Identifies the receptor that receives HTTP requests. The endpoint pattern and accepted methods define the API contract surface. Source: RFC 9110 \u00a74 \u2014 Identifiers in HTTP, \u00a77.1 \u2014 Determining the Target Resource.",
+  "type": "object",
+  "required": [
+    "targetUri"
+  ],
+  "properties": {
+    "targetUri": {
+      "type": "string",
+      "format": "uri-template",
+      "minLength": 1,
+      "description": "URI template pattern identifying this receptor's endpoint address (e.g., '/api/users/{id}'). Defines WHERE this port listens. Source: RFC 6570 (URI Template, 2012); RFC 9110 \u00a74.",
+      "$gsm:identityBound": true,
+      "$gsm:queryable": true
+    }
+  }
+}

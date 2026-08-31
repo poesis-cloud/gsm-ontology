@@ -1,0 +1,6 @@
+{
+  "qualifier": "gsmarc://gsm-ontology/nis2/risk-management/RiskManagementMeasure/v1",
+  "applicability": "ref(\"gsmarc://gsm-ontology/nis2/entity-classification/EntityClassification/v1\").entityTier in ['ESSENTIAL', 'IMPORTANT'] && ref(\"gsmarc://gsm-ontology/nis2/risk-management/RiskManagementMeasure/v1\").measureCategory == 'HR_SECURITY_AND_ACCESS_CONTROL'",
+  "assertion": "implementationLevel != 'NOT_IMPLEMENTED'",
+  "toleranceMode": "INSTANTANEOUS"
+}

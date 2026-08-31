@@ -1,0 +1,14 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$ref": "gsmarc://gsm/Effector/v1",
+  "$id": "gsmarc://gsm-ontology/http/ResponseEffector/v1",
+  "title": "ResponseEffector",
+  "description": "Effector archetype for HTTP response emission. HTTP responses have no verb system; response semantics are carried by the status code on the data layer (Response.statusClass/statusCode). Source: RFC 9110 \u00a715 \u2014 Status Codes.",
+  "type": "object",
+  "properties": {
+    "contentType": {
+      "type": "string",
+      "description": "Media type this effector declares it will send in response bodies (e.g., 'application/json'). Port-level contract: declares the effector's output format. Source: RFC 9110 \u00a78.3 \u2014 Content-Type."
+    }
+  }
+}

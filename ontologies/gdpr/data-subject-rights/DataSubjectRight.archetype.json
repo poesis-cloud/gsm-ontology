@@ -1,0 +1,85 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/gdpr/data-subject-rights/DataSubjectRight/v1",
+  "title": "DataSubjectRight",
+  "description": "GDPR-sourced archetype \u2014 data subject rights under Regulation (EU) 2016/679. Articles 15-22 define individual rights that data subjects can exercise against controllers. Each right has specific conditions, exemptions, and response obligations. Rootless \u2014 regulatory compliance dimension. Source: GDPR Articles 15-22.",
+  "type": "object",
+  "required": [
+    "rightType"
+  ],
+  "properties": {
+    "rightType": {
+      "type": "string",
+      "enum": [
+        "ACCESS",
+        "RECTIFICATION",
+        "ERASURE",
+        "RESTRICTION",
+        "PORTABILITY",
+        "OBJECTION",
+        "AUTOMATED_DECISION_PROTECTION"
+      ],
+      "$gsm:queryable": true,
+      "description": "The data subject right being exercised. ACCESS: obtain confirmation and copy of personal data (Art 15). RECTIFICATION: correct inaccurate data without undue delay (Art 16). ERASURE: obtain erasure ('right to be forgotten') when grounds apply (Art 17). RESTRICTION: obtain restriction of processing in specific circumstances (Art 18). PORTABILITY: receive data in structured, machine-readable format and transmit to another controller (Art 20). OBJECTION: object to processing based on public interest or legitimate interests (Art 21). AUTOMATED_DECISION_PROTECTION: not be subject to solely automated decision-making with legal/significant effects (Art 22)."
+    },
+    "requestReceived": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether a request to exercise this right has been received from the data subject."
+    },
+    "identityVerified": {
+      "type": "boolean",
+      "description": "Whether the identity of the data subject making the request has been verified. Controller may request additional information to confirm identity. Source: GDPR Art 12(6)."
+    },
+    "responseProvided": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether the controller has provided a response to the data subject's request."
+    },
+    "responseTimeDays": {
+      "type": "integer",
+      "$gsm:queryable": true,
+      "description": "Number of days from receipt of request to response. Standard deadline: 30 days, extendable by 60 days for complex/numerous requests. Source: GDPR Art 12(3)."
+    },
+    "exemptionApplied": {
+      "type": "boolean",
+      "description": "Whether an exemption to the right was applied (e.g., Art 17(3) exemptions to erasure, Art 21(1) compelling legitimate grounds for objection override)."
+    },
+    "exemptionBasis": {
+      "type": "string",
+      "description": "Legal basis for any exemption applied. References the specific GDPR article/paragraph providing the exemption grounds."
+    },
+    "dataCopyProvided": {
+      "type": "boolean",
+      "description": "Whether a copy of the personal data undergoing processing has been provided to the data subject. Applicable when rightType is ACCESS. Source: GDPR Art 15(3)."
+    },
+    "dataRectified": {
+      "type": "boolean",
+      "description": "Whether inaccurate personal data has been rectified or incomplete data completed without undue delay. Applicable when rightType is RECTIFICATION. Source: GDPR Art 16."
+    },
+    "dataErased": {
+      "type": "boolean",
+      "description": "Whether personal data has been erased without undue delay where grounds apply. Applicable when rightType is ERASURE. Source: GDPR Art 17(1)."
+    },
+    "processingRestricted": {
+      "type": "boolean",
+      "description": "Whether processing has been restricted in accordance with the data subject's request. Applicable when rightType is RESTRICTION. Source: GDPR Art 18(1)."
+    },
+    "dataProvidedInStructuredFormat": {
+      "type": "boolean",
+      "description": "Whether personal data has been provided in a structured, commonly used and machine-readable format. Applicable when rightType is PORTABILITY. Source: GDPR Art 20(1)."
+    },
+    "directTransferCompleted": {
+      "type": "boolean",
+      "description": "Whether personal data has been transmitted directly from one controller to another, where technically feasible. Applicable when rightType is PORTABILITY. Source: GDPR Art 20(2)."
+    },
+    "processingCeased": {
+      "type": "boolean",
+      "description": "Whether the controller has ceased processing the personal data following the data subject's objection, unless compelling legitimate grounds override. Applicable when rightType is OBJECTION. Source: GDPR Art 21(1)."
+    },
+    "humanInterventionProvided": {
+      "type": "boolean",
+      "description": "Whether human intervention has been provided on the part of the controller, including the right to express a point of view and contest the decision. Applicable when rightType is AUTOMATED_DECISION_PROTECTION. Source: GDPR Art 22(3)."
+    }
+  }
+}

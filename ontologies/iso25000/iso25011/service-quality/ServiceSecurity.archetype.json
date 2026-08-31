@@ -1,0 +1,38 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/iso25000/iso25011/service-quality/ServiceSecurity/v1",
+  "title": "ServiceSecurity",
+  "description": "ISO 25011 quality archetype \u2014 Security viability dimension. Degree to which the IT service protects information and data so that persons or other services have the degree of data access appropriate to their types and levels of authorization. Sub-characteristics: Confidentiality, Integrity, Traceability. Rootless archetype \u2014 used as qualifier in Directives/Norms governing service security posture. Source: ISO/IEC TS 25011:2017 \u00a77.3.",
+  "type": "object",
+  "required": [
+    "confidentialityLevel"
+  ],
+  "properties": {
+    "confidentialityLevel": {
+      "type": "string",
+      "enum": [
+        "PUBLIC",
+        "INTERNAL",
+        "CONFIDENTIAL",
+        "RESTRICTED"
+      ],
+      "$gsm:queryable": true,
+      "description": "Classification of data confidentiality enforced by the IT service. Drives access control, encryption, and audit requirements at the service level."
+    },
+    "integrityVerification": {
+      "type": "string",
+      "enum": [
+        "NONE",
+        "BASIC",
+        "ADVANCED"
+      ],
+      "$gsm:queryable": true,
+      "description": "Level of integrity verification the IT service provides. NONE = no verification. BASIC = checksums/signatures. ADVANCED = end-to-end integrity proofs."
+    },
+    "traceabilityEnabled": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether the IT service provides an audit trail of service interactions and data access. Norm example: ServiceSecurity.traceabilityEnabled == true."
+    }
+  }
+}

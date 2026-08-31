@@ -1,0 +1,30 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/application-architecture/ApplicationFunction/v1",
+  "$ref": "gsmarc://gsm/Mechanism/v1",
+  "title": "ApplicationFunction",
+  "description": "TOGAF-sourced mechanism archetype \u2014 Application Architecture behavioral unit. An application function is the automated behavior that an Application Component (Structure) performs. Extends Mechanism with TOGAF Application Architecture vocabulary. Source framework: TOGAF (Content Metamodel \u2192 Application Function).",
+  "type": "object",
+  "required": [
+    "functionType"
+  ],
+  "properties": {
+    "functionType": {
+      "type": "string",
+      "enum": [
+        "QUERY",
+        "COMMAND",
+        "TRANSFORMATION",
+        "VALIDATION",
+        "ORCHESTRATION"
+      ],
+      "$gsm:queryable": true,
+      "description": "Application function behavioral classification. QUERY = read/retrieve, COMMAND = state-changing action, TRANSFORMATION = data conversion/enrichment, VALIDATION = constraint checking, ORCHESTRATION = multi-step coordination. TOGAF mapping: Application Function behavioral type."
+    },
+    "idempotent": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether repeated invocations produce the same effect. Governs retry strategy and error recovery design."
+    }
+  }
+}

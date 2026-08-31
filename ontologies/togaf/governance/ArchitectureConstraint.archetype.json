@@ -1,0 +1,44 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/governance/ArchitectureConstraint/v1",
+  "$ref": "gsmarc://gsm/Directive/v1",
+  "title": "ArchitectureConstraint",
+  "description": "TOGAF-sourced directive archetype \u2014 a limitation on the degrees of freedom in architecture design. In TOGAF, Constraints span Directives (intent: what constrains design) and Norms (measurable: how to verify constraint compliance). This schema captures the directive facet. See also ConstraintCompliance in norms/ for the measurable facet. Requires GSM unsealing of Directive to be functional. Extends Directive with TOGAF Architecture Constraints vocabulary. TOGAF mapping: Constraint (ADM Requirements Management, Architecture Constraints). Source framework: TOGAF (ADM, Requirements Management).",
+  "type": "object",
+  "required": [
+    "constraintSource"
+  ],
+  "properties": {
+    "constraintSource": {
+      "type": "string",
+      "enum": [
+        "LEGAL",
+        "REGULATORY",
+        "TECHNICAL",
+        "ORGANIZATIONAL",
+        "FINANCIAL"
+      ],
+      "$gsm:queryable": true,
+      "description": "Origin of the constraint. TOGAF mapping: Constraint source classification (ADM Requirements Management)."
+    },
+    "scope": {
+      "type": "string",
+      "enum": [
+        "ENTERPRISE",
+        "PROJECT",
+        "SYSTEM"
+      ],
+      "$gsm:queryable": true,
+      "description": "Constraint applicability scope. TOGAF mapping: Constraint governance scope."
+    },
+    "flexibility": {
+      "type": "string",
+      "enum": [
+        "ABSOLUTE",
+        "NEGOTIABLE"
+      ],
+      "$gsm:queryable": true,
+      "description": "Degree to which this constraint can be relaxed. ABSOLUTE = immovable. NEGOTIABLE = can be waived with approval. TOGAF mapping: Constraint flexibility assessment."
+    }
+  }
+}

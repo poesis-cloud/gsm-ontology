@@ -1,6 +1,0 @@
-{
-  "qualifier": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprDataSubjectRight/v1",
-  "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprDataSubjectRight.rightType == 'ACCESS' && GdprDataSubjectRight.identityVerified == true",
-  "assertion": "responseProvided == true && dataCopyProvided == true",
-  "toleranceMode": "INSTANTANEOUS"
-}

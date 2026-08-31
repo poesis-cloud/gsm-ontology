@@ -1,6 +1,0 @@
-{
-  "qualifier": "gsmarc://gsm-frameworks/gdpr/impact-assessment/GdprImpactAssessment/v1",
-  "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprImpactAssessment.dpiaConducted == true",
-  "assertion": "dpiaContentsComplete == true",
-  "toleranceMode": "INSTANTANEOUS"
-}

@@ -1,0 +1,48 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/governance/Measure/v1",
+  "$ref": "gsmarc://gsm/Norm/v1",
+  "title": "Measure",
+  "description": "TOGAF-sourced norm archetype \u2014 a measurement definition specifying WHAT to measure and HOW, extending the GSM Norm's assertion grammar with TOGAF-specific measurement vocabulary (unit, aggregation, collection frequency). This is a measurement definition, not a measurement instance/observation. Requires GSM unsealing of Norm to be functional. Extends Norm with TOGAF Architecture Governance vocabulary. TOGAF mapping: Measure / KPI (Architecture Governance, Performance Management). Source framework: TOGAF (Architecture Governance).",
+  "type": "object",
+  "required": [
+    "measureType"
+  ],
+  "properties": {
+    "measureType": {
+      "type": "string",
+      "enum": [
+        "KPI",
+        "METRIC",
+        "INDICATOR",
+        "TARGET"
+      ],
+      "$gsm:queryable": true,
+      "description": "Measurement classification. KPI = key performance indicator. METRIC = quantitative measurement. INDICATOR = qualitative signal. TARGET = goal threshold. TOGAF mapping: Measure type in Architecture Governance."
+    },
+    "unit": {
+      "type": "string",
+      "minLength": 1,
+      "$gsm:queryable": true,
+      "description": "Measurement unit (e.g., 'percent', 'milliseconds', 'count', 'currency'). TOGAF mapping: Measure unit of measurement."
+    },
+    "aggregation": {
+      "type": "string",
+      "enum": [
+        "SUM",
+        "AVG",
+        "MIN",
+        "MAX",
+        "COUNT",
+        "PERCENTILE"
+      ],
+      "$gsm:queryable": true,
+      "description": "Aggregation method for measurement collection. TOGAF mapping: Measure aggregation strategy."
+    },
+    "collectionFrequency": {
+      "type": "string",
+      "pattern": "^P",
+      "description": "Measurement collection frequency as ISO 8601 duration (e.g., 'PT5M' for 5 minutes, 'P1D' for daily). TOGAF mapping: Measure collection schedule."
+    }
+  }
+}

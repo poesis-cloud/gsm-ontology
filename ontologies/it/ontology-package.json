@@ -1,0 +1,141 @@
+{
+  "name": "it",
+  "version": "1.0.0",
+  "description": "IT domain ontology \u2014 integrates the reference ontologies relevant to the IT domain into one coherent governance fabric and materializes their composition as typing archetypes per TOGAF architecture stratum (application, business, data, technology). Consumed by the IT Intelligence Platform (ITIP).",
+  "layer": "domain",
+  "composes": [
+    {
+      "name": "togaf",
+      "version": "1.0.0"
+    },
+    {
+      "name": "iso25000",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gdpr",
+      "version": "1.0.0"
+    },
+    {
+      "name": "nis2",
+      "version": "1.0.0"
+    },
+    {
+      "name": "scap",
+      "version": "1.0.0"
+    },
+    {
+      "name": "http",
+      "version": "1.0.0"
+    },
+    {
+      "name": "oidc",
+      "version": "1.0.0"
+    },
+    {
+      "name": "prov",
+      "version": "1.0.0"
+    }
+  ],
+  "elements": [
+    {
+      "path": "application-architecture/ApplicationCollaboration.archetype.json"
+    },
+    {
+      "path": "application-architecture/ApplicationFunction.archetype.json"
+    },
+    {
+      "path": "application-architecture/ApplicationInterface.archetype.json"
+    },
+    {
+      "path": "application-architecture/ApplicationService.archetype.json"
+    },
+    {
+      "path": "application-architecture/InformationExchange.archetype.json"
+    },
+    {
+      "path": "application-architecture/LogicalApplicationComponent.archetype.json"
+    },
+    {
+      "path": "application-architecture/PhysicalApplicationComponent.archetype.json"
+    },
+    {
+      "path": "business-architecture/Actor.archetype.json"
+    },
+    {
+      "path": "business-architecture/BusinessCapability.archetype.json"
+    },
+    {
+      "path": "business-architecture/BusinessEvent.archetype.json"
+    },
+    {
+      "path": "business-architecture/BusinessFunction.archetype.json"
+    },
+    {
+      "path": "business-architecture/BusinessProcess.archetype.json"
+    },
+    {
+      "path": "business-architecture/BusinessService.archetype.json"
+    },
+    {
+      "path": "business-architecture/Contract.archetype.json"
+    },
+    {
+      "path": "business-architecture/Location.archetype.json"
+    },
+    {
+      "path": "business-architecture/OrganizationUnit.archetype.json"
+    },
+    {
+      "path": "business-architecture/Product.archetype.json"
+    },
+    {
+      "path": "business-architecture/Role.archetype.json"
+    },
+    {
+      "path": "business-architecture/Stakeholder.archetype.json"
+    },
+    {
+      "path": "business-architecture/ValueStream.archetype.json"
+    },
+    {
+      "path": "data-architecture/DataEntity.archetype.json"
+    },
+    {
+      "path": "data-architecture/LogicalDataComponent.archetype.json"
+    },
+    {
+      "path": "data-architecture/PhysicalDataComponent.archetype.json"
+    },
+    {
+      "path": "technology-architecture/CommunicationPath.archetype.json"
+    },
+    {
+      "path": "technology-architecture/LogicalTechnologyComponent.archetype.json"
+    },
+    {
+      "path": "technology-architecture/Node.archetype.json"
+    },
+    {
+      "path": "technology-architecture/Observability.archetype.json"
+    },
+    {
+      "path": "technology-architecture/PhysicalTechnologyComponent.archetype.json"
+    },
+    {
+      "path": "technology-architecture/PlatformService.archetype.json"
+    },
+    {
+      "path": "technology-architecture/TechnologyComponent.archetype.json"
+    },
+    {
+      "path": "technology-architecture/TechnologyFunction.archetype.json"
+    },
+    {
+      "path": "technology-architecture/TechnologyInterface.archetype.json"
+    },
+    {
+      "path": "technology-architecture/TechnologyService.archetype.json"
+    }
+  ]
+}

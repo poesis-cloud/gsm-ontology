@@ -1,7 +1,0 @@
-{
-  "structure": "$nis2:regulatory-authority",
-  "modal": "MUST",
-  "verb": "ENSURE",
-  "qualifier": "gsmarc://gsm-frameworks/nis2/supply-chain/Nis2SupplyChainSecurity/v1",
-  "purpose": "$nis2:classified-entity"
-}

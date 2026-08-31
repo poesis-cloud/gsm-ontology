@@ -1,0 +1,22 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/it/business-architecture/Actor/v1",
+  "$ref": "gsmarc://gsm-ontology/togaf/business-architecture/Actor/v1",
+  "title": "Actor",
+  "description": "IT domain composite for Actor, materializing its applicable cross-framework facets. Typing: extends Actor (chain converges to its GSM base). Facets are mounted as optional named properties keyed by lowerCamelCase of the facet's title (the catalogue's facet mount rule \u2014 instance-level namespacing; JSON Schema does not namespace instance properties. Mount-key distinctness within one composite is the author's responsibility now that titles are no longer framework-prefixed). Mounted facets \u2014 attributed-to: Attribution; responsibility-of: Association, Delegation. Source: hand-authored, TOGAF business-architecture stratum.",
+  "type": "object",
+  "properties": {
+    "association": {
+      "$ref": "gsmarc://gsm-ontology/prov/agents-responsibility/Association/v1",
+      "description": "Optional Association facet mount (ontology axis: responsibility-of). Facet-internal required members apply only when this mount is present."
+    },
+    "attribution": {
+      "$ref": "gsmarc://gsm-ontology/prov/agents-responsibility/Attribution/v1",
+      "description": "Optional Attribution facet mount (ontology axis: attributed-to). Facet-internal required members apply only when this mount is present."
+    },
+    "delegation": {
+      "$ref": "gsmarc://gsm-ontology/prov/agents-responsibility/Delegation/v1",
+      "description": "Optional Delegation facet mount (ontology axis: responsibility-of). Facet-internal required members apply only when this mount is present."
+    }
+  }
+}

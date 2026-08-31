@@ -1,7 +1,0 @@
-{
-  "structure": "$gdpr:data-controller",
-  "modal": "MUST",
-  "verb": "ENSURE",
-  "qualifier": "gsmarc://gsm-frameworks/gdpr/lawful-basis/GdprLawfulBasis/v1",
-  "purpose": "$gdpr:personal-data-processing"
-}

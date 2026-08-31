@@ -1,7 +1,7 @@
-# Copilot Instructions — gsm-frameworks
+# Copilot Instructions — gsm-ontology
 
 This repository is the **published, versioned source of sourced governance/compliance/architecture/regulatory
-framework schemas** for the IT Intelligence Platform (ITIP). It contains no runnable application code — only
+ontology schemas** for the IT Intelligence Platform (ITIP). It contains no runnable application code — only
 JSON Schema archetypes and Directive/Norm ascription instances. Read `PROJECT_BRIEF.md` before starting work.
 
 ---
@@ -11,7 +11,7 @@ JSON Schema archetypes and Directive/Norm ascription instances. Read `PROJECT_BR
 | Agent | Name | Role | Key Skills |
 |-------|------|------|------------|
 | Producer | **Remy** | Sourcing backlog, provenance review, GitHub Issues, PR merges | `product-manager`, `create-pr`, `update-pr`, `sync`, `commit`, `chronicle` |
-| Dev | **Nova / Sage / Milo** | Author/update schemas, maintain inter-model articulation docs | `gsm-knowledge`, `itip-framework-sourcing`, `agent-customization`, `commit`, `create-pr`, `context-map`, `refactor-plan` |
+| Dev | **Nova / Sage / Milo** | Author/update schemas, maintain inter-model articulation docs | `gsm-knowledge`, `itip-ontology-sourcing`, `agent-customization`, `commit`, `create-pr`, `context-map`, `refactor-plan` |
 | QA | **Ivy** | Schema validity checks, provenance citation review | `code-review`, `commit` |
 
 Remy **never writes schema content**. Dev team **never merges to main directly** — always via PR.
@@ -21,24 +21,24 @@ Remy **never writes schema content**. Dev team **never merges to main directly**
 ## Domain Rules (mandatory for all agents)
 
 ### Model-native organization (P9)
-Each framework is organized by **its own taxonomy**, not by GSM subject type. The folder tells you what model
+Each ontology is organized by **its own taxonomy**, not by GSM subject type. The folder tells you what model
 domain owns the concept; the GSM subject-type mapping is expressed in the schema content via top-level `$ref`.
 
 ### Composition through GSM only
 Models compose **through the GSM governance layer** (Directives qualifying Subjects using archetypes from
-different models), never through schema-level cross-references between framework folders. Do not add
-filesystem-relative `$ref` paths that cross from one framework's folder into another's — cross-model
-articulation is documented in `frameworks/README.md`, not encoded in schema `$ref`.
+different models), never through schema-level cross-references between ontology folders. Do not add
+filesystem-relative `$ref` paths that cross from one ontology's folder into another's — cross-model
+articulation is documented in `ontologies/README.md`, not encoded in schema `$ref`.
 
 ### `$id` namespace stability
-Every archetype schema's `$id` uses the `gsmarc://gsm-frameworks/{authority}/{taxonomy}/{Title}/v1` scheme.
+Every archetype schema's `$id` uses the `gsmarc://gsm-ontology/{authority}/{taxonomy}/{Title}/v1` scheme.
 This is a **logical identifier**, independent of which repository or filesystem path physically hosts the
 file — never change an existing `$id` without a deliberate, documented versioning decision (bump the trailing
 `/v1` → `/v2`, do not mutate v1 in place once published).
 
 ### Provenance requirement
 Every sourced Directive/Norm/Archetype MUST cite the source clause/section it derives from (see each
-framework's `README.md` for the expected citation format). Do not reproduce copyrighted normative text
+ontology's `README.md` for the expected citation format). Do not reproduce copyrighted normative text
 verbatim beyond short quotation — only the derived GSM-compatible vocabulary.
 
 ### Statement file naming convention
@@ -46,7 +46,7 @@ See the "Terminology and file conventions" section of `README.md` (authoritative
 - Archetype statements (`$schema: gsmarc://gsm/Archetype/v1`): filename = `{Title}.archetype.json`.
 - Other ascription statements: filename = `{StatementIdentity}.{gsmSubjectType}.json`, e.g.
   `ProcessingPrinciples.directive.json`, `Accountability.norm.json`.
-- The typing Archetype is declared by the framework descriptor's `elements[].archetype`,
+- The typing Archetype is declared by the ontology package's `elements[].archetype`,
   never by the filename.
 
 ---

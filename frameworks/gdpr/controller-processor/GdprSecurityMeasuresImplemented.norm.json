@@ -1,6 +1,0 @@
-{
-  "qualifier": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprSecurityMeasure/v1",
-  "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER', 'PROCESSOR']",
-  "assertion": "securityMeasuresImplemented == true && confidentialityEnsured == true && integrityEnsured == true && availabilityEnsured == true && resilienceEnsured == true && timelyRestorationCapable == true && riskAssessmentPerformed == true",
-  "toleranceMode": "INSTANTANEOUS"
-}

@@ -1,0 +1,6 @@
+{
+  "qualifier": "gsmarc://gsm-ontology/nis2/risk-management/RiskManagementMeasure/v1",
+  "applicability": "ref(\"gsmarc://gsm-ontology/nis2/entity-classification/EntityClassification/v1\").entityTier in ['ESSENTIAL', 'IMPORTANT'] && ref(\"gsmarc://gsm-ontology/nis2/risk-management/RiskManagementMeasure/v1\").measureCategory == 'BUSINESS_CONTINUITY_AND_CRISIS_MANAGEMENT'",
+  "assertion": "implementationLevel != 'NOT_IMPLEMENTED'",
+  "toleranceMode": "INSTANTANEOUS"
+}

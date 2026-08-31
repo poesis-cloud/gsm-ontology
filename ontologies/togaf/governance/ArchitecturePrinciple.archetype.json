@@ -1,0 +1,37 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/governance/ArchitecturePrinciple/v1",
+  "$ref": "gsmarc://gsm/Directive/v1",
+  "title": "ArchitecturePrinciple",
+  "description": "TOGAF-sourced directive archetype \u2014 a qualitative statement of intent that guides architecture decisions. Enriches Directive with rationale and implications links. The base Directive already carries governance grammar (modal, verb, qualifier, purpose); Principle adds TOGAF-specific justification vocabulary. Requires GSM unsealing of Directive to be functional. Extends Directive with TOGAF Architecture Principles vocabulary. TOGAF mapping: Architecture Principle (Preliminary Phase, Architecture Principles). Source framework: TOGAF (Architecture Principles).",
+  "type": "object",
+  "required": [
+    "rationale"
+  ],
+  "properties": {
+    "rationale": {
+      "type": "string",
+      "minLength": 1,
+      "$gsm:queryable": true,
+      "description": "Justification for why this principle exists. TOGAF mapping: Architecture Principle rationale (mandatory per TOGAF Preliminary Phase)."
+    },
+    "implications": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "Consequences of adopting this principle \u2014 impacts on architecture, organization, and resources. TOGAF mapping: Architecture Principle implications."
+    },
+    "scope": {
+      "type": "string",
+      "enum": [
+        "ENTERPRISE",
+        "DOMAIN",
+        "APPLICATION"
+      ],
+      "$gsm:queryable": true,
+      "description": "Principle applicability scope. TOGAF mapping: Architecture Principle governance scope."
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/technology-architecture/Node/v1",
+  "$ref": "gsmarc://gsm/Structure/v1",
+  "title": "Node",
+  "description": "TOGAF-sourced structural archetype \u2014 deployment location hosting technology and application components. An active system that hosts other Structures and provides compute/network/storage Mechanisms. Extends Structure with TOGAF Technology Architecture vocabulary. TOGAF mapping: Node (Content Metamodel, Technology Architecture domain). Source framework: TOGAF (Technology Architecture, Content Framework).",
+  "type": "object",
+  "required": [
+    "nodeType"
+  ],
+  "properties": {
+    "nodeType": {
+      "type": "string",
+      "enum": [
+        "PHYSICAL_SERVER",
+        "VIRTUAL_MACHINE",
+        "CONTAINER",
+        "SERVERLESS_RUNTIME",
+        "EDGE_DEVICE"
+      ],
+      "$gsm:queryable": true,
+      "description": "Deployment node type. TOGAF mapping: Node classification in Technology Architecture deployment view."
+    },
+    "location": {
+      "type": "string",
+      "minLength": 1,
+      "$gsm:queryable": true,
+      "description": "Physical or logical deployment location (data center, region, availability zone). TOGAF mapping: Node location."
+    },
+    "environment": {
+      "type": "string",
+      "enum": [
+        "DEV",
+        "STAGING",
+        "PROD"
+      ],
+      "$gsm:queryable": true,
+      "description": "Deployment environment classification. TOGAF mapping: Technology Architecture deployment environment."
+    }
+  }
+}

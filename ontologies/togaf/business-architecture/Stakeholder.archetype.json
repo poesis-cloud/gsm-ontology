@@ -1,0 +1,35 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/business-architecture/Stakeholder/v1",
+  "$ref": "gsmarc://gsm/Structure/v1",
+  "title": "Stakeholder",
+  "description": "TOGAF-sourced structural archetype \u2014 a person, team, or organization with interests in or concerns relative to architecture outcomes. An active system: the stakeholder performs governance functions (Mechanisms), produces decisions/approvals (Effectors), receives architecture deliverables (Receptors). Note: Actor and Stakeholder may represent the same real-world entity from different perspectives \u2014 Actor focuses on what they DO, Stakeholder on what they CARE ABOUT. Extends Structure with TOGAF Stakeholder Management vocabulary. TOGAF mapping: Stakeholder (Stakeholder Management, Architecture Governance, Content Metamodel). Source framework: TOGAF (Stakeholder Management, Architecture Governance).",
+  "type": "object",
+  "required": [
+    "role"
+  ],
+  "properties": {
+    "role": {
+      "type": "string",
+      "minLength": 1,
+      "$gsm:queryable": true,
+      "description": "Stakeholder role identifier (e.g., 'Enterprise Architect', 'CTO', 'Product Owner', 'Security Officer'). TOGAF mapping: Stakeholder role in the Stakeholder Map matrix."
+    },
+    "influenceLevel": {
+      "type": "string",
+      "enum": [
+        "KEY_DECISION_MAKER",
+        "INFLUENCER",
+        "INFORMED"
+      ],
+      "$gsm:queryable": true,
+      "description": "Level of influence on architecture decisions. KEY_DECISION_MAKER = has approval authority. INFLUENCER = shapes decisions but does not approve. INFORMED = receives decisions. TOGAF mapping: Stakeholder Power/Interest grid classification."
+    },
+    "organizationUnit": {
+      "type": "string",
+      "minLength": 1,
+      "$gsm:queryable": true,
+      "description": "Organizational unit to which the stakeholder belongs. TOGAF mapping: Organization Unit entity in Content Metamodel."
+    }
+  }
+}

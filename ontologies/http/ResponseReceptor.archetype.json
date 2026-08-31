@@ -1,0 +1,8 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$ref": "gsmarc://gsm/Receptor/v1",
+  "$id": "gsmarc://gsm-ontology/http/ResponseReceptor/v1",
+  "title": "ResponseReceptor",
+  "description": "Identifies the client receptor that receives HTTP responses. Client response handlers have no protocol-native address; the archetype title serves as the directional marker. Source: RFC 9110 \u00a715 \u2014 Status Codes.",
+  "type": "object"
+}

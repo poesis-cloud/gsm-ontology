@@ -1,0 +1,54 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/it/business-architecture/Contract/v1",
+  "$ref": "gsmarc://gsm-ontology/togaf/business-architecture/Contract/v1",
+  "title": "Contract",
+  "description": "IT domain composite for Contract, materializing its applicable cross-framework facets. Typing: extends Contract (chain converges to its GSM base). Facets are mounted as optional named properties keyed by lowerCamelCase of the facet's title (the catalogue's facet mount rule \u2014 instance-level namespacing; JSON Schema does not namespace instance properties. Mount-key distinctness within one composite is the author's responsibility now that titles are no longer framework-prefixed). Mounted facets \u2014 attributed-to: Attribution; measured-by-service-quality: ServiceAdaptability, ServiceMaintainability, ServiceReliability, ServiceResponsiveness, ServiceSecurity, ServiceSuitability, ServiceTangibility, ServiceUsability; responsibility-of: Association, Delegation. Source: hand-authored, TOGAF business-architecture stratum.",
+  "type": "object",
+  "properties": {
+    "serviceAdaptability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25011/service-quality/ServiceAdaptability/v1",
+      "description": "Optional ServiceAdaptability facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "serviceMaintainability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25011/service-quality/ServiceMaintainability/v1",
+      "description": "Optional ServiceMaintainability facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "serviceReliability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25011/service-quality/ServiceReliability/v1",
+      "description": "Optional ServiceReliability facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "serviceResponsiveness": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25011/service-quality/ServiceResponsiveness/v1",
+      "description": "Optional ServiceResponsiveness facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "serviceSecurity": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25011/service-quality/ServiceSecurity/v1",
+      "description": "Optional ServiceSecurity facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "serviceSuitability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25011/service-quality/ServiceSuitability/v1",
+      "description": "Optional ServiceSuitability facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "serviceTangibility": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25011/service-quality/ServiceTangibility/v1",
+      "description": "Optional ServiceTangibility facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "serviceUsability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25011/service-quality/ServiceUsability/v1",
+      "description": "Optional ServiceUsability facet mount (ontology axis: measured-by-service-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "association": {
+      "$ref": "gsmarc://gsm-ontology/prov/agents-responsibility/Association/v1",
+      "description": "Optional Association facet mount (ontology axis: responsibility-of). Facet-internal required members apply only when this mount is present."
+    },
+    "attribution": {
+      "$ref": "gsmarc://gsm-ontology/prov/agents-responsibility/Attribution/v1",
+      "description": "Optional Attribution facet mount (ontology axis: attributed-to). Facet-internal required members apply only when this mount is present."
+    },
+    "delegation": {
+      "$ref": "gsmarc://gsm-ontology/prov/agents-responsibility/Delegation/v1",
+      "description": "Optional Delegation facet mount (ontology axis: responsibility-of). Facet-internal required members apply only when this mount is present."
+    }
+  }
+}

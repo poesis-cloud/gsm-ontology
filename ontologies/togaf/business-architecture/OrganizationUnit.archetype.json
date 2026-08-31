@@ -1,0 +1,35 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/business-architecture/OrganizationUnit/v1",
+  "$ref": "gsmarc://gsm/Structure/v1",
+  "title": "OrganizationUnit",
+  "description": "TOGAF-sourced structural archetype \u2014 human organizational structure (department, division, team, committee). An active system: people perform business functions (Mechanisms), produce decisions/outputs (Effectors), receive mandates/inputs (Receptors). Extends Structure with TOGAF Business Architecture vocabulary. TOGAF mapping: Organization Unit (Content Metamodel, Business Architecture domain). Source framework: TOGAF (Business Architecture, Content Framework).",
+  "type": "object",
+  "required": [
+    "unitType"
+  ],
+  "properties": {
+    "unitType": {
+      "type": "string",
+      "enum": [
+        "DEPARTMENT",
+        "DIVISION",
+        "TEAM",
+        "COMMITTEE",
+        "BOARD"
+      ],
+      "$gsm:queryable": true,
+      "description": "Organizational unit classification. TOGAF mapping: Organization Unit type in organizational decomposition."
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "STRATEGIC",
+        "TACTICAL",
+        "OPERATIONAL"
+      ],
+      "$gsm:queryable": true,
+      "description": "Organizational level in governance hierarchy. TOGAF mapping: organizational governance tier."
+    }
+  }
+}

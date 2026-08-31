@@ -1,0 +1,6 @@
+{
+  "qualifier": "gsmarc://gsm-ontology/gdpr/impact-assessment/ImpactAssessment/v1",
+  "applicability": "ref(\"gsmarc://gsm-ontology/gdpr/controller-processor/ControllerProcessorRole/v1\").role in ['CONTROLLER', 'JOINT_CONTROLLER'] && ref(\"gsmarc://gsm-ontology/gdpr/impact-assessment/ImpactAssessment/v1\").dpiaConducted == true",
+  "assertion": "dpiaContentsComplete == true",
+  "toleranceMode": "INSTANTANEOUS"
+}

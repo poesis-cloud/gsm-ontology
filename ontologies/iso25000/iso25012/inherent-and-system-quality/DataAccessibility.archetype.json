@@ -1,0 +1,31 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/iso25000/iso25012/inherent-and-system-quality/DataAccessibility/v1",
+  "title": "DataAccessibility",
+  "description": "ISO 25012-sourced data quality archetype \u2014 Accessibility inherent-and-system data quality characteristic. The degree to which data can be accessed in a specific context of use, particularly by people who need assistive technology or special configuration because of some disability. Rootless archetype \u2014 used as qualifier in Directives/Norms governing data entities. Source: ISO/IEC 25012 (Inherent and System-Dependent Data Quality \u2014 Accessibility).",
+  "type": "object",
+  "required": [
+    "accessibilityLevel"
+  ],
+  "properties": {
+    "accessibilityLevel": {
+      "type": "string",
+      "enum": [
+        "RESTRICTED",
+        "ROLE_BASED",
+        "BROADLY_ACCESSIBLE",
+        "UNIVERSALLY_ACCESSIBLE"
+      ],
+      "$gsm:queryable": true,
+      "description": "Degree of data accessibility. RESTRICTED = limited to specific accounts. ROLE_BASED = access determined by role/permission. BROADLY_ACCESSIBLE = available to most authorized users. UNIVERSALLY_ACCESSIBLE = available to all including assistive technology users."
+    },
+    "apiAccessAvailable": {
+      "type": "boolean",
+      "description": "Whether data is accessible via programmatic API."
+    },
+    "assistiveTechnologySupport": {
+      "type": "boolean",
+      "description": "Whether data presentation supports assistive technologies (screen readers, alternative formats)."
+    }
+  }
+}

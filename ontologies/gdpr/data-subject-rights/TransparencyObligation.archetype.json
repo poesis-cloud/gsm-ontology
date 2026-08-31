@@ -1,0 +1,51 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/gdpr/data-subject-rights/TransparencyObligation/v1",
+  "title": "TransparencyObligation",
+  "description": "GDPR-sourced archetype \u2014 transparency and information obligations under Regulation (EU) 2016/679. Articles 12-14 require controllers to provide information about processing in a concise, transparent, intelligible, and easily accessible form. Rootless \u2014 regulatory compliance dimension. Source: GDPR Articles 12, 13, 14.",
+  "type": "object",
+  "required": [
+    "informationProvided"
+  ],
+  "properties": {
+    "informationProvided": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether the required information has been provided to the data subject. Source: GDPR Art 13 (collected from data subject) or Art 14 (not obtained from data subject)."
+    },
+    "conciseTransparentIntelligible": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether information is provided in a concise, transparent, intelligible and easily accessible form, using clear and plain language. Source: GDPR Art 12(1)."
+    },
+    "controllerIdentityDisclosed": {
+      "type": "boolean",
+      "description": "Whether the identity and contact details of the controller (and representative/DPO if applicable) have been disclosed. Source: GDPR Art 13(1)(a)-(b), Art 14(1)(a)-(b)."
+    },
+    "purposesDisclosed": {
+      "type": "boolean",
+      "description": "Whether the purposes of processing and the lawful basis have been disclosed. Source: GDPR Art 13(1)(c), Art 14(1)(c)."
+    },
+    "recipientsDisclosed": {
+      "type": "boolean",
+      "description": "Whether the recipients or categories of recipients of personal data have been disclosed. Source: GDPR Art 13(1)(e), Art 14(1)(e)."
+    },
+    "retentionPeriodDisclosed": {
+      "type": "boolean",
+      "description": "Whether the storage period or criteria for determining it have been disclosed. Source: GDPR Art 13(2)(a), Art 14(2)(a)."
+    },
+    "rightsInformed": {
+      "type": "boolean",
+      "description": "Whether data subjects have been informed of their rights (access, rectification, erasure, restriction, portability, objection). Source: GDPR Art 13(2)(b)-(d), Art 14(2)(b)-(d)."
+    },
+    "dataSourceDisclosed": {
+      "type": "boolean",
+      "description": "Whether the source of personal data has been disclosed when data was not obtained directly from the data subject. Source: GDPR Art 14(2)(f). Set to true when data collected directly from the data subject (Art 13 \u2014 not applicable)."
+    },
+    "recipientsNotified": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether each recipient to whom personal data have been disclosed has been notified of any rectification, erasure, or restriction of processing carried out under Art 16, Art 17(1), or Art 18, unless impossible or involving disproportionate effort. Source: GDPR Art 19."
+    }
+  }
+}

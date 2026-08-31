@@ -1,0 +1,51 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/iso25000/iso25010/product-quality/ProductCompatibility/v1",
+  "title": "ProductCompatibility",
+  "description": "ISO 25010-sourced quality archetype \u2014 Compatibility product quality characteristic. Defines the property vocabulary for compatibility governance: co-existence with other products in shared environments and interoperability through information exchange. Rootless archetype \u2014 used as qualifier in Directives/Norms. Source: ISO/IEC 25010 (Product Quality \u2014 Compatibility: Co-existence, Interoperability).",
+  "type": "object",
+  "required": [
+    "coexistenceLevel"
+  ],
+  "properties": {
+    "coexistenceLevel": {
+      "type": "string",
+      "enum": [
+        "ISOLATED",
+        "SHARED_RESOURCES",
+        "SHARED_ENVIRONMENT",
+        "FULLY_COEXISTENT"
+      ],
+      "$gsm:queryable": true,
+      "description": "Degree of co-existence capability. ISOLATED = dedicated environment required. SHARED_RESOURCES = shares infrastructure but isolated data. SHARED_ENVIRONMENT = shares environment with managed contention. FULLY_COEXISTENT = no interference in any shared context."
+    },
+    "interoperabilityLevel": {
+      "type": "string",
+      "enum": [
+        "NONE",
+        "DATA_EXCHANGE",
+        "FUNCTIONAL_EXCHANGE",
+        "SEMANTIC_INTEROP"
+      ],
+      "$gsm:queryable": true,
+      "description": "Degree of interoperability. NONE = no exchange. DATA_EXCHANGE = raw data sharing. FUNCTIONAL_EXCHANGE = service-level integration. SEMANTIC_INTEROP = shared meaning and context."
+    },
+    "standardProtocols": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of standard protocols or formats supported for interoperability (e.g., REST, GraphQL, gRPC, AMQP)."
+    },
+    "sharedResourceContention": {
+      "type": "string",
+      "enum": [
+        "NONE",
+        "LOW",
+        "MODERATE",
+        "HIGH"
+      ],
+      "description": "Expected contention level when co-existing on shared resources (CPU, memory, network, storage)."
+    }
+  }
+}

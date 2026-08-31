@@ -1,0 +1,34 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/iso25000/iso25010/quality-in-use/ProductContextCoverage/v1",
+  "title": "ProductContextCoverage",
+  "description": "ISO 25010-sourced quality archetype \u2014 Context Coverage quality-in-use characteristic. Measures the degree to which a product can be used with effectiveness, efficiency, freedom from risk, and satisfaction in all specified contexts of use. Sub-characteristics: Context completeness, Flexibility. Rootless archetype \u2014 used as qualifier in Directives/Norms. Source: ISO/IEC 25010 (Quality in Use \u2014 Context Coverage).",
+  "type": "object",
+  "required": [
+    "contextCompleteness"
+  ],
+  "properties": {
+    "contextCompleteness": {
+      "type": "string",
+      "enum": [
+        "NARROW",
+        "PARTIAL",
+        "BROAD",
+        "COMPLETE"
+      ],
+      "$gsm:queryable": true,
+      "description": "Degree to which the product can be used with quality in all intended contexts. NARROW = single context only. PARTIAL = some contexts. BROAD = most contexts. COMPLETE = all specified contexts."
+    },
+    "flexibility": {
+      "type": "string",
+      "enum": [
+        "RIGID",
+        "LIMITED",
+        "ADAPTABLE",
+        "HIGHLY_FLEXIBLE"
+      ],
+      "$gsm:queryable": true,
+      "description": "Degree to which the product can be used with quality in contexts beyond those initially specified."
+    }
+  }
+}

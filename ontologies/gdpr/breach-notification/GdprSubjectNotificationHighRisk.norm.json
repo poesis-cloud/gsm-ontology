@@ -1,0 +1,6 @@
+{
+  "qualifier": "gsmarc://gsm-ontology/gdpr/breach-notification/DataBreach/v1",
+  "applicability": "ref(\"gsmarc://gsm-ontology/gdpr/controller-processor/ControllerProcessorRole/v1\").role in ['CONTROLLER', 'JOINT_CONTROLLER'] && ref(\"gsmarc://gsm-ontology/gdpr/breach-notification/DataBreach/v1\").personalDataBreach == true && ref(\"gsmarc://gsm-ontology/gdpr/breach-notification/DataBreach/v1\").riskToRightsAndFreedoms == 'HIGH'",
+  "assertion": "dataSubjectsNotified == true",
+  "toleranceMode": "INSTANTANEOUS"
+}

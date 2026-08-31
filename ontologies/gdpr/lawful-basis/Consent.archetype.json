@@ -1,0 +1,52 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/gdpr/lawful-basis/Consent/v1",
+  "title": "Consent",
+  "description": "GDPR-sourced archetype \u2014 conditions for valid consent under Regulation (EU) 2016/679. When processing relies on consent as lawful basis, consent must be freely given, specific, informed, unambiguous, demonstrable, and withdrawable. Rootless \u2014 regulatory compliance dimension. Source: GDPR Article 7, Article 8 (child's consent), Recitals 32, 42, 43.",
+  "type": "object",
+  "required": [
+    "consentDemonstrable"
+  ],
+  "properties": {
+    "consentDemonstrable": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether the controller can demonstrate that the data subject consented to the processing. The burden of proof lies with the controller. Source: GDPR Art 7(1)."
+    },
+    "freelyGiven": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether consent was freely given \u2014 not conditional on performance of a contract or provision of a service that does not require the consented processing. Source: GDPR Art 7(4), Recital 43."
+    },
+    "specificPurpose": {
+      "type": "boolean",
+      "description": "Whether consent is specific to one or more defined processing purposes. Blanket consent is not valid. Source: GDPR Art 6(1)(a), Recital 32."
+    },
+    "informedConsent": {
+      "type": "boolean",
+      "description": "Whether the data subject was adequately informed before giving consent, including the identity of the controller and the purposes of processing. Source: GDPR Recital 42."
+    },
+    "unambiguousIndication": {
+      "type": "boolean",
+      "description": "Whether consent was given by a clear affirmative act \u2014 not by silence, pre-ticked boxes, or inactivity. Source: GDPR Recital 32."
+    },
+    "consentDistinguishable": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether the consent request is presented distinguishably from other matters, in an intelligible and easily accessible form, using clear and plain language. Source: GDPR Art 7(2)."
+    },
+    "withdrawalMechanismAvailable": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether a mechanism for withdrawing consent is available and is as easy as giving consent. Data subject must be informed of the right to withdraw before giving consent. Source: GDPR Art 7(3)."
+    },
+    "childConsentApplicable": {
+      "type": "boolean",
+      "description": "Whether the processing involves information society services offered directly to a child (under 16, or lower age set by Member State but not below 13). Source: GDPR Art 8(1)."
+    },
+    "parentalConsentObtained": {
+      "type": "boolean",
+      "description": "Whether parental or guardian consent was obtained when the data subject is a child. Required when childConsentApplicable is true. Source: GDPR Art 8(1)."
+    }
+  }
+}

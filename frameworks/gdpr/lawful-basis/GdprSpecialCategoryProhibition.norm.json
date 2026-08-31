@@ -1,6 +1,0 @@
-{
-  "qualifier": "gsmarc://gsm-frameworks/gdpr/lawful-basis/GdprSpecialCategoryData/v1",
-  "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER']",
-  "assertion": "processingConditionMet == true",
-  "toleranceMode": "INSTANTANEOUS"
-}

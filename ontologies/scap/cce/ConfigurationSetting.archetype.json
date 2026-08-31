@@ -1,0 +1,48 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/scap/cce/ConfigurationSetting/v1",
+  "title": "ConfigurationSetting",
+  "description": "SCAP-sourced archetype \u2014 configuration setting identification per Common Configuration Enumeration (CCE). Each CCE entry uniquely identifies a configuration guidance statement, enabling correlation of security configuration guidance across multiple sources (CIS Benchmarks, DISA STIGs, NIST 800-53). Rootless \u2014 cross-cutting identification dimension applicable to any configurable subject. Source: NIST CCE List, NIST SP 800-126 r3 (SCAP 1.3).",
+  "type": "object",
+  "required": [
+    "cceId",
+    "settingDescription"
+  ],
+  "properties": {
+    "cceId": {
+      "type": "string",
+      "pattern": "^CCE-[0-9]+-[0-9]$",
+      "$gsm:queryable": true,
+      "$gsm:identityBound": true,
+      "description": "CCE unique identifier. Format: CCE-{digits}-{check digit} (e.g., CCE-80214-3). Each CCE ID uniquely identifies a single configuration guidance statement. Source: NIST CCE specification."
+    },
+    "settingDescription": {
+      "type": "string",
+      "minLength": 1,
+      "$gsm:queryable": true,
+      "description": "Human-readable description of the configuration issue this CCE identifies (e.g., 'The SSH PermitRootLogin setting should be disabled'). Source: CCE List description field."
+    },
+    "platform": {
+      "type": "string",
+      "pattern": "^cpe:2\\.3:[aoh*-]:",
+      "$gsm:queryable": true,
+      "description": "CPE URI identifying the technology platform to which this configuration setting applies (e.g., 'cpe:2.3:o:redhat:enterprise_linux:8:*:*:*:*:*:*:*'). Cross-references PlatformIdentifier. Source: CCE List platform field."
+    },
+    "technicalMechanism": {
+      "type": "string",
+      "description": "Implementation method for checking or setting this configuration (e.g., 'sshd_config file', 'Windows Registry HKLM\\...', 'sysctl kernel parameter', 'Group Policy Object'). Source: CCE List technical mechanism field."
+    },
+    "parameters": {
+      "type": "string",
+      "description": "Available values or options for this configuration setting (e.g., 'yes/no', 'enabled/disabled', numeric range). Source: CCE List parameters field."
+    },
+    "controlReferences": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "Control framework references that cite this configuration setting (e.g., 'CIS Controls v8 Safeguard 5.2', 'NIST SP 800-53 CM-6'). This property documents the cross-framework traceability that CCE natively provides. Source: CCE List references field."
+    }
+  }
+}

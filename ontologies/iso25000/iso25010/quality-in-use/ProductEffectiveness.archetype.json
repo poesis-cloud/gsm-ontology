@@ -1,0 +1,35 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/iso25000/iso25010/quality-in-use/ProductEffectiveness/v1",
+  "title": "ProductEffectiveness",
+  "description": "ISO 25010-sourced quality archetype \u2014 Effectiveness quality-in-use characteristic. Measures the accuracy and completeness with which users achieve specified goals. Rootless archetype \u2014 used as qualifier in Directives/Norms. Source: ISO/IEC 25010 (Quality in Use \u2014 Effectiveness).",
+  "type": "object",
+  "required": [
+    "taskCompletionRate"
+  ],
+  "properties": {
+    "taskCompletionRate": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "$gsm:queryable": true,
+      "description": "Percentage of tasks completed successfully by users (0-100)."
+    },
+    "goalAchievementAccuracy": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Percentage of goals achieved with the specified accuracy (0-100)."
+    },
+    "errorFrequency": {
+      "type": "string",
+      "enum": [
+        "NEGLIGIBLE",
+        "LOW",
+        "MODERATE",
+        "HIGH"
+      ],
+      "description": "Frequency of user errors preventing goal achievement."
+    }
+  }
+}

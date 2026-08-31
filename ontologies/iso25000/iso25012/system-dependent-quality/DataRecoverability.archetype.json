@@ -1,0 +1,34 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/iso25000/iso25012/system-dependent-quality/DataRecoverability/v1",
+  "title": "DataRecoverability",
+  "description": "ISO 25012-sourced data quality archetype \u2014 Recoverability system-dependent data quality characteristic. The degree to which data has attributes that enable it to maintain and preserve a specified level of operations and quality, even in the event of failure, in a specific context of use. Rootless archetype \u2014 used as qualifier in Directives/Norms governing data entities. Source: ISO/IEC 25012 (System-Dependent Data Quality \u2014 Recoverability).",
+  "type": "object",
+  "required": [
+    "recoveryPointObjective"
+  ],
+  "properties": {
+    "recoveryPointObjective": {
+      "type": "string",
+      "pattern": "^P",
+      "$gsm:queryable": true,
+      "description": "Maximum acceptable data loss measured in time. ISO 8601 duration (e.g., PT0S for zero data loss, PT1H for 1-hour RPO)."
+    },
+    "recoveryTimeObjective": {
+      "type": "string",
+      "pattern": "^P",
+      "description": "Maximum acceptable time to restore data access after failure. ISO 8601 duration."
+    },
+    "backupStrategy": {
+      "type": "string",
+      "enum": [
+        "NONE",
+        "PERIODIC_SNAPSHOT",
+        "INCREMENTAL",
+        "CONTINUOUS_REPLICATION"
+      ],
+      "$gsm:queryable": true,
+      "description": "Data backup strategy. NONE = no backup. PERIODIC_SNAPSHOT = scheduled full backups. INCREMENTAL = differential changes captured. CONTINUOUS_REPLICATION = real-time data replication."
+    }
+  }
+}

@@ -1,6 +1,0 @@
-{
-  "qualifier": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprDataProtectionOfficer/v1",
-  "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER', 'PROCESSOR'] && GdprDataProtectionOfficer.dpoDesignated == true",
-  "assertion": "dpoResourcesProvided == true",
-  "toleranceMode": "INSTANTANEOUS"
-}

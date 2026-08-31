@@ -1,6 +1,0 @@
-{
-  "qualifier": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprTransparencyObligation/v1",
-  "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER']",
-  "assertion": "recipientsNotified == true",
-  "toleranceMode": "INSTANTANEOUS"
-}

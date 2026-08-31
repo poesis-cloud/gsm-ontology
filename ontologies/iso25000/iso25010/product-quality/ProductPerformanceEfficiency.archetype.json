@@ -1,0 +1,41 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/iso25000/iso25010/product-quality/ProductPerformanceEfficiency/v1",
+  "title": "ProductPerformanceEfficiency",
+  "description": "TOGAF-sourced quality archetype \u2014 Performance viability dimension. Defines the property vocabulary for performance governance: latency percentiles, throughput, error rates. Rootless archetype \u2014 used as qualifier in Directives/Norms and as data type for Effectors/Receptors carrying performance state. Source framework: TOGAF (Non-Functional Requirements) + ISO/IEC 25010 (Performance Efficiency sub-characteristic).",
+  "type": "object",
+  "required": [
+    "p99LatencyMs"
+  ],
+  "properties": {
+    "p50LatencyMs": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Median (50th percentile) response latency in milliseconds."
+    },
+    "p95LatencyMs": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "95th percentile response latency in milliseconds."
+    },
+    "p99LatencyMs": {
+      "type": "integer",
+      "minimum": 0,
+      "$gsm:queryable": true,
+      "description": "99th percentile response latency in milliseconds. Norm example: Performance.p99LatencyMs < 500."
+    },
+    "throughputRps": {
+      "type": "integer",
+      "minimum": 0,
+      "$gsm:queryable": true,
+      "description": "Sustained throughput capacity in requests per second."
+    },
+    "errorRatePercent": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "$gsm:queryable": true,
+      "description": "Error rate budget as a percentage (e.g., 0.1 for 99.9% success rate SLO)."
+    }
+  }
+}

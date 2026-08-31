@@ -1,0 +1,44 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/governance/ArchitectureContract/v1",
+  "$ref": "gsmarc://gsm/Directive/v1",
+  "title": "ArchitectureContract",
+  "description": "TOGAF-sourced directive archetype \u2014 formal joint agreement governing architecture development, quality of service, and cross-organizational commitments. Architecture Contracts are binding governance instruments that formalize agreements between architecture stakeholders regarding deliverables, quality, and fitness-for-purpose. Requires GSM unsealing of Directive to be functional. Extends Directive with TOGAF Architecture Governance vocabulary. TOGAF mapping: Architecture Contract (Architecture Governance \u2014 Architecture Compliance, Interoperability). Source framework: TOGAF (Architecture Governance, Contract Management).",
+  "type": "object",
+  "required": [
+    "contractType"
+  ],
+  "properties": {
+    "contractType": {
+      "type": "string",
+      "enum": [
+        "DEVELOPMENT",
+        "SERVICE",
+        "INTEROPERABILITY",
+        "COMPLIANCE"
+      ],
+      "$gsm:queryable": true,
+      "description": "Type of architecture contract. DEVELOPMENT = governs architecture development projects. SERVICE = governs service delivery and quality. INTEROPERABILITY = governs cross-system integration agreements. COMPLIANCE = governs adherence to standards/regulations. TOGAF mapping: Architecture Contract type classification."
+    },
+    "scope": {
+      "type": "string",
+      "enum": [
+        "ENTERPRISE",
+        "DOMAIN",
+        "PROJECT",
+        "INTER_ORGANIZATIONAL"
+      ],
+      "$gsm:queryable": true,
+      "description": "Contract applicability scope. TOGAF mapping: Architecture Contract governance scope."
+    },
+    "bindingLevel": {
+      "type": "string",
+      "enum": [
+        "MANDATORY",
+        "ADVISORY"
+      ],
+      "$gsm:queryable": true,
+      "description": "Enforcement level of the contract. MANDATORY = binding on all parties. ADVISORY = recommended but not enforced. TOGAF mapping: Contract enforcement classification."
+    }
+  }
+}

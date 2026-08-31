@@ -1,0 +1,46 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/nis2/incident-reporting/IncidentReporting/v1",
+  "title": "IncidentReporting",
+  "description": "NIS2-sourced archetype \u2014 incident reporting obligations under Directive (EU) 2022/2555. Defines the vocabulary for the multi-stage incident notification pipeline: early warning, formal notification, intermediate report, and final report. Rootless \u2014 regulatory compliance dimension. Source: NIS2 Article 23.",
+  "type": "object",
+  "required": [
+    "reportingStage"
+  ],
+  "properties": {
+    "reportingStage": {
+      "type": "string",
+      "enum": [
+        "EARLY_WARNING",
+        "INCIDENT_NOTIFICATION",
+        "INTERMEDIATE_REPORT",
+        "FINAL_REPORT"
+      ],
+      "$gsm:queryable": true,
+      "description": "Stage of the NIS2 incident reporting pipeline. EARLY_WARNING: within 24h, indicate if suspected unlawful/malicious and potential cross-border impact (Art 23(4)(a)). INCIDENT_NOTIFICATION: within 72h, update early warning with initial assessment including severity/impact (Art 23(4)(b)). INTERMEDIATE_REPORT: upon CSIRT request, relevant status updates (Art 23(4)(c)). FINAL_REPORT: within 1 month, detailed description including root cause, mitigation, cross-border impact (Art 23(4)(d))."
+    },
+    "deadlineHours": {
+      "type": "integer",
+      "$gsm:queryable": true,
+      "description": "Deadline in hours from incident awareness. EARLY_WARNING: 24. INCIDENT_NOTIFICATION: 72. FINAL_REPORT: 720 (1 month). INTERMEDIATE_REPORT: on demand (no fixed deadline)."
+    },
+    "recipientAuthority": {
+      "type": "string",
+      "enum": [
+        "CSIRT",
+        "COMPETENT_AUTHORITY"
+      ],
+      "$gsm:queryable": true,
+      "description": "Authority to which the report must be submitted. CSIRT: Computer Security Incident Response Team designated under Art 10. COMPETENT_AUTHORITY: national authority designated under Art 8. Source: NIS2 Art 23(1)."
+    },
+    "significantIncident": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether the incident is classified as significant under Art 23(3): (a) caused or capable of causing severe operational disruption or financial loss, or (b) affected or capable of affecting other natural or legal persons by causing considerable material or non-material damage."
+    },
+    "crossBorderImpact": {
+      "type": "boolean",
+      "description": "Whether the incident has or may have cross-border impact. Source: NIS2 Art 23(4)(a)."
+    }
+  }
+}

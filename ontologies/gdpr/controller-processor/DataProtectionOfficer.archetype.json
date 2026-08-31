@@ -1,0 +1,44 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/gdpr/controller-processor/DataProtectionOfficer/v1",
+  "title": "DataProtectionOfficer",
+  "description": "GDPR-sourced archetype \u2014 data protection officer designation and properties under Regulation (EU) 2016/679. Articles 37-39 define when a DPO must be designated, required qualifications, independence guarantees, and tasks. Rootless \u2014 regulatory compliance dimension. Source: GDPR Articles 37, 38, 39.",
+  "type": "object",
+  "required": [
+    "dpoRequired"
+  ],
+  "properties": {
+    "dpoRequired": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether DPO designation is mandatory. Required when: (a) processing is by a public authority/body (Art 37(1)(a)); (b) core activities require regular and systematic monitoring of data subjects on a large scale (Art 37(1)(b)); (c) core activities consist of large-scale processing of special categories or criminal conviction data (Art 37(1)(c))."
+    },
+    "dpoDesignated": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether a DPO has been designated. Source: GDPR Art 37(1)."
+    },
+    "dpoQualified": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether the DPO is designated on the basis of professional qualities and expert knowledge of data protection law and practices. Source: GDPR Art 37(5)."
+    },
+    "dpoIndependent": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether the DPO operates independently \u2014 does not receive instructions regarding the exercise of tasks, is not dismissed or penalised for performing tasks, and reports directly to highest management level. Source: GDPR Art 38(3)."
+    },
+    "dpoContactPublished": {
+      "type": "boolean",
+      "description": "Whether the DPO contact details have been published and communicated to the supervisory authority. Source: GDPR Art 37(7)."
+    },
+    "dpoNoConflictOfInterest": {
+      "type": "boolean",
+      "description": "Whether the DPO does not hold a position that leads to a conflict of interest with DPO tasks. Other tasks and duties must not result in a conflict of interest. Source: GDPR Art 38(6)."
+    },
+    "dpoResourcesProvided": {
+      "type": "boolean",
+      "description": "Whether the controller/processor provides the DPO with resources necessary to carry out tasks and maintain expert knowledge. Source: GDPR Art 38(2)."
+    }
+  }
+}

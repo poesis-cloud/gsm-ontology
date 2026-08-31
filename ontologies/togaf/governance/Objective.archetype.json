@@ -1,0 +1,44 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/governance/Objective/v1",
+  "title": "Objective",
+  "description": "TOGAF-sourced archetype \u2014 a quantitative, time-bounded milestone derived from a Goal. Objectives make Goals measurable and trackable, bridging strategic intent (Goal) to operational requirements (ArchitectureRequirement). Rootless \u2014 an Objective is a measurement target, not an active system. TOGAF mapping: Objective (Motivation Extension, Architecture Vision). Source framework: TOGAF (Motivation Extension, Architecture Vision).",
+  "type": "object",
+  "required": [
+    "measureType"
+  ],
+  "properties": {
+    "measureType": {
+      "type": "string",
+      "enum": [
+        "QUANTITATIVE",
+        "QUALITATIVE",
+        "BINARY"
+      ],
+      "$gsm:queryable": true,
+      "description": "How the objective is measured. QUANTITATIVE = numeric target (e.g., 99.9% uptime). QUALITATIVE = assessed against criteria. BINARY = achieved or not. TOGAF mapping: Objective measurement approach."
+    },
+    "timeframe": {
+      "type": "string",
+      "pattern": "^P",
+      "description": "Target timeframe for achieving the objective. ISO 8601 duration (e.g., P1Y = 1 year, P6M = 6 months)."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PROPOSED",
+        "APPROVED",
+        "IN_PROGRESS",
+        "ACHIEVED",
+        "MISSED"
+      ],
+      "$gsm:queryable": true,
+      "description": "Objective lifecycle status. TOGAF mapping: Objective tracking in Architecture Vision / Governance."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable description of the objective and its success criteria."
+    }
+  }
+}

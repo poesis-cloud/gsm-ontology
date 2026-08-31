@@ -1,6 +1,0 @@
-{
-  "qualifier": "gsmarc://gsm-frameworks/gdpr/lawful-basis/GdprConsent/v1",
-  "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprLawfulBasis.lawfulBasis == 'CONSENT'",
-  "assertion": "withdrawalMechanismAvailable == true",
-  "toleranceMode": "INSTANTANEOUS"
-}

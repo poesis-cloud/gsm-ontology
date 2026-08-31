@@ -1,0 +1,46 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/adm/AdmPhaseRecord/v1",
+  "title": "AdmPhaseRecord",
+  "description": "TOGAF-sourced justification archetype \u2014 ADM Phase Record. Defines the property vocabulary for contextualizing architecture work within TOGAF's Architecture Development Method (ADM) cycle. Rootless archetype \u2014 used to type phase execution records in governance justification. TOGAF mapping: ADM Phase (Architecture Development Method \u2014 the iterative cycle of phases that produce architecture deliverables). Source framework: TOGAF (Architecture Development Method).",
+  "type": "object",
+  "required": [
+    "phase",
+    "status"
+  ],
+  "properties": {
+    "phase": {
+      "type": "string",
+      "enum": [
+        "PRELIMINARY",
+        "A_ARCHITECTURE_VISION",
+        "B_BUSINESS_ARCHITECTURE",
+        "C_INFORMATION_SYSTEMS",
+        "D_TECHNOLOGY_ARCHITECTURE",
+        "E_OPPORTUNITIES_AND_SOLUTIONS",
+        "F_MIGRATION_PLANNING",
+        "G_IMPLEMENTATION_GOVERNANCE",
+        "H_ARCHITECTURE_CHANGE_MANAGEMENT",
+        "REQUIREMENTS_MANAGEMENT"
+      ],
+      "$gsm:queryable": true,
+      "description": "TOGAF ADM phase. Preliminary + Phases A through H map to the ADM circle; Requirements Management is the central hub phase. TOGAF mapping: canonical ADM phase identifiers."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "NOT_STARTED",
+        "IN_PROGRESS",
+        "COMPLETED",
+        "ITERATED"
+      ],
+      "$gsm:queryable": true,
+      "description": "Phase execution status. ITERATED = phase was completed but re-entered in a subsequent ADM iteration cycle."
+    },
+    "iterationId": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identifier for the ADM iteration/cycle this phase record belongs to. Links related phase records within the same ADM execution."
+    }
+  }
+}

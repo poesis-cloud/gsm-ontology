@@ -1,0 +1,61 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/gdpr/controller-processor/ProcessorAgreement/v1",
+  "title": "ProcessorAgreement",
+  "description": "GDPR-sourced archetype \u2014 data processing agreement requirements under Regulation (EU) 2016/679. Article 28 mandates that processing by a processor shall be governed by a contract or legal act setting out subject-matter, duration, nature, purpose, type of personal data, categories of data subjects, and obligations/rights of the controller. Rootless \u2014 regulatory compliance dimension. Source: GDPR Article 28.",
+  "type": "object",
+  "required": [
+    "contractInPlace"
+  ],
+  "properties": {
+    "contractInPlace": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether a data processing agreement (contract or other legal act under EU/Member State law) is in place between controller and processor. Source: GDPR Art 28(3)."
+    },
+    "instructionsBound": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether the processor processes personal data only on documented instructions from the controller, including with regard to transfers. Source: GDPR Art 28(3)(a)."
+    },
+    "confidentialityEnsured": {
+      "type": "boolean",
+      "description": "Whether persons authorised to process personal data have committed themselves to confidentiality or are under an appropriate statutory obligation of confidentiality. Source: GDPR Art 28(3)(b)."
+    },
+    "securityMeasuresImplemented": {
+      "type": "boolean",
+      "description": "Whether the processor takes all measures required pursuant to Article 32 (security of processing). Source: GDPR Art 28(3)(c)."
+    },
+    "subProcessorAuthorized": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether the processor has obtained prior specific or general written authorisation from the controller before engaging another processor. Source: GDPR Art 28(2)."
+    },
+    "subProcessorContractMirrored": {
+      "type": "boolean",
+      "description": "Whether the same data protection obligations as set out in the controller-processor contract are imposed on any sub-processor by way of a contract. Source: GDPR Art 28(4)."
+    },
+    "controllerAssistanceProvided": {
+      "type": "boolean",
+      "description": "Whether the processor assists the controller in responding to data subject requests (Art 28(3)(e)), ensuring compliance with Art 32-36 obligations (Art 28(3)(f)), and providing all information necessary to demonstrate compliance (Art 28(3)(h)). Source: GDPR Art 28(3)(e)-(f)(h)."
+    },
+    "dataDeletedOrReturned": {
+      "type": "boolean",
+      "description": "Whether the processor deletes or returns all personal data to the controller after the end of the provision of services, and deletes existing copies unless EU/Member State law requires storage. Source: GDPR Art 28(3)(g)."
+    },
+    "auditRightsGranted": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether the processor makes available to the controller all information necessary to demonstrate compliance and allows for and contributes to audits and inspections. Source: GDPR Art 28(3)(h)."
+    },
+    "contractContentsComplete": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether the contract contains all elements required by Art 28(3)(a)-(h): instructions binding, confidentiality, security measures, sub-processor conditions, data subject request assistance, compliance assistance, data deletion/return, audit rights."
+    },
+    "contractInWriting": {
+      "type": "boolean",
+      "description": "Whether the contract or legal act is in writing, including in electronic form. Source: GDPR Art 28(9)."
+    }
+  }
+}

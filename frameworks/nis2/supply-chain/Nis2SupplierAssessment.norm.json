@@ -1,6 +1,0 @@
-{
-  "qualifier": "gsmarc://gsm-frameworks/nis2/supply-chain/Nis2SupplyChainSecurity/v1",
-  "applicability": "Nis2EntityClassification.entityTier in ['ESSENTIAL', 'IMPORTANT']",
-  "assertion": "supplierAssessmentCompleted == true",
-  "toleranceMode": "INSTANTANEOUS"
-}

@@ -1,0 +1,49 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/iso25000/iso25010/product-quality/ProductPortability/v1",
+  "title": "ProductPortability",
+  "description": "TOGAF-sourced quality archetype \u2014 Portability viability dimension. Defines the property vocabulary for portability governance: containerization, cloud-provider agnosticism, configuration externalization, and vendor lock-in assessment. Rootless archetype \u2014 used as qualifier in Directives/Norms and as data type for Effectors/Receptors carrying portability posture state. Source framework: TOGAF (Technology Architecture \u2014 migration planning, platform independence) + ISO/IEC 25010 (Portability \u2014 Adaptability, Installability, Replaceability). Coherence note: fills a gap identified in the TOGAF coherence audit \u2014 ISO 25010 Portability is a core quality characteristic relevant to cloud migration governance.",
+  "type": "object",
+  "required": [
+    "containerized"
+  ],
+  "properties": {
+    "containerized": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether the component is containerized (OCI-compliant image). Norm example: Portability.containerized == true."
+    },
+    "cloudProviderAgnostic": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether the component avoids cloud-provider-specific APIs/services. Drives vendor lock-in analysis."
+    },
+    "configExternalized": {
+      "type": "boolean",
+      "description": "Whether configuration is externalized from the deployment artifact (12-factor app principle)."
+    },
+    "dataExportFormat": {
+      "type": "string",
+      "enum": [
+        "CSV",
+        "JSON",
+        "PARQUET",
+        "AVRO",
+        "NONE"
+      ],
+      "$gsm:queryable": true,
+      "description": "Primary data export format for migration/portability scenarios. NONE = no bulk export capability."
+    },
+    "vendorLockInLevel": {
+      "type": "string",
+      "enum": [
+        "NONE",
+        "LOW",
+        "MEDIUM",
+        "HIGH"
+      ],
+      "$gsm:queryable": true,
+      "description": "Assessed vendor lock-in level. NONE = fully portable. LOW = minor adaptation needed. MEDIUM = significant migration effort. HIGH = deeply coupled to vendor platform."
+    }
+  }
+}

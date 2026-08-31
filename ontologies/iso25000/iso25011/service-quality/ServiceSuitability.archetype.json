@@ -1,0 +1,50 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/iso25000/iso25011/service-quality/ServiceSuitability/v1",
+  "title": "ServiceSuitability",
+  "description": "ISO 25011 quality archetype \u2014 Suitability viability dimension. Degree to which an IT service provides functions that meet stated and implied needs when the service is used under specified conditions. Sub-characteristics: Completeness, Correctness, Appropriateness, Consistency. Rootless archetype \u2014 used as qualifier in Directives/Norms and as data type for Effectors/Receptors carrying service suitability state. Source: ISO/IEC TS 25011:2017 \u00a77.1.",
+  "type": "object",
+  "required": [
+    "completeness"
+  ],
+  "properties": {
+    "completeness": {
+      "type": "string",
+      "enum": [
+        "PARTIAL",
+        "SUBSTANTIAL",
+        "FULL"
+      ],
+      "$gsm:queryable": true,
+      "description": "Degree to which the IT service provides all functions stated or implied by service agreements. PARTIAL = some functions missing. SUBSTANTIAL = most functions provided. FULL = all agreed functions delivered."
+    },
+    "correctness": {
+      "type": "string",
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH"
+      ],
+      "$gsm:queryable": true,
+      "description": "Degree to which the IT service provides correct results with the agreed degree of precision."
+    },
+    "appropriateness": {
+      "type": "string",
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH"
+      ],
+      "description": "Degree to which the functions of the IT service facilitate the accomplishment of specified tasks and objectives."
+    },
+    "consistency": {
+      "type": "string",
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH"
+      ],
+      "description": "Degree to which the IT service behavior and information is consistent across service delivery channels."
+    }
+  }
+}

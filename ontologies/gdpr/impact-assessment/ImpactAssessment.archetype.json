@@ -1,0 +1,52 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/gdpr/impact-assessment/ImpactAssessment/v1",
+  "title": "ImpactAssessment",
+  "description": "GDPR-sourced archetype \u2014 data protection impact assessment (DPIA) under Regulation (EU) 2016/679. Article 35 requires a DPIA when processing is likely to result in a high risk to the rights and freedoms of natural persons. Rootless \u2014 regulatory compliance dimension. Source: GDPR Articles 35, 36.",
+  "type": "object",
+  "required": [
+    "highRiskProcessing"
+  ],
+  "properties": {
+    "highRiskProcessing": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether the processing is likely to result in a high risk to rights and freedoms, triggering the DPIA obligation. Required in particular for: (a) systematic and extensive profiling with significant effects (Art 35(3)(a)); (b) large-scale processing of special categories or criminal data (Art 35(3)(b)); (c) systematic monitoring of publicly accessible areas on a large scale (Art 35(3)(c))."
+    },
+    "dpiaConducted": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether a DPIA has been conducted. Source: GDPR Art 35(1)."
+    },
+    "systematicDescriptionProvided": {
+      "type": "boolean",
+      "description": "Whether the DPIA contains a systematic description of the envisaged processing operations and purposes, including legitimate interest if applicable. Source: GDPR Art 35(7)(a)."
+    },
+    "necessityAssessmentPerformed": {
+      "type": "boolean",
+      "description": "Whether an assessment of the necessity and proportionality of the processing in relation to the purposes has been performed. Source: GDPR Art 35(7)(b)."
+    },
+    "riskAssessmentPerformed": {
+      "type": "boolean",
+      "description": "Whether an assessment of the risks to the rights and freedoms of data subjects has been performed. Source: GDPR Art 35(7)(c)."
+    },
+    "mitigationMeasuresIdentified": {
+      "type": "boolean",
+      "description": "Whether measures to address the risks have been identified, including safeguards, security measures, and mechanisms to ensure protection and demonstrate compliance. Source: GDPR Art 35(7)(d)."
+    },
+    "dpiaContentsComplete": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether the DPIA contains all elements required by Art 35(7)(a)-(d): systematic description, necessity/proportionality assessment, risk assessment, and mitigation measures."
+    },
+    "residualHighRisk": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether residual high risk remains after mitigation measures, triggering the Art 36 prior consultation obligation with the supervisory authority."
+    },
+    "priorConsultationCompleted": {
+      "type": "boolean",
+      "description": "Whether prior consultation with the supervisory authority has been completed. Required when residual high risk remains. Source: GDPR Art 36(1)."
+    }
+  }
+}

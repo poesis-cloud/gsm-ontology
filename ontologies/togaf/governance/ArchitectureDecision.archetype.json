@@ -1,0 +1,41 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/governance/ArchitectureDecision/v1",
+  "title": "ArchitectureDecision",
+  "description": "TOGAF-sourced justification archetype \u2014 Architecture Decision Record (ADR). Defines the property vocabulary for recording architecture decisions, their context, rationale, and lifecycle status. Rootless archetype \u2014 used to type decision records in governance justification. TOGAF mapping: Architecture Decision / Rationale (Architecture Governance, Decision Log). Formalizes the TOGAF concept of recording rationale as structured, queryable decision records. Source framework: TOGAF (Architecture Governance, Decision Log).",
+  "type": "object",
+  "required": [
+    "status"
+  ],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "PROPOSED",
+        "ACCEPTED",
+        "SUPERSEDED",
+        "DEPRECATED"
+      ],
+      "$gsm:queryable": true,
+      "description": "Decision lifecycle status. PROPOSED = under review. ACCEPTED = approved and active. SUPERSEDED = replaced by a newer decision. DEPRECATED = no longer applicable. TOGAF mapping: Decision Log status tracking."
+    },
+    "context": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Situation and forces that led to this decision being needed. TOGAF mapping: the architectural context and drivers."
+    },
+    "decision": {
+      "type": "string",
+      "minLength": 1,
+      "description": "What was decided \u2014 the chosen course of action."
+    },
+    "consequences": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "Known consequences of adopting this decision (both positive and negative). TOGAF mapping: impact assessment."
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "qualifier": "gsmarc://gsm-ontology/gdpr/lawful-basis/Consent/v1",
+  "applicability": "ref(\"gsmarc://gsm-ontology/gdpr/controller-processor/ControllerProcessorRole/v1\").role in ['CONTROLLER', 'JOINT_CONTROLLER'] && ref(\"gsmarc://gsm-ontology/gdpr/lawful-basis/LawfulBasis/v1\").lawfulBasis == 'CONSENT' && ref(\"gsmarc://gsm-ontology/gdpr/lawful-basis/Consent/v1\").childConsentApplicable == true",
+  "assertion": "parentalConsentObtained == true",
+  "toleranceMode": "INSTANTANEOUS"
+}

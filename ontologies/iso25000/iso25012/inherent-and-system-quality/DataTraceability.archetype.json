@@ -1,0 +1,37 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/iso25000/iso25012/inherent-and-system-quality/DataTraceability/v1",
+  "title": "DataTraceability",
+  "description": "ISO 25012-sourced data quality archetype \u2014 Traceability inherent-and-system data quality characteristic. The degree to which data has attributes that provide an audit trail of access to the data and of any changes made to the data in a specific context of use. Rootless archetype \u2014 used as qualifier in Directives/Norms governing data entities. Source: ISO/IEC 25012 (Inherent and System-Dependent Data Quality \u2014 Traceability).",
+  "type": "object",
+  "required": [
+    "traceabilityLevel"
+  ],
+  "properties": {
+    "traceabilityLevel": {
+      "type": "string",
+      "enum": [
+        "NONE",
+        "BASIC_LOGGING",
+        "CHANGE_TRACKING",
+        "FULL_LINEAGE"
+      ],
+      "$gsm:queryable": true,
+      "description": "Required traceability depth. NONE = no tracking. BASIC_LOGGING = access/change timestamps. CHANGE_TRACKING = who/what/when for each change. FULL_LINEAGE = complete provenance chain from source through all transformations."
+    },
+    "lineageDepth": {
+      "type": "string",
+      "enum": [
+        "IMMEDIATE_SOURCE",
+        "TWO_HOPS",
+        "FULL_CHAIN"
+      ],
+      "description": "How far back in the data supply chain lineage must be traceable."
+    },
+    "retentionPeriod": {
+      "type": "string",
+      "pattern": "^P",
+      "description": "How long traceability records must be retained. ISO 8601 duration."
+    }
+  }
+}

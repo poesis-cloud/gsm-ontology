@@ -1,6 +1,0 @@
-{
-  "qualifier": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprProcessingActivity/v1",
-  "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprProcessingActivity.recordsMaintained == true",
-  "assertion": "recordContentsComplete == true",
-  "toleranceMode": "INSTANTANEOUS"
-}

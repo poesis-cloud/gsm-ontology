@@ -1,0 +1,57 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/business-architecture/BusinessService/v1",
+  "$ref": "gsmarc://gsm/Structure/v1",
+  "title": "BusinessService",
+  "description": "TOGAF-sourced structural archetype \u2014 Business Architecture building block. Extends Structure with TOGAF Business Architecture vocabulary: service granularity, business domain, business criticality. Used as archetype_id on Structure Ascriptions representing business services. TOGAF mapping: Business Service (Content Metamodel, Business Architecture domain). Source framework: TOGAF (Business Architecture, Content Framework).",
+  "type": "object",
+  "required": [
+    "serviceGranularity",
+    "businessCriticality"
+  ],
+  "properties": {
+    "serviceGranularity": {
+      "type": "string",
+      "enum": [
+        "ATOMIC",
+        "COMPOSITE"
+      ],
+      "$gsm:queryable": true,
+      "description": "TOGAF Business Service composition level. ATOMIC = single indivisible service unit. COMPOSITE = aggregation of multiple business services. TOGAF mapping: Business Service granularity (Content Metamodel)."
+    },
+    "businessDomain": {
+      "type": "string",
+      "minLength": 1,
+      "$gsm:queryable": true,
+      "description": "Business domain partition (e.g., 'finance', 'hr', 'logistics', 'customer-management'). TOGAF mapping: Business Architecture domain partition."
+    },
+    "businessCriticality": {
+      "type": "string",
+      "enum": [
+        "MISSION_CRITICAL",
+        "BUSINESS_CRITICAL",
+        "BUSINESS_OPERATIONAL",
+        "ADMINISTRATIVE"
+      ],
+      "$gsm:queryable": true,
+      "description": "Business impact classification (descending criticality). Drives SLA, disaster recovery, and investment prioritization. TOGAF mapping: informs Architecture Principles priority and risk assessment."
+    },
+    "channel": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "WEB",
+          "MOBILE",
+          "BRANCH",
+          "CALL_CENTER",
+          "API",
+          "EMAIL"
+        ]
+      },
+      "uniqueItems": true,
+      "$gsm:queryable": true,
+      "description": "Delivery channels through which the business service is consumed. Design note: may evolve into interaction references when channel-as-structure is modeled. TOGAF mapping: Business Service delivery channel."
+    }
+  }
+}

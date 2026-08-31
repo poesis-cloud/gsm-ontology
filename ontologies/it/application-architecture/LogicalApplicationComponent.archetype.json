@@ -1,0 +1,58 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/it/application-architecture/LogicalApplicationComponent/v1",
+  "$ref": "gsmarc://gsm-ontology/togaf/application-architecture/LogicalApplicationComponent/v1",
+  "title": "LogicalApplicationComponent",
+  "description": "IT domain composite for LogicalApplicationComponent, materializing its applicable cross-framework facets. Typing: extends LogicalApplicationComponent (chain converges to its GSM base). Facets are mounted as optional named properties keyed by lowerCamelCase of the facet's title (the catalogue's facet mount rule \u2014 instance-level namespacing; JSON Schema does not namespace instance properties. Mount-key distinctness within one composite is the author's responsibility now that titles are no longer framework-prefixed). Mounted facets \u2014 attributed-to: Attribution; measured-by-product-quality: ProductAvailability, ProductCompatibility, ProductFunctionalSuitability, ProductInteroperability, ProductMaintainability, ProductPerformanceEfficiency, ProductPortability, ProductReliability, ProductScalability, ProductSecurity, ProductUsability. Source: hand-authored, TOGAF application-architecture stratum.",
+  "type": "object",
+  "properties": {
+    "productAvailability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25010/product-quality/ProductAvailability/v1",
+      "description": "Optional ProductAvailability facet mount (ontology axis: measured-by-product-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "productCompatibility": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25010/product-quality/ProductCompatibility/v1",
+      "description": "Optional ProductCompatibility facet mount (ontology axis: measured-by-product-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "productFunctionalSuitability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25010/product-quality/ProductFunctionalSuitability/v1",
+      "description": "Optional ProductFunctionalSuitability facet mount (ontology axis: measured-by-product-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "productInteroperability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25010/product-quality/ProductInteroperability/v1",
+      "description": "Optional ProductInteroperability facet mount (ontology axis: measured-by-product-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "productMaintainability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25010/product-quality/ProductMaintainability/v1",
+      "description": "Optional ProductMaintainability facet mount (ontology axis: measured-by-product-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "productPerformanceEfficiency": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25010/product-quality/ProductPerformanceEfficiency/v1",
+      "description": "Optional ProductPerformanceEfficiency facet mount (ontology axis: measured-by-product-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "productPortability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25010/product-quality/ProductPortability/v1",
+      "description": "Optional ProductPortability facet mount (ontology axis: measured-by-product-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "productReliability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25010/product-quality/ProductReliability/v1",
+      "description": "Optional ProductReliability facet mount (ontology axis: measured-by-product-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "productScalability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25010/product-quality/ProductScalability/v1",
+      "description": "Optional ProductScalability facet mount (ontology axis: measured-by-product-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "productSecurity": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25010/product-quality/ProductSecurity/v1",
+      "description": "Optional ProductSecurity facet mount (ontology axis: measured-by-product-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "productUsability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25010/product-quality/ProductUsability/v1",
+      "description": "Optional ProductUsability facet mount (ontology axis: measured-by-product-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "attribution": {
+      "$ref": "gsmarc://gsm-ontology/prov/agents-responsibility/Attribution/v1",
+      "description": "Optional Attribution facet mount (ontology axis: attributed-to). Facet-internal required members apply only when this mount is present."
+    }
+  }
+}

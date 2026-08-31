@@ -1,0 +1,7 @@
+{
+  "qualifier": "gsmarc://gsm-ontology/nis2/incident-reporting/IncidentReporting/v1",
+  "applicability": "ref(\"gsmarc://gsm-ontology/nis2/entity-classification/EntityClassification/v1\").entityTier in ['ESSENTIAL', 'IMPORTANT'] && ref(\"gsmarc://gsm-ontology/nis2/incident-reporting/IncidentReporting/v1\").significantIncident == true && ref(\"gsmarc://gsm-ontology/nis2/incident-reporting/IncidentReporting/v1\").reportingStage == 'EARLY_WARNING'",
+  "assertion": "deadlineHours <= 24",
+  "toleranceMode": "INSTANTANEOUS",
+  "temporalWindow": "PT24H"
+}

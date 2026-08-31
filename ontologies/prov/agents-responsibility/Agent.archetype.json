@@ -1,0 +1,17 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/prov/agents-responsibility/Agent/v1",
+  "title": "Agent",
+  "description": "Rootless shape facet \u2014 PROV Agent: \"something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity\". An agent has an identifier and an optional set of attribute-value pairs; PROV does not prescribe the identification scheme. Source: W3C PROV-DM (REC-prov-dm-20130430) \u00a75.3.1 Agent, agent(id, [attr1=val1, ...]); PROV-O prov:Agent.",
+  "type": "object",
+  "required": [
+    "id"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identifier for the agent \u2014 mandatory per PROV-DM \u00a75.7.1; a qualified name, mappable to an IRI (\u00a75.7.5)."
+    }
+  }
+}

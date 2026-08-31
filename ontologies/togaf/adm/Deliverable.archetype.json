@@ -1,0 +1,54 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/adm/Deliverable/v1",
+  "title": "Deliverable",
+  "description": "TOGAF-sourced archetype \u2014 a contractual output of a Work Package, representing a formally agreed-upon result of ADM work. Deliverables are composed of Artifacts (catalogs, matrices, diagrams). Placed in unclassified/ for GSM placement deliberation: may be a directive (prescriptive outcome), an interaction artifact (contractual exchange), or a structure (a system deliverable). TOGAF mapping: Deliverable (ADM Content Metamodel, Architecture Governance). Source framework: TOGAF (ADM, Content Framework).",
+  "type": "object",
+  "required": [
+    "deliverableType"
+  ],
+  "properties": {
+    "deliverableType": {
+      "type": "string",
+      "enum": [
+        "ARCHITECTURE_DEFINITION_DOCUMENT",
+        "ARCHITECTURE_REQUIREMENTS_SPECIFICATION",
+        "ARCHITECTURE_ROADMAP",
+        "TRANSITION_ARCHITECTURE",
+        "IMPLEMENTATION_GOVERNANCE_MODEL",
+        "ARCHITECTURE_CONTRACT",
+        "COMPLIANCE_ASSESSMENT",
+        "OTHER"
+      ],
+      "$gsm:queryable": true,
+      "description": "Deliverable classification per TOGAF ADM output types. TOGAF mapping: ADM deliverable taxonomy."
+    },
+    "admPhase": {
+      "type": "string",
+      "enum": [
+        "PRELIMINARY",
+        "VISION",
+        "BUSINESS_ARCHITECTURE",
+        "IS_ARCHITECTURE",
+        "TECHNOLOGY_ARCHITECTURE",
+        "OPPORTUNITIES_AND_SOLUTIONS",
+        "MIGRATION_PLANNING",
+        "IMPLEMENTATION_GOVERNANCE",
+        "ARCHITECTURE_CHANGE_MANAGEMENT"
+      ],
+      "$gsm:queryable": true,
+      "description": "ADM phase that produces this deliverable. TOGAF mapping: ADM phase."
+    },
+    "approvalStatus": {
+      "type": "string",
+      "enum": [
+        "DRAFT",
+        "IN_REVIEW",
+        "APPROVED",
+        "SUPERSEDED"
+      ],
+      "$gsm:queryable": true,
+      "description": "Formal approval status of the deliverable. TOGAF mapping: Architecture Governance approval lifecycle."
+    }
+  }
+}

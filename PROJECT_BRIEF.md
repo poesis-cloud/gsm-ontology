@@ -1,16 +1,16 @@
-# PROJECT_BRIEF.md — gsm-frameworks
+# PROJECT_BRIEF.md — gsm-ontology
 
 > Last updated: 2026-07-27 | Sprint 0 | Status: Design Phase
 
 ## 1. Project Overview
 
-`gsm-frameworks` is the published, versioned repository of **sourced governance/compliance/architecture/regulatory framework schemas** for the IT Intelligence Platform (ITIP). It was extracted from the private `itip` repository's `def/frameworks/` directory (269 files at extraction) so that the sourced vocabulary can be distributed, versioned, and consumed independently of ITIP's private design-time IP.
+`gsm-ontology` is the published, versioned repository of **sourced governance/compliance/architecture/regulatory ontology schemas** for the IT Intelligence Platform (ITIP). It was extracted from the private `itip` repository's `def/ontologies/` directory (269 files at extraction) so that the sourced vocabulary can be distributed, versioned, and consumed independently of ITIP's private design-time IP.
 
 It sits under the **GSM solution umbrella** (`gsm/`) alongside `gsm-specifications`, the normative model it is expressed against.
 
 ## 2. Concept / Product Description
 
-Content here is **schema, not application logic**: JSON Schema archetypes and Directive/Norm ascription instances sourced from external standards (TOGAF, ISO/IEC 25000 series, GDPR, NIS2, SCAP, RFC 9110, aDRI-IRN, and reserved protocol quads for gRPC/GraphQL/Kafka/AMQP/WebSocket/JDBC). Each framework is organized by its **own taxonomy** (P9 — model-native organization, not GSM subject-type classification), and composes with other models exclusively through the GSM governance layer (Directives qualifying Subjects using archetypes from different models) — never through schema-level cross-references.
+Content here is **schema, not application logic**: JSON Schema archetypes and Directive/Norm ascription instances sourced from external standards (TOGAF, ISO/IEC 25000 series, GDPR, NIS2, SCAP, RFC 9110, aDRI-IRN, and reserved protocol quads for gRPC/GraphQL/Kafka/AMQP/WebSocket/JDBC). Each ontology is organized by its **own taxonomy** (P9 — model-native organization, not GSM subject-type classification), and composes with other models exclusively through the GSM governance layer (Directives qualifying Subjects using archetypes from different models) — never through schema-level cross-references.
 
 ## 3. Tech Stack
 
@@ -29,9 +29,9 @@ This repo has no execution architecture of its own. It is a **content source** r
 
 | Area | Path | Contents |
 | ------ | ------ | ---------- |
-| Inter-model composition | `frameworks/README.md` | Composition principle, dynamic/static paradigm, articulation maps |
-| ITIP domain archetypes | `frameworks/itip/` | SourcedDirective, SourcedNorm, meta-governance mechanisms |
-| Sourced frameworks | `frameworks/{authority}/` | One folder per authority (togaf, iso25000, gdpr, nis2, scap, http, ...) |
+| Inter-model composition | `ontologies/README.md` | Composition principle, dynamic/static paradigm, articulation maps |
+| ITIP domain archetypes | `ontologies/itip/` | SourcedDirective, SourcedNorm, meta-governance mechanisms |
+| Sourced ontologies | `ontologies/{authority}/` | One folder per authority (togaf, iso25000, gdpr, nis2, scap, http, ...) |
 
 ## 6. Team Roles
 
@@ -47,7 +47,7 @@ This repo is content-only (no dev/QA sprint cycle in the application sense). Mai
 
 | Sprint | Name | Status | Scope |
 |--------|------|--------|-------|
-| 0 | Extraction | Done | Repo scaffold, content moved from `itip/def/frameworks/` |
+| 0 | Extraction | Done | Repo scaffold, content moved from `itip/def/ontologies/` |
 
 ## 8. Current State (rewrite every sprint)
 
@@ -58,7 +58,7 @@ This repo is content-only (no dev/QA sprint cycle in the application sense). Mai
 **What does not work yet:**
 
 - No CI/validation pipeline configured.
-- No automated cross-check that `gsmarc://gsm-frameworks/...` `$id` values stay unique across the corpus.
+- No automated cross-check that `gsmarc://gsm-ontology/...` `$id` values stay unique across the corpus.
 
 **What is next:**
 
@@ -73,5 +73,5 @@ This repo is content-only (no dev/QA sprint cycle in the application sense). Mai
 
 ```bash
 # Validate a single schema is well-formed JSON
-python -m json.tool frameworks/togaf/governance/Driver.schema.json
+python -m json.tool ontologies/togaf/governance/Driver.schema.json
 ```

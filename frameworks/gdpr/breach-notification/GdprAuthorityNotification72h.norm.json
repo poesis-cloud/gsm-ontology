@@ -1,7 +1,0 @@
-{
-  "qualifier": "gsmarc://gsm-frameworks/gdpr/breach-notification/GdprDataBreach/v1",
-  "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprDataBreach.personalDataBreach == true && GdprDataBreach.riskToRightsAndFreedoms != 'UNLIKELY'",
-  "assertion": "authorityNotified == true && authorityNotificationHours <= 72",
-  "toleranceMode": "INSTANTANEOUS",
-  "temporalWindow": "PT72H"
-}

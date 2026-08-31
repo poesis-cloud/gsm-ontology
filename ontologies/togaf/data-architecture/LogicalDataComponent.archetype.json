@@ -1,0 +1,34 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/data-architecture/LogicalDataComponent/v1",
+  "$ref": "gsmarc://gsm/Structure/v1",
+  "title": "LogicalDataComponent",
+  "description": "TOGAF-sourced structural archetype \u2014 logical data entity or grouping independent of physical storage technology. Complementary definition layer to PhysicalDataComponent: both define the same identity (data storage) at different abstraction levels (logical = strategic/design, physical = infrastructure/implementation). Extends Structure with TOGAF Data Architecture vocabulary. TOGAF mapping: Logical Data Component (Content Metamodel, Data Architecture domain). Source framework: TOGAF (Data Architecture, Content Framework).",
+  "type": "object",
+  "required": [
+    "dataScope"
+  ],
+  "properties": {
+    "dataScope": {
+      "type": "string",
+      "enum": [
+        "MASTER",
+        "REFERENCE",
+        "TRANSACTIONAL",
+        "ANALYTICAL"
+      ],
+      "$gsm:queryable": true,
+      "description": "Logical data scope. MASTER = authoritative enterprise entities. REFERENCE = shared lookup/code data. TRANSACTIONAL = operational event data. ANALYTICAL = derived/aggregated data. TOGAF mapping: Logical Data Component data classification."
+    },
+    "ownershipModel": {
+      "type": "string",
+      "enum": [
+        "SINGLE_OWNER",
+        "SHARED",
+        "FEDERATED"
+      ],
+      "$gsm:queryable": true,
+      "description": "Data ownership model. TOGAF mapping: Data governance ownership pattern."
+    }
+  }
+}

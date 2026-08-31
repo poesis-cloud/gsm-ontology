@@ -1,0 +1,44 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/business-architecture/Contract/v1",
+  "$ref": "gsmarc://gsm/Interaction/v1",
+  "title": "Contract",
+  "description": "TOGAF-sourced interaction archetype \u2014 governance agreement governing the coupling between service provider (Effector) and service consumer (Receptor). Types the Interaction that carries the contractual relationship. Quality targets (Availability, Performance, Security) are expressed as separate Directive/Norm qualifiers governing this Contract-typed Interaction \u2014 the Contract carries agreement metadata, not quality properties directly. Extends Interaction with TOGAF governance vocabulary. TOGAF mapping: Contract / SLA (Content Metamodel, Business Architecture domain). Source framework: TOGAF (Business Architecture, Content Framework).",
+  "type": "object",
+  "required": [
+    "contractType"
+  ],
+  "properties": {
+    "contractType": {
+      "type": "string",
+      "enum": [
+        "SLA",
+        "OLA",
+        "UNDERPINNING_CONTRACT",
+        "PARTNERSHIP_AGREEMENT"
+      ],
+      "$gsm:queryable": true,
+      "description": "Contract classification. SLA = Service Level Agreement (external). OLA = Operational Level Agreement (internal). UNDERPINNING_CONTRACT = third-party provider agreement. PARTNERSHIP_AGREEMENT = inter-organizational agreement. TOGAF mapping: Contract type."
+    },
+    "reviewFrequency": {
+      "type": "string",
+      "pattern": "^P",
+      "description": "Contract review period as ISO 8601 duration (e.g., 'P3M' for quarterly). TOGAF mapping: Contract governance cycle."
+    },
+    "penaltyDefined": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether contractual penalties are defined for non-compliance. TOGAF mapping: Contract enforcement mechanism presence."
+    },
+    "escalationPath": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Escalation procedure reference for contract breaches. TOGAF mapping: Contract escalation governance."
+    },
+    "duration": {
+      "type": "string",
+      "pattern": "^P",
+      "description": "Contract validity duration as ISO 8601 duration (e.g., 'P1Y' for one year, 'P6M' for six months). TOGAF mapping: Contract validity period."
+    }
+  }
+}

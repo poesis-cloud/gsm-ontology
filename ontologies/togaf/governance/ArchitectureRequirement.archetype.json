@@ -1,0 +1,39 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/governance/ArchitectureRequirement/v1",
+  "$ref": "gsmarc://gsm/Directive/v1",
+  "title": "ArchitectureRequirement",
+  "description": "TOGAF-sourced directive archetype \u2014 a statement of need that must be satisfied by the architecture. In TOGAF, Requirements span Directives (intent: what must be achieved) and Norms (measurable: how to verify). This schema captures the directive facet \u2014 the governance intent. See also RequirementCompliance in norms/ for the measurable facet. Requires GSM unsealing of Directive to be functional. Extends Directive with TOGAF Architecture Requirements vocabulary. TOGAF mapping: Requirement (ADM Requirements Management). Source framework: TOGAF (ADM, Requirements Management).",
+  "type": "object",
+  "required": [
+    "requirementType"
+  ],
+  "properties": {
+    "requirementType": {
+      "type": "string",
+      "enum": [
+        "FUNCTIONAL",
+        "NON_FUNCTIONAL",
+        "CONSTRAINT"
+      ],
+      "$gsm:queryable": true,
+      "description": "Requirement classification. FUNCTIONAL = behavior the system must perform. NON_FUNCTIONAL = quality attribute the system must satisfy. CONSTRAINT = limitation on design freedom. TOGAF mapping: Requirement type (ADM Requirements Management)."
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "MUST",
+        "SHOULD",
+        "COULD",
+        "WONT"
+      ],
+      "$gsm:queryable": true,
+      "description": "MoSCoW priority classification. TOGAF mapping: Requirement prioritization (ADM Phase E)."
+    },
+    "acceptanceCriteria": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Criteria for verifying requirement satisfaction. TOGAF mapping: Requirement acceptance criteria."
+    }
+  }
+}

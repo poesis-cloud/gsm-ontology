@@ -1,0 +1,7 @@
+{
+  "structure": "$nis2:regulatory-authority",
+  "modal": "MUST",
+  "verb": "ENSURE",
+  "qualifier": "gsmarc://gsm-ontology/nis2/incident-reporting/IncidentReporting/v1",
+  "purpose": "$nis2:classified-entity"
+}

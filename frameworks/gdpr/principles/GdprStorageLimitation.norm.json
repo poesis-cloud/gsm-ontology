@@ -1,6 +1,0 @@
-{
-  "qualifier": "gsmarc://gsm-frameworks/gdpr/principles/GdprProcessingPrinciple/v1",
-  "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER'] && GdprProcessingPrinciple.principle == 'STORAGE_LIMITATION'",
-  "assertion": "principleCompliant == true",
-  "toleranceMode": "INSTANTANEOUS"
-}

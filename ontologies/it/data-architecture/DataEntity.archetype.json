@@ -1,0 +1,74 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/it/data-architecture/DataEntity/v1",
+  "$ref": "gsmarc://gsm-ontology/togaf/data-architecture/DataEntity/v1",
+  "title": "DataEntity",
+  "description": "IT domain composite for DataEntity, materializing its applicable cross-framework facets. Typing: extends DataEntity (rootless \u2014 qualifier/data roles only). Facets are mounted as optional named properties keyed by lowerCamelCase of the facet's title (the catalogue's facet mount rule \u2014 instance-level namespacing; JSON Schema does not namespace instance properties. Mount-key distinctness within one composite is the author's responsibility now that titles are no longer framework-prefixed). Mounted facets \u2014 attributed-to: Attribution; measured-by-data-quality: DataAccessibility, DataAccuracy, DataAvailability, DataCompleteness, DataCompliance, DataConfidentiality, DataConsistency, DataCredibility, DataCurrentness, DataEfficiency, DataPortability, DataPrecision, DataRecoverability, DataTraceability, DataUnderstandability. Source: hand-authored, TOGAF data-architecture stratum.",
+  "type": "object",
+  "properties": {
+    "dataAccessibility": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25012/inherent-and-system-quality/DataAccessibility/v1",
+      "description": "Optional DataAccessibility facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "dataAccuracy": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25012/inherent-quality/DataAccuracy/v1",
+      "description": "Optional DataAccuracy facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "dataAvailability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25012/system-dependent-quality/DataAvailability/v1",
+      "description": "Optional DataAvailability facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "dataCompleteness": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25012/inherent-quality/DataCompleteness/v1",
+      "description": "Optional DataCompleteness facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "dataCompliance": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25012/inherent-and-system-quality/DataCompliance/v1",
+      "description": "Optional DataCompliance facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "dataConfidentiality": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25012/inherent-and-system-quality/DataConfidentiality/v1",
+      "description": "Optional DataConfidentiality facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "dataConsistency": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25012/inherent-quality/DataConsistency/v1",
+      "description": "Optional DataConsistency facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "dataCredibility": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25012/inherent-quality/DataCredibility/v1",
+      "description": "Optional DataCredibility facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "dataCurrentness": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25012/inherent-quality/DataCurrentness/v1",
+      "description": "Optional DataCurrentness facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "dataEfficiency": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25012/inherent-and-system-quality/DataEfficiency/v1",
+      "description": "Optional DataEfficiency facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "dataPortability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25012/system-dependent-quality/DataPortability/v1",
+      "description": "Optional DataPortability facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "dataPrecision": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25012/inherent-and-system-quality/DataPrecision/v1",
+      "description": "Optional DataPrecision facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "dataRecoverability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25012/system-dependent-quality/DataRecoverability/v1",
+      "description": "Optional DataRecoverability facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "dataTraceability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25012/inherent-and-system-quality/DataTraceability/v1",
+      "description": "Optional DataTraceability facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "dataUnderstandability": {
+      "$ref": "gsmarc://gsm-ontology/iso25000/iso25012/inherent-and-system-quality/DataUnderstandability/v1",
+      "description": "Optional DataUnderstandability facet mount (ontology axis: measured-by-data-quality). Facet-internal required members apply only when this mount is present."
+    },
+    "attribution": {
+      "$ref": "gsmarc://gsm-ontology/prov/agents-responsibility/Attribution/v1",
+      "description": "Optional Attribution facet mount (ontology axis: attributed-to). Facet-internal required members apply only when this mount is present."
+    }
+  }
+}

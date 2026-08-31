@@ -1,7 +1,0 @@
-{
-  "qualifier": "gsmarc://gsm-frameworks/nis2/incident-reporting/Nis2IncidentReporting/v1",
-  "applicability": "Nis2EntityClassification.entityTier in ['ESSENTIAL', 'IMPORTANT'] && Nis2IncidentReporting.significantIncident == true && Nis2IncidentReporting.reportingStage == 'INCIDENT_NOTIFICATION'",
-  "assertion": "deadlineHours <= 72",
-  "toleranceMode": "INSTANTANEOUS",
-  "temporalWindow": "PT72H"
-}

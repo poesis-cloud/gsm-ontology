@@ -1,0 +1,41 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/gdpr/principles/ProcessingPrinciple/v1",
+  "title": "ProcessingPrinciple",
+  "description": "GDPR-sourced archetype \u2014 data processing principle under Regulation (EU) 2016/679. Article 5 defines seven foundational principles that all personal data processing must satisfy. The controller is responsible for and must be able to demonstrate compliance with all principles (accountability). Rootless \u2014 regulatory compliance dimension. Source: GDPR Article 5(1)(a)-(f) and Article 5(2).",
+  "type": "object",
+  "required": [
+    "principle"
+  ],
+  "properties": {
+    "principle": {
+      "type": "string",
+      "enum": [
+        "LAWFULNESS_FAIRNESS_TRANSPARENCY",
+        "PURPOSE_LIMITATION",
+        "DATA_MINIMISATION",
+        "ACCURACY",
+        "STORAGE_LIMITATION",
+        "INTEGRITY_CONFIDENTIALITY",
+        "ACCOUNTABILITY"
+      ],
+      "$gsm:queryable": true,
+      "description": "One of the seven GDPR processing principles. LAWFULNESS_FAIRNESS_TRANSPARENCY: processed lawfully, fairly, and transparently (Art 5(1)(a)). PURPOSE_LIMITATION: collected for specified, explicit, legitimate purposes (Art 5(1)(b)). DATA_MINIMISATION: adequate, relevant, limited to what is necessary (Art 5(1)(c)). ACCURACY: accurate and kept up to date (Art 5(1)(d)). STORAGE_LIMITATION: kept no longer than necessary (Art 5(1)(e)). INTEGRITY_CONFIDENTIALITY: appropriate security including protection against unauthorised processing, loss, destruction, damage (Art 5(1)(f)). ACCOUNTABILITY: controller responsible for and able to demonstrate compliance (Art 5(2))."
+    },
+    "principleCompliant": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether the processing activity complies with this principle."
+    },
+    "complianceEvidence": {
+      "type": "string",
+      "description": "Reference to documented evidence demonstrating compliance with this principle. Source: GDPR Art 5(2) accountability obligation."
+    },
+    "assessmentDate": {
+      "type": "string",
+      "format": "date",
+      "$gsm:queryable": true,
+      "description": "Date of last compliance assessment for this principle."
+    }
+  }
+}

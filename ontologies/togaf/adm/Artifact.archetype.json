@@ -1,0 +1,44 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/adm/Artifact/v1",
+  "title": "Artifact",
+  "description": "TOGAF-sourced archetype \u2014 a granular architecture work product (catalog, matrix, or diagram) that composes a Deliverable. Artifacts are the atomic documentation units of TOGAF's ADM. Placed in unclassified/ for GSM placement deliberation: may be a description-plane evidence object (observability artifact), a definition-plane output, or a governance record. TOGAF mapping: Artifact (ADM Content Metamodel, Architecture Governance). Source framework: TOGAF (ADM, Content Framework).",
+  "type": "object",
+  "required": [
+    "artifactType"
+  ],
+  "properties": {
+    "artifactType": {
+      "type": "string",
+      "enum": [
+        "CATALOG",
+        "MATRIX",
+        "DIAGRAM"
+      ],
+      "$gsm:queryable": true,
+      "description": "TOGAF artifact classification. CATALOG = structured list (e.g., Technology Standards Catalog). MATRIX = relationship mapping (e.g., Application/Data Matrix). DIAGRAM = visual representation (e.g., Application Communication Diagram). TOGAF mapping: Artifact type taxonomy."
+    },
+    "admPhase": {
+      "type": "string",
+      "enum": [
+        "PRELIMINARY",
+        "VISION",
+        "BUSINESS_ARCHITECTURE",
+        "IS_ARCHITECTURE",
+        "TECHNOLOGY_ARCHITECTURE",
+        "OPPORTUNITIES_AND_SOLUTIONS",
+        "MIGRATION_PLANNING",
+        "IMPLEMENTATION_GOVERNANCE",
+        "ARCHITECTURE_CHANGE_MANAGEMENT"
+      ],
+      "$gsm:queryable": true,
+      "description": "ADM phase that produces this artifact. TOGAF mapping: ADM phase."
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1,
+      "$gsm:queryable": true,
+      "description": "Architecture domain or subject area this artifact covers. TOGAF mapping: Artifact scope."
+    }
+  }
+}

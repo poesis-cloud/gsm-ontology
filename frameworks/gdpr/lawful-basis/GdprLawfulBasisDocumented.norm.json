@@ -1,6 +1,0 @@
-{
-  "qualifier": "gsmarc://gsm-frameworks/gdpr/lawful-basis/GdprLawfulBasis/v1",
-  "applicability": "GdprControllerProcessorRole.role in ['CONTROLLER', 'JOINT_CONTROLLER']",
-  "assertion": "lawfulBasisDocumented == true",
-  "toleranceMode": "INSTANTANEOUS"
-}

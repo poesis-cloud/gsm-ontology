@@ -1,7 +1,0 @@
-{
-  "structure": "$gdpr:data-controller",
-  "modal": "MUST",
-  "verb": "ENABLE",
-  "qualifier": "gsmarc://gsm-frameworks/gdpr/data-subject-rights/GdprDataSubjectRight/v1",
-  "purpose": "$gdpr:data-subject"
-}

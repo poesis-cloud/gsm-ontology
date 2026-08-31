@@ -1,4 +1,4 @@
-# Contributing to GSM Frameworks
+# Contributing to GSM Ontology
 
 This repository is published under the Business Source License 1.1 (BUSL-1.1) (see `LICENSE`). It can be distributed and published independently of the Poesis workspace, so its contribution terms are **self-contained here** and travel with the repository.
 

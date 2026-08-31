@@ -1,6 +1,0 @@
-{
-  "qualifier": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2RiskManagementMeasure/v1",
-  "applicability": "Nis2EntityClassification.entityTier in ['ESSENTIAL', 'IMPORTANT'] && Nis2RiskManagementMeasure.measureCategory == 'EFFECTIVENESS_ASSESSMENT'",
-  "assertion": "implementationLevel != 'NOT_IMPLEMENTED'",
-  "toleranceMode": "INSTANTANEOUS"
-}

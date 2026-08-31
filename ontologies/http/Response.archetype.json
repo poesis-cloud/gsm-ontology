@@ -1,0 +1,56 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/http/Response/v1",
+  "title": "Response",
+  "description": "Types the data payload flowing through HTTP Effectors/Receptors when the payload is an HTTP response message. Extending archetypes add domain-specific body shapes and additional headers via $ref/allOf composition. Source: RFC 9110 (HTTP Semantics, 2022), \u00a73.4 \u2014 Messages, \u00a715 \u2014 Status Codes.",
+  "type": "object",
+  "required": [
+    "statusCode"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "statusCode": {
+            "not": {
+              "anyOf": [
+                {
+                  "minimum": 100,
+                  "maximum": 199
+                },
+                {
+                  "const": 204
+                },
+                {
+                  "const": 304
+                }
+              ]
+            }
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "body",
+          "contentType"
+        ]
+      }
+    }
+  ],
+  "properties": {
+    "statusCode": {
+      "type": "integer",
+      "minimum": 100,
+      "maximum": 599,
+      "$gsm:queryable": true,
+      "description": "The specific 3-digit HTTP status code (e.g., 200, 404, 503). Source: RFC 9110 \u00a715 \u2014 Status Codes."
+    },
+    "contentType": {
+      "type": "string",
+      "description": "Media type of the response payload body (IANA media type, e.g., 'application/json'). Source: RFC 9110 \u00a78.3 \u2014 Content-Type."
+    },
+    "body": {
+      "description": "Response message content. At protocol level, unconstrained; extending archetypes constrain this to a domain-specific shape via $ref/allOf composition. Source: RFC 9110 \u00a76.4 \u2014 Content."
+    }
+  }
+}

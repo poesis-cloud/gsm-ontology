@@ -1,0 +1,40 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/iso25000/iso25012/system-dependent-quality/DataPortability/v1",
+  "title": "DataPortability",
+  "description": "ISO 25012-sourced data quality archetype \u2014 Portability system-dependent data quality characteristic. The degree to which data has attributes that enable it to be installed, replaced, or moved from one system to another preserving the existing quality in a specific context of use. Rootless archetype \u2014 used as qualifier in Directives/Norms governing data entities. Source: ISO/IEC 25012 (System-Dependent Data Quality \u2014 Portability).",
+  "type": "object",
+  "required": [
+    "portabilityLevel"
+  ],
+  "properties": {
+    "portabilityLevel": {
+      "type": "string",
+      "enum": [
+        "LOCKED_IN",
+        "EXPORTABLE",
+        "STANDARD_FORMAT",
+        "FULLY_PORTABLE"
+      ],
+      "$gsm:queryable": true,
+      "description": "Degree of data portability. LOCKED_IN = proprietary format, vendor-specific. EXPORTABLE = can be exported but with transformation needed. STANDARD_FORMAT = uses industry-standard formats. FULLY_PORTABLE = self-describing, platform-independent, no transformation needed."
+    },
+    "standardFormats": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Standard data formats supported for portability (e.g., CSV, JSON, Parquet, Avro, XML)."
+    },
+    "migrationComplexity": {
+      "type": "string",
+      "enum": [
+        "TRIVIAL",
+        "LOW",
+        "MODERATE",
+        "HIGH"
+      ],
+      "description": "Expected complexity of migrating data between systems."
+    }
+  }
+}

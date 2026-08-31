@@ -1,0 +1,51 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/application-architecture/InformationExchange/v1",
+  "$ref": "gsmarc://gsm/Interaction/v1",
+  "title": "InformationExchange",
+  "description": "TOGAF-sourced interaction archetype \u2014 data flow between components. An information exchange represents the coupling between an Effector (producer) and a Receptor (consumer) through which data is communicated. Extends Interaction with TOGAF Application/Data Architecture vocabulary. Source framework: TOGAF (Content Metamodel \u2192 Information System Service / Data Flow).",
+  "type": "object",
+  "required": [
+    "exchangePattern"
+  ],
+  "properties": {
+    "exchangePattern": {
+      "type": "string",
+      "enum": [
+        "SYNC_REQUEST_REPLY",
+        "ASYNC_FIRE_AND_FORGET",
+        "ASYNC_PUBLISH_SUBSCRIBE",
+        "BATCH_TRANSFER"
+      ],
+      "$gsm:queryable": true,
+      "description": "Communication pattern. SYNC_REQUEST_REPLY = blocking call/response, ASYNC_FIRE_AND_FORGET = one-way message, ASYNC_PUBLISH_SUBSCRIBE = topic-based fan-out, BATCH_TRANSFER = scheduled bulk exchange. TOGAF mapping: Information Exchange pattern."
+    },
+    "protocol": {
+      "type": "string",
+      "enum": [
+        "HTTP",
+        "GRPC",
+        "KAFKA",
+        "AMQP",
+        "SMTP",
+        "FTP",
+        "JDBC"
+      ],
+      "$gsm:queryable": true,
+      "description": "Transport protocol. Governs interoperability constraints and technology selection."
+    },
+    "dataFormat": {
+      "type": "string",
+      "enum": [
+        "JSON",
+        "XML",
+        "AVRO",
+        "PROTOBUF",
+        "CSV",
+        "BINARY"
+      ],
+      "$gsm:queryable": true,
+      "description": "Payload serialization format. Governs schema registry requirements and compatibility rules."
+    }
+  }
+}

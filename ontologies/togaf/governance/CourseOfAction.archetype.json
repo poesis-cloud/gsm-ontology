@@ -1,0 +1,39 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/governance/CourseOfAction/v1",
+  "title": "CourseOfAction",
+  "description": "TOGAF-sourced archetype \u2014 a strategic or tactical approach to achieve an objective. Placed in unclassified/ for future GSM placement deliberation. TOGAF mapping: Course of Action (Business Architecture, Strategy). Source framework: TOGAF (Business Architecture, Strategy).",
+  "type": "object",
+  "required": [
+    "actionType"
+  ],
+  "properties": {
+    "actionType": {
+      "type": "string",
+      "enum": [
+        "STRATEGIC",
+        "TACTICAL"
+      ],
+      "$gsm:queryable": true,
+      "description": "Action scope level. STRATEGIC = long-term organizational direction. TACTICAL = short-term specific intervention. TOGAF mapping: Course of Action scope."
+    },
+    "feasibility": {
+      "type": "string",
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH"
+      ],
+      "$gsm:queryable": true,
+      "description": "Assessed feasibility of this course of action. TOGAF mapping: Course of Action feasibility assessment."
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "Identified risks associated with pursuing this course of action. TOGAF mapping: Course of Action risk identification."
+    }
+  }
+}

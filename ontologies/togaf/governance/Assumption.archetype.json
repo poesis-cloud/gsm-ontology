@@ -1,0 +1,38 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/governance/Assumption/v1",
+  "title": "Assumption",
+  "description": "TOGAF-sourced archetype \u2014 a statement taken to be true for planning purposes pending validation. Placed in unclassified/ for future GSM placement deliberation. TOGAF mapping: Assumption (ADM Requirements Management, Risk Management). Source framework: TOGAF (ADM, Requirements Management).",
+  "type": "object",
+  "required": [
+    "status"
+  ],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "UNVALIDATED",
+        "VALIDATED",
+        "INVALIDATED"
+      ],
+      "$gsm:queryable": true,
+      "description": "Assumption validation status. TOGAF mapping: Assumption lifecycle state."
+    },
+    "impact": {
+      "type": "string",
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH",
+        "CRITICAL"
+      ],
+      "$gsm:queryable": true,
+      "description": "Impact if the assumption proves false. TOGAF mapping: Assumption risk assessment."
+    },
+    "validationMethod": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Method to validate or invalidate this assumption. TOGAF mapping: Assumption validation approach."
+    }
+  }
+}

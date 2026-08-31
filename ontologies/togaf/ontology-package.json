@@ -1,0 +1,182 @@
+{
+  "name": "togaf",
+  "version": "1.0.0",
+  "description": "TOGAF-sourced vocabulary across business, application, data, and technology architecture, the ADM, and architecture governance.",
+  "layer": "reference",
+  "elements": [
+    {
+      "path": "adm/AdmPhaseRecord.archetype.json"
+    },
+    {
+      "path": "adm/ArchitectureRoadmap.archetype.json"
+    },
+    {
+      "path": "adm/Artifact.archetype.json"
+    },
+    {
+      "path": "adm/Deliverable.archetype.json"
+    },
+    {
+      "path": "adm/MigrationPlan.archetype.json"
+    },
+    {
+      "path": "adm/TransitionArchitecture.archetype.json"
+    },
+    {
+      "path": "adm/WorkPackage.archetype.json"
+    },
+    {
+      "path": "application-architecture/ApplicationCollaboration.archetype.json"
+    },
+    {
+      "path": "application-architecture/ApplicationFunction.archetype.json"
+    },
+    {
+      "path": "application-architecture/ApplicationInterface.archetype.json"
+    },
+    {
+      "path": "application-architecture/ApplicationService.archetype.json"
+    },
+    {
+      "path": "application-architecture/InformationExchange.archetype.json"
+    },
+    {
+      "path": "application-architecture/LogicalApplicationComponent.archetype.json"
+    },
+    {
+      "path": "application-architecture/PhysicalApplicationComponent.archetype.json"
+    },
+    {
+      "path": "business-architecture/Actor.archetype.json"
+    },
+    {
+      "path": "business-architecture/BusinessCapability.archetype.json"
+    },
+    {
+      "path": "business-architecture/BusinessEvent.archetype.json"
+    },
+    {
+      "path": "business-architecture/BusinessFunction.archetype.json"
+    },
+    {
+      "path": "business-architecture/BusinessProcess.archetype.json"
+    },
+    {
+      "path": "business-architecture/BusinessService.archetype.json"
+    },
+    {
+      "path": "business-architecture/Contract.archetype.json"
+    },
+    {
+      "path": "business-architecture/Location.archetype.json"
+    },
+    {
+      "path": "business-architecture/OrganizationUnit.archetype.json"
+    },
+    {
+      "path": "business-architecture/Product.archetype.json"
+    },
+    {
+      "path": "business-architecture/Role.archetype.json"
+    },
+    {
+      "path": "business-architecture/Stakeholder.archetype.json"
+    },
+    {
+      "path": "business-architecture/ValueStream.archetype.json"
+    },
+    {
+      "path": "data-architecture/DataEntity.archetype.json"
+    },
+    {
+      "path": "data-architecture/LogicalDataComponent.archetype.json"
+    },
+    {
+      "path": "data-architecture/PhysicalDataComponent.archetype.json"
+    },
+    {
+      "path": "governance/ArchitectureConstraint.archetype.json"
+    },
+    {
+      "path": "governance/ArchitectureConstraintCompliance.archetype.json"
+    },
+    {
+      "path": "governance/ArchitectureContract.archetype.json"
+    },
+    {
+      "path": "governance/ArchitectureDecision.archetype.json"
+    },
+    {
+      "path": "governance/ArchitecturePrinciple.archetype.json"
+    },
+    {
+      "path": "governance/ArchitectureRequirement.archetype.json"
+    },
+    {
+      "path": "governance/ArchitectureRequirementCompliance.archetype.json"
+    },
+    {
+      "path": "governance/Assumption.archetype.json"
+    },
+    {
+      "path": "governance/Concern.archetype.json"
+    },
+    {
+      "path": "governance/CourseOfAction.archetype.json"
+    },
+    {
+      "path": "governance/Driver.archetype.json"
+    },
+    {
+      "path": "governance/GapAssessment.archetype.json"
+    },
+    {
+      "path": "governance/Goal.archetype.json"
+    },
+    {
+      "path": "governance/Measure.archetype.json"
+    },
+    {
+      "path": "governance/Objective.archetype.json"
+    },
+    {
+      "path": "governance/ServiceQuality.archetype.json"
+    },
+    {
+      "path": "governance/Standard.archetype.json"
+    },
+    {
+      "path": "governance/Viewpoint.archetype.json"
+    },
+    {
+      "path": "technology-architecture/CommunicationPath.archetype.json"
+    },
+    {
+      "path": "technology-architecture/LogicalTechnologyComponent.archetype.json"
+    },
+    {
+      "path": "technology-architecture/Node.archetype.json"
+    },
+    {
+      "path": "technology-architecture/Observability.archetype.json"
+    },
+    {
+      "path": "technology-architecture/PhysicalTechnologyComponent.archetype.json"
+    },
+    {
+      "path": "technology-architecture/PlatformService.archetype.json"
+    },
+    {
+      "path": "technology-architecture/TechnologyComponent.archetype.json"
+    },
+    {
+      "path": "technology-architecture/TechnologyFunction.archetype.json"
+    },
+    {
+      "path": "technology-architecture/TechnologyInterface.archetype.json"
+    },
+    {
+      "path": "technology-architecture/TechnologyService.archetype.json"
+    }
+  ]
+}

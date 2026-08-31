@@ -1,7 +1,0 @@
-{
-  "structure": "$gdpr:data-controller",
-  "modal": "MUST",
-  "verb": "MAINTAIN",
-  "qualifier": "gsmarc://gsm-frameworks/gdpr/controller-processor/GdprProcessingActivity/v1",
-  "purpose": "$gdpr:personal-data-processing"
-}

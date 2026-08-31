@@ -1,0 +1,42 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/application-architecture/ApplicationInterface/v1",
+  "$ref": "gsmarc://gsm/Effector/v1",
+  "title": "ApplicationInterface",
+  "description": "TOGAF-sourced effector archetype \u2014 the access point where application services are made available to consumers. An output port of an Application Component or Application Service through which functionality is exposed. Requires GSM unsealing of Effector to be functional as an Effector extension. Extends Effector with TOGAF Application Architecture vocabulary. TOGAF mapping: Application Interface (Content Metamodel, Application Architecture domain). Source framework: TOGAF (Application Architecture, Content Framework).",
+  "type": "object",
+  "required": [
+    "interfaceType"
+  ],
+  "properties": {
+    "interfaceType": {
+      "type": "string",
+      "enum": [
+        "API",
+        "UI",
+        "FILE_TRANSFER",
+        "MESSAGE_QUEUE",
+        "EVENT_STREAM"
+      ],
+      "$gsm:queryable": true,
+      "description": "Interface technology type. API = programmatic access. UI = user-facing interface. FILE_TRANSFER = batch file exchange. MESSAGE_QUEUE = asynchronous messaging. EVENT_STREAM = event-driven streaming. TOGAF mapping: Application Interface type."
+    },
+    "specificationFormat": {
+      "type": "string",
+      "enum": [
+        "OPENAPI",
+        "WSDL",
+        "GRAPHQL",
+        "ASYNCAPI",
+        "CUSTOM"
+      ],
+      "$gsm:queryable": true,
+      "description": "Interface specification format. TOGAF mapping: Application Interface formal specification."
+    },
+    "authenticationRequired": {
+      "type": "boolean",
+      "$gsm:queryable": true,
+      "description": "Whether authentication is required to access this interface. TOGAF mapping: Application Interface security constraint."
+    }
+  }
+}

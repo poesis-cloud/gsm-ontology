@@ -1,6 +1,0 @@
-{
-  "qualifier": "gsmarc://gsm-frameworks/nis2/risk-management/Nis2GovernanceAccountability/v1",
-  "applicability": "Nis2EntityClassification.entityTier in ['ESSENTIAL', 'IMPORTANT']",
-  "assertion": "employeeTrainingOffered == true",
-  "toleranceMode": "INSTANTANEOUS"
-}

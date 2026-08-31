@@ -1,0 +1,125 @@
+{
+  "name": "iso25000",
+  "version": "1.0.0",
+  "description": "ISO/IEC 25000 SQuaRE-sourced quality vocabulary \u2014 ISO 25010 product and quality-in-use, ISO 25011 service quality, ISO 25012 data quality.",
+  "layer": "reference",
+  "elements": [
+    {
+      "path": "iso25010/product-quality/ProductAvailability.archetype.json"
+    },
+    {
+      "path": "iso25010/product-quality/ProductCompatibility.archetype.json"
+    },
+    {
+      "path": "iso25010/product-quality/ProductFunctionalSuitability.archetype.json"
+    },
+    {
+      "path": "iso25010/product-quality/ProductInteroperability.archetype.json"
+    },
+    {
+      "path": "iso25010/product-quality/ProductMaintainability.archetype.json"
+    },
+    {
+      "path": "iso25010/product-quality/ProductPerformanceEfficiency.archetype.json"
+    },
+    {
+      "path": "iso25010/product-quality/ProductPortability.archetype.json"
+    },
+    {
+      "path": "iso25010/product-quality/ProductReliability.archetype.json"
+    },
+    {
+      "path": "iso25010/product-quality/ProductScalability.archetype.json"
+    },
+    {
+      "path": "iso25010/product-quality/ProductSecurity.archetype.json"
+    },
+    {
+      "path": "iso25010/product-quality/ProductUsability.archetype.json"
+    },
+    {
+      "path": "iso25010/quality-in-use/ProductContextCoverage.archetype.json"
+    },
+    {
+      "path": "iso25010/quality-in-use/ProductEffectiveness.archetype.json"
+    },
+    {
+      "path": "iso25010/quality-in-use/ProductEfficiency.archetype.json"
+    },
+    {
+      "path": "iso25010/quality-in-use/ProductFreedomFromRisk.archetype.json"
+    },
+    {
+      "path": "iso25010/quality-in-use/ProductSatisfaction.archetype.json"
+    },
+    {
+      "path": "iso25011/service-quality/ServiceAdaptability.archetype.json"
+    },
+    {
+      "path": "iso25011/service-quality/ServiceMaintainability.archetype.json"
+    },
+    {
+      "path": "iso25011/service-quality/ServiceReliability.archetype.json"
+    },
+    {
+      "path": "iso25011/service-quality/ServiceResponsiveness.archetype.json"
+    },
+    {
+      "path": "iso25011/service-quality/ServiceSecurity.archetype.json"
+    },
+    {
+      "path": "iso25011/service-quality/ServiceSuitability.archetype.json"
+    },
+    {
+      "path": "iso25011/service-quality/ServiceTangibility.archetype.json"
+    },
+    {
+      "path": "iso25011/service-quality/ServiceUsability.archetype.json"
+    },
+    {
+      "path": "iso25012/inherent-and-system-quality/DataAccessibility.archetype.json"
+    },
+    {
+      "path": "iso25012/inherent-and-system-quality/DataCompliance.archetype.json"
+    },
+    {
+      "path": "iso25012/inherent-and-system-quality/DataConfidentiality.archetype.json"
+    },
+    {
+      "path": "iso25012/inherent-and-system-quality/DataEfficiency.archetype.json"
+    },
+    {
+      "path": "iso25012/inherent-and-system-quality/DataPrecision.archetype.json"
+    },
+    {
+      "path": "iso25012/inherent-and-system-quality/DataTraceability.archetype.json"
+    },
+    {
+      "path": "iso25012/inherent-and-system-quality/DataUnderstandability.archetype.json"
+    },
+    {
+      "path": "iso25012/inherent-quality/DataAccuracy.archetype.json"
+    },
+    {
+      "path": "iso25012/inherent-quality/DataCompleteness.archetype.json"
+    },
+    {
+      "path": "iso25012/inherent-quality/DataConsistency.archetype.json"
+    },
+    {
+      "path": "iso25012/inherent-quality/DataCredibility.archetype.json"
+    },
+    {
+      "path": "iso25012/inherent-quality/DataCurrentness.archetype.json"
+    },
+    {
+      "path": "iso25012/system-dependent-quality/DataAvailability.archetype.json"
+    },
+    {
+      "path": "iso25012/system-dependent-quality/DataPortability.archetype.json"
+    },
+    {
+      "path": "iso25012/system-dependent-quality/DataRecoverability.archetype.json"
+    }
+  ]
+}

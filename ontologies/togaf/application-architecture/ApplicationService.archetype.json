@@ -1,0 +1,49 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/application-architecture/ApplicationService/v1",
+  "$ref": "gsmarc://gsm/Structure/v1",
+  "title": "ApplicationService",
+  "description": "TOGAF-sourced structural archetype \u2014 application capability exposed to consumers, distinct from the implementing component. An active system: the service has Mechanisms (application functions it exposes), Effectors (API endpoints, responses), and Receptors (requests, events consumed). Extends Structure with TOGAF Application Architecture vocabulary. TOGAF mapping: Application Service (Content Metamodel, Application Architecture domain). Source framework: TOGAF (Application Architecture, Content Framework).",
+  "type": "object",
+  "required": [
+    "serviceType"
+  ],
+  "properties": {
+    "serviceType": {
+      "type": "string",
+      "enum": [
+        "INFORMATIONAL",
+        "TRANSACTIONAL",
+        "ANALYTICAL"
+      ],
+      "$gsm:queryable": true,
+      "description": "Application service behavioral classification. INFORMATIONAL = read-only data retrieval. TRANSACTIONAL = state-changing operations. ANALYTICAL = computation and reporting. TOGAF mapping: Application Service type."
+    },
+    "exposureLevel": {
+      "type": "string",
+      "enum": [
+        "PUBLIC",
+        "PARTNER",
+        "INTERNAL"
+      ],
+      "$gsm:queryable": true,
+      "description": "Service exposure scope. PUBLIC = externally accessible. PARTNER = B2B/federation. INTERNAL = organization-only. TOGAF mapping: Application Service boundary."
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Service version identifier (e.g., 'v2.1.0'). Enables version-aware governance and migration planning. TOGAF mapping: Application Service version."
+    },
+    "lifecycle": {
+      "type": "string",
+      "enum": [
+        "PLANNED",
+        "ACTIVE",
+        "DEPRECATED",
+        "RETIRED"
+      ],
+      "$gsm:queryable": true,
+      "description": "Service lifecycle stage. Drives migration planning and dependency governance. TOGAF mapping: Application Service lifecycle status."
+    }
+  }
+}

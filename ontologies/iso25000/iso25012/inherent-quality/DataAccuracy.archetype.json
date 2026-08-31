@@ -1,0 +1,39 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/iso25000/iso25012/inherent-quality/DataAccuracy/v1",
+  "title": "DataAccuracy",
+  "description": "ISO 25012-sourced data quality archetype \u2014 Accuracy inherent data quality characteristic. The degree to which data has attributes that correctly represent the true value of the intended attribute of a concept or event in a specific context of use. Rootless archetype \u2014 used as qualifier in Directives/Norms governing data entities. Source: ISO/IEC 25012 (Inherent Data Quality \u2014 Accuracy).",
+  "type": "object",
+  "required": [
+    "accuracyLevel"
+  ],
+  "properties": {
+    "accuracyLevel": {
+      "type": "string",
+      "enum": [
+        "APPROXIMATE",
+        "ACCEPTABLE",
+        "PRECISE",
+        "EXACT"
+      ],
+      "$gsm:queryable": true,
+      "description": "Classification of required data accuracy. APPROXIMATE = rough values acceptable. ACCEPTABLE = within defined tolerance. PRECISE = high fidelity required. EXACT = no deviation permitted."
+    },
+    "tolerancePercent": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Maximum acceptable deviation from true value, expressed as percentage."
+    },
+    "validationMethod": {
+      "type": "string",
+      "enum": [
+        "NONE",
+        "MANUAL_REVIEW",
+        "AUTOMATED_CHECK",
+        "CROSS_REFERENCE",
+        "AUTHORITATIVE_SOURCE"
+      ],
+      "description": "Method used to validate data accuracy against ground truth."
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/adm/ArchitectureRoadmap/v1",
+  "title": "ArchitectureRoadmap",
+  "description": "TOGAF-sourced archetype \u2014 a definition of sequenced architecture transitions from baseline to target state. A governance definition of planned change. Rootless, domain-scoped. TOGAF mapping: Architecture Roadmap (ADM Phase E, Opportunities and Solutions). Source framework: TOGAF (ADM, Phase E).",
+  "type": "object",
+  "required": [
+    "horizonType"
+  ],
+  "properties": {
+    "horizonType": {
+      "type": "string",
+      "enum": [
+        "SHORT_TERM",
+        "MEDIUM_TERM",
+        "LONG_TERM"
+      ],
+      "$gsm:queryable": true,
+      "description": "Planning horizon. SHORT_TERM = 0-6 months. MEDIUM_TERM = 6-18 months. LONG_TERM = 18+ months. TOGAF mapping: Architecture Roadmap planning horizon."
+    },
+    "transitionCount": {
+      "type": "integer",
+      "minimum": 1,
+      "$gsm:queryable": true,
+      "description": "Number of planned transition architectures. TOGAF mapping: Architecture Roadmap transition sequence count."
+    },
+    "baselineState": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Reference to or description of the baseline architecture state. TOGAF mapping: Architecture Roadmap baseline."
+    },
+    "targetState": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Reference to or description of the target architecture state. TOGAF mapping: Architecture Roadmap target."
+    }
+  }
+}

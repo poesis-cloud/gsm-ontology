@@ -1,0 +1,34 @@
+{
+  "$schema": "gsmarc://gsm/Archetype/v1",
+  "$id": "gsmarc://gsm-ontology/togaf/governance/Standard/v1",
+  "$ref": "gsmarc://gsm/Directive/v1",
+  "title": "Standard",
+  "description": "TOGAF-sourced directive archetype \u2014 a normative reference from an external or internal standards body that constrains architecture decisions. Enriches Directive with compliance and provenance vocabulary. Requires GSM unsealing of Directive to be functional. Extends Directive with TOGAF Standards Information Base vocabulary. TOGAF mapping: Standard (Standards Information Base, Architecture Repository). Source framework: TOGAF (Architecture Repository, Standards Information Base).",
+  "type": "object",
+  "required": [
+    "complianceLevel"
+  ],
+  "properties": {
+    "standardBody": {
+      "type": "string",
+      "minLength": 1,
+      "$gsm:queryable": true,
+      "description": "Issuing standards body (e.g., 'ISO', 'IEEE', 'IETF', 'TOGAF', 'INTERNAL'). TOGAF mapping: Standards Information Base source."
+    },
+    "complianceLevel": {
+      "type": "string",
+      "enum": [
+        "MANDATORY",
+        "RECOMMENDED",
+        "OPTIONAL"
+      ],
+      "$gsm:queryable": true,
+      "description": "Required compliance level with this standard. TOGAF mapping: Standards Information Base compliance classification."
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Standard version reference (e.g., 'ISO 27001:2022', 'RFC 7231'). TOGAF mapping: Standard version tracking."
+    }
+  }
+}
