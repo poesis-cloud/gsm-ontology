@@ -1,0 +1,11 @@
+scope: product
+name: GSM Ontology
+milestones:
+  - version: v1.0.0
+    current: true
+    features:
+      - https://github.com/poesis-cloud/gsm-ontology/issues/13
+      - https://github.com/poesis-cloud/gsm-ontology/issues/14
+      - https://github.com/poesis-cloud/gsm-ontology/issues/15
+      - https://github.com/poesis-cloud/gsm-ontology/issues/16
+      - https://github.com/poesis-cloud/gsm-ontology/issues/17
