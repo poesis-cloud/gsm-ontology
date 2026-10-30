@@ -703,3 +703,10 @@ governance grammar, not reproductions of source standards' normative text. See
 GSM Ontology is licensed under the **[Business Source License 1.1](LICENSE)**
 (BUSL-1.1), with the same Additional Use Grant, 2030-07-01 Change Date, and
 AGPL-3.0-or-later Change License as GSM and the other Poesis engine repositories.
+
+<!-- roadmap:start -->
+## Roadmap
+
+![Roadmap](docs/roadmap.svg)
+
+<!-- roadmap:end -->
