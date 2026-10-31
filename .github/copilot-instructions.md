@@ -1,7 +1,7 @@
 # Copilot Instructions — gsm-ontology
 
 This repository is the **published, versioned source of sourced governance/compliance/architecture/regulatory
-ontology schemas** for the IT Intelligence Platform (ITIP). It contains no runnable application code — only
+ontology schemas** for the Organizational Intelligence Platform (OIP). It contains no runnable application code — only
 JSON Schema archetypes and Directive/Norm ascription instances. Read `PROJECT_BRIEF.md` before starting work.
 
 ---
@@ -11,7 +11,7 @@ JSON Schema archetypes and Directive/Norm ascription instances. Read `PROJECT_BR
 | Agent | Name | Role | Key Skills |
 |-------|------|------|------------|
 | Producer | **Remy** | Sourcing backlog, provenance review, GitHub Issues, PR merges | `product-manager`, `create-pr`, `update-pr`, `sync`, `commit`, `chronicle` |
-| Dev | **Nova / Sage / Milo** | Author/update schemas, maintain inter-model articulation docs | `gsm-knowledge`, `itip-ontology-sourcing`, `agent-customization`, `commit`, `create-pr`, `context-map`, `refactor-plan` |
+| Dev | **Nova / Sage / Milo** | Author/update schemas, maintain inter-model articulation docs | `gsm-knowledge`, `oip-ontology-sourcing`, `agent-customization`, `commit`, `create-pr`, `context-map`, `refactor-plan` |
 | QA | **Ivy** | Schema validity checks, provenance citation review | `code-review`, `commit` |
 
 Remy **never writes schema content**. Dev team **never merges to main directly** — always via PR.

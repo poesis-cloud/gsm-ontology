@@ -6,7 +6,7 @@
 
 **Transposition deadline**: 17 October 2024.
 
-**Model type**: Regulatory — the first regulatory model in ITIP. Unlike quality models (ISO 25010/25011/25012) and architecture models (TOGAF) which define **vocabularies only** (P8 Layer 2 — archetype schemas), NIS2 operates at **two P8 layers simultaneously**:
+**Model type**: Regulatory — the first regulatory model in OIP. Unlike quality models (ISO 25010/25011/25012) and architecture models (TOGAF) which define **vocabularies only** (P8 Layer 2 — archetype schemas), NIS2 operates at **two P8 layers simultaneously**:
 
 | Layer | What it produces | File extension |
 | ------- | ----------------- | ---------------- |
@@ -165,7 +165,7 @@ See `../README.md` for full articulation analysis including:
 
 ## Regulatory Model Sourcing Convention
 
-NIS2 establishes the first **regulatory model sourcing** convention for ITIP:
+NIS2 establishes the first **regulatory model sourcing** convention for OIP:
 
 1. **Vocabulary schemas** (`.archetype.json`) define the regulation's domain-specific concepts — entity classification, compliance dimensions, reporting structures. Same conventions as quality/architecture models.
 

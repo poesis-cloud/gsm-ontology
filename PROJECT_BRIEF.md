@@ -4,7 +4,7 @@
 
 ## 1. Project Overview
 
-`gsm-ontology` is the published, versioned repository of **sourced governance/compliance/architecture/regulatory ontology schemas** for the IT Intelligence Platform (ITIP). It was extracted from the private `itip` repository's `def/ontologies/` directory (269 files at extraction) so that the sourced vocabulary can be distributed, versioned, and consumed independently of ITIP's private design-time IP.
+`gsm-ontology` is the published, versioned repository of **sourced governance/compliance/architecture/regulatory ontology schemas** for the Organizational Intelligence Platform (OIP). It was extracted from the private `oip` repository's `def/ontologies/` directory (269 files at extraction) so that the sourced vocabulary can be distributed, versioned, and consumed independently of OIP's private design-time IP.
 
 It sits under the **GSM solution umbrella** (`gsm/`) alongside `gsm-specifications`, the normative model it is expressed against.
 
@@ -22,7 +22,7 @@ Content here is **schema, not application logic**: JSON Schema archetypes and Di
 
 This repo has no execution architecture of its own. It is a **content source** read by:
 
-1. **ITIP** (`itip-definition-blackboard-repository-sourcer` or manual authoring) — posts Contributions referencing these archetypes.
+1. **SIS** (`sis-code-sourcer`) or manual authoring in **OIP** — posts Contributions referencing these archetypes.
 2. **SIE Definition Manager** — validates ascription statements against these schemas at `POST /api/v1/ascriptions` time.
 
 ## 5. Key Files Map
@@ -30,7 +30,7 @@ This repo has no execution architecture of its own. It is a **content source** r
 | Area | Path | Contents |
 | ------ | ------ | ---------- |
 | Inter-model composition | `ontologies/README.md` | Composition principle, dynamic/static paradigm, articulation maps |
-| ITIP domain archetypes | `ontologies/itip/` | SourcedDirective, SourcedNorm, meta-governance mechanisms |
+| OIP domain archetypes | `ontologies/oip/` | SourcedDirective, SourcedNorm, meta-governance mechanisms |
 | Sourced ontologies | `ontologies/{authority}/` | One folder per authority (togaf, iso25000, gdpr, nis2, scap, http, ...) |
 
 ## 6. Team Roles
@@ -47,13 +47,13 @@ This repo is content-only (no dev/QA sprint cycle in the application sense). Mai
 
 | Sprint | Name | Status | Scope |
 |--------|------|--------|-------|
-| 0 | Extraction | Done | Repo scaffold, content moved from `itip/def/ontologies/` |
+| 0 | Extraction | Done | Repo scaffold, content moved from `oip/def/ontologies/` |
 
 ## 8. Current State (rewrite every sprint)
 
 **What works:**
 
-- Full sourced schema set for TOGAF, ISO 25000, NIS2, GDPR, SCAP, HTTP, ITIP domain archetypes; reserved README-only placeholders for aDRI-IRN, gRPC, GraphQL, Kafka, AMQP, WebSocket, JDBC.
+- Full sourced schema set for TOGAF, ISO 25000, NIS2, GDPR, SCAP, HTTP, OIP domain archetypes; reserved README-only placeholders for aDRI-IRN, gRPC, GraphQL, Kafka, AMQP, WebSocket, JDBC.
 
 **What does not work yet:**
 

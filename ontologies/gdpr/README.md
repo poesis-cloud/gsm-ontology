@@ -6,7 +6,7 @@
 
 **Applicable since**: 25 May 2018.
 
-**Model type**: Regulatory — the second regulatory model in ITIP (after NIS2). Like NIS2, GDPR operates at **two P8 layers simultaneously**:
+**Model type**: Regulatory — the second regulatory model in OIP (after NIS2). Like NIS2, GDPR operates at **two P8 layers simultaneously**:
 
 | Layer | What it produces | File naming |
 | ------- | ----------------- | ------------- |

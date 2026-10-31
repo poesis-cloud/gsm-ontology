@@ -7,7 +7,7 @@
 | **Ontology** | IT domain ontology (`it`) |
 | **Layer** | domain |
 | **Composes** | togaf, iso25000, gdpr, nis2, scap, http, oidc, prov |
-| **Consumed by** | IT Intelligence Platform (ITIP) |
+| **Consumed by** | Organizational Intelligence Platform (OIP) |
 
 ## Purpose
 
