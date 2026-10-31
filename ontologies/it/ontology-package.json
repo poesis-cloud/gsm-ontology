@@ -1,7 +1,7 @@
 {
   "name": "it",
   "version": "1.0.0",
-  "description": "IT domain ontology \u2014 integrates the reference ontologies relevant to the IT domain into one coherent governance fabric and materializes their composition as typing archetypes per TOGAF architecture stratum (application, business, data, technology). Consumed by the IT Intelligence Platform (ITIP).",
+  "description": "IT domain ontology \u2014 integrates the reference ontologies relevant to the IT domain into one coherent governance fabric and materializes their composition as typing archetypes per TOGAF architecture stratum (application, business, data, technology). Consumed by the Organizational Intelligence Platform (OIP).",
   "layer": "domain",
   "composes": [
     {

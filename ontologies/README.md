@@ -55,7 +55,7 @@ When mapping ontology concepts to GSM, apply the dynamic/static distinction:
 
 | Ontology | Layer role | Composes | Contribution |
 | ---------- | ----------- | --------- | ------------- |
-| **IT** (`it/`) | Domain integrator for the IT domain, consumed by ITIP | togaf, iso25000, gdpr, nis2, scap, http, oidc, prov | Typing archetypes per TOGAF architecture stratum (`application-architecture/`, `business-architecture/`, `data-architecture/`, `technology-architecture/`), each mounting the applicable ISO 25010/25011/25012 and PROV facets directly (the facet mount rule) |
+| **IT** (`it/`) | Domain integrator for the IT domain, consumed by OIP | togaf, iso25000, gdpr, nis2, scap, http, oidc, prov | Typing archetypes per TOGAF architecture stratum (`application-architecture/`, `business-architecture/`, `data-architecture/`, `technology-architecture/`), each mounting the applicable ISO 25010/25011/25012 and PROV facets directly (the facet mount rule) |
 
 ## Model-Native Organization (P9)
 
@@ -385,7 +385,7 @@ ISO 25040 defines the **Quality Rating Module (QRM)** as its central evaluation 
 
 **Integration shape**: Not archetype schemas (not quality characteristics). Would be expressed as **assertion catalogs** or **Norm templates** — reusable `(qualifier, assertion, toleranceMode)` tuples that operators can instantiate on specific Subjects.
 
-**When**: When ITIP builds Norm authoring UX and needs a library of standard assertions for each quality archetype.
+**When**: When OIP builds Norm authoring UX and needs a library of standard assertions for each quality archetype.
 
 #### 25030 (Quality Requirements) — not sourceable as schemas
 
@@ -393,7 +393,7 @@ ISO 25040 defines the **Quality Rating Module (QRM)** as its central evaluation 
 
 **GSM mapping**: 25030 is *already operationalized* by the Directive grammar. GSM Directives ARE the quality requirement format that 25030 describes in prose. There is nothing to source as schemas — the entire standard is embodied in `Directive.archetype.json`.
 
-**Integration shape**: Architectural influence on ITIP's Directive authoring workflow — derivation chains (QIU → product → service → data) and deployment chains (system → subsystem → component) could inform ITIP's UX for Directive creation.
+**Integration shape**: Architectural influence on OIP's Directive authoring workflow — derivation chains (QIU → product → service → data) and deployment chains (system → subsystem → component) could inform OIP's UX for Directive creation.
 
 #### 25040 (Quality Evaluation) — partially sourceable
 
@@ -502,40 +502,40 @@ GDPR Art 5(1)(d) mandates data accuracy as a legal obligation with enforcement c
 
 ## Not Yet Sourced Ontologies (with justification)
 
-ITIP is designed to compose multiple ontologies through GSM. The sourced ontologies above were chosen because they form a **minimum coherent governance fabric**: architecture vocabulary (TOGAF), quality measurement (ISO 25000 SQuaRE), and regulatory compliance (NIS2 + GDPR). The following ontologies are known candidates but not yet sourced:
+OIP is designed to compose multiple ontologies through GSM. The sourced ontologies above were chosen because they form a **minimum coherent governance fabric**: architecture vocabulary (TOGAF), quality measurement (ISO 25000 SQuaRE), and regulatory compliance (NIS2 + GDPR). The following ontologies are known candidates but not yet sourced:
 
 ### Regulatory / Legal Ontologies
 
 | Ontology | Full Name | Reason Not Yet Sourced |
 | ----------- | ----------- | ------------------------ |
-| **DORA** | Regulation (EU) 2022/2554 — Digital Operational Resilience Act | Overlaps significantly with NIS2 on ICT risk management; applies specifically to financial entities. Candidate for sourcing when ITIP expands to financial sector governance. Many DORA obligations would articulate with existing NIS2 vocabulary (risk management, incident reporting, supply chain). |
-| **CRA** | Regulation (EU) 2024/2847 — Cyber Resilience Act | Product-level cybersecurity requirements for hardware/software with digital elements. Orthogonal to NIS2 (entity-level) — CRA governs the product lifecycle. Candidate when ITIP models product lifecycle governance. |
+| **DORA** | Regulation (EU) 2022/2554 — Digital Operational Resilience Act | Overlaps significantly with NIS2 on ICT risk management; applies specifically to financial entities. Candidate for sourcing when OIP expands to financial sector governance. Many DORA obligations would articulate with existing NIS2 vocabulary (risk management, incident reporting, supply chain). |
+| **CRA** | Regulation (EU) 2024/2847 — Cyber Resilience Act | Product-level cybersecurity requirements for hardware/software with digital elements. Orthogonal to NIS2 (entity-level) — CRA governs the product lifecycle. Candidate when OIP models product lifecycle governance. |
 | **PCI-DSS** | Payment Card Industry Data Security Standard v4.0 | Industry standard (not EU regulation) for payment data security. Narrow sector scope — 12 requirements map well to GSM Directives/Norms but serve only payment-processing entities. |
 | **SOX** | Sarbanes-Oxley Act (US) | US financial reporting and internal controls. Non-EU jurisdiction; narrow to publicly traded companies. Would require jurisdiction-scoping vocabulary beyond the current EU regulatory model. |
-| **eIDAS 2.0** | Regulation (EU) 2024/1183 — European Digital Identity | Digital identity wallets and trust services. Complementary to GDPR (identity verification) but narrow scope — candidate when ITIP models identity governance. |
+| **eIDAS 2.0** | Regulation (EU) 2024/1183 — European Digital Identity | Digital identity wallets and trust services. Complementary to GDPR (identity verification) but narrow scope — candidate when OIP models identity governance. |
 | **AI Act** | Regulation (EU) 2024/1689 — Artificial Intelligence Act | Risk-based AI governance. Would introduce a new scoping dimension (AI risk classification) orthogonal to NIS2 entity tiers and GDPR controller/processor roles. High-priority candidate for future sourcing. |
 
 ### Architecture / Governance Ontologies
 
 | Ontology | Full Name | Reason Not Yet Sourced |
 | ----------- | ----------- | ------------------------ |
-| **ITIL 4** | ITIL 4 Foundation (Axelos/PeopleCert) | IT Service Management practices. TOGAF already covers architecture governance; ITIL would add operational service management (incident, change, problem). Candidate when ITIP expands to operational governance beyond architecture. |
-| **COBIT 2019** | Control Objectives for Information and Related Technologies | IT governance and management ontology. Overlaps with TOGAF governance concepts (principles, requirements, controls). Candidate if ITIP needs a distinct IT audit/control vocabulary. |
-| **SAFe** | Scaled Agile Ontology | Agile delivery governance. Different governance paradigm (portfolio → program → team) — not a compliance or quality ontology. Candidate if ITIP models delivery governance. |
+| **ITIL 4** | ITIL 4 Foundation (Axelos/PeopleCert) | IT Service Management practices. TOGAF already covers architecture governance; ITIL would add operational service management (incident, change, problem). Candidate when OIP expands to operational governance beyond architecture. |
+| **COBIT 2019** | Control Objectives for Information and Related Technologies | IT governance and management ontology. Overlaps with TOGAF governance concepts (principles, requirements, controls). Candidate if OIP needs a distinct IT audit/control vocabulary. |
+| **SAFe** | Scaled Agile Ontology | Agile delivery governance. Different governance paradigm (portfolio → program → team) — not a compliance or quality ontology. Candidate if OIP models delivery governance. |
 | **ArchiMate** | ArchiMate 3.2 (The Open Group) | Enterprise Architecture modeling language. Overlaps significantly with TOGAF Content Metamodel (which is already sourced). ArchiMate adds viewpoint formalization but most entity concepts are already covered by TOGAF schemas. |
 
 ### Quality / Measurement Standards
 
 | Ontology | Full Name | Reason Not Yet Sourced |
 | ----------- | ----------- | ------------------------ |
-| **ISO 25020–25025** | SQuaRE 2502n — Quality Measurement | Concrete quality measures (formulas, scales) for 2501n characteristics. Would become Norm assertion libraries — not archetype schemas. Candidate when ITIP builds Norm authoring UX. |
-| **ISO 27001/27002** | Information Security Management System | Security controls catalog. NIS2 Art 21 already mandates cybersecurity measures; ISO 27001 controls would provide finer-grained security vocabulary. Candidate when ITIP needs control-level granularity beyond NIS2. |
+| **ISO 25020–25025** | SQuaRE 2502n — Quality Measurement | Concrete quality measures (formulas, scales) for 2501n characteristics. Would become Norm assertion libraries — not archetype schemas. Candidate when OIP builds Norm authoring UX. |
+| **ISO 27001/27002** | Information Security Management System | Security controls catalog. NIS2 Art 21 already mandates cybersecurity measures; ISO 27001 controls would provide finer-grained security vocabulary. Candidate when OIP needs control-level granularity beyond NIS2. |
 | **ISO 22301** | Business Continuity Management | Business continuity ontology. NIS2 Art 21(2)(c) already mandates business continuity; ISO 22301 would add detailed BCM vocabulary. Candidate for BCM-heavy sectors. |
 | **ISO 9001** | Quality Management Systems | Process-oriented quality management. Different paradigm from SQuaRE (process vs product/service/data quality). Not a quality model — a management system standard. |
 
 ## Candidate Ontologies
 
-The following ontologies are evaluated as potential future sourcing targets. They are organized along the **DNA axis** — the same axis ITIP users follow when governing their subjects:
+The following ontologies are evaluated as potential future sourcing targets. They are organized along the **DNA axis** — the same axis OIP users follow when governing their subjects:
 
 ```
 Directive    — strategic direction definition (WHY / WHAT to govern)

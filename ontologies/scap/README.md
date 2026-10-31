@@ -37,10 +37,10 @@ SCAP organizes itself into component specifications. Each sourced component gets
 
 | SCAP Component | Reason |
 | ---------------- | -------- |
-| **OVAL** (Open Vulnerability and Assessment Language) | Assessment execution language — maps to Mechanism rules (Starlark), not vocabulary schemas. Candidate for future sourcing as Mechanism archetypes when ITIP models assessment execution. |
-| **XCCDF** (Extensible Configuration Checklist Description Format) | Checklist bundling format — analogous to a Norm collection/profile. Candidate when ITIP models governance profile composition. |
-| **ARF** (Asset Reporting Format) | Result reporting format — maps to Effector/Receptor payloads (observation data), not definition vocabulary. Candidate when ITIP models compliance reporting. |
-| **CVSS** (Common Vulnerability Scoring System) | Vulnerability severity scoring — orthogonal to configuration. Candidate as a standalone quality dimension (rootless) when ITIP models vulnerability governance. |
+| **OVAL** (Open Vulnerability and Assessment Language) | Assessment execution language — maps to Mechanism rules (Starlark), not vocabulary schemas. Candidate for future sourcing as Mechanism archetypes when OIP models assessment execution. |
+| **XCCDF** (Extensible Configuration Checklist Description Format) | Checklist bundling format — analogous to a Norm collection/profile. Candidate when OIP models governance profile composition. |
+| **ARF** (Asset Reporting Format) | Result reporting format — maps to Effector/Receptor payloads (observation data), not definition vocabulary. Candidate when OIP models compliance reporting. |
+| **CVSS** (Common Vulnerability Scoring System) | Vulnerability severity scoring — orthogonal to configuration. Candidate as a standalone quality dimension (rootless) when OIP models vulnerability governance. |
 | **CVE** (Common Vulnerabilities and Exposures) | Vulnerability identification — similar to CCE but for vulnerabilities, not configurations. Candidate as a rootless identification archetype. |
 
 ## Governance Usage Patterns

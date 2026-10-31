@@ -5,7 +5,7 @@
 
 Ontology definitions built on the **Generative System Model (GSM)**, registered as governed
 ascriptions in the SIE Definition Manager (DM), and assembled into organization-specific
-ontology stacks by consuming domain applications such as the IT Intelligence Platform (ITIP).
+ontology stacks by consuming domain applications such as the Organizational Intelligence Platform (OIP).
 
 This repository is the sourced-framework product of GSM. The normative model it is
 expressed against lives in [`gsm-specifications`](https://github.com/poesis-cloud/gsm-specifications).
@@ -20,7 +20,7 @@ All three are aggregated under the [`gsm`](https://github.com/poesis-cloud/gsm) 
 ### Ontology
 
 A ontology is a named and versioned set of governed model elements. Its elements are
-registered individually in DM. ITIP groups them as a ontology and manages catalog
+registered individually in DM. OIP groups them as a ontology and manages catalog
 import, organization selection, composition, installation, and synchronization.
 
 ### Ontology ascription statement
@@ -278,7 +278,7 @@ source model's semantic domain.
 
 A **domain ontology** integrates the reference ontologies relevant to one domain into
 a coherent governance fabric and adds domain-native vocabulary. The current example is
-`it` — the IT domain ontology consumed by the IT Intelligence Platform (ITIP).
+`it` — the IT domain ontology consumed by the Organizational Intelligence Platform (OIP).
 
 A domain ontology:
 
@@ -302,7 +302,7 @@ alike) without coordination, and one organization may select several domain onto
 
 ### Layer 4 — Organization ontology ascription statements
 
-An organization ontology assembles the ITIP and domain ontology elements selected for
+An organization ontology assembles the OIP and domain ontology elements selected for
 one organization and adds the organization's own vocabulary and governance.
 
 A single organization ontology may use both Archetype inheritance and composition.
@@ -378,30 +378,30 @@ Organization ontologies are **never** maintained in this repository. The layer b
 is a publication boundary: this repository publishes the reference and
 domain layers — the shareable world ontology — while organization ontologies are
 tenant-scoped, often confidential, and authored at runtime through the consuming
-platform (e.g. ITIP), which registers their statements into DM and persists their
+platform (e.g. OIP), which registers their statements into DM and persists their
 tenant-scoped ontology aggregate. An organization wanting a coherent default without
 assembling its own stack selects a domain ontology wholesale.
 
-## ITIP ontology catalog and persistence
+## OIP ontology catalog and persistence
 
-Every ontology distributed by this repository is imported into the ITIP ontology
+Every ontology distributed by this repository is imported into the OIP ontology
 catalog, including the reference ontologies and the domain ontologies.
 
-For each repository ontology, ITIP:
+For each repository ontology, OIP:
 
 1. reads its `ontology-package.json` descriptor;
 2. persists its catalog metadata;
 3. registers or synchronizes its ontology statements in DM;
 4. stores the resulting DM Definition and Ascription identifiers as ontology members;
-5. exposes it in the ITIP ontology catalog UI.
+5. exposes it in the OIP ontology catalog UI.
 
 A domain ontology may be selected wholesale when a new organization is provisioned,
 serving as the coherent default stack for that domain.
 
-DM remains authoritative for individual governed ascriptions. ITIP is authoritative for
+DM remains authoritative for individual governed ascriptions. OIP is authoritative for
 ontology aggregates, catalog metadata, and organization stack selection.
 
-The ITIP backend requires tenant-aware persistence for:
+The OIP backend requires tenant-aware persistence for:
 
 - ontologies (`name`, `version`, tenant, catalog/runtime source metadata);
 - ontology dependencies and organization selections;
@@ -587,7 +587,7 @@ appropriate annotations.
 
 ## Installation and validation
 
-Before registering or activating a ontology, ITIP validates:
+Before registering or activating a ontology, OIP validates:
 
 - descriptor name, version, and `layer`;
 - each element's `ontology` object;
@@ -603,7 +603,7 @@ Before registering or activating a ontology, ITIP validates:
 - compatibility of the resulting composed schemas;
 - consistency between organization `selects`, statement members, and actual references.
 
-Ontology installation is managed as a unit by ITIP, while individual elements retain
+Ontology installation is managed as a unit by OIP, while individual elements retain
 the normal DM lifecycle.
 
 ## Foundation principles

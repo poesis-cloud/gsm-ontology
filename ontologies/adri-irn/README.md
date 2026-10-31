@@ -14,7 +14,7 @@
 
 **Status**: Reserved — pending full sourcing (ST-4: Sourcing & compliance fabric). Partner entry registered in `strategy/partner-matrix.md` (Tier 2, Emerging).
 
-**Strategic intent**: Poesis becomes the reference GSM implementation for aDRI-IRN adherence. Member organizations use SIE/ITIP to demonstrate and govern their IRN adherence, replacing spreadsheet-based compliance tracking with machine-evaluable governed Directive/Norm instances — the same pattern applied to NIS2 and DORA.
+**Strategic intent**: Poesis becomes the reference GSM implementation for aDRI-IRN adherence. Member organizations use SIE/OIP to demonstrate and govern their IRN adherence, replacing spreadsheet-based compliance tracking with machine-evaluable governed Directive/Norm instances — the same pattern applied to NIS2 and DORA.
 
 ---
 

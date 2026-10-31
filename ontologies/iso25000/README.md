@@ -62,10 +62,10 @@ ISO 25011 explicitly reuses ISO 25010's Quality in Use model (Effectiveness, Eff
 | SQuaRE Division | Standards | Reason for Exclusion |
 | ----------------- | ----------- | --------------------- |
 | **2500n — Management** | 25000, 25001, 25002 | Process guidance, common terminology, planning overview — not a quality model; no characteristics to source as archetypes |
-| **2502n — Measurement** | 25020, 25022–25025 | Concrete quality measures (formulas, scales, thresholds) — would become Norm assertion libraries, not archetype schemas; candidate for future sourcing when ITIP builds Norm authoring UX |
+| **2502n — Measurement** | 25020, 25022–25025 | Concrete quality measures (formulas, scales, thresholds) — would become Norm assertion libraries, not archetype schemas; candidate for future sourcing when OIP builds Norm authoring UX |
 | **25030 — Requirements** | 25030 | Process standard for quality requirements elicitation — already operationalized by GSM's Directive grammar (`modal × verb × qualifier × purpose`); nothing to source as schemas |
 | **25040 — Evaluation** | 25040 | Evaluation process framework and Quality Rating Modules — already operationalized by GSM's Norm grammar (`toleranceMode + temporalWindow + aggregation`); partially sourceable (evaluation type classification) but low priority |
-| **25050–25099 — Extensions** | 25051, 25060–25069 | RUSP requirements, Common Industry Format for usability — narrow scope, not yet relevant to ITIP governance |
+| **25050–25099 — Extensions** | 25051, 25060–25069 | RUSP requirements, Common Industry Format for usability — narrow scope, not yet relevant to OIP governance |
 
 See the [SQuaRE Series — GSM Compatibility Trace](../README.md#square-series--gsm-compatibility-trace) section in `../README.md` for a detailed pipeline mapping of all SQuaRE divisions to GSM primitives.
 
